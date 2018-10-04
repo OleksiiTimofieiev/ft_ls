@@ -2,6 +2,7 @@
 
 !!!!!!!!!!!!!:::::::!!!!!!!!!!!!!!!!!!!!
 https://wm-help.net/lib/b/book/1357034433/101
+https://stackoverflow.com/questions/7401704/what-is-that-total-in-the-very-first-line-after-ls-l
 
 
 
