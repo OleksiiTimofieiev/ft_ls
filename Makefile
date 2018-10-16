@@ -1,93 +1,46 @@
-NAME        = rtv1
-CC          = gcc
-#CFLAGS      = -Wall -Wextra -Werror -O3 -g
+NAME		= fdf
 
-SRCS_DIR    = ./src
-OBJS_DIR    = ./obj
-HEADERS_DIR = ./include
-LIBFT_DIR   = ./libft
+SRCS		=  	./srcs/main.c
+				
+CFLAGS		= 	-Wall -Wextra -Werror
+OBJECTS 	= 	$(SRCS:.c=.o)
+LIB			= 	libft/libft.a
 
-SRCS        = main.c rotate.c light.c add_light.c add_primitive.c intersection.c trace.c vector.c render.c math.c keyboard.c supersampling.c scenes.c consoleout.c object.c color.c fps.c init.c
+INC			= 	./includes/fdf.h
 
-OBJS        = $(SRCS:.c=.o)
+#colors
+RESET		= \033[m
+RED         = \033[1;31m
+GREEN       = \033[01;38;05;46m
+YELLOW      = \033[01;38;05;226m
+BLUE        = \033[03;38;05;21m
+VIOLET      = \033[01;38;05;201m
+CYAN        = \033[1;36m
+WHITE       = \033[01;38;05;15m
 
-VPATH       = $(SRCS_DIR) $(OBJS_DIR)
+all: $(NAME)
+	@echo  "$(YELLOW) : OK$(RESET)"
 
-INCLUDES    = -I include/
-INCLUDES   += -I libft/
-INCLUDES   += -I frameworks/SDL2.framework/Headers/
-INCLUDES   += -I frameworks/SDL2_image.framework/SDL2_image/Headers
-INCLUDES   += -I /Library/Frameworks/SDL2.framework/Versions/Current/Headers
+$(NAME): $(LIB) $(OBJECTS) $(INC)
+	@ gcc $(CFLAGS) -I$(INC) $(SRCS) -L ./libft -lft -L /usr/local/lib/ -lmlx -framework OpenGL -framework AppKit -o $(NAME)
 
-LIBFT       = $(LIBFT_DIR)/libft.a
+$(LIB):
+	@echo  "$(GREEN)Compiling: $(WHITE)libft$(RESET)$(YELLOW) : $(RESET)\c)"
+	@make -C libft
+	@echo  "$(GREEN)Compiling: $(WHITE)fdf  $(RESET)$(YELLOW) : $(RESET)\c)"
 
-LIBRARIES   = -lm -framework OpenCL
-LIBRARIES  += -L libft/ -lft -framework AppKit
-LIBRARIES  += -framework AppKit
-LIBRARIES  += -F frameworks/
-LIBRARIES  += -framework SDL2
-LIBRARIES  += -framework SDL2_ttf
+$(OBJECTS): %.o: %.c
+	@gcc -c $(CFLAGS) $< -o $@
+	@echo  "$(YELLOW)█$(RESET)\c)"
 
-TO_LINKING  = $(addprefix $(OBJS_DIR)/, $(OBJS)) $(INCLUDES) $(LIBRARIES) -rpath frameworks/
+clean:
+	@ make -C libft clean
+	@ rm -f $(OBJECTS)
 
-all         : $(NAME)
+fclean: clean
+	@ rm -f $(NAME) $(LIB)
+	@ make -C libft fclean
 
-$(NAME)     : $(LIBFT) $(LIBJSON) $(OBJS_DIR) $(OBJS) $(HEADERS)
-	@$(CC) $(CFLAGS) -o $(NAME) $(TO_LINKING)
-	@printf "\e[38;5;46m./$(NAME)   SUCCESSFUL BUILD 🖥\e[0m\n"
-	@printf "\e[38;5;5m\\n\
-	   \t       ██████╗ ████████╗██╗   ██╗ ██╗        ██████╗ ██╗   ██╗  \n\
-       \t       ██╔══██╗╚══██╔══╝██║   ██║███║        ██╔══██╗╚██╗ ██╔╝  \n\
-       \t       ██████╔╝   ██║   ██║   ██║╚██║        ██████╔╝ ╚████╔╝   \n\
-       \t       ██╔══██╗   ██║   ╚██╗ ██╔╝ ██║        ██╔══██╗  ╚██╔╝    \n\
-       \t       ██║  ██║   ██║    ╚████╔╝  ██║        ██████╔╝   ██║     \n\
-       \t       ╚═╝  ╚═╝   ╚═╝     ╚═══╝   ╚═╝        ╚═════╝    ╚═╝     \n\
-         █████╗ ██████╗ ██╗  ██╗██╗██████╗ ██╗███╗   ███╗ ██████╗ ███╗   ██╗\n\
-        ██╔══██╗██╔══██╗██║  ██║██║██╔══██╗██║████╗ ████║██╔═══██╗████╗  ██║\n\
-        ███████║██████╔╝███████║██║██║  ██║██║██╔████╔██║██║   ██║██╔██╗ ██║\n\
-        ██╔══██║██╔══██╗██╔══██║██║██║  ██║██║██║╚██╔╝██║██║   ██║██║╚██╗██║\n\
-        ██║  ██║██║  ██║██║  ██║██║██████╔╝██║██║ ╚═╝ ██║╚██████╔╝██║ ╚████║\n\
-        ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═════╝ ╚═╝╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n\
-        \e[0m\n"
+re: fclean all
 
-
-
-$(LIBFT)    :
-	@make -C $(LIBFT_DIR)
-
-$(LIBJSON)  :
-	@make -C $(LIBJSON_DIR)
-
-$(OBJS_DIR) :
-	@mkdir $(OBJS_DIR)
-	@printf "\e[38;5;46m$(OBJS_DIR)    FOLDER CREATED\e[0m\n"
-
-$(OBJS)     : %.o : %.c $(HEADERS)
-	@$(CC) $(CFLAGS) -c $< -o $(OBJS_DIR)/$@ $(INCLUDES)
-
-clean       :
-	@rm -rf $(OBJS_DIR)
-	@make -C $(LIBFT_DIR) clean
-	@printf "\e[38;5;226m$(OBJS_DIR)    FOLDER DELETED\e[0m\n"
-
-fclean      : clean
-	@rm -f $(NAME)
-	@make -C $(LIBFT_DIR) fclean
-	@printf "\e[38;5;226m./$(NAME)   DELETED\e[0m\n"
-
-re          : fclean all
-
-norm		:
-	norminette src/ includes/
-
-leaks       :
-	leaks $(NAME)
-
-test		:
-	make
-	./$(NAME) 4
-
-author		:
-	cat -e author
-
-.PHONY: clean fclean re author
+.PHONY: all clean fclean re
