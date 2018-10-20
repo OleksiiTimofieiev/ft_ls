@@ -16,10 +16,10 @@ CORE				= main.c
 
 SRCS        = $(addprefix srcs/, $(CORE))
 
-CFLAGS			= 	-Wall -Wextra -Werror -pthread
-OBJECTS 		= 	$(SRCS:.c=.o)
-LIB					= 	libft/libft.a
-INC					= 	./includes/ft_ls.h
+CFLAGS			= -Wall -Wextra -Werror
+OBJECTS 		= $(SRCS:.c=.o)
+LIB					= libft/libft.a
+INC					= ./includes/ft_ls.h
 
 #colors
 RESET				= \033[m
@@ -34,7 +34,7 @@ WHITE       = \033[01;38;05;15m
 all: $(NAME)
 
 $(NAME): $(LIB) $(OBJECTS) $(INC)
-	@ gcc $(CFLAGS) -I$(INC) $(SRCS) -L ./libft -lftprintf -o $(NAME)
+	@ gcc $(CFLAGS) -I$(INC) $(SRCS) -L ./libft -lftprintf -lncurses -o $(NAME)
 	@ echo  "$(YELLOW) : OK$(RESET)"
 
 $(LIB):

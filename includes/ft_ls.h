@@ -14,5 +14,6 @@
 # define FT_LS_H
 
 # include "../libft/ft_printf.h"
+# include <ncurses.h>
 
 #endif
