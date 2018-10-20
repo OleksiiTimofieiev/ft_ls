@@ -10,15 +10,14 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= ft_ls
+NAME				= ft_ls
 
-SRCS		=  ./srcs/main.c
+SRCS				=  ./srcs/main.c
 
-CFLAGS		= 	-Wall -Wextra -Werror -pthread
-OBJECTS 	= 	$(SRCS:.c=.o)
-LIB				= 	libft/libft.a
-
-INC				= 	./includes/ft_ls.h
+CFLAGS			= 	-Wall -Wextra -Werror -pthread
+OBJECTS 		= 	$(SRCS:.c=.o)
+LIB					= 	libft/libft.a
+INC					= 	./includes/ft_ls.h
 
 #colors
 RESET				= \033[m
@@ -33,14 +32,17 @@ WHITE       = \033[01;38;05;15m
 all: $(NAME)
 
 $(NAME): $(LIB) $(OBJECTS) $(INC)
-	@gcc $(CFLAGS) -I$(INC) $(SRCS) -L ./libft -lftprintf -o $(NAME)
-	@echo "$(VIOLET)It is alive.$(RESET)"
+	@ gcc $(CFLAGS) -I$(INC) $(SRCS) -L ./libft -lftprintf -o $(NAME)
+	@ echo  "$(YELLOW) : OK$(RESET)"
 
 $(LIB):
-	@make -C libft
+	@ echo  "$(GREEN)Compiling: $(WHITE)libft$(RESET)$(YELLOW) : $(RESET)\c)"
+	@ make -C libft
+	@ echo  "$(GREEN)Compiling: $(WHITE)ft_ls$(RESET)$(YELLOW) : $(RESET)\c)"
 
 $(OBJECTS): %.o: %.c
-	@gcc -c $(CFLAGS) $< -o $@
+	@ gcc -c $(CFLAGS) $< -o $@
+	@ echo  "$(YELLOW)█$(RESET)\c)"
 
 clean:
 	@ make -C libft clean

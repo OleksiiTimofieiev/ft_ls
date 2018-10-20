@@ -116,6 +116,16 @@ LIB = ft_memset.c \
 		ft_strnccpy.c \
 		ft_line_is_digit.c \
 
+		#colors
+		RESET		= \033[m
+		RED         = \033[1;31m
+		GREEN       = \033[01;38;05;46m
+		YELLOW      = \033[01;38;05;226m
+		BLUE        = \033[03;38;05;21m
+		VIOLET      = \033[01;38;05;201m
+		CYAN        = \033[1;36m
+		WHITE       = \033[01;38;05;15m
+
 CFLAGS = -Wall -Wextra -Werror
 IFLAGS = -I libft/
 
@@ -124,18 +134,20 @@ LIBSRCS	= $(addprefix libft/, $(LIB))
 OBJECTS = $(SRCS:.c=.o)
 LIBOBJ = $(LIBSRCS:.c=.o)
 
-.PHONY: all clean fclean re 
+.PHONY: all clean fclean re
 
 all: $(NAME)
 
 $(OBJECTS): %.o: %.c
 	@gcc -c $(CFLAGS) $< -o $@
+	@ echo  "$(BLUE)█$(RES)\c)"
 
 $(LIBOBJ): %.o: %.c
 	@gcc -c $(CFLAGS) $(IFLAGS) $< -o $@
 
 $(NAME): $(LIBOBJ) $(OBJECTS)
 	@ar rcs $(NAME) $(OBJECTS) $(LIBOBJ)
+	@echo  "$(YELLOW) : OK$(RES)"
 
 clean:
 	@/bin/rm -f $(OBJECTS)
