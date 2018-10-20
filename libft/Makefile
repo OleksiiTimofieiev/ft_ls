@@ -139,22 +139,22 @@ LIBOBJ = $(LIBSRCS:.c=.o)
 all: $(NAME)
 
 $(OBJECTS): %.o: %.c
-	@gcc -c $(CFLAGS) $< -o $@
+	@ gcc -c $(CFLAGS) $< -o $@
 	@ echo  "$(BLUE)█$(RES)\c)"
 
 $(LIBOBJ): %.o: %.c
-	@gcc -c $(CFLAGS) $(IFLAGS) $< -o $@
+	@ gcc -c $(CFLAGS) $(IFLAGS) $< -o $@
 
 $(NAME): $(LIBOBJ) $(OBJECTS)
-	@ar rcs $(NAME) $(OBJECTS) $(LIBOBJ)
-	@echo  "$(YELLOW) : OK$(RES)"
+	@ ar rcs $(NAME) $(OBJECTS) $(LIBOBJ)
+	@ echo  "$(RESET)$(YELLOW) : OK$(RESET)"
 
 clean:
-	@/bin/rm -f $(OBJECTS)
-	@make clean -C ./libft
+	@ /bin/rm -f $(OBJECTS)
+	@ make clean -C ./libft
 
 fclean: clean
-	@/bin/rm -f $(NAME)
-	@make fclean -C ./libft
+	@ /bin/rm -f $(NAME)
+	@ make fclean -C ./libft
 
 re: fclean all
