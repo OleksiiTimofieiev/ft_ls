@@ -12,7 +12,9 @@
 
 NAME				= ft_ls
 
-SRCS				=  ./srcs/main.c
+CORE				= main.c
+
+SRCS        = $(addprefix srcs/, $(CORE))
 
 CFLAGS			= 	-Wall -Wextra -Werror -pthread
 OBJECTS 		= 	$(SRCS:.c=.o)
