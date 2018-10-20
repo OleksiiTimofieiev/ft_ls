@@ -1,15 +1,27 @@
-NAME		= fdf
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: otimofie <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/04/18 11:59:13 by otimofie          #+#    #+#              #
+#    Updated: 2018/05/03 19:23:57 by otimofie         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
-SRCS		=  	./srcs/main.c
-				
-CFLAGS		= 	-Wall -Wextra -Werror
+NAME		= ft_ls
+
+SRCS		=  ./srcs/main.c
+
+CFLAGS		= 	-Wall -Wextra -Werror -pthread
 OBJECTS 	= 	$(SRCS:.c=.o)
-LIB			= 	libft/libft.a
+LIB				= 	libft/libft.a
 
-INC			= 	./includes/fdf.h
+INC				= 	./includes/ft_ls.h
 
 #colors
-RESET		= \033[m
+RESET				= \033[m
 RED         = \033[1;31m
 GREEN       = \033[01;38;05;46m
 YELLOW      = \033[01;38;05;226m
@@ -19,19 +31,16 @@ CYAN        = \033[1;36m
 WHITE       = \033[01;38;05;15m
 
 all: $(NAME)
-	@echo  "$(YELLOW) : OK$(RESET)"
 
 $(NAME): $(LIB) $(OBJECTS) $(INC)
-	@ gcc $(CFLAGS) -I$(INC) $(SRCS) -L ./libft -lft -L /usr/local/lib/ -lmlx -framework OpenGL -framework AppKit -o $(NAME)
+	@gcc $(CFLAGS) -I$(INC) $(SRCS) -L ./libft -lftprintf -o $(NAME)
+	@echo "$(VIOLET)It is alive.$(RESET)"
 
 $(LIB):
-	@echo  "$(GREEN)Compiling: $(WHITE)libft$(RESET)$(YELLOW) : $(RESET)\c)"
 	@make -C libft
-	@echo  "$(GREEN)Compiling: $(WHITE)fdf  $(RESET)$(YELLOW) : $(RESET)\c)"
 
 $(OBJECTS): %.o: %.c
 	@gcc -c $(CFLAGS) $< -o $@
-	@echo  "$(YELLOW)█$(RESET)\c)"
 
 clean:
 	@ make -C libft clean
