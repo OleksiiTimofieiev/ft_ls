@@ -1,26 +1,24 @@
 #include "../includes/ft_ls.h"
 
-int    main()
+int		main(void)
 {
-  initscr();
-  noecho();
-  cbreak();
-  curs_set(FALSE);
-  start_color();
-  raw();
+	DIR		*dir;
+	struct dirent	*sd;
 
-  WINDOW * _main;
-  _main = newwin(30, 80, 2, 150);
+	dir = opendir(".");
 
-  refresh();
+	if (dir == NULL)
+	{
+		ft_printf("Can not open the directoty\n");
+		exit(1);
+	}
+	while ((sd = readdir(dir)) != NULL)
+	{
+		ft_printf(">> %s\n", sd->d_name);		
+	}
 
-
-    mvwprintw(_main,5,2, "Hostname                   ->    %s;", "blablabla");
-
-    wrefresh(_main);
-
-    getch();
-    endwin();
-
-  return (0);
+	closedir(dir);
+	return (1);
 }
+
+

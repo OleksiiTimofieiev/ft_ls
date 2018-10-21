@@ -3,26 +3,26 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: otimofie <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/18 11:59:13 by otimofie          #+#    #+#              #
-#    Updated: 2018/05/03 19:23:57 by otimofie         ###   ########.fr        #
+#    Updated: 2018/10/21 15:18:43 by otimofie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME				= ft_ls
+NAME		= ft_ls
 
-CORE				= main.c
+CORE		= main.c
 
 SRCS        = $(addprefix srcs/, $(CORE))
 
-CFLAGS			= -Wall -Wextra -Werror
-OBJECTS 		= $(SRCS:.c=.o)
-LIB					= libft/libft.a
-INC					= ./includes/ft_ls.h
+CFLAGS		= -Wall -Wextra -Werror
+OBJECTS 	= $(SRCS:.c=.o)
+LIB			= libft/libft.a
+INC			= ./includes/ft_ls.h
 
 #colors
-RESET				= \033[m
+RESET		= \033[m
 RED         = \033[1;31m
 GREEN       = \033[01;38;05;46m
 YELLOW      = \033[01;38;05;226m
@@ -34,7 +34,7 @@ WHITE       = \033[01;38;05;15m
 all: $(NAME)
 
 $(NAME): $(LIB) $(OBJECTS) $(INC)
-	@ gcc $(CFLAGS) -I$(INC) $(SRCS) -L ./libft -lftprintf -lncurses -o $(NAME)
+	@ gcc $(CFLAGS) -I$(INC) $(SRCS) -L ./libft -lftprintf -o $(NAME)
 	@ echo  "$(YELLOW) : OK$(RESET)"
 
 $(LIB):
