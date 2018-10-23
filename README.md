@@ -20,3 +20,13 @@ recurses get data
 https://www.tldp.org/LDP/lpg/node11.html#SECTION00722000000000000000
 
 https://explainshell.com/explain?cmd=ls+-lR
+
+
+
+Абстрактные синтаксические деревья
+
+Сортировка ошибок
+
+Dev
+Etc
+Tmp/
