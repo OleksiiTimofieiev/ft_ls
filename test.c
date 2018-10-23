@@ -84,7 +84,8 @@ void listdir(const char *name, int indent /* flags */)
     if (!(dir = opendir(name)))
         return;
 
-    x++;
+    // x++;
+
 
     while ((entry = readdir(dir)) != NULL) 
     {
@@ -112,7 +113,7 @@ void listdir(const char *name, int indent /* flags */)
     }
 
     closedir(dir);
-    x--;
+    // x--;
 
     // if (x > 0)
     //     print_list(list);
