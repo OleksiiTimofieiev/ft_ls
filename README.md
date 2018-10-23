@@ -18,3 +18,5 @@ http://library.bntu.by/sites/default/files/novye-postupleniya/kerrisk-maykl-linu
 recurses get data
 
 https://www.tldp.org/LDP/lpg/node11.html#SECTION00722000000000000000
+
+https://explainshell.com/explain?cmd=ls+-lR
