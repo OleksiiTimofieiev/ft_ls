@@ -30,3 +30,8 @@ https://explainshell.com/explain?cmd=ls+-lR
 Dev
 Etc
 Tmp/
+
+Err I
+Tmp dev/ /
+Time
+Sd_mode
