@@ -84,12 +84,6 @@ void listdir(const char *name, int indent /* flags */)
     if (!(dir = opendir(name)))
         return;
 
-    x = 1;
-
-    if (x == 1)
-    {
-
-
     while ((entry = readdir(dir)) != NULL) 
     {
         if (entry->d_type == DT_DIR)
@@ -114,7 +108,7 @@ void listdir(const char *name, int indent /* flags */)
             // add(&list, entry->d_name);
         }
     }
-}
+
 
     closedir(dir);
     // x--;
