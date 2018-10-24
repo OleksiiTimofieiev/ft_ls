@@ -50,7 +50,7 @@ void    print_list(t_temp *tmp)
         printf("%s\n", tmp->data);
         tmp = tmp->next;
     }
-    // printf("%s\n", "end\n");
+    printf("\n");
 
 }
 
@@ -84,7 +84,10 @@ void listdir(const char *name, int indent /* flags */)
     if (!(dir = opendir(name)))
         return;
 
-    // x++;
+    x = 1;
+
+    if (x == 1)
+    {
 
 
     while ((entry = readdir(dir)) != NULL) 
@@ -111,6 +114,7 @@ void listdir(const char *name, int indent /* flags */)
             // add(&list, entry->d_name);
         }
     }
+}
 
     closedir(dir);
     // x--;
