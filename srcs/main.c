@@ -1,5 +1,7 @@
 #include "../includes/ft_ls.h"
 
+// sorting after reading the root on the each step of the recursion (lexicographical.c);
+
 int		main(void)
 {
 	DIR		*dir;
