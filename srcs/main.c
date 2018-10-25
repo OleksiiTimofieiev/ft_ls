@@ -2,8 +2,6 @@
 
 #include <stdio.h>
 
-// sorting after reading the root on the each step of the recursion (lexicographical.c);
-
 typedef     struct s_temp
 {
     char *d_name;
