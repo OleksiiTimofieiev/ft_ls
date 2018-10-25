@@ -3,15 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+         #
+#    By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/12 22:37:25 by otimofie          #+#    #+#              #
-#    Updated: 2018/04/21 16:31:34 by otimofie         ###   ########.fr        #
+#    Updated: 2018/10/25 16:46:05 by timofieiev       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 NAME = libft.a
+
 SRC = 	ft_memset.c \
 		ft_bzero.c \
 		ft_memcpy.c \
