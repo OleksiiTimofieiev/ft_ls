@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+         #
+#    By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/18 11:59:13 by otimofie          #+#    #+#              #
-#    Updated: 2018/10/21 15:18:43 by otimofie         ###   ########.fr        #
+#    Updated: 2018/10/25 12:56:21 by timofieiev       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ WHITE       = \033[01;38;05;15m
 all: $(NAME)
 
 $(NAME): $(LIB) $(OBJECTS) $(INC)
-	@ gcc $(CFLAGS) -I$(INC) $(SRCS) -L ./libft -lftprintf -o $(NAME)
+	@ gcc $(CFLAGS) $(INC) $(SRCS) -L ./libft -lftprintf -o $(NAME)
 	@ echo  "$(YELLOW) : OK$(RESET)"
 
 $(LIB):
@@ -51,8 +51,8 @@ clean:
 	@ rm -f $(OBJECTS)
 
 fclean: clean
-	@ rm -f $(NAME) $(LIB)
 	@ make -C libft fclean
+	@ rm -f $(NAME) $(LIB)
 
 re: fclean all
 
