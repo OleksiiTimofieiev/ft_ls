@@ -12,7 +12,8 @@
 
 NAME		= ft_ls
 
-CORE		= main.c
+CORE		= main.c \
+			  quick_sort.c \
 
 SRCS        = $(addprefix srcs/, $(CORE))
 

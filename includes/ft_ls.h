@@ -18,4 +18,13 @@
 # include <dirent.h>
 # include <sys/types.h>
 
+typedef	struct		s_temp
+{
+    char			*d_name;
+    unsigned char	d_type;
+    struct s_temp	*next;
+}			t_temp;
+
+void	q_sort(t_temp **headRef);
+
 #endif
