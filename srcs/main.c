@@ -7,6 +7,7 @@
 typedef     struct s_temp
 {
     char *data;
+    unsigned char d_type;
     struct s_temp *next;
 }                  t_temp;
 
@@ -112,7 +113,7 @@ void quickSort(t_temp **headRef)
     return; 
 } 
 
-void add(t_temp** head_ref, char *new_data) 
+void add(t_temp** head_ref, char *new_data, unsigned char d_type) 
 { 
     /* 1. allocate t_temp */
     t_temp* new_t_temp = (t_temp*) malloc(sizeof(t_temp)); 
@@ -121,6 +122,7 @@ void add(t_temp** head_ref, char *new_data)
   
     /* 2. put in the data  */
     new_t_temp->data  = strdup(new_data); 
+    new_t_temp->d_type = d_type
   
     /* 3. This new t_temp is going to be the last t_temp, so make next of 
           it as NULL*/
@@ -172,7 +174,7 @@ void listdir(const char *name, int indent /* flags */) // ? go from the first el
 
     while ((entry = readdir(dir)) != NULL) 
     {
-            add(&list, entry->d_name); 
+            add(&list, entry->d_name, entry->d_type); 
     }
 
     closedir(dir);
@@ -199,6 +201,7 @@ void listdir(const char *name, int indent /* flags */) // ? go from the first el
                 continue;
 
             snprintf(path, sizeof(path), "%s/%s", name, entry->d_name);
+
             ft_printf("%s\n", path);
 
             // printf("%*s[%s]\n", indent, "", entry->d_name);
