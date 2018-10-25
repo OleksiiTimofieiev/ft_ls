@@ -41,8 +41,7 @@ t_temp	*partition(t_temp *head, t_temp *end, t_temp **new_head, t_temp **new_end
 		}
 		else
 		{
-			if (prev)
-				prev->next = cur->next;
+			(prev) ? prev->next = cur->next : 0;
 			tmp = cur->next;
 			cur->next = NULL;
 			tail->next = cur;
