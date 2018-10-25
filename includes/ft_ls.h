@@ -23,7 +23,16 @@ typedef	struct		s_temp
     char			*d_name;
     unsigned char	d_type;
     struct s_temp	*next;
-}			t_temp;
+}					t_temp;
+
+typedef	struct		s_qsort
+{
+	t_temp			*pivot;
+	t_temp			*prev;
+	t_temp			*tail;
+	t_temp			*cur;
+	t_temp			*tmp;
+}					t_qsort;
 
 void	q_sort(t_temp **headRef);
 
