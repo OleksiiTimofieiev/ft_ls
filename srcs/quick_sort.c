@@ -35,8 +35,7 @@ t_temp	*partition(t_temp *head, t_temp *end, t_temp **new_head, t_temp **new_end
 	{
 		if (ft_strcmp(cur->d_name, pivot->d_name) < 0)
 		{
-			if ((*new_head) == NULL)
-				(*new_head) = cur;
+			(*new_head == NULL) ? *new_head = cur : 0;
 			prev = cur;
 			cur = cur->next;
 		}
@@ -51,8 +50,7 @@ t_temp	*partition(t_temp *head, t_temp *end, t_temp **new_head, t_temp **new_end
 			cur = tmp;
 		}
 	}
-	if ((*new_head) == NULL)
-		(*new_head) = pivot;
+	(*new_head == NULL) ? *new_head = pivot : 0;
 	(*new_end) = tail;
 	return (pivot);
 }
