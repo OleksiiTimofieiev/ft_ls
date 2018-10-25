@@ -167,7 +167,7 @@ void listdir(const char *name, int indent /* flags */) // ? go from the first el
 int main(int argc, char **argv) 
 {
 	if (argc == 1)
-    	listdir("./libft", 0);
+    	listdir(".", 0);
 	else
 		ft_printf(argv[1]);
 	// system("leaks -q ft_ls");
