@@ -1,6 +1,6 @@
 #include "../includes/ft_ls.h"
 
-#include <stdio.h>
+// #include <stdio.h>
 
 // sorting after reading the root on the each step of the recursion (lexicographical.c);
 
