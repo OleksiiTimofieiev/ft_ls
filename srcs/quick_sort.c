@@ -12,6 +12,14 @@
 
 #include "../includes/ft_ls.h"
 
+void	init(t_temp **head, t_temp **end, t_qsort *var)
+{
+	var->pivot = *end;
+	var->prev = NULL;
+	var->cur = *head;
+	var->tail = var->pivot;
+}
+
 t_temp	*get_tail(t_temp *cur)
 {
 	while (cur != NULL && cur->next != NULL)
@@ -19,39 +27,32 @@ t_temp	*get_tail(t_temp *cur)
 	return (cur);
 }
 
-t_temp	*partition(t_temp *head, t_temp *end, t_temp **new_head, t_temp **new_end)
+t_temp	*delim(t_temp *head, t_temp *end, t_temp **new_head, t_temp **new_end)
 {
-	t_temp *pivot;
-	t_temp *prev;
-	t_temp *tail;
-	t_temp *cur;
-	t_temp *tmp;
+	t_qsort var;
 
-	pivot = end;
-	prev = NULL;
-	cur = head;
-	tail = pivot;
-	while (cur != pivot)
+	init(&head, &end, &var);
+	while (var.cur != var.pivot)
 	{
-		if (ft_strcmp(cur->d_name, pivot->d_name) < 0)
+		if (ft_strcmp(var.cur->d_name, var.pivot->d_name) < 0)
 		{
-			(*new_head == NULL) ? *new_head = cur : 0;
-			prev = cur;
-			cur = cur->next;
+			(*new_head == NULL) ? *new_head = var.cur : 0;
+			var.prev = var.cur;
+			var.cur = var.cur->next;
 		}
 		else
 		{
-			(prev) ? prev->next = cur->next : 0;
-			tmp = cur->next;
-			cur->next = NULL;
-			tail->next = cur;
-			tail = cur;
-			cur = tmp;
+			(var.prev) ? var.prev->next = var.cur->next : 0;
+			var.tmp = var.cur->next;
+			var.cur->next = NULL;
+			var.tail->next = var.cur;
+			var.tail = var.cur;
+			var.cur = var.tmp;
 		}
 	}
-	(*new_head == NULL) ? *new_head = pivot : 0;
-	(*new_end) = tail;
-	return (pivot);
+	(*new_head == NULL) ? *new_head = var.pivot : 0;
+	(*new_end) = var.tail;
+	return (var.pivot);
 }
 
 t_temp	*quick_sort(t_temp *head, t_temp *end)
@@ -65,7 +66,7 @@ t_temp	*quick_sort(t_temp *head, t_temp *end)
 		return (head);
 	new_head = NULL;
 	new_end = NULL;
-	pivot = partition(head, end, &new_head, &new_end);
+	pivot = delim(head, end, &new_head, &new_end);
 	if (new_head != pivot)
 	{
 		tmp = new_head;

@@ -4,6 +4,23 @@
 
 // Returns the last t_temp of the list 
 
+void deleteList(t_temp** head_ref) 
+{ 
+   /* deref head_ref to get the real head */
+   t_temp* current = *head_ref; 
+   t_temp* next; 
+  
+   while (current != NULL)  
+   { 
+       next = current->next; 
+       free(current->d_name); 
+       free(current);
+       current = next; 
+   } 
+}
+    
+   /* deref head_ref to affect the real head back 
+      in the caller. */
 
 void add(t_temp** head_ref, char *new_d_name, unsigned char d_type) 
 { 
@@ -75,33 +92,37 @@ void listdir(const char *name, int indent /* flags */) // ? go from the first el
     // path is to be opened, not the name;
     // path for each directory;
 
+    
     q_sort(&list); 
+
+
     print_list(list);
 
     free(entry);
 
     // if (!(dir = opendir(name))) // name == path;
     //     return;
-    // t_temp *list = list;
+    t_temp *t_list = list;
 
-    while(list)
+
+    while(t_list)
     {
-    	if (list->d_type == DT_DIR)
+    	if (t_list->d_type == DT_DIR)
     	{
     		char path[1024];
 
-            if (ft_strcmp(list->d_name, ".") == 0 || ft_strcmp(list->d_name, "..") == 0)
+            if (ft_strcmp(t_list->d_name, ".") == 0 || ft_strcmp(t_list->d_name, "..") == 0)
             {
-                list = list->next;
+                t_list = t_list->next;
                 continue ;
             }
-            snprintf(path, sizeof(path), "%s/%s", name, list->d_name);
+            snprintf(path, sizeof(path), "%s/%s", name, t_list->d_name);
 
             ft_printf("%s\n", path);
 
             listdir(path, indent + 2);
     	}
-    	list = list->next;
+    	t_list = t_list->next;
     }
 
 
@@ -132,8 +153,8 @@ void listdir(const char *name, int indent /* flags */) // ? go from the first el
     //     // }
     // }
 
-
     closedir(dir);
+    deleteList(&list);
     // x--;
 
     // if (x > 0)
@@ -146,10 +167,11 @@ void listdir(const char *name, int indent /* flags */) // ? go from the first el
 int main(int argc, char **argv) 
 {
 	if (argc == 1)
-    	listdir(".", 0);
+    	listdir("./libft", 0);
 	else
 		ft_printf(argv[1]);
 	// system("leaks -q ft_ls");
+    system("leaks -q ft_ls");
     return 0;
 }
 
