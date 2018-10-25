@@ -6,7 +6,7 @@
 
 typedef     struct s_temp
 {
-    char *data;
+    char *d_name;
     unsigned char d_type;
     struct s_temp *next;
 }                  t_temp;
@@ -29,7 +29,7 @@ t_temp *partition(t_temp *head, t_temp *end, t_temp **newHead, t_temp **newEnd)
     // which is updated in the newHead and newEnd variables 
     while (cur != pivot) 
     { 
-        if (strcmp(cur->data, pivot->data) < 0) 
+        if (strcmp(cur->d_name, pivot->d_name) < 0) 
         { 
             // First t_temp that has a value less than the pivot - becomes 
             // the new head 
@@ -52,7 +52,7 @@ t_temp *partition(t_temp *head, t_temp *end, t_temp **newHead, t_temp **newEnd)
         } 
     } 
   
-    // If the pivot data is the smallest element in the current list, 
+    // If the pivot d_name is the smallest element in the current list, 
     // pivot becomes the head 
     if ((*newHead) == NULL) 
         (*newHead) = pivot; 
@@ -113,16 +113,16 @@ void quickSort(t_temp **headRef)
     return; 
 } 
 
-void add(t_temp** head_ref, char *new_data, unsigned char d_type) 
+void add(t_temp** head_ref, char *new_d_name, unsigned char d_type) 
 { 
     /* 1. allocate t_temp */
     t_temp* new_t_temp = (t_temp*) malloc(sizeof(t_temp)); 
   
     t_temp *last = *head_ref;  /* used in step 5*/
   
-    /* 2. put in the data  */
-    new_t_temp->data  = strdup(new_data); 
-    new_t_temp->d_type = d_type
+    /* 2. put in the d_name  */
+    new_t_temp->d_name  = strdup(new_d_name); 
+    new_t_temp->d_type = d_type;
   
     /* 3. This new t_temp is going to be the last t_temp, so make next of 
           it as NULL*/
@@ -149,7 +149,7 @@ void    print_list(t_temp *tmp)
     // printf("\n%s\n", "start");
     while(tmp)
     {
-        ft_printf("%s\n", tmp->data);
+        ft_printf("%s\n", tmp->d_name);
         tmp = tmp->next;
     }
     ft_printf("\n");
@@ -177,7 +177,7 @@ void listdir(const char *name, int indent /* flags */) // ? go from the first el
             add(&list, entry->d_name, entry->d_type); 
     }
 
-    closedir(dir);
+
     // sort(&list);
 
     // path is to be opened, not the name;
@@ -188,34 +188,55 @@ void listdir(const char *name, int indent /* flags */) // ? go from the first el
 
     free(entry);
 
-    if (!(dir = opendir(name))) // name == path;
-        return;
+    // if (!(dir = opendir(name))) // name == path;
+    //     return;
 
-    while ((entry = readdir(dir)) != NULL) 
+    while(list)
     {
-        if (entry->d_type == DT_DIR)
-        {
-            char path[1024];
+    	if (list->d_type == DT_DIR)
+    	{
+    		char path[1024];
 
-            if (ft_strcmp(entry->d_name, ".") == 0 || ft_strcmp(entry->d_name, "..") == 0)
-                continue;
-
-            snprintf(path, sizeof(path), "%s/%s", name, entry->d_name);
+            if (ft_strcmp(list->d_name, ".") == 0 || ft_strcmp(list->d_name, "..") == 0)
+            {
+                list = list->next;
+                continue ;
+            }
+            snprintf(path, sizeof(path), "%s/%s", name, list->d_name);
 
             ft_printf("%s\n", path);
 
-            // printf("%*s[%s]\n", indent, "", entry->d_name);
-
-            // add(&list, entry->d_name); 
-
             listdir(path, indent + 2);
-        } 
-        // else 
-        // {
-        //     // printf("%*s- %s\n", indent, "", entry->d_name);
-        //     // add(&list, entry->d_name);
-        // }
+    	}
+    	list = list->next;
     }
+
+
+    // while ((entry = readdir(dir)) != NULL) 
+    // {
+    //     if (entry->d_type == DT_DIR)
+    //     {
+    //         char path[1024];
+
+    //         if (ft_strcmp(entry->d_name, ".") == 0 || ft_strcmp(entry->d_name, "..") == 0)
+    //             continue;
+
+    //         snprintf(path, sizeof(path), "%s/%s", name, entry->d_name);
+
+    //         ft_printf("%s\n", path);
+
+    //         // printf("%*s[%s]\n", indent, "", entry->d_name);
+
+    //         // add(&list, entry->d_name); 
+
+    //         listdir(path, indent + 2);
+    //     } 
+    //     // else 
+    //     // {
+    //     //     // printf("%*s- %s\n", indent, "", entry->d_name);
+    //     //     // add(&list, entry->d_name);
+    //     // }
+    // }
 
 
     closedir(dir);
@@ -228,7 +249,7 @@ void listdir(const char *name, int indent /* flags */) // ? go from the first el
 int main(int argc, char **argv) 
 {
 	if (argc == 1)
-    	listdir("./", 0);
+    	listdir(".", 0);
 	else
 		ft_printf(argv[1]);
     return 0;
