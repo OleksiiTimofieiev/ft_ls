@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   print_int_u_2.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otimofie <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 21:39:24 by otimofie          #+#    #+#             */
-/*   Updated: 2018/02/28 21:39:25 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/10/25 17:22:01 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 void	ft_print_int_u(size_t g)
 {

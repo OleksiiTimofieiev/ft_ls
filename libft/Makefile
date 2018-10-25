@@ -6,13 +6,13 @@
 #    By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/02/23 21:09:12 by otimofie          #+#    #+#              #
-#    Updated: 2018/10/25 14:10:11 by timofieiev       ###   ########.fr        #
+#    Updated: 2018/10/25 17:18:55 by timofieiev       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libftprintf.a
+NAME =  libft.a
 
-SRCS = ft_printf.c \
+SRCS =  ft_printf.c \
  		ft_wchar_print.c \
  		parsing.c \
  		printing.c \
@@ -40,8 +40,7 @@ SRCS = ft_printf.c \
 		print_octal_main_2.c \
 		ft_print_hex_main_pointer_1.c \
 		ft_print_hex_main_pointer_2.c \
-
-LIB = ft_memset.c \
+		ft_memset.c \
 		ft_bzero.c \
 		ft_memcpy.c \
 		ft_memccpy.c \
@@ -127,35 +126,25 @@ LIB = ft_memset.c \
 		WHITE       = \033[01;38;05;15m
 
 CFLAGS = -Wall -Wextra -Werror
-IFLAGS = -I libft/
-
-LIBSRCS	= $(addprefix libft/, $(LIB))
-
+IFLAGS = -I.
 OBJECTS = $(SRCS:.c=.o)
-LIBOBJ = $(LIBSRCS:.c=.o)
 
 .PHONY: all clean fclean re
 
 all: $(NAME)
 
 $(OBJECTS): %.o: %.c
-	@ gcc -c $(CFLAGS) $< -o $@
-	@ echo  "$(BLUE)█$(RES)\c)"
-
-$(LIBOBJ): %.o: %.c
-	@ echo  "$(BLUE)█$(RES)\c)"
 	@ gcc -c $(CFLAGS) $(IFLAGS) $< -o $@
+	@ echo  "$(BLUE)█$(RES)\c)"
 
-$(NAME): $(LIBOBJ) $(OBJECTS)
-	@ ar rcs $(NAME) $(OBJECTS) $(LIBOBJ)
-	@ echo  "$(RESET)$(YELLOW) : OK$(RESET)"
+$(NAME): $(OBJECTS)
+	@ ar rcs $(NAME) $(OBJECTS) 
+	@ echo  "$(RESET) $(YELLOW) : OK$(RESET)"
 
 clean:
 	@ /bin/rm -f $(OBJECTS)
-	@ make clean -C ./libft
 
 fclean: clean
 	@ /bin/rm -f $(NAME)
-	@ make fclean -C ./libft
 
 re: fclean all

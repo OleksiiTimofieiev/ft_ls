@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   different_2.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otimofie <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 21:04:06 by otimofie          #+#    #+#             */
-/*   Updated: 2018/02/28 21:04:07 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/10/25 17:25:02 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 void	ft_get_the_var_according_to_a_flag_ss(va_list var)
 {

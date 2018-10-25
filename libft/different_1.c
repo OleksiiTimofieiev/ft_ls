@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   different_1.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otimofie <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 20:31:25 by otimofie          #+#    #+#             */
-/*   Updated: 2018/02/28 20:31:27 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/10/25 17:25:06 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 int		ft_decimal_length_u(size_t nbr)
 {

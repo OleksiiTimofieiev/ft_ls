@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isint.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otimofie <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/21 16:31:45 by otimofie          #+#    #+#             */
-/*   Updated: 2018/04/21 16:46:14 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/10/25 17:24:34 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int		ft_isint(ssize_t nbr)
 {

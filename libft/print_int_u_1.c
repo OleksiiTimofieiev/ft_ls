@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   print_int_u_1.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otimofie <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 21:39:15 by otimofie          #+#    #+#             */
-/*   Updated: 2018/02/28 21:39:17 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/10/25 17:22:05 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 void	case_1_u(int *s, int *d, int *z, size_t g)
 {

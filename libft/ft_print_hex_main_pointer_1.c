@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_hex_main_pointer_1.c                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otimofie <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/01 14:10:54 by otimofie          #+#    #+#             */
-/*   Updated: 2018/03/01 14:10:55 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/10/25 17:23:49 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 void	case_1_pointer(int *s, int *d, int *z, size_t g)
 {

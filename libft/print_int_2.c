@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   print_int_2.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otimofie <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 18:35:27 by otimofie          #+#    #+#             */
-/*   Updated: 2018/02/28 18:35:29 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/10/25 17:22:13 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 void	print_case_1(int s, int z, ssize_t g)
 {

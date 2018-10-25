@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   parsing_3.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otimofie <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 15:11:01 by otimofie          #+#    #+#             */
-/*   Updated: 2018/02/28 15:11:02 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/10/25 17:22:35 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 void	ft_get_precision(va_list ap)
 {

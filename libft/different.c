@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   different.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otimofie <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 20:31:14 by otimofie          #+#    #+#             */
-/*   Updated: 2018/02/28 20:31:15 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/10/25 17:24:58 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 void	char_hendler_helper(void)
 {

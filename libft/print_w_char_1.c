@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   print_w_char_1.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otimofie <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 19:42:06 by otimofie          #+#    #+#             */
-/*   Updated: 2018/02/28 19:42:08 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/10/25 17:21:39 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 void	case_1_w_c(int *s, int *c)
 {

@@ -6,7 +6,7 @@
 #    By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/18 11:59:13 by otimofie          #+#    #+#              #
-#    Updated: 2018/10/25 14:14:09 by timofieiev       ###   ########.fr        #
+#    Updated: 2018/10/25 17:19:50 by timofieiev       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ SRCS        = $(addprefix srcs/, $(CORE))
 
 CFLAGS		= -Wall -Wextra -Werror
 OBJECTS 	= $(SRCS:.c=.o)
-LIB			= libft/libft.a
+LIB			= ./libft.a
 INC			= ./includes/ft_ls.h
 
 #colors
@@ -34,12 +34,12 @@ WHITE       = \033[01;38;05;15m
 all: $(NAME)
 
 $(NAME): $(LIB) $(OBJECTS) $(INC)
-	@ gcc $(CFLAGS) -I $(INC) $(SRCS) -L ./libft -lftprintf -o $(NAME)
+	@ gcc $(CFLAGS) -I $(INC) $(SRCS) -L ./libft -lft -o $(NAME)
 	@ echo  "$(YELLOW) : OK$(RESET)"
 
 $(LIB):
 	@ echo  "$(GREEN)Compiling: $(WHITE)libft$(RESET)$(YELLOW) : $(RESET)\c)"
-	@ make -C libft
+	@ make -C ./libft
 	@ echo  "$(GREEN)Compiling: $(WHITE)ft_ls$(RESET)$(YELLOW) : $(RESET)\c)"
 
 $(OBJECTS): %.o: %.c
@@ -47,11 +47,11 @@ $(OBJECTS): %.o: %.c
 	@ echo  "$(YELLOW)█$(RESET)\c)"
 
 clean:
-	@ make -C libft clean
+	@ make -C ./libft clean
 	@ rm -f $(OBJECTS)
 
 fclean: clean
-	@ make -C libft fclean
+	@ make -C ./libft fclean
 	@ rm -f $(NAME) $(LIB)
 
 re: fclean all

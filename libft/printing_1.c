@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   printing_1.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otimofie <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 15:20:00 by otimofie          #+#    #+#             */
-/*   Updated: 2018/02/28 15:20:02 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/10/25 17:21:26 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 int		ft_wide_strlen(wchar_t *s)
 {

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otimofie <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/01 15:03:19 by otimofie          #+#    #+#             */
-/*   Updated: 2018/03/01 15:03:20 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/10/25 17:23:25 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 void	get_current_n_chars(va_list ap)
 {

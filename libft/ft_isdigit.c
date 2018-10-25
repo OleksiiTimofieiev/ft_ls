@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otimofie <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/11 15:24:44 by otimofie          #+#    #+#             */
-/*   Updated: 2017/11/11 15:24:46 by otimofie         ###   ########.fr       */
+/*   Created: 2017/11/11 15:20:08 by otimofie          #+#    #+#             */
+/*   Updated: 2018/10/25 17:24:39 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isprint(int c)
+#include "libft.h"
+
+int		ft_isdigit(int c)
 {
-	if (c >= 32 && c <= 126)
+	if (c >= '0' && c <= '9')
 		return (1);
 	else
 		return (0);

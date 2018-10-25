@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   print_hex_big_2.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otimofie <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/01 12:42:15 by otimofie          #+#    #+#             */
-/*   Updated: 2018/03/01 12:42:17 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/10/25 17:22:26 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 void	print_case_1_hex(int z, int s, int d, size_t g)
 {

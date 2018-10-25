@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otimofie <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/27 21:50:51 by otimofie          #+#    #+#             */
-/*   Updated: 2018/02/27 21:50:52 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/10/25 17:22:31 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 int		ft_compare_chars_for_parser(char a, char b)
 {

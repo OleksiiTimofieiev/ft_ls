@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   print_octal_main_2.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otimofie <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/01 13:36:44 by otimofie          #+#    #+#             */
-/*   Updated: 2018/03/01 13:36:46 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/10/25 17:21:57 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 void	printer_octal_1(int s, int d, int z, size_t g)
 {
