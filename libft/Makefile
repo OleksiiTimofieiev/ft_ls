@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+         #
+#    By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/02/23 21:09:12 by otimofie          #+#    #+#              #
-#    Updated: 2018/04/21 16:31:09 by otimofie         ###   ########.fr        #
+#    Updated: 2018/10/25 12:36:00 by timofieiev       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -143,6 +143,7 @@ $(OBJECTS): %.o: %.c
 	@ echo  "$(BLUE)█$(RES)\c)"
 
 $(LIBOBJ): %.o: %.c
+	@ echo  "$(BLUE)█$(RES)\c)"
 	@ gcc -c $(CFLAGS) $(IFLAGS) $< -o $@
 
 $(NAME): $(LIBOBJ) $(OBJECTS)
