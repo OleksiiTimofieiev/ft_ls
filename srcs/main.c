@@ -27,7 +27,7 @@ t_temp *partition(t_temp *head, t_temp *end, t_temp **newHead, t_temp **newEnd)
     // which is updated in the newHead and newEnd variables 
     while (cur != pivot) 
     { 
-        if (strcmp(cur->d_name, pivot->d_name) < 0) 
+        if (ft_strcmp(cur->d_name, pivot->d_name) < 0) 
         { 
             // First t_temp that has a value less than the pivot - becomes 
             // the new head 
@@ -170,7 +170,7 @@ void listdir(const char *name, int indent /* flags */) // ? go from the first el
     // id of error
     // *S_IROTH
 
-    while ((entry = readdir(dir)) != NULL) 
+    while ((entry = readdir(dir)) != NULL) // uses stat here;
     {
             add(&list, entry->d_name, entry->d_type); 
     }
@@ -188,6 +188,7 @@ void listdir(const char *name, int indent /* flags */) // ? go from the first el
 
     // if (!(dir = opendir(name))) // name == path;
     //     return;
+    // t_temp *list = list;
 
     while(list)
     {
@@ -244,12 +245,16 @@ void listdir(const char *name, int indent /* flags */) // ? go from the first el
     //     print_list(list);
 }
 
+// trash handler;
+// leaks: list pointer withing the recursion work, list while printing;
+
 int main(int argc, char **argv) 
 {
 	if (argc == 1)
     	listdir(".", 0);
 	else
 		ft_printf(argv[1]);
+	// system("leaks -q ft_ls");
     return 0;
 }
 
