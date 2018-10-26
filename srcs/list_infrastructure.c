@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/10/26 19:28:03 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/10/26 19:29:40 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,5 +55,4 @@ void	print_list(t_temp *list)
 		ft_printf("%s\n", list->d_name);
 		list = list->next;
 	}
-	ft_printf("\n");
 }

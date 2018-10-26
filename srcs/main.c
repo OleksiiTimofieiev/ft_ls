@@ -31,7 +31,7 @@ void listdir(const char *name/*, int indent  flags */) // ? go from the first el
 				continue ;
 			}
 			snprintf(path, sizeof(path), "%s/%s", name, t_list->d_name);
-			ft_printf("%s\n", path);
+			ft_printf("\n%s\n", path);
 			listdir(path);
 		}
 		t_list = t_list->next;
@@ -40,8 +40,7 @@ void listdir(const char *name/*, int indent  flags */) // ? go from the first el
 	delete_list(&list);
 }
 
-// trash handler;
-// leaks: list pointer withing the recursion work, list while printing;
+// separate trash handler;
 // manage errors;
 // make it in a cycle for each command line argument;
 // norminetter leaks;
