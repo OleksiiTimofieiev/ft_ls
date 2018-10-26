@@ -24,7 +24,6 @@ void listdir(const char *name/*, int indent  flags */) // ? go from the first el
 	while(t_list)
 	{
 		if (t_list->d_type == DT_DIR)
-		{
 			if (ft_strcmp(t_list->d_name, ".") == 0 || ft_strcmp(t_list->d_name, "..") == 0)
 			{
 				t_list = t_list->next;
@@ -33,7 +32,6 @@ void listdir(const char *name/*, int indent  flags */) // ? go from the first el
 			snprintf(path, sizeof(path), "%s/%s", name, t_list->d_name);
 			ft_printf("%s\n", path);
 			listdir(path);
-		}
 		t_list = t_list->next;
 	}
 	closedir(dir);
