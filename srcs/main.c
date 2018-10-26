@@ -44,6 +44,7 @@ void listdir(const char *name/*, int indent  flags */) // ? go from the first el
 // leaks: list pointer withing the recursion work, list while printing;
 // manage errors;
 // make it in a cycle for each command line argument;
+// norminetter leaks;
 
 int main(int argc, char **argv)
 {
