@@ -4,6 +4,7 @@
 
 void listdir(const char *name/*, int indent  flags */) // ? go from the first element of the list;
 {
+	// one structure;
 	DIR *dir;
 	struct dirent *entry;
 	t_temp *list;
@@ -40,8 +41,6 @@ void listdir(const char *name/*, int indent  flags */) // ? go from the first el
 	{
 		if (t_list->d_type == DT_DIR)
 		{
-			
-
 			if (ft_strcmp(t_list->d_name, ".") == 0 || ft_strcmp(t_list->d_name, "..") == 0)
 			{
 				t_list = t_list->next;
