@@ -6,7 +6,7 @@
 #    By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/18 11:59:13 by otimofie          #+#    #+#              #
-#    Updated: 2018/10/25 17:19:50 by timofieiev       ###   ########.fr        #
+#    Updated: 2018/10/26 13:04:44 by timofieiev       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@ NAME		= ft_ls
 
 CORE		= main.c \
 			  quick_sort.c \
+			  list_infrastructure.c \
 
 SRCS        = $(addprefix srcs/, $(CORE))
 

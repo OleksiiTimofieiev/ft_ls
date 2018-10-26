@@ -6,7 +6,7 @@
 /*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/20 15:18:36 by otimofie          #+#    #+#             */
-/*   Updated: 2018/10/25 17:20:26 by timofieiev       ###   ########.fr       */
+/*   Updated: 2018/10/26 13:03:32 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,8 @@ typedef	struct		s_qsort
 }					t_qsort;
 
 void	q_sort(t_temp **headRef);
+void	add(t_temp** head_ref, char *new_d_name, unsigned char d_type);
+void    print_list(t_temp *list);
+void	deleteList(t_temp** head_ref);
 
 #endif
