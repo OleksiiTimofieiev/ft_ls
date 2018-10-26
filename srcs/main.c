@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-void listdir(const char *name, int indent /* flags */) // ? go from the first element of the list;
+void listdir(const char *name/*, int indent  flags */) // ? go from the first element of the list;
 {
 	DIR *dir;
 
@@ -58,7 +58,7 @@ void listdir(const char *name, int indent /* flags */) // ? go from the first el
 
 			ft_printf("%s\n", path);
 
-			listdir(path, indent + 2);
+			listdir(path);
 		}
 		t_list = t_list->next;
 	}
@@ -101,14 +101,14 @@ void listdir(const char *name, int indent /* flags */) // ? go from the first el
 
 // trash handler;
 // leaks: list pointer withing the recursion work, list while printing;
+// manage errors;
 
-int main(int argc, char **argv) 
+int main(int argc, char **argv)
 {
 	if (argc == 1)
-		listdir(".", 0);
+		listdir(".");
 	else
-		ft_printf(argv[1]);
-	// system("leaks -q ft_ls");
+		listdir(argv[1]);
 	system("leaks -q ft_ls");
 	return 0;
 }
