@@ -102,14 +102,14 @@ void listdir(const char *name/*, int indent  flags */) // ? go from the first el
 // trash handler;
 // leaks: list pointer withing the recursion work, list while printing;
 // manage errors;
+// make it in a cycle for each command line argument;
 
 int main(int argc, char **argv)
 {
-	if (argc == 1)
-		listdir(".");
-	else
-		listdir(argv[1]);
+	(argc == 1) ? listdir(".") : listdir(argv[1]); 
+
 	system("leaks -q ft_ls");
+	
 	return 0;
 }
 
