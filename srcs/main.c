@@ -37,7 +37,7 @@ void listdir(const char *name/*, int indent  flags */) // ? go from the first el
 		t_list = t_list->next;
 	}
 	closedir(dir);
-	deleteList(&list);
+	delete_list(&list);
 }
 
 // trash handler;
