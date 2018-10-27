@@ -24,6 +24,7 @@ void	listdir(const char *name/*, int indent  flags */) // ? go from the first el
 	t_temp *t_list;
 	char path[1024];
 	char *path2 = ft_strdup(name);
+	// handle if no '/'
 
 	ft_printf("initial path -> %s\n", path2);
 	
@@ -35,7 +36,6 @@ void	listdir(const char *name/*, int indent  flags */) // ? go from the first el
 		char *buffer = ft_strjoin(path2, entry->d_name);
 
 		add(&list, entry->d_name, entry->d_type, get_stats(buffer));
-		// handle if no '/'
 		free(buffer);
 	}
 	q_sort(&list);
