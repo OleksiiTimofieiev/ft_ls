@@ -76,7 +76,7 @@ void	listdir(const char *name/*, int indent  flags */) // ? go from the first el
 			}
 			// remaster snprintf;
 			snprintf(path, sizeof(path), "%s/%s", name, t_list->d_name);
-			ft_printf("\n%s\n", path);
+			ft_printf("\n%s:\n", path);
 			listdir(path);
 		}
 		t_list = t_list->next;
