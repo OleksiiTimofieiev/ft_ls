@@ -40,7 +40,7 @@ void	listdir(const char *name/*, int indent  flags */) // ? go from the first el
 
 	if (!(dir = opendir(name)))
 		return ;
-	list = NULL;
+	list = NULL; // to more general func
 	while ((entry = readdir(dir)) != NULL)
 	{
 		buffer = ft_strjoin(path2, entry->d_name);
@@ -66,10 +66,7 @@ void	listdir(const char *name/*, int indent  flags */) // ? go from the first el
 		}
 		t_list = t_list->next;
 	}
-	// dump cleaner func;
-
 	ft_dump_cleaner(&list, &path2, &dir);
-
 }
 
 // separate trash handler;
