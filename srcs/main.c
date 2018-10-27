@@ -2,6 +2,8 @@
 
 #include <stdio.h>
 
+// global variable for the flags;
+
 t_data	get_stats(char *buffer)
 {
 	t_data	stats;
