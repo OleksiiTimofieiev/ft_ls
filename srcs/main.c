@@ -29,7 +29,7 @@ void	listdir(const char *name/*, int indent  flags */) // ? go from the first el
 	// handle if no '/'
 	// handle size of printing;
 
-		ft_printf("initial path -> %s\n", path2);
+	ft_printf("initial path -> %s\n", path2);
 
 	if (!(dir = opendir(name)))
 		return ;
@@ -42,7 +42,6 @@ void	listdir(const char *name/*, int indent  flags */) // ? go from the first el
 	}
 	q_sort(&list);
 	print_list(list);
-	free(entry);
 	t_list = list;
 	while(t_list)
 	{
