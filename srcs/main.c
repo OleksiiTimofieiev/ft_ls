@@ -51,11 +51,6 @@ void	listdir(const char *name/*, int indent  flags */) // ? go from the first el
 	char *buffer;
 
 	add_slash(&path2);
-
-	// handle size of printing;
-
-	ft_printf("initial path -> %s\n", path2); // add / if no slash in the end;
-
 	if (!(dir = opendir(name)))
 		return ;
 	list = NULL; // to more general func
@@ -66,7 +61,7 @@ void	listdir(const char *name/*, int indent  flags */) // ? go from the first el
 		free(buffer);
 	}
 	q_sort(&list);	// ? q_sort in print list;
-	print_list(list); // ? q_sort in print list;
+	print_list(list); // ? q_sort in print list;	// handle size of printing;
 	t_list = list;
 	while(t_list)
 	{
@@ -87,9 +82,9 @@ void	listdir(const char *name/*, int indent  flags */) // ? go from the first el
 	ft_dump_cleaner(&list, &path2, &dir);
 }
 
-// manage errors;
 // make it in a cycle for each command line argument;
-// norminetter and leaks;
+// norminette and leaks;
+// manage errors;
 // validator
 
 int		main(int argc, char **argv)
