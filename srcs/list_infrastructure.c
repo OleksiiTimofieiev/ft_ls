@@ -6,13 +6,13 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/10/27 16:03:45 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/10/27 16:07:49 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_ls.h"
 
-long long	get_total_blocks(t_temp *list)
+static long long	get_total_blocks(t_temp *list)
 {
 	long long sum = 0;
 
