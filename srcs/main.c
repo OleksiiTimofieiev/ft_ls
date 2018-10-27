@@ -26,7 +26,7 @@ void	listdir(const char *name/*, int indent  flags */) // ? go from the first el
 	char *path2 = ft_strdup(name);
 	char *buffer;
 
-	// handle if no '/'
+	// handle if no '/' in the end of the path 2;
 	// handle size of printing;
 
 	ft_printf("initial path -> %s\n", path2);
@@ -58,6 +58,7 @@ void	listdir(const char *name/*, int indent  flags */) // ? go from the first el
 		}
 		t_list = t_list->next;
 	}
+	// dump cleaner func;
 	closedir(dir);
 	delete_list(&list);
 	free(path2);
