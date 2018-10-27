@@ -42,6 +42,8 @@ void	add_slash(char ** path2)
 
 }
 
+
+// struct options;
 void	listdir(const char *name/*, int indent  flags */) // ? go from the first element of the list;
 {
 	DIR *dir;
