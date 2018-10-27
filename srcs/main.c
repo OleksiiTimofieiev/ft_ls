@@ -16,6 +16,13 @@ t_data	get_stats(char *buffer)
 	return (stats);
 }
 
+void	ft_dump_cleaner(t_temp **list, char **path2, DIR **dir)
+{
+	delete_list(list);
+	closedir(*dir);
+	free(*path2);
+}
+
 void	listdir(const char *name/*, int indent  flags */) // ? go from the first element of the list;
 {
 	DIR *dir;
@@ -52,6 +59,7 @@ void	listdir(const char *name/*, int indent  flags */) // ? go from the first el
 				t_list = t_list->next;
 				continue ;
 			}
+			// remaster snprintf;
 			snprintf(path, sizeof(path), "%s/%s", name, t_list->d_name);
 			ft_printf("\n%s\n", path);
 			listdir(path);
@@ -59,9 +67,9 @@ void	listdir(const char *name/*, int indent  flags */) // ? go from the first el
 		t_list = t_list->next;
 	}
 	// dump cleaner func;
-	closedir(dir);
-	delete_list(&list);
-	free(path2);
+
+	ft_dump_cleaner(&list, &path2, &dir);
+
 }
 
 // separate trash handler;
