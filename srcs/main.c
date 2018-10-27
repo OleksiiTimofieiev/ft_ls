@@ -23,6 +23,23 @@ void	ft_dump_cleaner(t_temp **list, char **path2, DIR **dir)
 	free(*path2);
 }
 
+void	add_slash(char ** path2)
+{
+	// int i = 0;
+	// int flag = 0;
+	size_t len = ft_strlen(*path2);
+
+	if ((*path2)[len - 1] != '/')
+	{
+		ft_putstr("->>> we do not have a slash\n");
+		char *tmp = ft_strdup(*path2);
+		free(*path2);
+		*path2 = ft_strjoin(tmp, "/");
+		free(tmp);
+	}
+
+}
+
 void	listdir(const char *name/*, int indent  flags */) // ? go from the first element of the list;
 {
 	DIR *dir;
@@ -30,13 +47,14 @@ void	listdir(const char *name/*, int indent  flags */) // ? go from the first el
 	t_temp *list;
 	t_temp *t_list;
 	char path[1024];
-	char *path2 = ft_strdup(name);
+	char *path2 = ft_strdup(name); // make in ono init func
 	char *buffer;
 
-	// handle if no '/' in the end of the path 2;
+	add_slash(&path2);
+
 	// handle size of printing;
 
-	ft_printf("initial path -> %s\n", path2);
+	ft_printf("initial path -> %s\n", path2); // add / if no slash in the end;
 
 	if (!(dir = opendir(name)))
 		return ;
@@ -47,8 +65,8 @@ void	listdir(const char *name/*, int indent  flags */) // ? go from the first el
 		add(&list, entry->d_name, entry->d_type, get_stats(buffer));
 		free(buffer);
 	}
-	q_sort(&list);
-	print_list(list);
+	q_sort(&list);	// ? q_sort in print list;
+	print_list(list); // ? q_sort in print list;
 	t_list = list;
 	while(t_list)
 	{
@@ -69,10 +87,10 @@ void	listdir(const char *name/*, int indent  flags */) // ? go from the first el
 	ft_dump_cleaner(&list, &path2, &dir);
 }
 
-// separate trash handler;
 // manage errors;
 // make it in a cycle for each command line argument;
-// norminetter leaks;
+// norminetter and leaks;
+// validator
 
 int		main(int argc, char **argv)
 {
