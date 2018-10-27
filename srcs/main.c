@@ -24,17 +24,19 @@ void	listdir(const char *name/*, int indent  flags */) // ? go from the first el
 	t_temp *t_list;
 	char path[1024];
 	char *path2 = ft_strdup(name);
-	// handle if no '/'
+	char *buffer;
 
-	ft_printf("initial path -> %s\n", path2);
-	
+	// handle if no '/'
+	// handle size of printing;
+
+		ft_printf("initial path -> %s\n", path2);
+
 	if (!(dir = opendir(name)))
 		return ;
 	list = NULL;
 	while ((entry = readdir(dir)) != NULL)
 	{
-		char *buffer = ft_strjoin(path2, entry->d_name);
-
+		buffer = ft_strjoin(path2, entry->d_name);
 		add(&list, entry->d_name, entry->d_type, get_stats(buffer));
 		free(buffer);
 	}
