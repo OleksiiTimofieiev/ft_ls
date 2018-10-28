@@ -18,43 +18,18 @@ t_data	get_stats(char *buffer)
 	return (stats);
 }
 
-void	ft_dump_cleaner(t_temp **list, char **path2, DIR **dir)
-{
-	delete_list(list);
-	closedir(*dir);
-	free(*path2);
-}
-
-void	add_slash(char ** path2)
-{
-	// int i = 0;
-	// int flag = 0;
-	size_t len = ft_strlen(*path2);
-
-	if ((*path2)[len - 1] != '/')
-	{
-		ft_putstr("->>> we do not have a slash\n");
-		char *tmp = ft_strdup(*path2);
-		free(*path2);
-		*path2 = ft_strjoin(tmp, "/");
-		free(tmp);
-	}
-
-}
-
-
 // struct options;
-void	listdir(const char *name/*, int indent  flags */) // ? go from the first element of the list;
+void	listdir(char *name/*, int indent  flags */) // ? go from the first element of the list;
 {
 	DIR *dir;
 	struct dirent *entry;
 	t_temp *list;
 	t_temp *t_list;
 	char path[1024];
-	char *path2 = ft_strdup(name); // make in ono init func
+	char *path2; // make in ono init func
 	char *buffer;
 
-	add_slash(&path2);
+	init_path2(&path2, name);
 	if (!(dir = opendir(name)))
 		return ;
 	list = NULL; // to more general func

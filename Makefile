@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+         #
+#    By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/18 11:59:13 by otimofie          #+#    #+#              #
-#    Updated: 2018/10/26 13:04:44 by timofieiev       ###   ########.fr        #
+#    Updated: 2018/10/28 11:07:17 by otimofie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ NAME		= ft_ls
 CORE		= main.c \
 			  quick_sort.c \
 			  list_infrastructure.c \
+			  listdir_infrastructure.c \
 
 SRCS        = $(addprefix srcs/, $(CORE))
 
