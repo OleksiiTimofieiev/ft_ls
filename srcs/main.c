@@ -50,7 +50,8 @@ void	listdir(char *name/*, int indent  flags */) // ? go from the first element 
 // make it in a cycle for each command line argument;
 // norminette and leaks;
 // manage errors;
-// validator
+// validator;
+// quantity of spaces;
 
 int		main(int argc, char **argv)
 {
