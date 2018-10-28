@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/20 15:18:36 by otimofie          #+#    #+#             */
-/*   Updated: 2018/10/28 11:09:07 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/10/28 12:12:50 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <dirent.h>
 # include <sys/types.h>
 # include <sys/stat.h>
+# include <sys/xattr.h>
 
 typedef	struct		s_temp
 {
@@ -28,12 +29,14 @@ typedef	struct		s_temp
 
 	long long		bytes_data;
 	long long		blocks_data;
+	char			*type_and_permissions_data;
 }					t_temp;
 
 typedef	struct		s_data
 {
 	long long		bytes_buf;
 	long long		blocks_buf;
+	char			*type_and_permissions_buf;
 
 }					t_data;
 
@@ -48,10 +51,11 @@ typedef	struct		s_qsort
 
 void				q_sort(t_temp **head_ref);
 void				add(t_temp **head_ref, char *new_d_name,
-					unsigned char d_type, t_data/*, char *path*/);
+					unsigned char d_type, t_data data/*, char *path*/);
 void				print_list(t_temp *list);
 void				delete_list(t_temp **head_ref);
 void				init_path2(char **path2, char *name);
 void				ft_dump_cleaner(t_temp **list, char **path2, DIR **dir);
+t_data				get_stats(char *buffer);
 
 #endif

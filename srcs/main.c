@@ -4,20 +4,6 @@
 
 // global variable for the flags;
 
-t_data	get_stats(char *buffer)
-{
-	t_data	stats;
-
-	struct stat buf;
-
-	stat(buffer, &buf);
-
-	stats.blocks_buf = buf.st_blocks;
-	stats.bytes_buf = buf.st_size;
-
-	return (stats);
-}
-
 // struct options;
 void	listdir(char *name/*, int indent  flags */) // ? go from the first element of the list;
 {
