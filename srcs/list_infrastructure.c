@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/03 15:39:22 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/03 16:04:04 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,32 +42,47 @@ void	delete_list(t_temp **head_ref)
 
 void add(t_temp **head_ref, char *new_d_name, unsigned char d_type, t_data var/*, char *path*/)
 {
-	t_temp *new_t_temp;
+	t_temp *new;
 	t_temp *last;
 
-	new_t_temp = (t_temp*)malloc(sizeof(t_temp));
+	new = (t_temp*)malloc(sizeof(t_temp));
 	last = *head_ref;
 	
-	new_t_temp->blocks_data = var.blocks_buf;
-	new_t_temp->bytes_data = var.bytes_buf;
-	new_t_temp->d_name = ft_strdup(new_d_name);
-	ft_strcpy(new_t_temp->type_and_permissions_data, var.type_and_permissions_buf);
-	new_t_temp->d_type = d_type;
-	new_t_temp->hard_links_data = var.hard_links_buf;
-	new_t_temp->owner_name_data = var.owner_name_buf;
-	new_t_temp->group_name_data = var.group_name_buf;
+	new->blocks_data = var.blocks_buf;
+	new->bytes_data = var.bytes_buf;
+	new->d_name = ft_strdup(new_d_name);
+	ft_strcpy(new->type_and_permissions_data, var.type_and_permissions_buf);
+	new->d_type = d_type;
+	new->hard_links_data = var.hard_links_buf;
+	new->owner_name_data = var.owner_name_buf;
+	new->group_name_data = var.group_name_buf;
+	new->size_data = var.size_buf;
+	new->time_data = var.time_buf;
 
-	new_t_temp->next = NULL;
+
+	new->next = NULL;
 	
 	if (*head_ref == NULL)
 	{
-		*head_ref = new_t_temp;
+		*head_ref = new;
 		return ;
 	}
 	while (last->next != NULL)
 		last = last->next;
-	last->next = new_t_temp;
+	last->next = new;
 	return ;
+}
+
+void	print_date(char *time_str)
+{
+	int i;
+
+	i = 4;
+	while (i < 16)
+	{
+		ft_printf("%c", time_str[i++]);
+	}
+	ft_printf(" ");
 }
 
 void	print_list(t_temp *list)
@@ -78,8 +93,14 @@ void	print_list(t_temp *list)
 	ft_printf("total %lld\n", total);
 	while (list)
 	{
-		ft_printf("%s %d %s %sname-> %s, bytes-> %lld, blocks-> %lld\n", list->type_and_permissions_data, list->hard_links_data, 
-		list->owner_name_data, list->group_name_data, list->d_name, list->bytes_data, list->blocks_data);
+		ft_printf("%s ", list->type_and_permissions_data);
+		ft_printf("%d ", list->hard_links_data);
+		ft_printf("%s ", list->owner_name_data);
+		ft_printf("%s ", list->group_name_data);
+		ft_printf("%d ", list->size_data);
+		print_date(list->time_data);
+			ft_printf("%s \n", list->d_name);
+
 		list = list->next;
 	}
 }

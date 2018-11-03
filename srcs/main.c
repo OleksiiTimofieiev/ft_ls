@@ -17,7 +17,15 @@ void	listdir(char *name/*, int indent  flags */) // ? go from the first element 
 
 	init_path2(&path2, name);
 	if (!(dir = opendir(name)))
+	{
+		// free(path2);
+		// free(buffer);
+		// free(dir);
+
+		// leak with no such file in the directory;
+
 		return ;
+	}
 	list = NULL; // to more general func
 	while ((entry = readdir(dir)) != NULL)
 	{

@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/28 13:38:08 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/03 15:39:10 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/03 16:24:06 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,11 +64,12 @@ t_data	get_stats(char *buffer_inner)
 	get_xattr(stats.type_and_permissions_buf, buffer_inner);
 	stats.type_and_permissions_buf[11] = '\0';
 	stats.hard_links_buf = buf.st_nlink;
-	// ft_printf("%10s ", getpwuid(buf.st_uid)->pw_name);
 
+	//TODO: clear it up with stack variables:
 	stats.owner_name_buf = getpwuid(buf.st_uid)->pw_name;
 	stats.group_name_buf = getgrgid(buf.st_gid)->gr_name;
+	stats.size_buf = buf.st_size;
+	stats.time_buf = ctime(&buf.st_ctime);
 
-	
 	return (stats);
 }
