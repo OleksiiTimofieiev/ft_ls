@@ -11,7 +11,7 @@ void	listdir(char *name/*, int indent  flags */) // ? go from the first element 
 	struct dirent *entry;
 	t_temp *list;
 	t_temp *t_list;
-	char path[1024];
+	// char path[1024];
 	char *path2; // make in ono init func
 	char *buffer;
 
@@ -36,22 +36,22 @@ void	listdir(char *name/*, int indent  flags */) // ? go from the first element 
 	q_sort(&list);	// ? q_sort in print list;
 	print_list(list); // ? q_sort in print list;	// handle size of printing;
 	t_list = list;
-	while(t_list)
-	{
-		if (t_list->d_type == DT_DIR)
-		{
-			if (ft_strcmp(t_list->d_name, ".") == 0 || ft_strcmp(t_list->d_name, "..") == 0)
-			{
-				t_list = t_list->next;
-				continue ;
-			}
-			// remaster snprintf;
-			snprintf(path, sizeof(path), "%s/%s", name, t_list->d_name);
-			ft_printf("\n%s:\n", path); 
-			listdir(path);
-		}
-		t_list = t_list->next;
-	}
+	// while(t_list)
+	// {
+	// 	if (t_list->d_type == DT_DIR)
+	// 	{
+	// 		if (ft_strcmp(t_list->d_name, ".") == 0 || ft_strcmp(t_list->d_name, "..") == 0)
+	// 		{
+	// 			t_list = t_list->next;
+	// 			continue ;
+	// 		}
+	// 		// remaster snprintf;
+	// 		snprintf(path, sizeof(path), "%s/%s", name, t_list->d_name);
+	// 		ft_printf("\n%s:\n", path); 
+	// 		listdir(path);
+	// 	}
+	// 	t_list = t_list->next;
+	// }
 	ft_dump_cleaner(&list, &path2, &dir);
 }
 

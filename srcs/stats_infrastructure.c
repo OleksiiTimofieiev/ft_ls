@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/28 13:38:08 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/03 17:02:34 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/03 17:14:31 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ t_data	get_stats(char *buffer_inner)
 	struct stat	buf;
 	char *buf1;
 
-	stat(buffer_inner, &buf);
+	stat(buffer_inner, &buf); //TODO: use lstat;
 	stats.blocks_buf = buf.st_blocks;
 	stats.bytes_buf = buf.st_size;
 	get_file_type(stats.type_and_permissions_buf, buf.st_mode);
