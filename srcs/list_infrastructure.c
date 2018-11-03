@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/10/28 13:43:15 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/03 15:08:22 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ void add(t_temp **head_ref, char *new_d_name, unsigned char d_type, t_data var/*
 	new_t_temp->d_name = ft_strdup(new_d_name);
 	ft_strcpy(new_t_temp->type_and_permissions_data, var.type_and_permissions_buf);
 	new_t_temp->d_type = d_type;
+	new_t_temp->hard_links_data = var.hard_links_buf;
 	new_t_temp->next = NULL;
 	
 	if (*head_ref == NULL)
@@ -74,7 +75,7 @@ void	print_list(t_temp *list)
 	ft_printf("total %lld\n", total);
 	while (list)
 	{
-		ft_printf("%s, name-> %s, bytes-> %lld, blocks-> %lld\n", list->type_and_permissions_data ,list->d_name, list->bytes_data, list->blocks_data);
+		ft_printf("%s %d name-> %s, bytes-> %lld, blocks-> %lld\n", list->type_and_permissions_data,list->hard_links_data, list->d_name, list->bytes_data, list->blocks_data);
 		list = list->next;
 	}
 }

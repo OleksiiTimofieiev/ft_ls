@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stats_infrastructure.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otimofie <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/28 13:38:08 by otimofie          #+#    #+#             */
-/*   Updated: 2018/10/28 13:38:09 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/03 14:59:27 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,6 @@ t_data	get_stats(char *buffer_inner)
 	get_permissions(stats.type_and_permissions_buf, buf.st_mode);
 	get_xattr(stats.type_and_permissions_buf, buffer_inner);
 	stats.type_and_permissions_buf[11] = '\0';
+	stats.hard_links_buf = buf.st_nlink;
 	return (stats);
 }
