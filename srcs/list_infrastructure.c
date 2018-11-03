@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/03 16:04:04 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/03 16:58:26 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,18 @@ void	delete_list(t_temp **head_ref)
 		current = next;
 	}
 }
+static void	str_copy(char *dst, char *src)
+{
+	int i;
+
+	i = 0;
+	while (i < 20)
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[19] = '\0';
+}
 
 void add(t_temp **head_ref, char *new_d_name, unsigned char d_type, t_data var/*, char *path*/)
 {
@@ -57,8 +69,7 @@ void add(t_temp **head_ref, char *new_d_name, unsigned char d_type, t_data var/*
 	new->owner_name_data = var.owner_name_buf;
 	new->group_name_data = var.group_name_buf;
 	new->size_data = var.size_buf;
-	new->time_data = var.time_buf;
-
+	str_copy(new->time_data, var.time_buf);
 
 	new->next = NULL;
 	
@@ -99,7 +110,7 @@ void	print_list(t_temp *list)
 		ft_printf("%s ", list->group_name_data);
 		ft_printf("%d ", list->size_data);
 		print_date(list->time_data);
-			ft_printf("%s \n", list->d_name);
+		ft_printf("%s \n", list->d_name);
 
 		list = list->next;
 	}

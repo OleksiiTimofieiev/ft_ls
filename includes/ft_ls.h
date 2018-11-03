@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/20 15:18:36 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/03 15:54:48 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/03 16:58:33 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ typedef	struct		s_temp
 	char			*owner_name_data;
 	char			*group_name_data;
 	long long int	size_data;
-	char 			*time_data;
+	char 			time_data[20];
 
 }					t_temp;
 
@@ -50,7 +50,7 @@ typedef	struct		s_data
 	char			*owner_name_buf; 
 	char			*group_name_buf;
 	long long int	size_buf;
-	char			*time_buf;
+	char			time_buf[20];
 
 }					t_data;
 

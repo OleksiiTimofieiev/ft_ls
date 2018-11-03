@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/28 13:38:08 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/03 16:24:06 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/03 16:58:40 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,20 @@ void	get_xattr(char *type_and_permissions_buf, char *buffer_inner)
 		l, 1024, XATTR_SHOWCOMPRESSION)) ? '@' : ' ';
 }
 
+static void	str_copy(char *dst, char *src)
+{
+	int i;
+
+	i = 0;
+	while (i < 20)
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[19] = '\0';
+}
+
+
 t_data	get_stats(char *buffer_inner)
 {
 	t_data		stats;
@@ -69,7 +83,9 @@ t_data	get_stats(char *buffer_inner)
 	stats.owner_name_buf = getpwuid(buf.st_uid)->pw_name;
 	stats.group_name_buf = getgrgid(buf.st_gid)->gr_name;
 	stats.size_buf = buf.st_size;
-	stats.time_buf = ctime(&buf.st_ctime);
+
+	char *buf1 = ctime(&buf.st_mtime);;
+	str_copy(stats.time_buf, buf1);
 
 	return (stats);
 }
