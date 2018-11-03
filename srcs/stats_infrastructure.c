@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/28 13:38:08 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/03 14:59:27 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/03 15:12:30 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,6 @@ t_data	get_stats(char *buffer_inner)
 	get_xattr(stats.type_and_permissions_buf, buffer_inner);
 	stats.type_and_permissions_buf[11] = '\0';
 	stats.hard_links_buf = buf.st_nlink;
+
 	return (stats);
 }
