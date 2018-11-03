@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/03 17:01:23 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/03 17:06:45 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ void	print_date(char *time_str)
 	ft_printf(" ");
 }
 
-void	print_list(t_temp *list)
+void	print_list(t_temp *list) //TODO: modify with *;
 {
 	long long total = 0;
 
@@ -102,7 +102,7 @@ void	print_list(t_temp *list)
 	while (list)
 	{
 		ft_printf("%s ", list->type_and_permissions_data);
-		ft_printf("%d ", list->hard_links_data);
+		ft_printf("%*d ", 2, list->hard_links_data);
 		ft_printf("%s ", list->owner_name_data);
 		ft_printf("%s ", list->group_name_data);
 		ft_printf("%d ", list->size_data);
