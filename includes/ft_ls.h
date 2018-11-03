@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/20 15:18:36 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/03 15:13:16 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/03 15:38:24 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@
 # include <sys/xattr.h>
 # include <pwd.h>
 # include <uuid/uuid.h>
+# 	include <grp.h>
+
 
 typedef	struct		s_temp
 {
@@ -34,6 +36,8 @@ typedef	struct		s_temp
 	char			type_and_permissions_data[12];
 	unsigned int	hard_links_data;
 	char			*owner_name_data;
+	char			*group_name_data;
+
 }					t_temp;
 
 typedef	struct		s_data
@@ -43,6 +47,7 @@ typedef	struct		s_data
 	char			type_and_permissions_buf[12];
 	unsigned int	hard_links_buf;
 	char			*owner_name_buf; 
+	char			*group_name_buf;
 }					t_data;
 
 typedef	struct		s_qsort
@@ -56,7 +61,7 @@ typedef	struct		s_qsort
 
 void				q_sort(t_temp **head_ref);
 void				add(t_temp **head_ref, char *new_d_name,
-					unsigned char d_type, t_data data/*, char *path*/);
+					unsigned char d_type, t_data var/*, char *path*/);
 void				print_list(t_temp *list);
 void				delete_list(t_temp **head_ref);
 void				init_path2(char **path2, char *name);
