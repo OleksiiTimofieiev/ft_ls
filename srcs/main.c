@@ -6,6 +6,7 @@
 //  - ls with link and a directory; dev vs dev/
 //  - output format;
 // work with errors from Liubomir
+// think over about the all flags
 
 // flags = // struct options;
 
