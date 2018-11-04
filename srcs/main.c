@@ -23,6 +23,7 @@ void	listdir(char *name/*, int indent  flags */) // ? go from the first element 
 		// free(dir);
 
 		// leak with no such file in the directory;
+		ft_printf("error->>>>>>>>>>>>>>\n");
 
 		return ;
 	}
