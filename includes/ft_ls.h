@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/20 15:18:36 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/04 20:49:57 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/04 21:17:38 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ typedef	struct		s_qsort
 
 void				q_sort(t_temp **head_ref);
 void				add(t_temp **head_ref, char *new_d_name,
-					unsigned char d_type, t_data var/*, char *path*/);
+					unsigned char d_type, t_data var);
 void				print_list(t_temp *list);
 void				delete_list(t_temp **head_ref);
 void				init_path2(char **path2, char *name);

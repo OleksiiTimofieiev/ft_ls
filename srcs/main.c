@@ -43,7 +43,7 @@
 // b and c file types
 // link -> dir, hindu has the solution
 
-//TODO: modify with * according to the biggest length;
+// modify with * according to the biggest length;
 
 // 'p' instead of 'f' in /etc/
 
