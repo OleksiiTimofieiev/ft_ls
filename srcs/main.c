@@ -45,6 +45,8 @@
 
 //TODO: modify with * according to the biggest length;
 
+// 'p' instead of 'f' in /etc/
+
 void	listdir(char *name/*, int indent  flags */) // ? go from the first element of the list;
 {
 	DIR *dir;
