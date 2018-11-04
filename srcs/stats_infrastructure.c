@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/28 13:38:08 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/04 15:50:01 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/04 15:56:08 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,19 +51,6 @@ void	get_xattr(char *type_and_permissions_buf, char *buffer_inner)
 		l, 2024, XATTR_NOFOLLOW) > 0) ? '@' : ' ';
 }
 
-static void	str_copy(char *dst, char *src)
-{
-	int i;
-
-	i = 0;
-	while (i < 20)
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	dst[19] = '\0';
-}
-
 t_data	get_stats(char *buffer_inner)
 {
 	t_data		stats;
@@ -85,12 +72,10 @@ t_data	get_stats(char *buffer_inner)
 	str_copy(stats.group_name_buf, buf1);
 	buf1 = ctime(&buf.st_mtime);;
 	str_copy(stats.time_buf, buf1);
-
 	if ((buf.st_mode & S_IFMT) == S_IFCHR) // major / minor // TODO: get all clear;
 	{
 		ft_printf("\nMAJOR-> %d ", major(buf.st_rdev));
 		ft_printf("MINOR -> %d\n", minor(buf.st_rdev));
 	}
-
 	return (stats);
 }

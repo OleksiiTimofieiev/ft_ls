@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/20 15:18:36 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/04 13:05:21 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/04 15:57:09 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,5 +71,6 @@ void				delete_list(t_temp **head_ref);
 void				init_path2(char **path2, char *name);
 void				ft_dump_cleaner(t_temp **list, char **path2, DIR **dir);
 t_data				get_stats(char *buffer);
+void				str_copy(char *dst, char *src);
 
 #endif

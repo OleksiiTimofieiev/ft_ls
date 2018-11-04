@@ -2,6 +2,10 @@
 
 #include <stdio.h> // for snprintf;
 
+//  - major / minor in the necessary format;
+//  - ls with link and a directory; dev vs dev/
+//  - output format;
+
 // flags = // struct options;
 
 // chmod 000 -> no rights
