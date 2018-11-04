@@ -16,6 +16,7 @@
 // think over about the all flags
 // redo snprintf;
 // dif print modef for the different file types;
+// hex in dev;
 
 // flags = // struct options;
 
@@ -65,6 +66,7 @@ void	listdir(char *name/*, int indent  flags */) // ? go from the first element 
 
 		// leak with no such file in the directory;
 		ft_printf("error->>>>>>>>>>>>>>\n");
+		perror("open");
 
 		return ;
 	}
@@ -106,9 +108,7 @@ void	listdir(char *name/*, int indent  flags */) // ? go from the first element 
 int		main(int argc, char **argv)
 {
 	(argc == 1) ? listdir(".") : listdir(argv[1]); 
-
 	system("leaks -q ft_ls");
-	
 	return (0);
 }
 
