@@ -7,6 +7,7 @@
 //  - output format;
 // work with errors from Liubomir
 // think over about the all flags
+// redo snprintf;
 
 // flags = // struct options;
 
