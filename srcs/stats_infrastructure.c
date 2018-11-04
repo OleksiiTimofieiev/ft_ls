@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/28 13:38:08 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/04 21:14:41 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/04 21:20:05 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,5 +77,6 @@ t_data	get_stats(char *buffer_inner)
 		ft_printf("MAJOR-> %d ", major(buf.st_rdev));
 		ft_printf("MINOR -> %d\n", minor(buf.st_rdev));
 	}
+	//TODO: finish with data handling to the structure;
 	return (stats);
 }
