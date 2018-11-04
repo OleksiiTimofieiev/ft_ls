@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/04 15:56:55 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/04 20:52:20 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,9 @@ void				add(t_temp **head_ref, char *new_d_name,
 	t_temp *last;
 
 	new = (t_temp*)malloc(sizeof(t_temp));
+
 	last = *head_ref;
+
 	new->blocks_data = var.blocks_buf;
 	new->bytes_data = var.bytes_buf;
 	new->d_name = ft_strdup(new_d_name);
@@ -59,6 +61,7 @@ void				add(t_temp **head_ref, char *new_d_name,
 	new->size_data = var.size_buf;
 	str_copy(new->time_data, var.time_buf);
 	new->next = NULL;
+
 	if (*head_ref == NULL)
 	{
 		*head_ref = new;

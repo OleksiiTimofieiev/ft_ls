@@ -47,6 +47,10 @@
 
 // 'p' instead of 'f' in /etc/
 
+// drwx------+   5 otimofie  2017        170 Aug 29 14:11 
+
+// if from last month -> year
+
 void	listdir(char *name/*, int indent  flags */) // ? go from the first element of the list;
 {
 	DIR *dir;
@@ -95,6 +99,7 @@ void	listdir(char *name/*, int indent  flags */) // ? go from the first element 
 			// remaster snprintf;
 			// ft_printf("dir2 ->>>>>>>>\n");
 			snprintf(path, sizeof(path), "%s/%s", name, t_list->d_name);
+
 			ft_printf("\n%s:\n", path); 
 			listdir(path);
 		}

@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/20 15:18:36 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/04 16:42:53 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/04 20:49:57 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ typedef	struct		s_temp
 {
 	char			*d_name;
 	unsigned char	d_type;
-	struct s_temp	*next;
 	long long		bytes_data;
 	long long		blocks_data;
 	char			type_and_permissions_data[12];
@@ -37,6 +36,7 @@ typedef	struct		s_temp
 	char			group_name_data[20];
 	long long int	size_data;
 	char 			time_data[20];
+	struct s_temp	*next;
 
 }					t_temp;
 
