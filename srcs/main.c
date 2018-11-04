@@ -12,7 +12,6 @@
 // b and c file types
 // link -> dir, hindu has the solution
 
-
 // struct options;
 void	listdir(char *name/*, int indent  flags */) // ? go from the first element of the list;
 {

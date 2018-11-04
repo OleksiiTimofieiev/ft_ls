@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/28 13:38:08 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/04 15:28:27 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/04 15:37:03 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	get_xattr(char *type_and_permissions_buf, char *buffer_inner)
 	char l[2024];
 
 	type_and_permissions_buf[10] = (listxattr(buffer_inner,
-		l, 2024, XATTR_SHOWCOMPRESSION) == 0) ? ' ' : '@';
+		l, 2024, XATTR_SHOWCOMPRESSION) > 0) ? '@' : ' ';
 }
 
 static void	str_copy(char *dst, char *src)
