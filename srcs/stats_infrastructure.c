@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/28 13:38:08 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/04 15:41:32 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/04 15:50:01 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,13 +79,10 @@ t_data	get_stats(char *buffer_inner)
 	stats.type_and_permissions_buf[11] = '\0';
 	stats.hard_links_buf = buf.st_nlink;
 	stats.size_buf = buf.st_size;
-
 	buf1 = getpwuid(buf.st_uid)->pw_name;
 	str_copy(stats.owner_name_buf, buf1);
-
 	buf1 = getgrgid(buf.st_gid)->gr_name;
 	str_copy(stats.group_name_buf, buf1);
-
 	buf1 = ctime(&buf.st_mtime);;
 	str_copy(stats.time_buf, buf1);
 

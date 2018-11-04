@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/04 13:41:42 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/04 15:53:17 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 static long long	get_total_blocks(t_temp *list)
 {
-	long long sum = 0;
+	long long sum;
 
-
-	while(list)
+	sum = 0;
+	while (list)
 	{
 		sum += list->blocks_data;
 		list = list->next;
@@ -25,7 +25,7 @@ static long long	get_total_blocks(t_temp *list)
 	return (sum);
 }
 
-void	delete_list(t_temp **head_ref)
+void				delete_list(t_temp **head_ref)
 {
 	t_temp *current;
 	t_temp *next;
@@ -39,20 +39,9 @@ void	delete_list(t_temp **head_ref)
 		current = next;
 	}
 }
-static void	str_copy(char *dst, char *src)
-{
-	int i;
 
-	i = 0;
-	while (i < 20)
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	dst[19] = '\0';
-}
-
-void add(t_temp **head_ref, char *new_d_name, unsigned char d_type, t_data var/*, char *path*/)
+void				add(t_temp **head_ref, char *new_d_name,
+					unsigned char d_type, t_data var)
 {
 	t_temp *new;
 	t_temp *last;
@@ -62,14 +51,11 @@ void add(t_temp **head_ref, char *new_d_name, unsigned char d_type, t_data var/*
 	new->blocks_data = var.blocks_buf;
 	new->bytes_data = var.bytes_buf;
 	new->d_name = ft_strdup(new_d_name);
-	// ft_bzero(new->type_and_permissions_data, 12);
 	ft_strcpy(new->type_and_permissions_data, var.type_and_permissions_buf);
 	new->d_type = d_type;
 	new->hard_links_data = var.hard_links_buf;
-
 	ft_strcpy(new->owner_name_data, var.owner_name_buf);
 	ft_strcpy(new->group_name_data, var.group_name_buf);
-
 	new->size_data = var.size_buf;
 	str_copy(new->time_data, var.time_buf);
 	new->next = NULL;
@@ -84,7 +70,7 @@ void add(t_temp **head_ref, char *new_d_name, unsigned char d_type, t_data var/*
 	return ;
 }
 
-void	print_date(char *time_str)
+void				print_date(char *time_str)
 {
 	int i;
 
@@ -94,9 +80,9 @@ void	print_date(char *time_str)
 	ft_printf(" ");
 }
 
-void	print_list(t_temp *list) //TODO: modify with *;
+void				print_list(t_temp *list)
 {
-	long long total = 0;
+	long long total;
 
 	total = get_total_blocks(list);
 	ft_printf("total %lld\n", total);

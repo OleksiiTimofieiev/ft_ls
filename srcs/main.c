@@ -1,6 +1,6 @@
 #include "../includes/ft_ls.h"
 
-#include <stdio.h>
+#include <stdio.h> // for snprintf;
 
 // flags = // struct options;
 
@@ -26,6 +26,8 @@
 
 // b and c file types
 // link -> dir, hindu has the solution
+
+//TODO: modify with *;
 
 void	listdir(char *name/*, int indent  flags */) // ? go from the first element of the list;
 {

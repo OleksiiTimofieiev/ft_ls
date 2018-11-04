@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/28 11:07:42 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/03 15:22:04 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/04 15:52:45 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,17 @@ void	init_path2(char **path2, char *name)
 		*path2 = ft_strjoin(tmp, "/");
 		free(tmp);
 	}
+}
+
+void	str_copy(char *dst, char *src)
+{
+	int i;
+
+	i = 0;
+	while (i < 20)
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[19] = '\0';
 }
