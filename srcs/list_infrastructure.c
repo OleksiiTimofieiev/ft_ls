@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   list_infrastructure.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
+/*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/04 11:38:59 by timofieiev       ###   ########.fr       */
+/*   Updated: 2018/11/04 13:06:43 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,8 +65,10 @@ void add(t_temp **head_ref, char *new_d_name, unsigned char d_type, t_data var/*
 	ft_strcpy(new->type_and_permissions_data, var.type_and_permissions_buf);
 	new->d_type = d_type;
 	new->hard_links_data = var.hard_links_buf;
-	new->owner_name_data = var.owner_name_buf;
-	new->group_name_data = var.group_name_buf;
+
+	ft_strcpy(new->owner_name_data, var.owner_name_buf);
+	ft_strcpy(new->group_name_data, var.group_name_buf);
+
 	new->size_data = var.size_buf;
 	str_copy(new->time_data, var.time_buf);
 	new->next = NULL;
@@ -101,8 +103,8 @@ void	print_list(t_temp *list) //TODO: modify with *;
 	{
 		ft_printf("%s ", list->type_and_permissions_data);
 		ft_printf("%*d ", 2, list->hard_links_data);
-		// ft_printf("%s ", list->owner_name_data);
-		// ft_printf("%s ", list->group_name_data);
+		ft_printf("%s ", list->owner_name_data);
+		ft_printf("%s ", list->group_name_data);
 		ft_printf("%d ", list->size_data);
 		print_date(list->time_data);
 		ft_printf("%s \n", list->d_name);

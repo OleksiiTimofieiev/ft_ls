@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stats_infrastructure.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
+/*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/28 13:38:08 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/04 11:33:54 by timofieiev       ###   ########.fr       */
+/*   Updated: 2018/11/04 13:25:21 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ t_data	get_stats(char *buffer_inner)
 	struct stat	buf;
 	char *buf1;
 
-	stat(buffer_inner, &buf); //TODO: use lstat;
+	lstat(buffer_inner, &buf); //TODO: use lstat;
 	stats.blocks_buf = buf.st_blocks;
 	stats.bytes_buf = buf.st_size;
 	get_file_type(stats.type_and_permissions_buf, buf.st_mode);
@@ -79,11 +79,13 @@ t_data	get_stats(char *buffer_inner)
 	get_xattr(stats.type_and_permissions_buf, buffer_inner);
 	stats.type_and_permissions_buf[11] = '\0';
 	stats.hard_links_buf = buf.st_nlink;
-
-	// TODO: clear with char *, move ot the stack[], change names of the data structure;
-	// stats.owner_name_buf = getpwuid(buf.st_uid)->pw_name;
-	// stats.group_name_buf = getgrgid(buf.st_gid)->gr_name;
 	stats.size_buf = buf.st_size;
+
+	buf1 = getpwuid(buf.st_uid)->pw_name;
+	str_copy(stats.owner_name_buf, buf1);
+
+	buf1 = getgrgid(buf.st_gid)->gr_name;
+	str_copy(stats.group_name_buf, buf1);
 
 	buf1 = ctime(&buf.st_mtime);;
 	str_copy(stats.time_buf, buf1);
