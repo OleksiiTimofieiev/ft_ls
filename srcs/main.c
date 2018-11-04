@@ -17,6 +17,11 @@
 
 // etc
 // etc/
+// tmp
+// tmp/
+// dev
+// dev/
+
 // ➜  ft_ls git:(master) ✗ ls -laR /etc
 // lrwxr-xr-x@ 1 root  wheel  11 Mar  4  2018 /etc -> private/etc
 
@@ -27,15 +32,10 @@
 // drwxr-xr-x   2 otimofie  2017    68 Nov  3 15:01 .
 // drwxr-xr-x  36 otimofie  2017  1224 Nov  4 15:47 ..
 
-// dev
-// dev/
-
-// tmp;
-
 // b and c file types
 // link -> dir, hindu has the solution
 
-//TODO: modify with *;
+//TODO: modify with * according to the biggest length;
 
 void	listdir(char *name/*, int indent  flags */) // ? go from the first element of the list;
 {
