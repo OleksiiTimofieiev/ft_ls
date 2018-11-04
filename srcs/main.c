@@ -55,10 +55,8 @@ void	listdir(char *name/*, int indent  flags */) // ? go from the first element 
 	char *path2; // make in ono init func
 	char *buffer;
 
-	entry = NULL;
 	init_path2(&path2, name);
-
-	if (!(dir = opendir(name)))
+	if (!(dir = opendir(name))) // separate func;
 	{
 		free(path2);
 		// free(buffer);
@@ -71,7 +69,7 @@ void	listdir(char *name/*, int indent  flags */) // ? go from the first element 
 		return ;
 	}
 
-	list = NULL; // to more general func
+	list = NULL; // to more general func // add to func above;
 	while ((entry = readdir(dir)) != NULL)
 	{
 		buffer = ft_strjoin(path2, entry->d_name);
