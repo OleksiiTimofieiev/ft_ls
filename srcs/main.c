@@ -5,6 +5,7 @@
 //  - major / minor in the necessary format;
 //  - ls with link and a directory; dev vs dev/
 //  - output format;
+// work with errors from Liubomir
 
 // flags = // struct options;
 
