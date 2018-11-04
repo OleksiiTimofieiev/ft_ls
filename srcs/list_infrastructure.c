@@ -6,7 +6,7 @@
 /*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/04 11:37:40 by timofieiev       ###   ########.fr       */
+/*   Updated: 2018/11/04 11:38:59 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,9 +87,7 @@ void	print_date(char *time_str)
 
 	i = 4;
 	while (i < 16)
-	{
 		ft_printf("%c", time_str[i++]);
-	}
 	ft_printf(" ");
 }
 
