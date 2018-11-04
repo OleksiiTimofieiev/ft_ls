@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/28 13:38:08 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/04 13:25:21 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/04 15:28:27 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	get_file_type(char *type_and_permissions_buf, mode_t file_mode)
 	else if ((file_mode & S_IFMT) == S_IFBLK)
 		type_and_permissions_buf[0] = 'b';
 	else if ((file_mode & S_IFMT) == S_IFSOCK)
-		type_and_permissions_buf[0] = 'c';
+		type_and_permissions_buf[0] = 's';
 	else if ((file_mode & S_IFMT) == S_IFIFO)
 		type_and_permissions_buf[0] = 'f';
 }
@@ -45,10 +45,10 @@ void	get_permissions(char *type_and_permissions_buf, mode_t perm_mode)
 
 void	get_xattr(char *type_and_permissions_buf, char *buffer_inner)
 {
-	char l[1024];
+	char l[2024];
 
 	type_and_permissions_buf[10] = (listxattr(buffer_inner,
-		l, 1024, XATTR_SHOWCOMPRESSION)) ? '@' : ' ';
+		l, 2024, XATTR_SHOWCOMPRESSION) == 0) ? ' ' : '@';
 }
 
 static void	str_copy(char *dst, char *src)
@@ -64,14 +64,22 @@ static void	str_copy(char *dst, char *src)
 	dst[19] = '\0';
 }
 
+// #define MINORBITS 20
+// #define MINORMASK ((1U << MINORBITS) - 1)
+
+// #define MAJOR(dev) ((unsigned int)((dev) >> MINORBITS))
+// #define MINOR(dev) ((unsigned int)((dev)&MINORMASK))
+// #define MKDEV(ma, mi) (((ma) << MINORBITS) | (mi))
+
+// #define MAJOR(x) ((x >> 8) & 0x7F)
 
 t_data	get_stats(char *buffer_inner)
 {
 	t_data		stats;
 	struct stat	buf;
-	char *buf1;
+	char		*buf1;
 
-	lstat(buffer_inner, &buf); //TODO: use lstat;
+	lstat(buffer_inner, &buf);
 	stats.blocks_buf = buf.st_blocks;
 	stats.bytes_buf = buf.st_size;
 	get_file_type(stats.type_and_permissions_buf, buf.st_mode);
@@ -89,6 +97,12 @@ t_data	get_stats(char *buffer_inner)
 
 	buf1 = ctime(&buf.st_mtime);;
 	str_copy(stats.time_buf, buf1);
+
+	if ((buf.st_mode & S_IFMT) == S_IFCHR) // major / minor // TODO: get all clear;
+	{
+		ft_printf("\nMAJOR-> %d ", major(buf.st_rdev));
+		ft_printf("MINOR -> %d\n", minor(buf.st_rdev));
+	}
 
 	return (stats);
 }
