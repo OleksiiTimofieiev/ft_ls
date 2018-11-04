@@ -8,6 +8,7 @@
 // work with errors from Liubomir
 // think over about the all flags
 // redo snprintf;
+// dif print modef for the different file types;
 
 // flags = // struct options;
 
