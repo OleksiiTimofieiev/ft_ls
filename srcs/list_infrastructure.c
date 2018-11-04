@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   list_infrastructure.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/03 17:06:45 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/04 11:37:40 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,8 +103,8 @@ void	print_list(t_temp *list) //TODO: modify with *;
 	{
 		ft_printf("%s ", list->type_and_permissions_data);
 		ft_printf("%*d ", 2, list->hard_links_data);
-		ft_printf("%s ", list->owner_name_data);
-		ft_printf("%s ", list->group_name_data);
+		// ft_printf("%s ", list->owner_name_data);
+		// ft_printf("%s ", list->group_name_data);
 		ft_printf("%d ", list->size_data);
 		print_date(list->time_data);
 		ft_printf("%s \n", list->d_name);

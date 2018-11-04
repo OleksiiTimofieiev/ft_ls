@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stats_infrastructure.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/28 13:38:08 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/03 17:14:31 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/04 11:33:54 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,9 +80,9 @@ t_data	get_stats(char *buffer_inner)
 	stats.type_and_permissions_buf[11] = '\0';
 	stats.hard_links_buf = buf.st_nlink;
 
-	//TODO: clear with char *, move ot the stack[], change names of the data structure;
-	stats.owner_name_buf = getpwuid(buf.st_uid)->pw_name;
-	stats.group_name_buf = getgrgid(buf.st_gid)->gr_name;
+	// TODO: clear with char *, move ot the stack[], change names of the data structure;
+	// stats.owner_name_buf = getpwuid(buf.st_uid)->pw_name;
+	// stats.group_name_buf = getgrgid(buf.st_gid)->gr_name;
 	stats.size_buf = buf.st_size;
 
 	buf1 = ctime(&buf.st_mtime);;
