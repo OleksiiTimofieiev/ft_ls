@@ -2,7 +2,7 @@
 
 #include <stdio.h> // for snprintf;
 
-//  - major / minor in the necessary format;
+//  - major / minor in the necessary format (first and second part) <-> print separately;
 //  - ls with link and a directory; dev vs dev/
 //  - output format;
 // work with errors from Liubomir
