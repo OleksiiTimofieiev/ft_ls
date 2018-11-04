@@ -2,17 +2,31 @@
 
 #include <stdio.h>
 
-// global variable for the flags;
+// flags = // struct options;
+
 // chmod 000 -> no rights
+// not exists
+
 // etc
 // etc/
+// ➜  ft_ls git:(master) ✗ ls -laR /etc
+// lrwxr-xr-x@ 1 root  wheel  11 Mar  4  2018 /etc -> private/etc
+
+// ➜  ft_ls git:(master) ✗ ls -la LinkDir
+// lrwxr-xr-x  1 otimofie  2017  3 Nov  3 15:01 LinkDir -> Dir
+// ➜  ft_ls git:(master) ✗ ls -la LinkDir/
+// total 0
+// drwxr-xr-x   2 otimofie  2017    68 Nov  3 15:01 .
+// drwxr-xr-x  36 otimofie  2017  1224 Nov  4 15:47 ..
+
 // dev
 // dev/
-// not exists
+
+// tmp;
+
 // b and c file types
 // link -> dir, hindu has the solution
 
-// struct options;
 void	listdir(char *name/*, int indent  flags */) // ? go from the first element of the list;
 {
 	DIR *dir;

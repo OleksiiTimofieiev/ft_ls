@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/28 13:38:08 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/04 15:37:03 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/04 15:41:32 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	get_xattr(char *type_and_permissions_buf, char *buffer_inner)
 	char l[2024];
 
 	type_and_permissions_buf[10] = (listxattr(buffer_inner,
-		l, 2024, XATTR_SHOWCOMPRESSION) > 0) ? '@' : ' ';
+		l, 2024, XATTR_NOFOLLOW) > 0) ? '@' : ' ';
 }
 
 static void	str_copy(char *dst, char *src)
@@ -63,15 +63,6 @@ static void	str_copy(char *dst, char *src)
 	}
 	dst[19] = '\0';
 }
-
-// #define MINORBITS 20
-// #define MINORMASK ((1U << MINORBITS) - 1)
-
-// #define MAJOR(dev) ((unsigned int)((dev) >> MINORBITS))
-// #define MINOR(dev) ((unsigned int)((dev)&MINORMASK))
-// #define MKDEV(ma, mi) (((ma) << MINORBITS) | (mi))
-
-// #define MAJOR(x) ((x >> 8) & 0x7F)
 
 t_data	get_stats(char *buffer_inner)
 {
