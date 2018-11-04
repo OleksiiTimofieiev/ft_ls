@@ -5,6 +5,13 @@
 //  - major / minor in the necessary format (first and second part) <-> print separately;
 //  - ls with link and a directory; dev vs dev/
 //  - output format;
+// make it in a cycle for each command line argument;
+// norminette and leaks;
+// manage errors;
+// validator;
+// quantity of spaces;
+// ls -laRrt
+// ls -l -a -r -t ...
 // work with errors from Liubomir
 // think over about the all flags
 // redo snprintf;
@@ -95,12 +102,6 @@ void	listdir(char *name/*, int indent  flags */) // ? go from the first element 
 
 	ft_dump_cleaner(&list, &path2, &dir);
 }
-
-// make it in a cycle for each command line argument;
-// norminette and leaks;
-// manage errors;
-// validator;
-// quantity of spaces;
 
 int		main(int argc, char **argv)
 {
