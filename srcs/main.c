@@ -20,6 +20,7 @@
 // dif print modef for the different file types;
 // hex in dev;
 // adopt logic for the N number of the argc;	
+// if 0,5 year before -> show only the time;
 
 // flags = // struct options;
 
