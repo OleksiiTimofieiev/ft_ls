@@ -19,7 +19,7 @@
 // redo snprintf;
 // dif print modef for the different file types;
 // hex in dev;
-// adopt logic for the N number of the argc;
+// adopt logic for the N number of the argc;	
 
 // flags = // struct options;
 
