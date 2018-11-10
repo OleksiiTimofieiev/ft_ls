@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/10 19:57:49 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/10 21:03:54 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,10 +110,10 @@ void fill_the_length(t_temp *list, t_output_length *length)
 		if (length->number_of_bytes < ft_decimal_length(list->bytes_data))
 			length->number_of_bytes = ft_decimal_length(list->bytes_data);
 
-		if (length->major < ft_decimal_length(list->major_data))
+		if (length->major && length->major < ft_decimal_length(list->major_data))
 			length->major = ft_decimal_length(list->major_data);
 
-		if (length->minor < ft_decimal_length(list->minor_data))
+		if (length->minor && length->minor < ft_decimal_length(list->minor_data))
 			length->minor = ft_decimal_length(list->minor_data);
 
 		list = list->next;
@@ -122,29 +122,44 @@ void fill_the_length(t_temp *list, t_output_length *length)
 
 // get the index to start copy instruction;
 
-void fill_data_to_major_minor_string(t_temp *list, t_output_length *length)
+// void fill_data_to_major_minor_string(t_temp *list, t_output_length *length)
+// {
+// 	int len = (length->major + length->minor + 2 + 1); // 2 , + space; 1 == end of line;
+
+// 	ft_printf("len->%d, maj->%d, min->%d\n", len, length->major, length->minor);
+
+// 	int i = 0;
+
+// 	while(list)
+// 	{
+// 		list->major_minor_string = (char *)malloc(sizeof(char) * len);
+
+// 		i = 0;
+// 		while(i < len)
+// 			list->major_minor_string[i++] = '0';
+
+// 		list->major_minor_string[len] = '\0';
+
+// 		list->major_minor_string[length->major] = ',';
+// 		list->major_minor_string[length->major + 1] = ' ';
+
+// 		list = list->next;
+// 	}
+// }
+
+void print_major_minor(t_temp *list, t_output_length *length)
 {
-	int len = (length->major + length->minor + 2 + 1); // 2 , + space; 1 == end of line;
+	// ft_printf("%s", " ");
+	if (list->major_data != 0)
+		ft_printf("%*d,", length->major, list->major_data); // do not forget 32
+	else
+		ft_printf("%*d,", length->major - 1, list->major_data); // do not forget 32
+	if (list->minor_data !=0)
+		ft_printf("%*d", length->minor, list->minor_data);
+	else
+		ft_printf("%*d", length->minor -1, list->minor_data);
 
-	ft_printf("len->%d, maj->%d, min->%d\n", len, length->major, length->minor);
-
-	int i = 0;
-
-	while(list)
-	{
-		list->major_minor_string = (char *)malloc(sizeof(char) * len);
-
-		i = 0;
-		while(i < len)
-			list->major_minor_string[i++] = '0';
-
-		list->major_minor_string[len] = '\0';
-
-		list->major_minor_string[length->major] = ',';
-		list->major_minor_string[length->major + 1] = ' ';
-
-		list = list->next;
-	}
+	ft_putchar(32);
 }
 
 void print_list(t_temp *list)
@@ -155,7 +170,11 @@ void print_list(t_temp *list)
 
 	ft_printf("len_major->%d, len_minor->%d\n", length.major, length.minor);
 
-	fill_data_to_major_minor_string(list, &length);
+	int len = length.major + length.minor;
+
+if (len > length.number_of_bytes)
+length.number_of_bytes = len;
+	// fill_data_to_major_minor_string(list, &length);
 
 	ft_printf("total %lld\n", get_total_blocks(list));
 
@@ -167,13 +186,19 @@ void print_list(t_temp *list)
 		ft_printf("%*-s  ", length.group_name, list->group_name_data);
 		
 		if (list->type_and_permissions_data[0] == 'c' || list->type_and_permissions_data[0] == 'b')
-			ft_printf("%s ", list->major_minor_string);
+		{
+			// ft_printf("%s ", list->major_minor_string);
+			ft_putstr("----here------ ");
+			print_major_minor(list, &length);
 			//general maximum value;
+		}
 		else
-			ft_printf("%*d ", length.number_of_bytes, list->size_data);
-
+		{
+			ft_printf("%*d ", length.number_of_bytes - 2, list->size_data);
+		}
 		print_date(list->time_data);
 		ft_printf("%s \n", list->d_name);
 		list = list->next;
 	}
+ft_printf("test->|%*d|",2,0);
 }
