@@ -33,6 +33,8 @@
 // drwxr-xr-x   2 otimofie  2017    68 Nov  3 15:01 .
 // drwxr-xr-x  36 otimofie  2017  1224 Nov  4 15:47 ..
 
+// size of the directory;
+
 // drwx------+   5 otimofie  2017        170 Aug 29 14:11 
 
 // norminette;

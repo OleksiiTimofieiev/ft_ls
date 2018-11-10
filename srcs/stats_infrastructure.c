@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stats_infrastructure.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/28 13:38:08 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/10 22:03:31 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/11 00:07:08 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

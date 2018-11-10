@@ -1,0 +1,2338 @@
+total 13384
+drwxr-xr-x   47 timofieiev  staff     1504 Nov 11 00:31 .
+drwx------@  32 timofieiev  staff     1024 Nov 11 00:31 ..
+-rw-r--r--    1 timofieiev  staff     6148 Oct 28 17:47 .DS_Store
+-rw-r--r--@   1 timofieiev  staff      231 Oct 25 17:04 .How do I write a C program to emulate the Unix LS-L command? - Quora.webarchive.icloud
+-rw-r--r--@   1 timofieiev  staff      239 Oct 25 17:04 .How to read linux file permission programmatically in C:C++ - Stack Overflow.webarchive.icloud
+-rw-r--r--@   1 timofieiev  staff      230 Oct 25 17:04 .How to recursively list directories in C on Linux? - Stack Overflow.webarchive.icloud
+-rw-r--r--@   1 timofieiev  staff      192 Oct 25 17:04 .Screen Shot 2018-03-12 at 6.54.16 PM.png.icloud
+drwxr-xr-x   15 timofieiev  staff      480 Nov 11 00:31 .git
+-rw-r--r--@   1 timofieiev  staff      236 Oct 25 17:04 .linux - How to list files in a directory in a C program? - Stack Overflow.webarchive.icloud
+-rw-r--r--@   1 timofieiev  staff      224 Oct 25 17:04 .linux - Implementing the ls -al command in C - Stack Overflow.webarchive.icloud
+-rw-r--r--@   1 timofieiev  staff      237 Oct 25 17:04 .macos - How to get extended attributes of a file(UNIX:C)? - Stack Overflow.webarchive.icloud
+drwxr-xr-x    3 timofieiev  staff       96 Oct 27 19:35 .vscode
+-rw-r--r--    1 timofieiev  staff   122923 Nov 11 00:13 1
+-rw-r--r--    1 timofieiev  staff        0 Nov 11 00:31 10
+-rw-r--r--    1 timofieiev  staff   121163 Nov 11 00:13 2
+-rw-r--r--    1 timofieiev  staff   123719 Nov 11 00:19 3
+-rw-r--r--    1 timofieiev  staff   121279 Nov 11 00:18 4
+-rw-r--r--    1 timofieiev  staff   121388 Nov 11 00:26 5
+-rw-r--r--    1 timofieiev  staff   121395 Nov 11 00:26 6
+-rw-r--r--    1 timofieiev  staff   121504 Nov 11 00:28 7
+-rw-r--r--    1 timofieiev  staff   121511 Nov 11 00:28 8
+-rw-r--r--    1 timofieiev  staff   121620 Nov 11 00:31 9
+lrwxr-xr-x    1 timofieiev  staff        3 Nov  4 09:27 LinkDir -> Dir
+-rw-r--r--    1 timofieiev  staff     1986 Oct 28 17:47 Makefile
+-rw-r--r--    1 timofieiev  staff     4001 Oct 25 17:04 Makefile1
+-rw-r--r--    1 timofieiev  staff      691 Oct 25 17:04 README.md
+-rw-r--r--    1 timofieiev  staff   109202 Oct 25 17:04 Screen Shot 2018-09-27 at 15.00.44.png
+-rw-r--r--    1 timofieiev  staff     8192 Oct 25 17:04 Thumbs.db
+-rw-r--r--    1 timofieiev  staff   123479 Oct 25 17:04 Tutorial - Write a Shell in C • Stephen Brennan.pdf
+drwxr-xr-x    3 timofieiev  staff       96 Oct 28 17:47 archive
+-rw-r--r--    1 timofieiev  staff   163966 Oct 25 17:04 at, xattr.png
+-rw-r--r--    1 timofieiev  staff        9 Oct 25 17:04 author
+-rw-r--r--    1 timofieiev  staff  1661166 Oct 25 17:04 c - Implementation of the ls command with several options - Code Review Stack Exchange.webarchive
+-rw-r--r--    1 timofieiev  staff    41736 Oct 25 17:04 check it out.png
+-rw-r--r--    1 timofieiev  staff     3246 Nov 11 00:03 comp
+drwxr-xr-x   10 timofieiev  staff      320 Nov 10 13:23 errors
+-rwxr-xr-x    1 timofieiev  staff    57564 Nov 11 00:28 ft_ls
+-rw-r--r--    1 timofieiev  staff  1462757 Oct 25 17:04 ft_ls.en.pdf
+drwxr-xr-x    3 timofieiev  staff       96 Nov 11 00:10 includes
+drwxr-xr-x  214 timofieiev  staff     6848 Nov 10 23:45 libft
+-rw-r--r--    1 timofieiev  staff  1271333 Oct 25 17:04 ls output.png
+-rw-r--r--    1 timofieiev  staff   138480 Nov  4 16:30 major_minor.webarchive
+drwxr-xr-x   12 timofieiev  staff      384 Nov 11 00:19 srcs
+-rw-r--r--    1 timofieiev  staff   122805 Nov 11 00:03 test
+-rw-r--r--    1 timofieiev  staff   274327 Oct 25 17:04 type of files.png
+-rw-r--r--    1 timofieiev  staff   178375 Oct 25 17:04 type of fyle.pdf
+-rw-r--r--    1 timofieiev  staff    12625 Oct 25 17:04 woohoo.png
+
+./.git:
+total 104
+drwxr-xr-x   15 timofieiev  staff    480 Nov 11 00:31 .
+drwxr-xr-x   47 timofieiev  staff   1504 Nov 11 00:31 ..
+-rw-r--r--    1 timofieiev  staff     17 Nov 10 07:41 COMMIT_EDITMSG
+-rw-r--r--    1 timofieiev  staff    226 Nov 10 23:44 FETCH_HEAD
+-rw-r--r--    1 timofieiev  staff     23 Oct 25 17:04 HEAD
+-rw-r--r--    1 timofieiev  staff     41 Nov 10 23:44 ORIG_HEAD
+-rw-r--r--    1 timofieiev  staff    316 Oct 25 17:04 config
+-rw-r--r--    1 timofieiev  staff     73 Oct 25 17:03 description
+drwxr-xr-x   13 timofieiev  staff    416 Oct 25 17:03 hooks
+-rw-r--r--    1 timofieiev  staff  23377 Nov 11 00:19 index
+drwxr-xr-x    3 timofieiev  staff     96 Oct 25 17:03 info
+drwxr-xr-x    4 timofieiev  staff    128 Nov 10 23:44 logs
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 objects
+-rw-r--r--    1 timofieiev  staff    187 Oct 25 17:04 packed-refs
+drwxr-xr-x    6 timofieiev  staff    192 Nov  4 09:27 refs
+
+./.git/hooks:
+total 96
+drwxr-xr-x  13 timofieiev  staff   416 Oct 25 17:03 .
+drwxr-xr-x  15 timofieiev  staff   480 Nov 11 00:31 ..
+-rwxr-xr-x   1 timofieiev  staff   478 Oct 25 17:03 applypatch-msg.sample
+-rwxr-xr-x   1 timofieiev  staff   896 Oct 25 17:03 commit-msg.sample
+-rwxr-xr-x   1 timofieiev  staff  3327 Oct 25 17:03 fsmonitor-watchman.sample
+-rwxr-xr-x   1 timofieiev  staff   189 Oct 25 17:03 post-update.sample
+-rwxr-xr-x   1 timofieiev  staff   424 Oct 25 17:03 pre-applypatch.sample
+-rwxr-xr-x   1 timofieiev  staff  1642 Oct 25 17:03 pre-commit.sample
+-rwxr-xr-x   1 timofieiev  staff  1348 Oct 25 17:03 pre-push.sample
+-rwxr-xr-x   1 timofieiev  staff  4898 Oct 25 17:03 pre-rebase.sample
+-rwxr-xr-x   1 timofieiev  staff   544 Oct 25 17:03 pre-receive.sample
+-rwxr-xr-x   1 timofieiev  staff  1492 Oct 25 17:03 prepare-commit-msg.sample
+-rwxr-xr-x   1 timofieiev  staff  3610 Oct 25 17:03 update.sample
+
+./.git/info:
+total 8
+drwxr-xr-x   3 timofieiev  staff   96 Oct 25 17:03 .
+drwxr-xr-x  15 timofieiev  staff  480 Nov 11 00:31 ..
+-rw-r--r--   1 timofieiev  staff  240 Oct 25 17:03 exclude
+
+./.git/logs:
+total 16
+drwxr-xr-x   4 timofieiev  staff   128 Nov 10 23:44 .
+drwxr-xr-x  15 timofieiev  staff   480 Nov 11 00:31 ..
+-rw-r--r--   1 timofieiev  staff  5125 Nov 10 23:44 HEAD
+drwxr-xr-x   5 timofieiev  staff   160 Nov 10 23:44 refs
+
+./.git/logs/refs:
+total 8
+drwxr-xr-x  5 timofieiev  staff  160 Nov 10 23:44 .
+drwxr-xr-x  4 timofieiev  staff  128 Nov 10 23:44 ..
+drwxr-xr-x  3 timofieiev  staff   96 Nov 10 23:44 heads
+drwxr-xr-x  3 timofieiev  staff   96 Nov 10 23:44 remotes
+-rw-r--r--  1 timofieiev  staff  520 Nov  4 09:27 stash
+
+./.git/logs/refs/heads:
+total 16
+drwxr-xr-x  3 timofieiev  staff    96 Nov 10 23:44 .
+drwxr-xr-x  5 timofieiev  staff   160 Nov 10 23:44 ..
+-rw-r--r--  1 timofieiev  staff  4666 Nov 10 23:44 master
+
+./.git/logs/refs/remotes:
+total 0
+drwxr-xr-x  3 timofieiev  staff   96 Nov 10 23:44 .
+drwxr-xr-x  5 timofieiev  staff  160 Nov 10 23:44 ..
+drwxr-xr-x  4 timofieiev  staff  128 Nov 10 23:44 origin
+
+./.git/logs/refs/remotes/origin:
+total 16
+drwxr-xr-x  4 timofieiev  staff   128 Nov 10 23:44 .
+drwxr-xr-x  3 timofieiev  staff    96 Nov 10 23:44 ..
+-rw-r--r--  1 timofieiev  staff   190 Oct 25 17:04 HEAD
+-rw-r--r--  1 timofieiev  staff  3986 Nov 10 23:44 master
+
+./.git/objects:
+total 0
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 .
+drwxr-xr-x   15 timofieiev  staff   480 Nov 11 00:31 ..
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 16:31 00
+drwxr-xr-x    7 timofieiev  staff   224 Nov  4 09:27 01
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 16:31 02
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 09:27 03
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 16:31 04
+drwxr-xr-x    5 timofieiev  staff   160 Oct 27 19:35 05
+drwxr-xr-x    7 timofieiev  staff   224 Nov  4 16:31 06
+drwxr-xr-x    5 timofieiev  staff   160 Oct 27 19:35 07
+drwxr-xr-x    6 timofieiev  staff   192 Nov  4 16:31 08
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 16:31 09
+drwxr-xr-x    3 timofieiev  staff    96 Oct 26 13:27 0a
+drwxr-xr-x    5 timofieiev  staff   160 Nov 10 07:40 0b
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 16:31 0c
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 16:31 0d
+drwxr-xr-x    4 timofieiev  staff   128 Nov  5 10:16 0e
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 11:38 0f
+drwxr-xr-x    5 timofieiev  staff   160 Oct 27 19:35 10
+drwxr-xr-x    5 timofieiev  staff   160 Nov  5 10:16 11
+drwxr-xr-x    3 timofieiev  staff    96 Oct 28 17:47 12
+drwxr-xr-x    5 timofieiev  staff   160 Oct 26 16:23 13
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 09:27 14
+drwxr-xr-x    4 timofieiev  staff   128 Nov  5 10:16 16
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 11:39 17
+drwxr-xr-x    6 timofieiev  staff   192 Nov  4 09:27 18
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 16:31 19
+drwxr-xr-x    7 timofieiev  staff   224 Nov 10 07:40 1a
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 09:27 1b
+drwxr-xr-x    6 timofieiev  staff   192 Nov 10 07:40 1c
+drwxr-xr-x    4 timofieiev  staff   128 Oct 27 19:35 1d
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 11:39 1e
+drwxr-xr-x    8 timofieiev  staff   256 Nov  5 10:16 1f
+drwxr-xr-x    6 timofieiev  staff   192 Oct 27 19:35 20
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 16:31 21
+drwxr-xr-x    3 timofieiev  staff    96 Oct 28 17:47 22
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 09:27 23
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 16:31 24
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 16:31 25
+drwxr-xr-x    9 timofieiev  staff   288 Nov  4 09:27 26
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 16:31 27
+drwxr-xr-x    3 timofieiev  staff    96 Oct 25 18:21 29
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 09:27 2a
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 09:27 2b
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 16:31 2d
+drwxr-xr-x    5 timofieiev  staff   160 Nov  5 10:16 2e
+drwxr-xr-x    4 timofieiev  staff   128 Oct 27 19:35 30
+drwxr-xr-x    3 timofieiev  staff    96 Oct 26 16:27 32
+drwxr-xr-x    7 timofieiev  staff   224 Nov  4 09:28 33
+drwxr-xr-x    6 timofieiev  staff   192 Nov  4 09:27 34
+drwxr-xr-x    7 timofieiev  staff   224 Nov 10 07:41 35
+drwxr-xr-x    3 timofieiev  staff    96 Oct 25 18:21 36
+drwxr-xr-x    5 timofieiev  staff   160 Nov 10 07:40 37
+drwxr-xr-x    5 timofieiev  staff   160 Nov  5 10:16 39
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 11:38 3b
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 09:28 3c
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 16:31 3e
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 11:38 3f
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 16:31 40
+drwxr-xr-x    6 timofieiev  staff   192 Nov  4 16:31 41
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 09:27 42
+drwxr-xr-x    3 timofieiev  staff    96 Oct 26 16:23 44
+drwxr-xr-x    4 timofieiev  staff   128 Nov 10 07:40 46
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 16:31 48
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 16:31 49
+drwxr-xr-x    6 timofieiev  staff   192 Nov  5 10:16 4b
+drwxr-xr-x    4 timofieiev  staff   128 Nov 10 07:41 4c
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 16:31 4d
+drwxr-xr-x    3 timofieiev  staff    96 Oct 25 18:21 4e
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 09:27 4f
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 16:31 50
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 09:27 51
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 16:30 52
+drwxr-xr-x    8 timofieiev  staff   256 Nov  4 09:27 53
+drwxr-xr-x    4 timofieiev  staff   128 Nov 10 07:40 54
+drwxr-xr-x    3 timofieiev  staff    96 Oct 25 18:21 55
+drwxr-xr-x    3 timofieiev  staff    96 Oct 27 19:35 56
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 16:31 57
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 16:31 58
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 09:27 59
+drwxr-xr-x    3 timofieiev  staff    96 Oct 26 13:07 5a
+drwxr-xr-x    3 timofieiev  staff    96 Oct 26 16:22 5b
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 16:30 5c
+drwxr-xr-x    6 timofieiev  staff   192 Nov 10 07:40 5d
+drwxr-xr-x    3 timofieiev  staff    96 Oct 28 17:47 5e
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 11:59 5f
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 16:31 60
+drwxr-xr-x    4 timofieiev  staff   128 Nov  5 10:16 61
+drwxr-xr-x    4 timofieiev  staff   128 Nov  5 10:16 62
+drwxr-xr-x    4 timofieiev  staff   128 Oct 27 19:35 63
+drwxr-xr-x    6 timofieiev  staff   192 Nov  5 10:16 64
+drwxr-xr-x    5 timofieiev  staff   160 Nov 10 07:40 66
+drwxr-xr-x    4 timofieiev  staff   128 Oct 28 17:47 67
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 16:31 68
+drwxr-xr-x    6 timofieiev  staff   192 Nov  4 09:27 69
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 09:27 6a
+drwxr-xr-x    3 timofieiev  staff    96 Oct 27 19:35 6c
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 09:28 6d
+drwxr-xr-x    6 timofieiev  staff   192 Nov  4 16:31 6e
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 16:31 6f
+drwxr-xr-x    3 timofieiev  staff    96 Oct 28 17:47 70
+drwxr-xr-x    4 timofieiev  staff   128 Oct 28 17:47 71
+drwxr-xr-x    3 timofieiev  staff    96 Nov 10 07:41 72
+drwxr-xr-x    8 timofieiev  staff   256 Nov 10 07:41 73
+drwxr-xr-x    6 timofieiev  staff   192 Nov  4 16:31 74
+drwxr-xr-x    4 timofieiev  staff   128 Nov  5 10:16 75
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 09:27 76
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 16:30 77
+drwxr-xr-x    4 timofieiev  staff   128 Nov 10 07:40 78
+drwxr-xr-x    3 timofieiev  staff    96 Oct 28 17:47 79
+drwxr-xr-x    3 timofieiev  staff    96 Oct 27 19:35 7a
+drwxr-xr-x    7 timofieiev  staff   224 Nov 10 07:40 7b
+drwxr-xr-x    3 timofieiev  staff    96 Oct 27 19:35 7c
+drwxr-xr-x    5 timofieiev  staff   160 Oct 27 19:35 7e
+drwxr-xr-x    6 timofieiev  staff   192 Nov  4 09:27 7f
+drwxr-xr-x    3 timofieiev  staff    96 Oct 27 19:35 80
+drwxr-xr-x    3 timofieiev  staff    96 Oct 25 18:21 82
+drwxr-xr-x    4 timofieiev  staff   128 Nov  5 10:16 84
+drwxr-xr-x    5 timofieiev  staff   160 Nov 10 07:40 85
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 09:27 86
+drwxr-xr-x    4 timofieiev  staff   128 Nov 10 07:40 87
+drwxr-xr-x    4 timofieiev  staff   128 Nov 10 07:40 89
+drwxr-xr-x    6 timofieiev  staff   192 Nov  4 09:27 8a
+drwxr-xr-x    7 timofieiev  staff   224 Nov 10 07:41 8b
+drwxr-xr-x    4 timofieiev  staff   128 Oct 25 18:21 8c
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 11:38 8d
+drwxr-xr-x    3 timofieiev  staff    96 Oct 25 18:21 8e
+drwxr-xr-x    4 timofieiev  staff   128 Nov  5 10:16 8f
+drwxr-xr-x    4 timofieiev  staff   128 Oct 28 17:47 90
+drwxr-xr-x    3 timofieiev  staff    96 Oct 27 19:35 92
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 16:31 93
+drwxr-xr-x    3 timofieiev  staff    96 Oct 27 19:35 94
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 09:27 95
+drwxr-xr-x    3 timofieiev  staff    96 Oct 27 19:35 96
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 09:27 97
+drwxr-xr-x    5 timofieiev  staff   160 Oct 28 17:47 98
+drwxr-xr-x    3 timofieiev  staff    96 Oct 29 12:09 99
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 16:31 9b
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 09:27 9c
+drwxr-xr-x    3 timofieiev  staff    96 Oct 25 18:21 9d
+drwxr-xr-x    7 timofieiev  staff   224 Nov  4 16:31 a0
+drwxr-xr-x    4 timofieiev  staff   128 Oct 25 18:21 a1
+drwxr-xr-x    7 timofieiev  staff   224 Nov 10 07:41 a2
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 16:31 a3
+drwxr-xr-x    4 timofieiev  staff   128 Oct 28 17:47 a4
+drwxr-xr-x    4 timofieiev  staff   128 Oct 29 12:08 a6
+drwxr-xr-x    5 timofieiev  staff   160 Oct 29 12:08 a7
+drwxr-xr-x    5 timofieiev  staff   160 Nov 10 07:41 a8
+drwxr-xr-x    4 timofieiev  staff   128 Oct 28 17:47 aa
+drwxr-xr-x    7 timofieiev  staff   224 Nov  4 16:31 ab
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 16:31 ac
+drwxr-xr-x    6 timofieiev  staff   192 Nov  5 10:16 ad
+drwxr-xr-x    8 timofieiev  staff   256 Nov  5 10:16 ae
+drwxr-xr-x    6 timofieiev  staff   192 Nov 10 07:41 b0
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 09:27 b1
+drwxr-xr-x    3 timofieiev  staff    96 Oct 27 19:35 b2
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 09:27 b3
+drwxr-xr-x    6 timofieiev  staff   192 Nov 10 07:40 b4
+drwxr-xr-x    4 timofieiev  staff   128 Oct 28 17:47 b5
+drwxr-xr-x    5 timofieiev  staff   160 Oct 26 16:22 b6
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 16:31 b7
+drwxr-xr-x    3 timofieiev  staff    96 Nov  5 10:16 b8
+drwxr-xr-x    3 timofieiev  staff    96 Nov  5 10:16 ba
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 16:31 bb
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 11:39 bc
+drwxr-xr-x    7 timofieiev  staff   224 Nov  4 16:31 bd
+drwxr-xr-x    4 timofieiev  staff   128 Oct 26 16:27 be
+drwxr-xr-x    7 timofieiev  staff   224 Nov  4 16:31 bf
+drwxr-xr-x    3 timofieiev  staff    96 Oct 25 18:21 c0
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 16:31 c1
+drwxr-xr-x    5 timofieiev  staff   160 Oct 27 19:35 c2
+drwxr-xr-x    3 timofieiev  staff    96 Oct 27 19:35 c4
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 09:28 c6
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 16:31 c7
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 16:31 c8
+drwxr-xr-x    6 timofieiev  staff   192 Nov  4 16:30 c9
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 16:31 cb
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 16:31 cc
+drwxr-xr-x    4 timofieiev  staff   128 Nov  5 10:16 cd
+drwxr-xr-x    8 timofieiev  staff   256 Nov  4 16:31 ce
+drwxr-xr-x    7 timofieiev  staff   224 Nov  5 10:16 cf
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 16:31 d0
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 16:31 d1
+drwxr-xr-x    3 timofieiev  staff    96 Oct 25 18:21 d2
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 16:31 d3
+drwxr-xr-x    4 timofieiev  staff   128 Nov 10 07:41 d5
+drwxr-xr-x    3 timofieiev  staff    96 Nov  5 10:16 d6
+drwxr-xr-x    7 timofieiev  staff   224 Nov  4 16:31 d7
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 09:28 d8
+drwxr-xr-x    3 timofieiev  staff    96 Oct 27 19:35 d9
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 16:31 da
+drwxr-xr-x    4 timofieiev  staff   128 Nov  5 10:16 db
+drwxr-xr-x    5 timofieiev  staff   160 Oct 28 17:47 dc
+drwxr-xr-x    6 timofieiev  staff   192 Nov  5 10:16 dd
+drwxr-xr-x    6 timofieiev  staff   192 Nov  5 10:16 de
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 09:27 df
+drwxr-xr-x    6 timofieiev  staff   192 Nov  5 10:16 e1
+drwxr-xr-x    5 timofieiev  staff   160 Oct 28 17:47 e2
+drwxr-xr-x    3 timofieiev  staff    96 Oct 27 19:35 e3
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 16:30 e4
+drwxr-xr-x    3 timofieiev  staff    96 Oct 28 17:47 e5
+drwxr-xr-x    4 timofieiev  staff   128 Nov  5 10:16 e6
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 16:31 e7
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 09:27 e8
+drwxr-xr-x    7 timofieiev  staff   224 Nov  5 10:16 e9
+drwxr-xr-x    8 timofieiev  staff   256 Nov  4 16:31 ea
+drwxr-xr-x    3 timofieiev  staff    96 Oct 25 18:21 eb
+drwxr-xr-x    4 timofieiev  staff   128 Oct 28 17:47 ec
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 11:59 ed
+drwxr-xr-x    3 timofieiev  staff    96 Oct 29 12:09 ee
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 09:27 ef
+drwxr-xr-x    3 timofieiev  staff    96 Oct 26 13:17 f0
+drwxr-xr-x    3 timofieiev  staff    96 Oct 27 19:35 f1
+drwxr-xr-x    6 timofieiev  staff   192 Nov  4 16:31 f2
+drwxr-xr-x    3 timofieiev  staff    96 Oct 25 18:21 f3
+drwxr-xr-x    4 timofieiev  staff   128 Nov  5 10:16 f4
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 09:27 f5
+drwxr-xr-x    3 timofieiev  staff    96 Oct 25 18:21 f6
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 16:31 f7
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 16:31 f8
+drwxr-xr-x    5 timofieiev  staff   160 Oct 29 12:09 f9
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 11:38 fa
+drwxr-xr-x    3 timofieiev  staff    96 Nov  5 10:16 fc
+drwxr-xr-x    6 timofieiev  staff   192 Nov  5 10:16 fd
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 16:31 fe
+drwxr-xr-x    6 timofieiev  staff   192 Nov 10 07:40 ff
+drwxr-xr-x    2 timofieiev  staff    64 Oct 25 17:03 info
+drwxr-xr-x   12 timofieiev  staff   384 Nov 10 23:45 pack
+
+./.git/objects/00:
+total 24
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1351 Nov  4 16:30 2b905e8f884b1b5ffcca080e8ca70cf78894b0
+-r--r--r--    1 timofieiev  staff  1249 Nov  4 16:30 7daf1e58cc521f6686d4c5d4696e04a7fbe168
+-r--r--r--    1 timofieiev  staff  1237 Nov  4 09:27 c381f53b04cf05ecce66c418eb12ed598e16db
+
+./.git/objects/01:
+total 40
+drwxr-xr-x    7 timofieiev  staff   224 Nov  4 09:27 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   525 Oct 25 18:21 01f8d785a9845c7f89da30fa1e37698f914491
+-r--r--r--    1 timofieiev  staff  1487 Oct 27 19:35 064266b2c604977c6853a0bb0b9b32dfac13de
+-r--r--r--    1 timofieiev  staff   423 Oct 25 18:21 33403f69d6cb8a3f1151ee32f6c74333de2324
+-r--r--r--    1 timofieiev  staff   652 Oct 25 18:21 50860a3cb3242699c8c507c559f64d873091c2
+-r--r--r--    1 timofieiev  staff   318 Nov  4 09:27 a97a888ca90892e91a008b975906db2d398b1c
+
+./.git/objects/02:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   166 Nov  4 16:30 0b9e5c5fcf9f7068dd79c2606f92fd80a18358
+-r--r--r--    1 timofieiev  staff   190 Nov  4 16:30 48f7834cc943496ff82c90dba0c9620a284ad7
+
+./.git/objects/03:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 09:27 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1316 Nov  4 09:27 ff7b33e28fd163f0d1735f759d255c022c6834
+
+./.git/objects/04:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff    52 Nov  4 16:30 5bae7e193c55e38280f4693f13cd22302520b2
+-r--r--r--    1 timofieiev  staff   579 Oct 25 18:21 cdf00a746428b8a9c6373ec25f8d1d80abafc1
+
+./.git/objects/05:
+total 32
+drwxr-xr-x    5 timofieiev  staff   160 Oct 27 19:35 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   348 Nov 10 07:41 15446b5f634c6a9b0106f2916572f59035d67e
+-r--r--r--    1 timofieiev  staff   403 Nov 10 07:41 2d8f7a7ee43198407d4a18bcb1f4a5e2172c0d
+-r--r--r--    1 timofieiev  staff  5671 Oct 27 19:35 95dd9fc53a585f5eb214b08458bf594e75ded9
+
+./.git/objects/06:
+total 40
+drwxr-xr-x    7 timofieiev  staff   224 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1120 Nov  4 09:27 3507a3cbe6d192cfba2bcf36efb7ceb38a8de2
+-r--r--r--    1 timofieiev  staff  1234 Nov  4 16:30 590b44f05760264ad9e94aaf750795b50ee258
+-r--r--r--    1 timofieiev  staff  1488 Oct 27 19:35 633b2e9f13556c3523444dd505edddbb2f5344
+-r--r--r--    1 timofieiev  staff   166 Nov  4 16:30 73954e2d1246d476559d36640d9b917411c388
+-r--r--r--    1 timofieiev  staff   980 Nov  4 09:27 b28ccd18169668132f188d3a3639ec00f823e5
+
+./.git/objects/07:
+total 24
+drwxr-xr-x    5 timofieiev  staff   160 Oct 27 19:35 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   859 Oct 27 19:35 6af0471c2aea6d437c715ac7024e2f35e38a90
+-r--r--r--    1 timofieiev  staff   711 Oct 25 18:21 75399c44114757e4c6ec13931a6b9e3051cbc8
+-r--r--r--    1 timofieiev  staff  1457 Oct 26 16:10 c43863ac0fce101855c10f5a66daa50910f605
+
+./.git/objects/08:
+total 32
+drwxr-xr-x    6 timofieiev  staff   192 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   726 Nov  4 16:30 2ae7d5c100c4c7206fad290ee69167afc3e954
+-r--r--r--    1 timofieiev  staff   478 Oct 25 18:21 2be992f29b4aa44685d0ccfd57a08f39a7e918
+-r--r--r--    1 timofieiev  staff   387 Nov 10 07:41 3d0f6700425106ac472a701aa742a75eceee33
+-r--r--r--    1 timofieiev  staff   630 Oct 26 16:27 5560a66d7d9a72f22442e5f3d0bd32b8a48573
+
+./.git/objects/09:
+total 96
+drwxr-xr-x    5 timofieiev  staff    160 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   1003 Nov  4 16:30 002c40dffa4510a770ee40a5e5432a6453a3a0
+-r--r--r--    1 timofieiev  staff    318 Nov  4 09:27 b10fd08645451db5adbf7318dff8dc3b84b77a
+-r--r--r--    1 timofieiev  staff  37920 Nov  4 11:38 dc22ab39a2b872ae35c093429d95a2bc0be46a
+
+./.git/objects/0a:
+total 16
+drwxr-xr-x    3 timofieiev  staff    96 Oct 26 13:27 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  5658 Oct 26 13:27 c72e4734fafe069c42be7dfffea66bf9dc8ed3
+
+./.git/objects/0b:
+total 24
+drwxr-xr-x    5 timofieiev  staff   160 Nov 10 07:40 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1352 Nov  4 16:30 10b3ce251fd89b4a51b94fa0935e130566f166
+-r--r--r--    1 timofieiev  staff   206 Oct 27 19:35 65309026a21df63f2481c540394d6086e117c9
+-r--r--r--    1 timofieiev  staff  1393 Nov 10 07:40 e38682a1567f9ca1afb0889e58926b1e3d66cc
+
+./.git/objects/0c:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1012 Nov  4 16:30 76643966fabd10897014b8f7ec014a5af1dbdc
+-r--r--r--    1 timofieiev  staff   700 Oct 25 18:21 9a6b267dc9f502468c4c6fb8aa120669f2f378
+
+./.git/objects/0d:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   317 Nov  4 16:30 f03dec5ddbf4263fca9d6118a29b599a94fee8
+
+./.git/objects/0e:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Nov  5 10:16 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1165 Nov  4 16:30 5108d56b088aa55316d0f5e1370040573c39d6
+-r--r--r--    1 timofieiev  staff   166 Nov  5 10:16 6319ed394cf7561e0726780e8823de024db345
+
+./.git/objects/0f:
+total 24
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 11:38 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   373 Nov 10 07:41 1c335dfd55ef7a16e453776e310bac8068f973
+-r--r--r--    1 timofieiev  staff   190 Nov  4 11:38 33b31b1cf53e464021c3247dec1b3c1a32ca3d
+-r--r--r--    1 timofieiev  staff  1026 Oct 28 17:47 b49edb339813e3b011f9591e65b9de29db7cda
+
+./.git/objects/10:
+total 24
+drwxr-xr-x    5 timofieiev  staff   160 Oct 27 19:35 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   340 Nov 10 07:41 7d2999190239b6c0bc8beff03b84cdeb09236c
+-r--r--r--    1 timofieiev  staff   158 Oct 27 19:35 c54fec06c9b1125f2a2f94f94685d7d1c7c51d
+-r--r--r--    1 timofieiev  staff   342 Oct 25 18:21 f0a0a16f133094e9bb28f777bb84ff6cb2c996
+
+./.git/objects/11:
+total 24
+drwxr-xr-x    5 timofieiev  staff   160 Nov  5 10:16 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   763 Oct 27 19:35 03ea46c3e6dc21fead392469fa87e02fba5b59
+-r--r--r--    1 timofieiev  staff  1356 Nov  5 10:16 7920511f87f3f8c9b295ae973207878ac8715a
+-r--r--r--    1 timofieiev  staff   392 Nov 10 07:41 e75491e6649d61f3ab0ddb80b84e558ffdffdc
+
+./.git/objects/12:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Oct 28 17:47 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   717 Oct 28 17:47 f4bf21396d013df27ce297d01578737354daad
+
+./.git/objects/13:
+total 24
+drwxr-xr-x    5 timofieiev  staff   160 Oct 26 16:23 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   170 Oct 26 16:10 3ada7bb345e9de47d600c80a7b10ce98617529
+-r--r--r--    1 timofieiev  staff  1457 Oct 26 16:23 7118c6f788d34535fb06ef1383877ef4de8fcd
+-r--r--r--    1 timofieiev  staff   925 Nov  4 11:38 c2c05e7c0e7cb6a693865f6ca0785e6878cfdf
+
+./.git/objects/14:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 09:27 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1320 Nov  4 09:27 3564879bec518dd811ef2d6295f69ffe28602a
+
+./.git/objects/16:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Nov  5 10:16 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1362 Nov  5 10:16 cdad5f7ca03cb11871349c06c10720cdd382c0
+-r--r--r--    1 timofieiev  staff   353 Nov 10 07:41 f85f0926859e0ea371ac1539a72d2edbc729aa
+
+./.git/objects/17:
+total 24
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 11:39 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   993 Nov  4 11:39 2857c5afbd27ab329b44053604a7521ff859c3
+-r--r--r--    1 timofieiev  staff  1386 Nov  4 09:27 7c6f7a5f44e18feef3fde7c44ef2af952d6656
+-r--r--r--    1 timofieiev  staff   986 Nov  4 11:38 9c4a2261942b9082598f64adbbcb3c8fc2e15f
+
+./.git/objects/18:
+total 32
+drwxr-xr-x    6 timofieiev  staff   192 Nov  4 09:27 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   317 Nov  4 09:27 347287bedb33936662339dd521a11fd1918012
+-r--r--r--    1 timofieiev  staff   441 Nov 10 07:41 9324780a231aa2d3b257bce35a349c235eb796
+-r--r--r--    1 timofieiev  staff   318 Nov  4 09:27 f6e546c6207b24215d2b4287c731c68196397d
+-r--r--r--    1 timofieiev  staff   307 Oct 25 18:21 f9da8530b980fe999841688e7165772c87274f
+
+./.git/objects/19:
+total 24
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  5672 Nov  4 09:27 df81c5e7b7a890a4a7b35d5f212d0e84e5dcd8
+-r--r--r--    1 timofieiev  staff  1352 Nov  4 16:30 fd36751b29eca0444a25f30d67163898f32611
+
+./.git/objects/1a:
+total 72
+drwxr-xr-x    7 timofieiev  staff    224 Nov 10 07:40 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff    158 Oct 27 19:35 047599d8e778082e7a94ea4ca30a35b1b7a475
+-r--r--r--    1 timofieiev  staff    404 Nov 10 07:41 373db052cbabb7511368e2b864d51be13f0a36
+-r--r--r--    1 timofieiev  staff    966 Nov  4 09:27 95a3ecfa8fda54641d7062d35247c542f2fdb2
+-r--r--r--    1 timofieiev  staff    164 Nov 10 07:40 bed338f5560f9e3f35b0086c8dcd480958f1b9
+-r--r--r--    1 timofieiev  staff  19564 Oct 28 17:47 f7b8b0e67cdd779623e9af9335f4a48976448d
+
+./.git/objects/1b:
+total 24
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 09:27 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   833 Nov  4 09:27 0b32d626b9c23cf588ec79da878031e691cd8d
+-r--r--r--    1 timofieiev  staff   512 Oct 25 18:21 75443390612d6a07ac7a4724087c14f23e5714
+-r--r--r--    1 timofieiev  staff  1428 Oct 26 10:43 be1fd260ccb4cbb48893df38c1c4158b6dedae
+
+./.git/objects/1c:
+total 32
+drwxr-xr-x    6 timofieiev  staff   192 Nov 10 07:40 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   897 Nov  4 16:30 1fe593cc912603ba5488a2379d8eaa57037fce
+-r--r--r--    1 timofieiev  staff   163 Nov  4 16:30 2e279529b2b8196a2162f0541b1155fd9dc05f
+-r--r--r--    1 timofieiev  staff   165 Nov 10 07:40 a8cc9d02828c2c764ad5b56d808377090f3fcd
+-r--r--r--    1 timofieiev  staff   317 Nov  5 10:16 b7621e891c4527ce4b13fa77b3d460ca9aa31c
+
+./.git/objects/1d:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Oct 27 19:35 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   998 Oct 27 19:35 07e5e742cfbbf394054109cd801450de150427
+-r--r--r--    1 timofieiev  staff  1427 Oct 26 17:58 184720deeae5591f75f6b85145388934e55bf4
+
+./.git/objects/1e:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 11:39 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   768 Oct 28 17:47 8a560a675d305ce6e4e7a81e628f139667d967
+-r--r--r--    1 timofieiev  staff  1321 Nov  4 11:39 9848527c351db4ac4fbcb3345fffb11abfa071
+
+./.git/objects/1f:
+total 80
+drwxr-xr-x    8 timofieiev  staff    256 Nov  5 10:16 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff    317 Nov  4 11:39 0bff6c1ca9c8264127f5488d6a37961489a676
+-r--r--r--    1 timofieiev  staff    445 Oct 25 18:21 13a1d01e7db64991f57579776efcd15d683132
+-r--r--r--    1 timofieiev  staff    741 Nov  4 09:27 561e04fadf9ca92287c8ec279347afd91f8282
+-r--r--r--    1 timofieiev  staff     52 Nov  5 10:16 ba6215aeee70562694fb42860d1d315fe28720
+-r--r--r--    1 timofieiev  staff  19980 Nov  4 11:39 e0d41f3ba86337e0062ca312dd222fe4e79e94
+-r--r--r--    1 timofieiev  staff     52 Oct 28 17:47 fafcdd3ba8583155001530376e568a015fbc8c
+
+./.git/objects/20:
+total 32
+drwxr-xr-x    6 timofieiev  staff   192 Oct 27 19:35 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   163 Oct 26 16:27 12eee67f17238eac6f8c4ce948dcefb458cdba
+-r--r--r--    1 timofieiev  staff   206 Oct 27 19:35 1dfc994f3f09068f57bb3084f1453af4032f47
+-r--r--r--    1 timofieiev  staff  1442 Oct 27 19:35 5b09c75b431cd3fc98b98f4ac83d346087d122
+-r--r--r--    1 timofieiev  staff   165 Oct 26 17:58 774e29517c74b156ae763cc43deb43cd1bb6ba
+
+./.git/objects/21:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   318 Nov  4 16:30 1fa5f9d6c50b2bfb07cc6f5ecef76a627f1f75
+
+./.git/objects/22:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Oct 28 17:47 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1353 Oct 28 17:47 83959c97b824ad3ea6a9f1a1d0765b0ff5f68e
+
+./.git/objects/23:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 09:27 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   318 Nov  4 09:27 8b81d7dca532469328783079a6dd3b7f693d2a
+
+./.git/objects/24:
+total 24
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   317 Nov  4 16:30 33c39c2121358d49284040bb3639eb1c662029
+-r--r--r--    1 timofieiev  staff   637 Oct 25 18:21 9c8944f8e16f3db402857a9b59d42c00400e11
+-r--r--r--    1 timofieiev  staff   166 Nov  4 16:30 c0f5ebba1896ac33529976694c67755e6c983c
+
+./.git/objects/25:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   317 Nov  4 16:30 d5a801e0b2d75d73de6790816dea1346967af3
+
+./.git/objects/26:
+total 96
+drwxr-xr-x    9 timofieiev  staff    288 Nov  4 09:27 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff    742 Oct 28 17:47 229b21801493a53c6b4b9aa17abb14c68cf4e3
+-r--r--r--    1 timofieiev  staff    160 Nov  4 09:27 5d5b57b7c4842c903eeb9d1e6f1da08b762969
+-r--r--r--    1 timofieiev  staff   5672 Nov  4 09:27 8a884070babfe665ccf14549651db0e6aedb22
+-r--r--r--    1 timofieiev  staff    810 Nov  4 09:27 900736042fe7e113947e80e7523b0c4a665d82
+-r--r--r--    1 timofieiev  staff   1488 Oct 27 19:35 b308de7f2799dab5242df180cf3e113ec84ef7
+-r--r--r--    1 timofieiev  staff    658 Nov  4 09:27 d4dc8186a22f73607b7beb129d372fc33e4f66
+-r--r--r--    1 timofieiev  staff  20168 Nov  4 09:27 f1120452f0290019812dd9c91976e4687154d1
+
+./.git/objects/27:
+total 56
+drwxr-xr-x    5 timofieiev  staff    160 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   1351 Nov  4 16:30 333c7fa4a9953d3d1388df8fe27b6d07030bc4
+-r--r--r--    1 timofieiev  staff  19205 Oct 27 19:35 819b360515c56806fa76cf11baa68ffe08596f
+-r--r--r--    1 timofieiev  staff    990 Nov  4 11:38 8ad0fac827a1edacc09f7ca7a46f8d84b62244
+
+./.git/objects/29:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Oct 25 18:21 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   584 Oct 25 18:21 79ca1c019dc56785fd5e6b0ec81bd58de0fdbe
+
+./.git/objects/2a:
+total 88
+drwxr-xr-x    4 timofieiev  staff    128 Nov  4 09:27 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  37890 Nov  4 09:27 ae8c486db2a85ba1cea8f0fc51a196d6d59e51
+-r--r--r--    1 timofieiev  staff    158 Oct 27 19:35 e15738476e72f64ccfb4972366fc5a4ebd322c
+
+./.git/objects/2b:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 09:27 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   794 Nov  4 09:27 8ddf46cbac001b7ece61a8a43c5ce1e23df1e9
+
+./.git/objects/2d:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   191 Nov  4 16:30 993dc5c50add9cd6e67f540da9f6eea0352c95
+
+./.git/objects/2e:
+total 56
+drwxr-xr-x    5 timofieiev  staff    160 Nov  5 10:16 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  20322 Nov  5 10:16 188055faf6389bd87895a7ff312efcd7225468
+-r--r--r--    1 timofieiev  staff    886 Nov  4 09:27 c5f8ce9eb581824fc634270b94bf511e19a8b7
+-r--r--r--    1 timofieiev  staff    422 Nov 10 07:41 f5ef1f7ab891d198e94c6e64cc5ed52f11159b
+
+./.git/objects/30:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Oct 27 19:35 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   170 Oct 26 13:10 74da4fd1dd93a888ccbf12edbe3d7170a61cec
+-r--r--r--    1 timofieiev  staff   157 Oct 27 19:35 d229c314840eee2350a59c38c4730d96cdc550
+
+./.git/objects/32:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Oct 26 16:27 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   207 Oct 26 16:27 463d8ba33927dafc5fc08524c22fd4657ab279
+
+./.git/objects/33:
+total 48
+drwxr-xr-x    7 timofieiev  staff   224 Nov  4 09:28 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   631 Oct 28 17:47 127756c4033669a6f8ed1f0c2ef1d4f047f3b4
+-r--r--r--    1 timofieiev  staff   452 Oct 28 17:47 38275e334e88dfd975236dceb05a91e0c56641
+-r--r--r--    1 timofieiev  staff  5656 Nov  4 09:27 56142c8a74510620d4fce33f44049663f32f93
+-r--r--r--    1 timofieiev  staff   577 Oct 28 17:47 c2d3c1062a1c8a12978524b4755f19908eef22
+-r--r--r--    1 timofieiev  staff   425 Nov 10 07:41 faf90a53803debc2afb16a63ad774d08e36694
+
+./.git/objects/34:
+total 32
+drwxr-xr-x    6 timofieiev  staff   192 Nov  4 09:27 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   318 Nov  4 09:27 4db3de6397dcd0859fa3c06864aefc4dbd0e97
+-r--r--r--    1 timofieiev  staff   967 Oct 27 19:35 8788493acb0294762a75b75411f32e9de07038
+-r--r--r--    1 timofieiev  staff  2558 Oct 25 18:21 b7d1005ad2a2f2aa573d25a3aec9f3e83127cf
+-r--r--r--    1 timofieiev  staff   658 Oct 25 18:21 fce75ba7cc07766e7082f14c16b08b4001c8a8
+
+./.git/objects/35:
+total 40
+drwxr-xr-x    7 timofieiev  staff   224 Nov 10 07:41 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   720 Nov  4 09:27 21b8695feee2efcce81fd4a059da7f977bdc5d
+-r--r--r--    1 timofieiev  staff   926 Nov 10 07:41 2794bc4d63ed82fc98f90ae5713af847b06f77
+-r--r--r--    1 timofieiev  staff  1248 Oct 27 19:35 7c6c5402aaacdf68c2d6443e67b18814b59301
+-r--r--r--    1 timofieiev  staff  1237 Oct 27 19:35 893e56f43449dd48f789ccb96cdfa1591f6717
+-r--r--r--    1 timofieiev  staff  1353 Oct 29 12:09 c9a5a699820a9b2df5c8214efe90a7701289dc
+
+./.git/objects/36:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Oct 25 18:21 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   821 Oct 25 18:21 cc0d5e82fac93494fac7593008ed8696128b66
+
+./.git/objects/37:
+total 24
+drwxr-xr-x    5 timofieiev  staff   160 Nov 10 07:40 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1351 Nov  4 09:27 73f6becf17a4845dc7de91649f58b76cb7e2d5
+-r--r--r--    1 timofieiev  staff   531 Oct 25 18:21 bb0cd8e58fffb6ef36878df06ddcca8c3e455e
+-r--r--r--    1 timofieiev  staff   317 Nov 10 07:40 c9754402356c76f2198eec499e7e04133ab29f
+
+./.git/objects/39:
+total 24
+drwxr-xr-x    5 timofieiev  staff   160 Nov  5 10:16 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   775 Oct 27 19:35 04591c85eb072372e555c47158189ebe45ed27
+-r--r--r--    1 timofieiev  staff   317 Nov  4 16:30 05b309c82f4eb029d0e914dfcf423766f50de9
+-r--r--r--    1 timofieiev  staff   736 Nov  5 10:16 cacf6529fa9001614ac39a9097b0d6c816aa1a
+
+./.git/objects/3b:
+total 32
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 11:38 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   467 Nov 10 07:41 292a7e7655ae6f1057030048e7d8e751e1c780
+-r--r--r--    1 timofieiev  staff  5763 Nov  4 11:38 8d4b5eae8ea7ef9fd82730300911529b660b6b
+-r--r--r--    1 timofieiev  staff   405 Nov 10 07:41 8eab90c70bbb5e87deaae5e1f215aac55813c5
+
+./.git/objects/3c:
+total 96
+drwxr-xr-x    5 timofieiev  staff    160 Nov  4 09:28 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  37906 Nov  4 09:27 28129827cbe2244d758c3d2402ef525df622fc
+-r--r--r--    1 timofieiev  staff    162 Oct 28 17:47 7e0efea69f7842df9f3dcc4bb52d2cae585806
+-r--r--r--    1 timofieiev  staff    350 Nov 10 07:41 a7115b7f16fa23679577b0b206ad8765dfb0a2
+
+./.git/objects/3e:
+total 24
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   390 Oct 26 13:10 80084b9dad9bd7c8b79e72c06e23fceb7f0eda
+-r--r--r--    1 timofieiev  staff  1322 Nov  4 16:30 85c20568f6c81a8389d04c7c1d3ea6c0dbc7fa
+-r--r--r--    1 timofieiev  staff   730 Oct 25 18:21 bff00dcb44c207bcd5533cbd19e84b3beaf39f
+
+./.git/objects/3f:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 11:38 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1140 Nov  4 11:38 41bd7cecb5131d022aafe2215af4b5730f2459
+
+./.git/objects/40:
+total 24
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   318 Nov  4 16:30 6ee52e12adb5968850826261eeb6370014ea91
+-r--r--r--    1 timofieiev  staff   261 Oct 28 17:47 9ce0757559ee3e43d653bd4bf76b6916a7d3d9
+-r--r--r--    1 timofieiev  staff  1087 Nov  4 09:27 f5944a9478586d4a2041b0b160966ff5870817
+
+./.git/objects/41:
+total 32
+drwxr-xr-x    6 timofieiev  staff   192 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   317 Nov  4 11:38 221a446c9bc4ab884320c8c701604037d7e364
+-r--r--r--    1 timofieiev  staff   208 Oct 26 16:10 30ed50ea6aed57b419dbfb06d6543d3a22c85c
+-r--r--r--    1 timofieiev  staff  1352 Nov  4 16:30 5b85519708b201f14cdc89176e9f8dab252dc5
+-r--r--r--    1 timofieiev  staff  1132 Nov  4 16:30 a09e43698171bd49349c2f07e5f40530dcc0e7
+
+./.git/objects/42:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 09:27 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   316 Nov  4 09:27 e2b73ed0ae5f08951537d303abf08e0cfd78c8
+
+./.git/objects/44:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Oct 26 16:23 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   695 Oct 26 16:23 c934c47b99888844bd1948c8133a85926ed501
+
+./.git/objects/46:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Nov 10 07:40 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1443 Nov 10 07:40 316122834459eab4ca7190a2e63fc6249d54e3
+-r--r--r--    1 timofieiev  staff  1456 Oct 26 16:22 a4ae7ca664f1a5ced3779d6e10d0ebd0163e9a
+
+./.git/objects/48:
+total 24
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   353 Nov 10 07:41 2c0b85c0eb2286a6e503ddfa3673f4c6ddfc4c
+-r--r--r--    1 timofieiev  staff   170 Oct 26 13:07 59b2fdc97e885dbbc0e1d4aa288b02b355f8da
+-r--r--r--    1 timofieiev  staff  1353 Nov  4 16:30 b1f2e2a66b317ce1d679ad7f19a4237d5db990
+
+./.git/objects/49:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1350 Nov  4 16:30 2f3a93b7bd79bdc49dc75d05c7971031c51bfc
+
+./.git/objects/4b:
+total 32
+drwxr-xr-x    6 timofieiev  staff   192 Nov  5 10:16 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1314 Nov  5 10:16 48cd5fb54174b65feb630ba106bc49abace8e4
+-r--r--r--    1 timofieiev  staff   384 Nov 10 07:41 8d191c2f6ed0b33d4b8302e9a5bfa78e83401c
+-r--r--r--    1 timofieiev  staff  1135 Nov  4 09:27 9a319877f7f5355d532969d2d9743f1887d8e0
+-r--r--r--    1 timofieiev  staff   895 Nov  5 10:16 b3cd44b0625d6494462a23ea9ed669df6042db
+
+./.git/objects/4c:
+total 88
+drwxr-xr-x    4 timofieiev  staff    128 Nov 10 07:41 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  37918 Nov 10 07:41 3b3ee176a013c2fca8efa648f8ce05cb3fb84d
+-r--r--r--    1 timofieiev  staff    875 Oct 26 13:27 dd426b1147b6f64462ef3e3579ae8c4e832bd3
+
+./.git/objects/4d:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   910 Nov  4 16:30 0c7306b355e75cb1986159eb9e141c6a4fcae4
+-r--r--r--    1 timofieiev  staff  1320 Nov  4 09:27 d6880d442ec1a7421a1a14e0ab56a3d192b479
+
+./.git/objects/4e:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Oct 25 18:21 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   691 Oct 25 18:21 c1ade1d886abbc0c664430d0b950f7cacd7a0b
+
+./.git/objects/4f:
+total 24
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 09:27 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   530 Oct 27 19:35 17f29e666b63d0ef7613b0682e4ebc5b5a5277
+-r--r--r--    1 timofieiev  staff  1121 Nov  4 09:27 23d28dee4f63daea46bbd72669956fac5ec512
+-r--r--r--    1 timofieiev  staff   738 Oct 25 18:21 f91460f5d7171354d56e8c0104dc1b747ac145
+
+./.git/objects/50:
+total 152
+drwxr-xr-x    4 timofieiev  staff    128 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  71074 Nov  4 16:30 2ca80e4865eec23159096f540bfab1a1ad3765
+-r--r--r--    1 timofieiev  staff    696 Nov  4 09:27 41c4ad0db3f135923ea2daf00fc63ce2b1225a
+
+./.git/objects/51:
+total 48
+drwxr-xr-x    4 timofieiev  staff    128 Nov  4 09:27 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff    172 Oct 25 18:21 01630cdc40de35c3ec0fe597f7c26190e06641
+-r--r--r--    1 timofieiev  staff  19933 Nov  4 09:27 d8945fd90fcd04e388d144848724467853584f
+
+./.git/objects/52:
+total 24
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 16:30 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   167 Nov  4 16:30 2ccf0234ad3acef06f1d12ff8bb1eeed5c35a8
+-r--r--r--    1 timofieiev  staff   850 Nov  4 09:27 abb6d777e529a859c437033ad0b5c8d7888a1a
+-r--r--r--    1 timofieiev  staff   357 Nov 10 07:41 e328b9c6fd73ca54325753b1272245d8bff4b4
+
+./.git/objects/53:
+total 48
+drwxr-xr-x    8 timofieiev  staff   256 Nov  4 09:27 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   159 Nov  4 09:27 3acc74facc4aca48b6bb20f0a022abd502eef8
+-r--r--r--    1 timofieiev  staff   688 Oct 26 16:22 670776bf294e9c7d26ba7b25de6a7ff2847bc5
+-r--r--r--    1 timofieiev  staff  1116 Oct 25 18:21 7242fba212b6d1f6e421885434b15a971dcde4
+-r--r--r--    1 timofieiev  staff   600 Oct 25 18:21 8b0b8c80baad303b8c27135465a6f981c1be1f
+-r--r--r--    1 timofieiev  staff   447 Nov 10 07:41 b3dd271f76020b948c126aeb9ee2ea2ea4a7c5
+-r--r--r--    1 timofieiev  staff   459 Nov 10 07:41 d3186424ff4cfcbd0b1560e3326eabc2d10bb9
+
+./.git/objects/54:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Nov 10 07:40 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1323 Nov  4 16:30 38c8ab54edc4130332de6138c676b1ef0f23f3
+-r--r--r--    1 timofieiev  staff  1352 Nov 10 07:40 5d6d59d37b081b63251257bb23b4164e9c6fbf
+
+./.git/objects/55:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Oct 25 18:21 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   297 Oct 25 18:21 ec3ba08dfb509e4e0786848c88e1b9c7c24a52
+
+./.git/objects/56:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Oct 27 19:35 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff    51 Oct 27 19:35 d7a9dd6eba299c4d8d1fd2f62fb960a8e356ea
+
+./.git/objects/57:
+total 96
+drwxr-xr-x    5 timofieiev  staff    160 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  37955 Nov  4 16:30 264635ae3f1dcddf0887c93153ba274b62e06d
+-r--r--r--    1 timofieiev  staff     52 Nov  4 16:30 d1cac2eda6665834c80799b5b997383b74987e
+-r--r--r--    1 timofieiev  staff   1126 Nov  4 11:38 e66e07f8a2068389c3c93dd9a69dce825f2ff2
+
+./.git/objects/58:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1298 Nov  4 16:30 17b0c8e35f8e426aded35e6dd638c676b63c07
+
+./.git/objects/59:
+total 88
+drwxr-xr-x    4 timofieiev  staff    128 Nov  4 09:27 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff     52 Nov  4 09:27 dfed062a4db7d1591c41cbc6961310fae05a33
+-r--r--r--    1 timofieiev  staff  37862 Oct 27 19:35 e35cde8d74ce79b94b271338ad862db542bb31
+
+./.git/objects/5a:
+total 80
+drwxr-xr-x    3 timofieiev  staff     96 Oct 26 13:07 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  37907 Oct 26 13:07 61a3d64e922a22514ec97803fe79ea8cda3e00
+
+./.git/objects/5b:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Oct 26 16:22 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   207 Oct 26 16:22 7194aeea6f66450142850e1c6d2e6d802b4ce4
+
+./.git/objects/5c:
+total 56
+drwxr-xr-x    5 timofieiev  staff    160 Nov  4 16:30 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff    164 Oct 26 16:23 0dc3f58f4eae2617da64a65cef621d6f1027e2
+-r--r--r--    1 timofieiev  staff    167 Nov  4 16:30 62895efe1e74a677c86c51a11196cffd570dfe
+-r--r--r--    1 timofieiev  staff  18170 Oct 26 16:27 ed38364cacfb878de2fae885aebea037c37637
+
+./.git/objects/5d:
+total 64
+drwxr-xr-x    6 timofieiev  staff    192 Nov 10 07:40 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff    986 Nov  4 09:27 5ce04ccfd7c7677311cab9dfd076fd016e9c49
+-r--r--r--    1 timofieiev  staff  20305 Nov  4 16:30 8162b42f7298f91427d68462986288d0052ca0
+-r--r--r--    1 timofieiev  staff    318 Nov 10 07:40 9c135009f02dd0b5c10a19a77aa6640a57b27e
+-r--r--r--    1 timofieiev  staff    402 Nov 10 07:41 b105dea63ad8f6409e06a85ddf139ae83308db
+
+./.git/objects/5e:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Oct 28 17:47 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1353 Oct 28 17:47 559cfe794aa7a7ee768184bb861eceaab636f2
+
+./.git/objects/5f:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 11:59 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   191 Nov  4 11:59 43f311c928005790db5e99e48040149a0d2121
+-r--r--r--    1 timofieiev  staff    18 Nov  4 09:27 c5479c7216afe1b9a509e4bc812a9562af9572
+
+./.git/objects/60:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   924 Nov  4 16:30 6044aa545f17f941601d7bca27767c071bbf27
+
+./.git/objects/61:
+total 24
+drwxr-xr-x    4 timofieiev  staff   128 Nov  5 10:16 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   743 Nov  5 10:16 7a011cbd9133da25afdff90c134ecfd59de207
+-r--r--r--    1 timofieiev  staff  5659 Oct 26 13:07 7f96aa4a63364b63d94752b369c6e5b6bc5fe2
+
+./.git/objects/62:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Nov  5 10:16 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1174 Nov  5 10:16 b9f88482c27f1e56c603177c96814dfa5da703
+-r--r--r--    1 timofieiev  staff   429 Nov 10 07:41 c1d0e9b88c91e309c313b28a5e5e672438375f
+
+./.git/objects/63:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Oct 27 19:35 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1425 Oct 26 13:17 391c18420c63174e3d3f6fe7b84f46054fa2f0
+-r--r--r--    1 timofieiev  staff  1489 Oct 27 19:35 d099c4c953702d62007ed3b2b1e84d28c175b3
+
+./.git/objects/64:
+total 40
+drwxr-xr-x    6 timofieiev  staff   192 Nov  5 10:16 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1352 Nov  5 10:16 41a4dac013f54354dd86ab45061ed762cbd875
+-r--r--r--    1 timofieiev  staff  5672 Nov  4 09:27 504ea900d767120e9b904e888fad2f7c47a986
+-r--r--r--    1 timofieiev  staff  1297 Nov  5 10:16 c40aa369fc3019c50fa6255d562e8c01aac383
+-r--r--r--    1 timofieiev  staff  1320 Nov  4 09:27 c9bbc8f60769603e9d078cf002a2b7ad2a69b0
+
+./.git/objects/66:
+total 24
+drwxr-xr-x    5 timofieiev  staff   160 Nov 10 07:40 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   318 Nov 10 07:40 2f2c9bcf050c9e23f739b503890f724eb88f18
+-r--r--r--    1 timofieiev  staff  1441 Oct 27 19:35 5e0788f5df7f272f8980431277efdfba33b867
+-r--r--r--    1 timofieiev  staff   987 Oct 27 19:35 81c419b7d97f6520c6dc13adf8523a60e47bee
+
+./.git/objects/67:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Oct 28 17:47 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   173 Oct 27 19:35 5ac6a10ba635447e184ad956a33d18fa168452
+-r--r--r--    1 timofieiev  staff   449 Oct 28 17:47 da4db4e7d00df05ebbfe5b558fd465f655b2cc
+
+./.git/objects/68:
+total 48
+drwxr-xr-x    4 timofieiev  staff    128 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  20217 Nov  4 16:30 545b19c6a2e49347ef2bfd29f3583655bace1b
+-r--r--r--    1 timofieiev  staff    172 Oct 26 10:43 d91c581f2c4c6aff5736d1aaf69fabba869f51
+
+./.git/objects/69:
+total 64
+drwxr-xr-x    6 timofieiev  staff    192 Nov  4 09:27 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  19530 Nov  4 09:27 973ef5311e65d76aacbea6fc3840363aa34032
+-r--r--r--    1 timofieiev  staff    171 Nov  4 09:27 a475d50e9359a8f6975bf5ad9529d1a38d76b3
+-r--r--r--    1 timofieiev  staff    889 Nov  4 09:27 baf376d6a8d5e4fd7d255e41a053e7ca011f02
+-r--r--r--    1 timofieiev  staff    839 Oct 27 19:35 e31b8e495ea6550a65917e0814a2eb3cfab7e0
+
+./.git/objects/6a:
+total 24
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 09:27 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   926 Nov  4 09:27 08ec372efc4d923f998fa61eade0bfca6b30de
+-r--r--r--    1 timofieiev  staff   770 Nov  4 09:27 42c7a27411b2f9a40c8497d4e2ec993e1da3a3
+-r--r--r--    1 timofieiev  staff   956 Nov  4 09:27 a74733b5572bf68810672c4e5e9aa96df6a72f
+
+./.git/objects/6c:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Oct 27 19:35 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   988 Oct 27 19:35 2ea971e897b37ca5c88f5d11714679eef302c1
+
+./.git/objects/6d:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 09:28 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   909 Nov  4 09:27 bb5a07a8a447a0c171828bcaadf9cf4ffd28b7
+-r--r--r--    1 timofieiev  staff   170 Oct 28 17:47 e451180291d86775e76ec27cd827750ffb9f06
+
+./.git/objects/6e:
+total 32
+drwxr-xr-x    6 timofieiev  staff   192 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1168 Nov  4 16:30 479302db26b202a63e4db636270f625d75efa8
+-r--r--r--    1 timofieiev  staff  1012 Oct 26 16:27 a85c7e148b8931bf2a5ed27384484b432bc621
+-r--r--r--    1 timofieiev  staff  1122 Nov  4 09:27 b6f1833fc59871c10670bbd51513f0fe0b70e4
+-r--r--r--    1 timofieiev  staff  1489 Oct 27 19:35 b7cb2813aa95e724f19caece18a638302b2163
+
+./.git/objects/6f:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1012 Nov  4 16:30 60ba7c6cb381dc124b307c2b710ce0fd943489
+
+./.git/objects/70:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Oct 28 17:47 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff    52 Oct 28 17:47 dbc57e4d381aec2ddc58e0d049d2036a76068c
+
+./.git/objects/71:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Oct 28 17:47 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1352 Oct 28 17:47 05ebea1b8a8438b22f211ad09e7b31ea77c93a
+-r--r--r--    1 timofieiev  staff   395 Nov 10 07:41 ca1b9208284acfdc7ff3cc89e3932f45c3468f
+
+./.git/objects/72:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Nov 10 07:41 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   318 Nov 10 07:41 51b31b926da940428d038f6d7fd411e48e61b1
+
+./.git/objects/73:
+total 88
+drwxr-xr-x    8 timofieiev  staff    256 Nov 10 07:41 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   5698 Nov  4 16:30 1d5fbc28fa6a18b94e01fd165d909c7ee076f8
+-r--r--r--    1 timofieiev  staff    318 Nov  4 16:30 50e209194f95faa661f54c59d2a6012c2826ad
+-r--r--r--    1 timofieiev  staff   1488 Oct 27 19:35 52e0ff3eeaf6ba477ae9c758349752f6e5f0b8
+-r--r--r--    1 timofieiev  staff    674 Nov 10 07:41 9022bd2cdd33d5a9c5e642eec014725b45d493
+-r--r--r--    1 timofieiev  staff  19723 Oct 28 17:47 979efe2d81b646fbabf1ff1171d5f4eae2ccd0
+-r--r--r--    1 timofieiev  staff   1476 Oct 27 19:35 eca9ddd7d65dca5e48fa9bc8eba89fb2822daa
+
+./.git/objects/74:
+total 64
+drwxr-xr-x    6 timofieiev  staff    192 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff    318 Nov  4 16:30 185d59e781d698c5a51afbde546a144a4dc713
+-r--r--r--    1 timofieiev  staff  18972 Oct 27 19:35 25e24803b460daa865e9429888d1af07fcb6be
+-r--r--r--    1 timofieiev  staff    208 Oct 26 13:10 d21e3f0e4543b8b74dec5df9f02781aa8506df
+-r--r--r--    1 timofieiev  staff    397 Nov 10 07:41 ee91c271742001ce85a3b2b0b5cc1ea0f20119
+
+./.git/objects/75:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Nov  5 10:16 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   207 Oct 27 19:35 60a72e7080597dfae44b57fb3214049a8587c7
+-r--r--r--    1 timofieiev  staff  1181 Nov  5 10:16 9c64af3a48d9c01ed63b47cdcc189cff3e6a5d
+
+./.git/objects/76:
+total 24
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 09:27 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   605 Oct 25 18:21 b0cd766cd8a2880dfa2cacd5f1096a7b1b801c
+-r--r--r--    1 timofieiev  staff   816 Nov  4 09:27 c53057df4764742c1760f59c847a67f5b48191
+-r--r--r--    1 timofieiev  staff  1192 Oct 28 17:47 e1d3675f1dfe0864828c9bfd884dcfc31c568b
+
+./.git/objects/77:
+total 24
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 16:30 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   170 Oct 26 13:17 2214a15ce66031b687499054c6c403128baa48
+-r--r--r--    1 timofieiev  staff   165 Nov  4 16:30 2248fd4b69d8f57c34486427f7b0878cc0c2ef
+-r--r--r--    1 timofieiev  staff  3096 Nov  4 11:59 c3ac822ff3ac094ad65b05e2f6bfba1d8e4b09
+
+./.git/objects/78:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Nov 10 07:40 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   796 Nov  4 09:27 50d9fae93d4f74e9381883f3d5eb45875e9fc6
+-r--r--r--    1 timofieiev  staff  1350 Nov 10 07:40 66ef68bc2396ea4a2e6987919968eefc8e3d4c
+
+./.git/objects/79:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Oct 28 17:47 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   901 Oct 28 17:47 59fd76de5f8cf22b84447f8eb7f7b661143c46
+
+./.git/objects/7a:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Oct 27 19:35 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   208 Oct 27 19:35 562debdc7fd3ea33fc2ad9259dad69a372af9a
+
+./.git/objects/7b:
+total 40
+drwxr-xr-x    7 timofieiev  staff   224 Nov 10 07:40 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1488 Oct 27 19:35 0a401a0fbcb456f271099fd5c03f51f68d48b2
+-r--r--r--    1 timofieiev  staff  1350 Nov 10 07:40 2a762af236d679d88c8ca026255e1990c713e2
+-r--r--r--    1 timofieiev  staff   165 Oct 27 19:35 567795c59d5997b2d3cd8315c4c921daeb43f9
+-r--r--r--    1 timofieiev  staff   430 Nov 10 07:41 b3122a2f3d9d9feb5d06c3c0f5441fd2a633c9
+-r--r--r--    1 timofieiev  staff   207 Oct 27 19:35 e8e2722e4428ba20d9473b062020a8ec00eb5f
+
+./.git/objects/7c:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Oct 27 19:35 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   208 Oct 27 19:35 35aa823481deacebb5dce774cf7dd2cf48e30b
+
+./.git/objects/7e:
+total 24
+drwxr-xr-x    5 timofieiev  staff   160 Oct 27 19:35 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   169 Oct 27 19:35 0881e960d875e1eaffd9d01b58c45bb1192a13
+-r--r--r--    1 timofieiev  staff   207 Oct 26 16:23 241b3d6f43878b35700a07a1a38f5232e249b6
+-r--r--r--    1 timofieiev  staff   207 Oct 26 13:10 58654641f2e4e5f1d52ea1eda9a4fca58ed2ae
+
+./.git/objects/7f:
+total 32
+drwxr-xr-x    6 timofieiev  staff   192 Nov  4 09:27 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   497 Oct 25 18:21 9755e063c23fbb51f7b563c2368f82e92fe4d1
+-r--r--r--    1 timofieiev  staff   507 Oct 25 18:21 d011b74a6e79da5f936020656a09a4d08e05fa
+-r--r--r--    1 timofieiev  staff   171 Nov  4 09:27 e612773aba6a1a8aec5b791d0c21f79458d16e
+-r--r--r--    1 timofieiev  staff   974 Nov  4 09:27 fc2844e11c2f88220618d003f4db3a24813749
+
+./.git/objects/80:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Oct 27 19:35 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   762 Oct 27 19:35 00ab019c1945a1d15460c0a1143d289f6c4240
+
+./.git/objects/82:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Oct 25 18:21 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   425 Nov 10 07:41 8b0098319af9c989b08e7ea1d4b0bc273ba2e4
+
+./.git/objects/84:
+total 48
+drwxr-xr-x    4 timofieiev  staff    128 Nov  5 10:16 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   1109 Oct 28 17:47 1e6bfb65ec4054e60244c7b90518fd58e5b8ce
+-r--r--r--    1 timofieiev  staff  20359 Nov  5 10:16 6f6bde4673bdb8e3d7b66e807828e8af675e72
+
+./.git/objects/85:
+total 24
+drwxr-xr-x    5 timofieiev  staff   160 Nov 10 07:40 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1352 Nov  5 10:16 1cee30bdce15b80b8d068faa2b22b213ed11f5
+-r--r--r--    1 timofieiev  staff  1351 Nov 10 07:40 ce6dfeb370a6c4a2ef02e657baee65fcaff423
+-r--r--r--    1 timofieiev  staff   330 Oct 28 17:47 ea9d54d06cb48b382cf6278ee80180fe6bc326
+
+./.git/objects/86:
+total 24
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 09:27 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1229 Nov  4 09:27 3e25e096b195bc68a9786aab26e247b454ce89
+-r--r--r--    1 timofieiev  staff   319 Nov  4 09:27 4f022cabd7c29c2a968787f1c6a9231d9087b3
+-r--r--r--    1 timofieiev  staff   358 Nov 10 07:41 75bae50109b61617d1e8f3a0f421eb0bf1e48e
+
+./.git/objects/87:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Nov 10 07:40 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1419 Nov 10 07:40 9f7f4d31e958aa7c4d9b3a7f4066809798f912
+-r--r--r--    1 timofieiev  staff   166 Nov  5 10:16 b1ce3cd2bf7a47c30b26b32f935a4933df159d
+
+./.git/objects/89:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Nov 10 07:40 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   166 Nov 10 07:40 226f47451449341bddeaaf945f491f4a8d3b39
+-r--r--r--    1 timofieiev  staff  1036 Oct 26 13:07 9f034a78332973198bf72ff77750efc6c06bf4
+
+./.git/objects/8a:
+total 32
+drwxr-xr-x    6 timofieiev  staff   192 Nov  4 09:27 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   171 Nov  4 09:27 8c017f224adacb8bbd8ce9e4221c21c3170484
+-r--r--r--    1 timofieiev  staff   354 Nov 10 07:41 d59d22832cefc463d57a77897d8aeaaf055991
+-r--r--r--    1 timofieiev  staff  1353 Oct 29 12:08 f07c6e4288a8897564d549a8408cb932eb79f6
+-r--r--r--    1 timofieiev  staff   342 Nov 10 07:41 fd9b1924e217d2c709a642a64aaba97ccc2912
+
+./.git/objects/8b:
+total 104
+drwxr-xr-x    7 timofieiev  staff    224 Nov 10 07:41 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff    318 Nov 10 07:40 1237a93b7b990d765e6af9150014aacbedfb80
+-r--r--r--    1 timofieiev  staff  20315 Nov 10 07:41 1fe1c056829ae00e57af6c35c3fdc29478c6d4
+-r--r--r--    1 timofieiev  staff    482 Oct 26 13:07 4bba761146190bb0c21888044dc268bc0316a7
+-r--r--r--    1 timofieiev  staff    656 Oct 25 18:21 8fb1ae30cc18fac5f94a95c7785103834544a9
+-r--r--r--    1 timofieiev  staff  19204 Oct 27 19:35 cf5536932f0cbfdaf632a2f30eb8adf9868b52
+
+./.git/objects/8c:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Oct 25 18:21 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   511 Nov 10 07:41 21b681025aec49a3815d54c28f57f9e88f741c
+-r--r--r--    1 timofieiev  staff   660 Nov 10 07:41 b8c6436f2174c94a132b83f4cc85ff5567f388
+
+./.git/objects/8d:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 11:38 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1126 Nov  4 09:27 99e5745e67ba91bcbf6129411b430707ed799d
+-r--r--r--    1 timofieiev  staff  1203 Nov  4 11:38 d26fbb0f8bdb83b8057af2c48e2a663b8dd1ae
+
+./.git/objects/8e:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Oct 25 18:21 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   341 Oct 25 18:21 92002c0c69b964e1ecbbb0223f97c84766c130
+
+./.git/objects/8f:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Nov  5 10:16 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   164 Nov  5 10:16 14f4e6c9abcfe1f76e1c25679a431611cd1436
+-r--r--r--    1 timofieiev  staff    51 Oct 26 13:07 871f2344647cca636d0472e311bb6d72336db5
+
+./.git/objects/90:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Oct 28 17:47 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   512 Oct 25 18:21 994f3561e81ca110239ccfcff9d246a646941d
+-r--r--r--    1 timofieiev  staff   756 Oct 28 17:47 b8eb9a819917dfbe177df88e1fa306a23482b7
+
+./.git/objects/92:
+total 40
+drwxr-xr-x    3 timofieiev  staff     96 Oct 27 19:35 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  18973 Oct 27 19:35 5009c980fd326ada6398fb3589487bd2edf6f0
+
+./.git/objects/93:
+total 24
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   518 Nov  4 16:30 1ca1d1d59196a9d7b7be2dce8f5b8651d158c6
+-r--r--r--    1 timofieiev  staff   456 Nov  4 09:27 4cb4e415b0c9c04423bb9fed69267c8c059bb0
+-r--r--r--    1 timofieiev  staff   159 Nov  4 09:27 b1a8ce3238fc3089efd08a7f0396ddde09bcfb
+
+./.git/objects/94:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Oct 27 19:35 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   207 Oct 27 19:35 8e8e36f852fa13cc15b1910863317fcc0451a0
+
+./.git/objects/95:
+total 24
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 09:27 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   368 Nov 10 07:41 11ce91a35a6d33b2696bb5f640f995473ae1bc
+-r--r--r--    1 timofieiev  staff  1456 Oct 26 13:10 16a2c4a9f4680b2faff5ebfaedc4c702c8d358
+-r--r--r--    1 timofieiev  staff  1116 Nov  4 09:27 84876f0cc0c902294334fd194805bd34d3b2f1
+
+./.git/objects/96:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Oct 27 19:35 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1488 Oct 27 19:35 19e2ee32c7b920ff7e6f91f47604aa6440b679
+
+./.git/objects/97:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 09:27 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1385 Nov  4 09:27 b9ae9674ebe7165cb5ebd2f46d094516b6aa9c
+-r--r--r--    1 timofieiev  staff   346 Nov 10 07:41 bc5cbc131127cf0af3774cf0f7bd7b02974696
+
+./.git/objects/98:
+total 56
+drwxr-xr-x    5 timofieiev  staff    160 Oct 28 17:47 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  19014 Oct 27 19:35 336d4de7cdd575bfbbd097bda8bf9b718a0668
+-r--r--r--    1 timofieiev  staff    720 Oct 28 17:47 6ca17186f761260888cf351e0237c5f6c10e78
+-r--r--r--    1 timofieiev  staff    622 Oct 28 17:47 8dc425daf7d8ec4166d83e804be2067ae4db00
+
+./.git/objects/99:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Oct 29 12:09 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   633 Oct 29 12:09 85be44665a64765e9d3fcb026f09ab8a4880ad
+
+./.git/objects/9b:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1171 Nov  4 16:30 c089e93b0fdeb5ea1fbfd5d909e0161698ebff
+
+./.git/objects/9c:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 09:27 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   387 Oct 26 13:10 9b7b0ab8a5132373b59917333e76a7a928f3a1
+-r--r--r--    1 timofieiev  staff   960 Nov  4 09:27 ba662235908c84db5b171616fddb6608400cb7
+
+./.git/objects/9d:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Oct 25 18:21 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   404 Nov 10 07:41 87060a61b02e77722e6380a2e3c377617919a1
+
+./.git/objects/a0:
+total 112
+drwxr-xr-x    7 timofieiev  staff    224 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   1458 Oct 26 13:31 45d65769a807b70f5ac48ee95f02d1d66b9a3b
+-r--r--r--    1 timofieiev  staff   1133 Nov  4 16:30 4fa0452a91752e9063c447358fd01c213bf146
+-r--r--r--    1 timofieiev  staff    642 Oct 25 18:21 72254be43308d5f617428147b1a606522c19ce
+-r--r--r--    1 timofieiev  staff    517 Nov 10 07:41 8cb00601009cf73aef3903ddb394fce1ab712f
+-r--r--r--    1 timofieiev  staff  37881 Oct 26 13:27 ae2dfd999858f982a574eb060e8f538cd168dc
+
+./.git/objects/a1:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Oct 25 18:21 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   597 Oct 25 18:21 16e1fee7898c735cb92255f8e294993f97fc2a
+-r--r--r--    1 timofieiev  staff   796 Oct 25 18:21 6cb6d5c2bce8f965286b6e2f799392bbd80244
+
+./.git/objects/a2:
+total 40
+drwxr-xr-x    7 timofieiev  staff   224 Nov 10 07:41 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1318 Nov  4 16:30 09fed1576dc970aa54706e1a3e4c0562123ea5
+-r--r--r--    1 timofieiev  staff    52 Nov  4 09:27 3bec5d08e96b59d5b9f5e4e103dbc362d04c36
+-r--r--r--    1 timofieiev  staff   163 Nov  4 16:30 68ddcca4ebc73d8b8e9c77db05426f3fe9746c
+-r--r--r--    1 timofieiev  staff  1318 Nov  4 09:27 c6b57a630af09a6246b85d9a2b7d84f71c824e
+-r--r--r--    1 timofieiev  staff   157 Nov 10 07:41 c721d0437c5409483abf22f3fdedadf1bbc20c
+
+./.git/objects/a3:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   999 Oct 27 19:35 9c79750bbeae6d4555e9ea76f0112dec264a83
+-r--r--r--    1 timofieiev  staff  1191 Nov  4 16:30 cd35aa69b971bae9ec87547ec2d706ac49e961
+
+./.git/objects/a4:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Oct 28 17:47 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   360 Nov 10 07:41 2b019063c9b4dc6b3119779018cdddbd735e97
+-r--r--r--    1 timofieiev  staff   317 Oct 28 17:47 d1d11b1204700445ccbb88c7d016833d0f0217
+
+./.git/objects/a6:
+total 48
+drwxr-xr-x    4 timofieiev  staff    128 Oct 29 12:08 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  19723 Oct 29 12:08 13d5d3b5ea80304de1570d00e23d14b735eb85
+-r--r--r--    1 timofieiev  staff    794 Oct 27 19:35 f12e41ab9e95228dea6dd00cfc87fdfc3b24a0
+
+./.git/objects/a7:
+total 24
+drwxr-xr-x    5 timofieiev  staff   160 Oct 29 12:08 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   776 Oct 25 18:21 4a3ad46fd45eb82736698258092b4b7b425a5c
+-r--r--r--    1 timofieiev  staff   164 Oct 29 12:08 77b802b16cc66caeeaf823c678c3d9b90a9d5a
+-r--r--r--    1 timofieiev  staff   630 Oct 25 18:21 e59346edc988ce92a71738dd46d244c9c5d40b
+
+./.git/objects/a8:
+total 24
+drwxr-xr-x    5 timofieiev  staff   160 Nov 10 07:41 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   972 Nov  4 09:27 2002be2cb0e8b5bd7254575b8200fb3cc232b1
+-r--r--r--    1 timofieiev  staff  1351 Nov 10 07:41 6e3d7f7209d27e63a09f6c87c0ebe6f37bf0c1
+-r--r--r--    1 timofieiev  staff  1292 Nov  4 11:59 ddea2e46212282ba0b0319f6d5389e8d743f97
+
+./.git/objects/aa:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Oct 28 17:47 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1192 Oct 28 17:47 9b4cb038048fe8cf781f2d119d6346aaeb885a
+-r--r--r--    1 timofieiev  staff   173 Oct 28 17:47 ffef5bdedd10f316427d1f5845e8738a621ccd
+
+./.git/objects/ab:
+total 72
+drwxr-xr-x    7 timofieiev  staff    224 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff    742 Nov  4 16:30 50ca896425d21e7b3e04bd01c28f57bc9ae0a8
+-r--r--r--    1 timofieiev  staff    735 Oct 27 19:35 5bd093717ff053686d40fee498948dff5bda9a
+-r--r--r--    1 timofieiev  staff   1456 Oct 26 13:10 b4e8e4060d69a53581d991fe1d1b6b59344ae3
+-r--r--r--    1 timofieiev  staff    840 Nov  4 09:27 cde17be86915a4581c4d70eb17893e23eb768a
+-r--r--r--    1 timofieiev  staff  18147 Oct 27 19:35 d70a17e92f867c6419f8beaeb06a1d548e8d64
+
+./.git/objects/ac:
+total 120
+drwxr-xr-x    4 timofieiev  staff    128 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  20306 Nov  4 16:30 06d8caf849bbfa8826df5511cf6832bf0de9c9
+-r--r--r--    1 timofieiev  staff  37912 Nov  4 09:27 e6b4901322aa23119dee669e0f025c909d40da
+
+./.git/objects/ad:
+total 32
+drwxr-xr-x    6 timofieiev  staff   192 Nov  5 10:16 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   826 Oct 25 18:21 090aac43470ad52d72a557a4decf8aad35a57d
+-r--r--r--    1 timofieiev  staff   947 Nov  4 09:27 52a7201a8fe68942b9b4f67b9a47ad5bfc40cc
+-r--r--r--    1 timofieiev  staff    52 Nov  5 10:16 66a7dd63d6ca0b69db5909c1c509cf0ff30157
+-r--r--r--    1 timofieiev  staff   896 Nov  4 16:30 c4fc7fa63f2dee378825eee82af83a93542b31
+
+./.git/objects/ae:
+total 48
+drwxr-xr-x    8 timofieiev  staff   256 Nov  5 10:16 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   847 Oct 27 19:35 21ceb37029feab35c6399dc48a1c067c484f0e
+-r--r--r--    1 timofieiev  staff   318 Nov  5 10:16 22920d470a66e5fb2b320f15b3b4eb7301c29d
+-r--r--r--    1 timofieiev  staff   905 Oct 26 16:10 66d732b70abea8a33032fc679e269dfa81a288
+-r--r--r--    1 timofieiev  staff   179 Oct 27 19:35 a8ade7927842ebc3a99022f9984f055e07473c
+-r--r--r--    1 timofieiev  staff    52 Nov  4 09:27 ab5a25bdebd4a0d15922af490c1e102f00da85
+-r--r--r--    1 timofieiev  staff   367 Nov 10 07:41 dafd061d645f1c7781e59ddc470edef5d0a05c
+
+./.git/objects/b0:
+total 32
+drwxr-xr-x    6 timofieiev  staff   192 Nov 10 07:41 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1385 Nov  4 09:27 0943226ad4dfbc916d1eea5ce838c0d48e935b
+-r--r--r--    1 timofieiev  staff   199 Oct 29 12:09 566a1fdf22985ba3af788fbe460fbaffa2310b
+-r--r--r--    1 timofieiev  staff   718 Oct 26 13:07 c48c56bef1a127c560504ab03e575f1c78b3fa
+-r--r--r--    1 timofieiev  staff  1446 Nov 10 07:41 fd196554f84365d2b4efa567a3ddcc50dac159
+
+./.git/objects/b1:
+total 24
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 09:27 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   172 Nov  4 09:27 3579c26864e257e8ea1b6cd72100774e77776d
+-r--r--r--    1 timofieiev  staff   207 Oct 26 13:27 a10f87cfe59002fd3d64802bcbb14d18670fcb
+-r--r--r--    1 timofieiev  staff  1036 Nov  4 09:27 a7b313c20ba84538daeaf5f3b28e875aad456e
+
+./.git/objects/b2:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Oct 27 19:35 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   207 Oct 27 19:35 219d89589aed21232407e1d3486cb357968472
+
+./.git/objects/b3:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 09:27 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1221 Nov  4 09:27 9af88c11120fb37e7bb69425a76fe2bf190378
+-r--r--r--    1 timofieiev  staff   412 Nov 10 07:41 ccdceab7eb98c344d46b7b94adacc2f6a4308b
+
+./.git/objects/b4:
+total 32
+drwxr-xr-x    6 timofieiev  staff   192 Nov 10 07:40 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   591 Oct 25 18:21 0e8714639a6e92201cf5bbf142aeb60666cd8c
+-r--r--r--    1 timofieiev  staff  1418 Nov 10 07:40 3fc93ff6e09e5af4e11684c0c1686839d83bdc
+-r--r--r--    1 timofieiev  staff   488 Oct 25 18:21 a60a7aa72d28185e67614936fa301ec1fb351b
+-r--r--r--    1 timofieiev  staff   317 Nov  5 10:16 be7847a0efc3000a5f4f78efbbdc0f83b263a9
+
+./.git/objects/b5:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Oct 28 17:47 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   340 Nov 10 07:41 46ed303a0cc4dd95da8a8ff9cdaa1dcf9d5972
+-r--r--r--    1 timofieiev  staff   713 Oct 28 17:47 9de1d52a1afb371e39c4a02132736bb377e319
+
+./.git/objects/b6:
+total 24
+drwxr-xr-x    5 timofieiev  staff   160 Oct 26 16:22 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   165 Oct 26 16:22 0f79a4d01f9e79d919b98efb6ef495689f5dca
+-r--r--r--    1 timofieiev  staff   508 Oct 25 18:21 843259f5a54cd51d46c47c793ec8a8b279a134
+-r--r--r--    1 timofieiev  staff   706 Oct 26 13:27 b0e898c3b8f7acd09e1ecce47b5e0036aa09dd
+
+./.git/objects/b7:
+total 24
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   166 Oct 27 19:35 3ca9cda17628708d891a98ce58e31ad0c8afac
+-r--r--r--    1 timofieiev  staff   731 Oct 27 19:35 7547534993f7c13354a4a29e7e718e4f0d9db2
+-r--r--r--    1 timofieiev  staff   911 Nov  4 16:30 af9e2e2903d676817c6de170b97d4fa39737d9
+
+./.git/objects/b8:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Nov  5 10:16 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   937 Nov  5 10:16 359b50dc1b2f464b35fae94c29f9644ed46986
+
+./.git/objects/ba:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Nov  5 10:16 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1180 Nov  5 10:16 3d60cf8f9894c0f1311ab34ea10aab44739b0c
+
+./.git/objects/bb:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   938 Nov  4 16:30 c46ebc9698d53c4443f12be9c275fffe14e12e
+-r--r--r--    1 timofieiev  staff   262 Oct 28 17:47 c650136288e0280937a12eb40b0c95fb49479c
+
+./.git/objects/bc:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 11:39 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   162 Oct 27 19:35 c69a67ce88c4ef2949f04411358917d28d1a78
+-r--r--r--    1 timofieiev  staff   188 Nov  4 11:39 f42309c78ad1d1c0dff8f29cc376894883e810
+
+./.git/objects/bd:
+total 40
+drwxr-xr-x    7 timofieiev  staff   224 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   521 Oct 25 18:21 2c9d447dac6658d8a9f67303a0ec5b639f7630
+-r--r--r--    1 timofieiev  staff   207 Oct 27 19:35 48d683ed221ff0b4339a29a6200a4eab013356
+-r--r--r--    1 timofieiev  staff   171 Nov  4 16:30 8143969858c3284c064949d30c12614c0ea4bb
+-r--r--r--    1 timofieiev  staff   841 Oct 27 19:35 aa5477124cb9684c0d9024210580ade279c548
+-r--r--r--    1 timofieiev  staff  1489 Oct 27 19:35 fb464e0f71b93d07cbcd60bd8bd70731d98bc6
+
+./.git/objects/be:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Oct 26 16:27 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   421 Oct 25 18:21 626665c924d18a8bb9e7b7ed77d40622732361
+-r--r--r--    1 timofieiev  staff  1458 Oct 26 16:27 879266fc350147ae1199f6e111a8aa334d6c3f
+
+./.git/objects/bf:
+total 72
+drwxr-xr-x    7 timofieiev  staff    224 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   1489 Oct 27 19:35 01f971d71785b6a815cd9386f9649b7c640e2e
+-r--r--r--    1 timofieiev  staff   1089 Nov  4 16:30 7b95521e70f6c84d315c88132d5dd200e56efd
+-r--r--r--    1 timofieiev  staff    174 Nov  4 09:27 873f85dbde0d414b9e3d7a4b58e74c723104b0
+-r--r--r--    1 timofieiev  staff  19910 Nov  4 09:27 89da27d6e25fe5ae5114a2decedf1ab7049aec
+-r--r--r--    1 timofieiev  staff    857 Oct 25 18:21 b7eb28207b8b4f555ffc2811adb3d7b82e2197
+
+./.git/objects/c0:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Oct 25 18:21 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   685 Oct 25 18:21 c69248c124aa09d36fbf3aa0f08aedec3986cb
+
+./.git/objects/c1:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1375 Nov  4 16:30 0ce9318c5bf2e1675a32a07319f36c4214e579
+
+./.git/objects/c2:
+total 56
+drwxr-xr-x    5 timofieiev  staff    160 Oct 27 19:35 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff    169 Oct 27 19:35 1c58d65fa9df0dd84b75e941b9140f15c80684
+-r--r--r--    1 timofieiev  staff    848 Oct 27 19:35 8b026aec6e31f978132713f7c05c6ae34c9ba4
+-r--r--r--    1 timofieiev  staff  18974 Oct 27 19:35 e05d2da14c3ca25493f975587ea0bb21fd65e9
+
+./.git/objects/c4:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Oct 27 19:35 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   207 Oct 27 19:35 996080b60d925672c694c4ac44cbc9e67bb147
+
+./.git/objects/c6:
+total 24
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 09:28 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   160 Oct 27 19:35 8fa425981b3071c2dc808765dac93c75d981f4
+-r--r--r--    1 timofieiev  staff   200 Nov  4 09:27 a370e09c6127e594e1c99148a7d99fb59e35c8
+-r--r--r--    1 timofieiev  staff   207 Oct 27 19:35 df56690ec4dcc7ed407438d871cd0db99d7d90
+
+./.git/objects/c7:
+total 48
+drwxr-xr-x    4 timofieiev  staff    128 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   1377 Nov  4 16:30 7242144727142bc8bb5d75d13a67c3054e892a
+-r--r--r--    1 timofieiev  staff  19693 Oct 29 12:09 c57ec6b7d0320142cebd8aa9110e3a285cf51b
+
+./.git/objects/c8:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   837 Nov  4 16:30 192c7e6bc5854276fd883d97c9e460fbdfb103
+
+./.git/objects/c9:
+total 32
+drwxr-xr-x    6 timofieiev  staff   192 Nov  4 16:30 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   721 Oct 25 18:21 6769872cac4e87b5a8d763b62970548aee7710
+-r--r--r--    1 timofieiev  staff   302 Oct 25 18:21 abaaad0ebc6807ca8077d7bdbb0053d4920e50
+-r--r--r--    1 timofieiev  staff   166 Oct 27 19:35 c1431149d88d0ad3719cd22644026c6322068d
+-r--r--r--    1 timofieiev  staff   165 Nov  4 16:30 fbfddd3c59ef5b0b0b1bebee16321277b7a119
+
+./.git/objects/cb:
+total 24
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   159 Nov  4 16:30 25544623f1eec3f05aaae532c453a3aff73c41
+-r--r--r--    1 timofieiev  staff   207 Oct 27 19:35 5ca103df6870e4c89aa87582eb11e9ae2248ae
+-r--r--r--    1 timofieiev  staff   318 Nov  4 16:30 c7450a1bbbe9f6c4ddb5368caed18349991488
+
+./.git/objects/cc:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   161 Nov  4 16:30 46ac13a34550457d5339df7ce8d0928dbc62da
+
+./.git/objects/cd:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Nov  5 10:16 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   721 Oct 25 18:21 b0c58cb153071e3dd7ac3a93bf96098f8f14fe
+-r--r--r--    1 timofieiev  staff  1351 Nov  5 10:16 fdcb9bcbb3a75c97fac6774abf1c5ff7e39bca
+
+./.git/objects/ce:
+total 152
+drwxr-xr-x    8 timofieiev  staff    256 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  20102 Nov  4 09:27 15866521006cf7324f4e63cd870b9e2e429b66
+-r--r--r--    1 timofieiev  staff    412 Oct 25 18:21 1d0a81e471f024bc18f87ec9208f1aee3c643f
+-r--r--r--    1 timofieiev  staff    711 Oct 25 18:21 264b9e3fe0d3ed9790d8d8fb0d9b45420c5593
+-r--r--r--    1 timofieiev  staff   1249 Nov  4 16:30 6f3569f844fa91e4cc5bda2b68b4390026c65f
+-r--r--r--    1 timofieiev  staff  37928 Oct 25 18:21 74914096b9e0361a62d754af9911ca985586f2
+-r--r--r--    1 timofieiev  staff   1349 Nov  4 16:30 9840638cbbe4cd755cf9955cf12903086e9431
+
+./.git/objects/cf:
+total 48
+drwxr-xr-x    7 timofieiev  staff   224 Nov  5 10:16 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff    58 Oct 27 19:35 159ba0219f80b6d7fa93f330f01041b9cd4424
+-r--r--r--    1 timofieiev  staff   351 Nov 10 07:41 31e98ca05517d93ef12044047aba4d1a0a6d7b
+-r--r--r--    1 timofieiev  staff   972 Nov  5 10:16 900b1b28f4ec8f1ee9514e6cfd13bb92bdcae0
+-r--r--r--    1 timofieiev  staff    51 Nov  4 09:27 d763545feb814c49ebcf9e91b9e8e3bdfb5dbe
+-r--r--r--    1 timofieiev  staff  5698 Nov  4 16:30 f3949ef9a0cf644c9f335a01beac24487953ec
+
+./.git/objects/d0:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   168 Oct 27 19:35 b33fe1da38d9dac5afbb4446196c240fc21871
+-r--r--r--    1 timofieiev  staff  1070 Nov  4 16:30 e0a87ff2efe581b137415f36a65a5be4a05808
+
+./.git/objects/d1:
+total 56
+drwxr-xr-x    5 timofieiev  staff    160 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff    670 Nov  4 16:30 0c4877ab498a141f38b8df5950d7d4909960ad
+-r--r--r--    1 timofieiev  staff  20328 Nov  4 16:30 2084dc1dc391a301ee3a516cd66a0554b25ba3
+-r--r--r--    1 timofieiev  staff     86 Oct 26 10:43 bdc213cb7d40cf7b71c744c0f66a15b5ab8dd4
+
+./.git/objects/d2:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Oct 25 18:21 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   390 Nov 10 07:41 01a92b3237402e5655b70cbe8458ab546cc1a3
+
+./.git/objects/d3:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1212 Nov  4 16:30 1f9e2d8ea1a7e5df496a5f01ad202d8baffa60
+-r--r--r--    1 timofieiev  staff  1320 Nov  4 09:27 b3d41f40c6c3317e76d56ac968018a7586ece8
+
+./.git/objects/d5:
+total 24
+drwxr-xr-x    4 timofieiev  staff   128 Nov 10 07:41 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  5763 Nov 10 07:41 28dc2c799443b8d1a13347dda3f28293556806
+-r--r--r--    1 timofieiev  staff  1151 Nov  4 09:27 3bb367da49a99030dce72aa39f67974e67d8aa
+
+./.git/objects/d6:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Nov  5 10:16 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1295 Nov  5 10:16 749e7d0147dafe70a45c39e3085949452baa00
+
+./.git/objects/d7:
+total 72
+drwxr-xr-x    7 timofieiev  staff    224 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff    508 Oct 25 18:21 2fcee0c7e8eb806c57e34b2b911c815a98e452
+-r--r--r--    1 timofieiev  staff    477 Nov 10 07:41 5e9c20e1796f3bf1e531a99a6633d2dc940faa
+-r--r--r--    1 timofieiev  staff  18190 Oct 26 13:07 7c3fe22a442820a8975ebc9ed656ac62e7ccea
+-r--r--r--    1 timofieiev  staff   1147 Nov  4 16:30 7f0671a75733d086de1af9f37ae433bcb48608
+-r--r--r--    1 timofieiev  staff    585 Oct 28 17:47 93e441f1b8002fdcf36381578137f374b0f349
+
+./.git/objects/d8:
+total 40
+drwxr-xr-x    3 timofieiev  staff     96 Nov  4 09:28 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  19698 Nov  4 09:27 e1256c16f5fa63c9f76fd558f61715fa68dd4e
+
+./.git/objects/d9:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Oct 27 19:35 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   208 Oct 27 19:35 112409c5cec6c8ba3bd66d0d72b4b9741ec855
+
+./.git/objects/da:
+total 80
+drwxr-xr-x    3 timofieiev  staff     96 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  37868 Nov  4 16:30 65f6501591332e07319f5d5f6eb71c514196c6
+
+./.git/objects/db:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Nov  5 10:16 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1458 Oct 25 18:21 cf7875411a338c0213c4c7568b0042a654af19
+-r--r--r--    1 timofieiev  staff   166 Nov  5 10:16 f28c50619e38889ec769a04502cae78549b225
+
+./.git/objects/dc:
+total 24
+drwxr-xr-x    5 timofieiev  staff   160 Oct 28 17:47 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   376 Nov 10 07:41 6d04de7ca2adcda2c43360d3754219a1689cd1
+-r--r--r--    1 timofieiev  staff  1197 Oct 25 18:21 abb06405780b2f0440c68064fea6616405b64f
+-r--r--r--    1 timofieiev  staff   191 Oct 28 17:47 c4d88d6c8acc448ba0e7daab49a0fe75232e1e
+
+./.git/objects/dd:
+total 104
+drwxr-xr-x    6 timofieiev  staff    192 Nov  5 10:16 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff    357 Nov 10 07:41 6908d0a32655d582e0f0c6ed874db3e1f43d3b
+-r--r--r--    1 timofieiev  staff   1349 Nov  5 10:16 b33f4981f2951e57b78fea7e30bd463f65a962
+-r--r--r--    1 timofieiev  staff     52 Oct 25 18:21 b5da097d096310805e2302eb95bc60f1d8f9f2
+-r--r--r--    1 timofieiev  staff  37899 Nov  4 09:27 f1a2ade74b4e4f3395d76b8bcb4758bc2c4eac
+
+./.git/objects/de:
+total 32
+drwxr-xr-x    6 timofieiev  staff   192 Nov  5 10:16 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   305 Oct 25 18:21 3508f73643bd80ce656a4e015c9a6855218746
+-r--r--r--    1 timofieiev  staff   165 Nov  5 10:16 a1fe41f20441484c0bc2025d9b328652dc51f6
+-r--r--r--    1 timofieiev  staff   669 Nov  4 09:27 d909cabcda58d423ae01c76beb0947048cd583
+-r--r--r--    1 timofieiev  staff   473 Nov 10 07:41 e7e9344f60a0531156d551213e05e3699d8733
+
+./.git/objects/df:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 09:27 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   988 Oct 27 19:35 0e205a84c19be80a657cbb98dc2f362effac37
+-r--r--r--    1 timofieiev  staff   724 Nov  4 09:27 12480622758d111a9016f9a9c836df5237dea7
+
+./.git/objects/e1:
+total 32
+drwxr-xr-x    6 timofieiev  staff   192 Nov  5 10:16 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   317 Nov  5 10:16 6f3467775d4c22d1778ca8ede1b05ad16d969e
+-r--r--r--    1 timofieiev  staff   419 Nov 10 07:41 ca5019fa197884fd01dc55079a1d8b6b9b91b0
+-r--r--r--    1 timofieiev  staff   165 Nov  5 10:16 eba633e4f94d8ed93ba3c647ac959ace623445
+-r--r--r--    1 timofieiev  staff   740 Nov  4 09:27 eff6bcbdd20ad6ca9428de359c8fa9f06f7130
+
+./.git/objects/e2:
+total 24
+drwxr-xr-x    5 timofieiev  staff   160 Oct 28 17:47 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   769 Oct 27 19:35 159289ff7eb198fb80e7dfdb659fd4e8d45f0b
+-r--r--r--    1 timofieiev  staff   920 Oct 28 17:47 2b5f265275d2b10d6ddd888093ed7202e3b8a6
+-r--r--r--    1 timofieiev  staff   208 Oct 27 19:35 b0f7fbc7000e595b1732d282f02cbe0f025433
+
+./.git/objects/e3:
+total 40
+drwxr-xr-x    3 timofieiev  staff     96 Oct 27 19:35 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  19212 Oct 27 19:35 c23db742b620ece3479fa71f01310e4424d281
+
+./.git/objects/e4:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 16:30 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   398 Nov 10 07:41 71024b58053b59049d28f1e646b10a1056fdc4
+-r--r--r--    1 timofieiev  staff   164 Nov  4 16:30 da33a209dc7b12e7360dbab3c2a093899a3658
+
+./.git/objects/e5:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Oct 28 17:47 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff    52 Oct 28 17:47 f152eaf8224fc0cf3610517817b7165153da97
+
+./.git/objects/e6:
+total 48
+drwxr-xr-x    4 timofieiev  staff    128 Nov  5 10:16 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff    899 Nov  4 09:27 297caa5f4d3daa46ada67a2a4d2779d29a26ec
+-r--r--r--    1 timofieiev  staff  20356 Nov  5 10:16 c7f88353c49db966bd425e47ff02d129b9dfcc
+
+./.git/objects/e7:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1323 Nov  4 16:30 46fa814d9f7010b7dfc6837904284b16f102b1
+
+./.git/objects/e8:
+total 24
+drwxr-xr-x    5 timofieiev  staff   160 Nov  4 09:27 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   170 Nov  4 09:27 ee8684163cddb5c40b9fcf62b7bb764c4a3f5d
+-r--r--r--    1 timofieiev  staff   814 Oct 28 17:47 f649386d24428665c5de23165b653771e9d514
+-r--r--r--    1 timofieiev  staff   400 Nov 10 07:41 f761484fc2e8320c678699518c798a6d02288a
+
+./.git/objects/e9:
+total 40
+drwxr-xr-x    7 timofieiev  staff   224 Nov  5 10:16 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1488 Oct 27 19:35 0e8c3b6e85967da3ef96cd8f5c7664db4064e6
+-r--r--r--    1 timofieiev  staff   319 Nov  5 10:16 650d61ce1b09b20f472866fd69d51360cb313e
+-r--r--r--    1 timofieiev  staff    60 Oct 27 19:35 9bccc82e549b98bd7ace602ccdfdd67c767396
+-r--r--r--    1 timofieiev  staff   158 Oct 27 19:35 a5a5abdb1fc73a12f0c8bf1708ae03efc66e15
+-r--r--r--    1 timofieiev  staff  1488 Oct 27 19:35 a69ede9c4017a42d0704884e4f3415fcb3062f
+
+./.git/objects/ea:
+total 48
+drwxr-xr-x    8 timofieiev  staff   256 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   987 Nov  4 16:30 11a04a1d0f8762cc88f99582009ebe4fa3bb6a
+-r--r--r--    1 timofieiev  staff   131 Oct 26 17:58 90ae6c470082e21ea8f2ef2c4bd4cac508fd5a
+-r--r--r--    1 timofieiev  staff   409 Nov 10 07:41 96e740c166edb62e90321b347a9753338ce176
+-r--r--r--    1 timofieiev  staff   171 Oct 26 13:10 b402303ba073eb7cd0c361581147f4b4744508
+-r--r--r--    1 timofieiev  staff  1488 Oct 27 19:35 d5e2a519673036628b1c44d2143f1b5f391131
+-r--r--r--    1 timofieiev  staff  1459 Oct 27 19:35 d97ed793656cca79e35688f19cb0856cf45ca3
+
+./.git/objects/eb:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Oct 25 18:21 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   445 Nov 10 07:41 09de08176e33605d262459ae90c26c0af63023
+
+./.git/objects/ec:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Oct 28 17:47 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1110 Oct 28 17:47 7e95e43ab210279a1a9a03a40bb56a2eb09b5a
+-r--r--r--    1 timofieiev  staff   169 Oct 26 13:27 9ac69deadbcb2fd6698a9e39794b885e832fdf
+
+./.git/objects/ed:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 11:59 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   811 Nov  4 11:59 274fce04a81b70a0d11bc3126057f6cd8f27a6
+-r--r--r--    1 timofieiev  staff  1296 Oct 27 19:35 36fe45e32c42d11b4723026e271967dee85165
+
+./.git/objects/ee:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Oct 29 12:09 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   292 Oct 29 12:09 79ed605a8bd990346976e5ae2b493bd19efc0e
+
+./.git/objects/ef:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 09:27 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   318 Nov  4 09:27 9b4ae74836caa76995f5e35a6e5e0c46acb583
+
+./.git/objects/f0:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Oct 26 13:17 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   130 Oct 26 13:17 6c93c8fa8acf2650633ac545cc2fda37726d23
+
+./.git/objects/f1:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Oct 27 19:35 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1489 Oct 27 19:35 76fc80242bbf7edb6eb605097db2953bb028fa
+
+./.git/objects/f2:
+total 64
+drwxr-xr-x    6 timofieiev  staff    192 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  20304 Nov  4 16:30 1d98819b3836a8d60d47c40425bfe3ea36c617
+-r--r--r--    1 timofieiev  staff    874 Oct 26 13:07 28f3a198be6460954fc0837843f02577835422
+-r--r--r--    1 timofieiev  staff    317 Nov  4 09:27 e7bdb453d1ea9d8eb1fc1ea13561416f82d086
+-r--r--r--    1 timofieiev  staff    207 Oct 27 19:35 fd1dc69d3e361aa4acd86d2427e665232f4bb5
+
+./.git/objects/f3:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Oct 25 18:21 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   419 Nov 10 07:41 c24e0ee184cf089fee1589ad5d49ca14919fef
+
+./.git/objects/f4:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Nov  5 10:16 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1207 Nov  4 16:30 3acff82920abe6f3565ae5c1d24cb926e46648
+-r--r--r--    1 timofieiev  staff  1350 Nov  5 10:16 a6c9dfa7aebe7e175b498a841b9c007d163fde
+
+./.git/objects/f5:
+total 24
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 09:27 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  5655 Oct 25 18:21 44a971c663b76529484ed1531401d758749029
+-r--r--r--    1 timofieiev  staff   170 Nov  4 09:27 d50823270217875272f8981ef481b87189b467
+
+./.git/objects/f6:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Oct 25 18:21 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   434 Nov 10 07:41 f8afea99ca0f5aedfdc01babc49c594d5f602d
+
+./.git/objects/f7:
+total 16
+drwxr-xr-x    4 timofieiev  staff   128 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   317 Nov  4 16:30 0880bbdded446205bc4f12ae3c442792a4e186
+-r--r--r--    1 timofieiev  staff   591 Nov  4 11:38 9c24b7b1c823c7331b390b2df93dd2bc0811ba
+
+./.git/objects/f8:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1380 Nov  4 16:30 eca3bf88c3e3e0c08d194a349104013c5547c2
+
+./.git/objects/f9:
+total 56
+drwxr-xr-x    5 timofieiev  staff    160 Oct 29 12:09 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff    439 Nov 10 07:41 19d99a0be4625086228375d6a24d47ba6a27f1
+-r--r--r--    1 timofieiev  staff  19123 Oct 28 17:47 658a26c4334c6af851a8812c4897ca71533ca2
+-r--r--r--    1 timofieiev  staff    174 Oct 29 12:09 a4a72dc6caf372247f0935cd2282b4beadbcc5
+
+./.git/objects/fa:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 11:38 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  1321 Nov  4 11:38 da5cc42f37915798f6d8a032ff2f243845f934
+
+./.git/objects/fc:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Nov  5 10:16 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   319 Nov  5 10:16 8b7eb4342987a920c34ee3ec53c5ba93c92a9a
+
+./.git/objects/fd:
+total 64
+drwxr-xr-x    6 timofieiev  staff    192 Nov  5 10:16 .
+drwxr-xr-x  228 timofieiev  staff   7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff  20157 Nov  4 09:27 092b7a6983cdf6afe9aa53546be4719b1fff06
+-r--r--r--    1 timofieiev  staff   1350 Nov  5 10:16 30c020fdd384a57f610d62dc2aeb208179c660
+-r--r--r--    1 timofieiev  staff   1351 Nov  4 16:30 33ae7fafaac0fb4e69ab9ca06e9a96f80590c2
+-r--r--r--    1 timofieiev  staff     52 Nov  4 09:27 dbe5c23133193d457fb22e9d8fab4cf1d6b48b
+
+./.git/objects/fe:
+total 8
+drwxr-xr-x    3 timofieiev  staff    96 Nov  4 16:31 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   190 Nov  4 16:30 4b71346ec40f026720820a2629a6fb16075ff6
+
+./.git/objects/ff:
+total 32
+drwxr-xr-x    6 timofieiev  staff   192 Nov 10 07:40 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff   588 Oct 28 17:47 029fa7b77e33ab8a95c77236b077aef74ba815
+-r--r--r--    1 timofieiev  staff   166 Nov 10 07:40 07c1bb557879fa40e2c7be57c08f2973abff80
+-r--r--r--    1 timofieiev  staff   190 Nov  4 11:59 d2902152e85730ae7872f5a761a08cce3c010f
+-r--r--r--    1 timofieiev  staff   375 Nov 10 07:41 f3ca45d60444f198cbcb28a3b23095398fce88
+
+./.git/objects/info:
+total 0
+drwxr-xr-x    2 timofieiev  staff    64 Oct 25 17:03 .
+drwxr-xr-x  228 timofieiev  staff  7296 Nov 10 23:45 ..
+
+./.git/objects/pack:
+total 58936
+drwxr-xr-x   12 timofieiev  staff       384 Nov 10 23:45 .
+drwxr-xr-x  228 timofieiev  staff      7296 Nov 10 23:45 ..
+-r--r--r--    1 timofieiev  staff     10004 Nov 10 23:44 pack-503b8ff1f7960dcac533d2e34bf8fefee6439df9.idx
+-r--r--r--    1 timofieiev  staff    296328 Nov 10 23:44 pack-503b8ff1f7960dcac533d2e34bf8fefee6439df9.pack
+-r--r--r--    1 timofieiev  staff      5216 Oct 25 22:13 pack-683e923e99584fb601b8441a5ea27474e9b80302.idx
+-r--r--r--    1 timofieiev  staff    150229 Nov 10 07:41 pack-683e923e99584fb601b8441a5ea27474e9b80302.pack
+-r--r--r--    1 timofieiev  staff      4712 Nov  4 19:19 pack-850f1add744a4bc888ef09d8d05fdb61e968ec67.idx
+-r--r--r--    1 timofieiev  staff    130308 Nov  4 19:19 pack-850f1add744a4bc888ef09d8d05fdb61e968ec67.pack
+-r--r--r--    1 timofieiev  staff      5384 Oct 27 09:19 pack-a5c7b9e824b67cceb0243609f45a307f240c67b9.idx
+-r--r--r--    1 timofieiev  staff    126022 Oct 27 09:19 pack-a5c7b9e824b67cceb0243609f45a307f240c67b9.pack
+-r--r--r--    1 timofieiev  staff     17844 Oct 25 17:04 pack-fe6712355b883bc39c1ed494b7b125278496c826.idx
+-r--r--r--    1 timofieiev  staff  29293641 Nov 10 07:41 pack-fe6712355b883bc39c1ed494b7b125278496c826.pack
+
+./.git/refs:
+total 8
+drwxr-xr-x   6 timofieiev  staff  192 Nov  4 09:27 .
+drwxr-xr-x  15 timofieiev  staff  480 Nov 11 00:31 ..
+drwxr-xr-x   3 timofieiev  staff   96 Nov 10 23:44 heads
+drwxr-xr-x   3 timofieiev  staff   96 Oct 25 18:21 remotes
+-rw-r--r--   1 timofieiev  staff   41 Nov  4 09:27 stash
+drwxr-xr-x   2 timofieiev  staff   64 Oct 25 17:03 tags
+
+./.git/refs/heads:
+total 8
+drwxr-xr-x  3 timofieiev  staff   96 Nov 10 23:44 .
+drwxr-xr-x  6 timofieiev  staff  192 Nov  4 09:27 ..
+-rw-r--r--  1 timofieiev  staff   41 Nov 10 23:44 master
+
+./.git/refs/remotes:
+total 0
+drwxr-xr-x  3 timofieiev  staff   96 Oct 25 18:21 .
+drwxr-xr-x  6 timofieiev  staff  192 Nov  4 09:27 ..
+drwxr-xr-x  4 timofieiev  staff  128 Nov 10 23:44 origin
+
+./.git/refs/remotes/origin:
+total 16
+drwxr-xr-x  4 timofieiev  staff  128 Nov 10 23:44 .
+drwxr-xr-x  3 timofieiev  staff   96 Oct 25 18:21 ..
+-rw-r--r--  1 timofieiev  staff   32 Oct 25 17:04 HEAD
+-rw-r--r--  1 timofieiev  staff   41 Nov 10 23:44 master
+
+./.git/refs/tags:
+total 0
+drwxr-xr-x  2 timofieiev  staff   64 Oct 25 17:03 .
+drwxr-xr-x  6 timofieiev  staff  192 Nov  4 09:27 ..
+
+./.vscode:
+total 8
+drwxr-xr-x   3 timofieiev  staff    96 Oct 27 19:35 .
+drwxr-xr-x  47 timofieiev  staff  1504 Nov 11 00:31 ..
+-rw-r--r--   1 timofieiev  staff    48 Oct 27 19:35 settings.json
+
+./archive:
+total 272
+drwxr-xr-x   3 timofieiev  staff      96 Oct 28 17:47 .
+drwxr-xr-x  47 timofieiev  staff    1504 Nov 11 00:31 ..
+-rw-r--r--   1 timofieiev  staff  137585 Oct 28 17:47 8.6 Пример. Печать каталогов : Язык программирования Си. Издание 3-е, исправленное : Библиотека (кни.pdf
+
+./errors:
+total 64
+drwxr-xr-x  10 timofieiev  staff   320 Nov 10 13:23 .
+drwxr-xr-x  47 timofieiev  staff  1504 Nov 11 00:31 ..
+-rw-r--r--@  1 timofieiev  staff   192 Oct 25 17:04 .Screen Shot 2018-10-23 at 9.30.53 PM.png.icloud
+-rw-r--r--@  1 timofieiev  staff   192 Oct 25 17:04 .Screen Shot 2018-10-23 at 9.31.01 PM.png.icloud
+-rw-r--r--@  1 timofieiev  staff   192 Oct 25 17:04 .Screen Shot 2018-10-23 at 9.31.14 PM.png.icloud
+-rw-r--r--@  1 timofieiev  staff   192 Oct 25 17:04 .Screen Shot 2018-10-23 at 9.32.20 PM.png.icloud
+-rw-r--r--@  1 timofieiev  staff   192 Oct 25 17:04 .Screen Shot 2018-10-23 at 9.32.29 PM.png.icloud
+-rw-r--r--@  1 timofieiev  staff   192 Oct 25 17:04 .Screen Shot 2018-10-23 at 9.32.42 PM.png.icloud
+-rw-r--r--@  1 timofieiev  staff   192 Oct 25 17:04 .Screen Shot 2018-10-23 at 9.33.02 PM.png.icloud
+-rw-r--r--@  1 timofieiev  staff   192 Oct 25 17:04 .Screen Shot 2018-10-23 at 9.38.59 PM.png.icloud
+
+./includes:
+total 8
+drwxr-xr-x   3 timofieiev  staff    96 Nov 11 00:10 .
+drwxr-xr-x  47 timofieiev  staff  1504 Nov 11 00:31 ..
+-rw-r--r--   1 timofieiev  staff  2491 Nov 11 00:10 ft_ls.h
+
+./libft:
+total 2008
+drwxr-xr-x  214 timofieiev  staff    6848 Nov 10 23:45 .
+drwxr-xr-x   47 timofieiev  staff    1504 Nov 11 00:31 ..
+-rw-r--r--@   1 timofieiev  staff    3423 Oct 25 17:18 Makefile
+-rw-r--r--    1 timofieiev  staff    2521 Oct 25 17:24 different.c
+-rw-r--r--    1 timofieiev  staff    3328 Nov 10 23:44 different.o
+-rw-r--r--    1 timofieiev  staff    1055 Oct 25 17:25 different_1.c
+-rw-r--r--    1 timofieiev  staff     732 Nov 10 23:44 different_1.o
+-rw-r--r--    1 timofieiev  staff    3086 Oct 25 17:25 different_2.c
+-rw-r--r--    1 timofieiev  staff    4704 Nov 10 23:44 different_2.o
+-rw-r--r--    1 timofieiev  staff    1001 Oct 25 17:04 ft_2d_arr_size.c
+-rw-r--r--    1 timofieiev  staff     680 Nov 10 23:44 ft_2d_arr_size.o
+-rwxr-xr-x    1 timofieiev  staff    1327 Oct 25 17:04 ft_atoi.c
+-rw-r--r--    1 timofieiev  staff    1012 Nov 10 23:44 ft_atoi.o
+-rwxr-xr-x    1 timofieiev  staff    1334 Oct 25 17:04 ft_atoi_global.c
+-rw-r--r--    1 timofieiev  staff     700 Nov  4 09:27 ft_bzero 2.o
+-rwxr-xr-x    1 timofieiev  staff     970 Oct 25 17:04 ft_bzero.c
+-rw-r--r--    1 timofieiev  staff     700 Nov 10 23:44 ft_bzero.o
+-rw-r--r--    1 timofieiev  staff    1124 Oct 25 17:04 ft_check_quantity.c
+-rw-r--r--    1 timofieiev  staff     764 Nov 10 23:44 ft_check_quantity.o
+-rw-r--r--    1 timofieiev  staff    1021 Oct 25 17:04 ft_clean_2d_char.c
+-rw-r--r--    1 timofieiev  staff     752 Nov 10 23:44 ft_clean_2d_char.o
+-rw-r--r--    1 timofieiev  staff    1089 Nov 10 23:44 ft_decimal_length.c
+-rw-r--r--    1 timofieiev  staff     764 Nov 10 23:44 ft_decimal_length.o
+-rw-r--r--    1 timofieiev  staff    1024 Oct 25 17:04 ft_hex_length.c
+-rw-r--r--    1 timofieiev  staff     688 Nov 10 23:44 ft_hex_length.o
+-rwxr-xr-x    1 timofieiev  staff    1010 Oct 25 17:04 ft_isalnum.c
+-rw-r--r--    1 timofieiev  staff     772 Nov 10 23:44 ft_isalnum.o
+-rwxr-xr-x    1 timofieiev  staff    1008 Oct 25 17:04 ft_isalpha.c
+-rw-r--r--    1 timofieiev  staff     672 Nov 10 23:44 ft_isalpha.o
+-rwxr-xr-x    1 timofieiev  staff     997 Oct 25 17:24 ft_isascii.c
+-rw-r--r--    1 timofieiev  staff     676 Nov 10 23:44 ft_isascii.o
+-rwxr-xr-x    1 timofieiev  staff    1000 Oct 25 17:24 ft_isdigit.c
+-rw-r--r--    1 timofieiev  staff     676 Nov 10 23:44 ft_isdigit.o
+-rw-r--r--    1 timofieiev  staff    1087 Oct 25 17:24 ft_isint.c
+-rw-r--r--    1 timofieiev  staff     696 Nov 10 23:44 ft_isint.o
+-rw-r--r--    1 timofieiev  staff    1712 Oct 25 17:04 ft_isposint.c
+-rw-r--r--    1 timofieiev  staff    1604 Nov 10 23:44 ft_isposint.o
+-rwxr-xr-x    1 timofieiev  staff     999 Oct 25 17:24 ft_isprint.c
+-rw-r--r--    1 timofieiev  staff     676 Nov 10 23:44 ft_isprint.o
+-rwxr-xr-x    1 timofieiev  staff    1507 Oct 25 17:04 ft_itoa.c
+-rw-r--r--    1 timofieiev  staff    1212 Nov 10 23:44 ft_itoa.o
+-rw-r--r--    1 timofieiev  staff    1058 Oct 25 17:04 ft_line_is_digit.c
+-rw-r--r--    1 timofieiev  staff     788 Nov 10 23:44 ft_line_is_digit.o
+-rwxr-xr-x    1 timofieiev  staff    1035 Oct 25 17:04 ft_lstadd.c
+-rw-r--r--    1 timofieiev  staff     684 Nov 10 23:44 ft_lstadd.o
+-rwxr-xr-x    1 timofieiev  staff    1213 Oct 25 17:04 ft_lstdel.c
+-rw-r--r--    1 timofieiev  staff     808 Nov 10 23:44 ft_lstdel.o
+-rwxr-xr-x    1 timofieiev  staff    1095 Oct 25 17:04 ft_lstdelone.c
+-rw-r--r--    1 timofieiev  staff     772 Nov 10 23:44 ft_lstdelone.o
+-rwxr-xr-x    1 timofieiev  staff    1046 Oct 25 17:04 ft_lstiter.c
+-rw-r--r--    1 timofieiev  staff     716 Nov 10 23:44 ft_lstiter.o
+-rwxr-xr-x    1 timofieiev  staff    1227 Oct 25 17:04 ft_lstmap.c
+-rw-r--r--    1 timofieiev  staff     840 Nov 10 23:44 ft_lstmap.o
+-rwxr-xr-x    1 timofieiev  staff    1331 Oct 25 17:04 ft_lstnew.c
+-rw-r--r--    1 timofieiev  staff     940 Nov 10 23:44 ft_lstnew.o
+-rwxr-xr-x    1 timofieiev  staff    1090 Oct 25 17:04 ft_memalloc.c
+-rw-r--r--    1 timofieiev  staff     776 Nov 10 23:44 ft_memalloc.o
+-rwxr-xr-x    1 timofieiev  staff    1240 Oct 25 17:04 ft_memccpy.c
+-rw-r--r--    1 timofieiev  staff     780 Nov 10 23:44 ft_memccpy.o
+-rwxr-xr-x    1 timofieiev  staff    1102 Oct 25 17:04 ft_memchr.c
+-rw-r--r--    1 timofieiev  staff     740 Nov 10 23:44 ft_memchr.o
+-rwxr-xr-x    1 timofieiev  staff    1177 Oct 25 17:04 ft_memcmp.c
+-rw-r--r--    1 timofieiev  staff     764 Nov 10 23:44 ft_memcmp.o
+-rwxr-xr-x    1 timofieiev  staff    1129 Oct 25 17:04 ft_memcpy.c
+-rw-r--r--    1 timofieiev  staff     732 Nov 10 23:44 ft_memcpy.o
+-rwxr-xr-x    1 timofieiev  staff    1010 Oct 25 17:04 ft_memdel.c
+-rw-r--r--    1 timofieiev  staff     720 Nov 10 23:44 ft_memdel.o
+-rwxr-xr-x    1 timofieiev  staff    1160 Oct 25 17:04 ft_memmove.c
+-rw-r--r--    1 timofieiev  staff     800 Nov 10 23:44 ft_memmove.o
+-rwxr-xr-x    1 timofieiev  staff    1098 Oct 25 17:04 ft_memset.c
+-rw-r--r--    1 timofieiev  staff     708 Nov 10 23:44 ft_memset.o
+-rw-r--r--    1 timofieiev  staff    1021 Oct 25 17:04 ft_octal_length.c
+-rw-r--r--    1 timofieiev  staff     688 Nov 10 23:44 ft_octal_length.o
+-rw-r--r--    1 timofieiev  staff    1162 Oct 25 17:04 ft_print_hex.c
+-rw-r--r--    1 timofieiev  staff     848 Nov 10 23:44 ft_print_hex.o
+-rw-r--r--    1 timofieiev  staff    2124 Oct 25 17:24 ft_print_hex_1.c
+-rw-r--r--    1 timofieiev  staff    2772 Nov 10 23:44 ft_print_hex_1.o
+-rw-r--r--    1 timofieiev  staff    2550 Oct 25 17:23 ft_print_hex_2.c
+-rw-r--r--    1 timofieiev  staff    3364 Nov 10 23:44 ft_print_hex_2.o
+-rw-r--r--    1 timofieiev  staff    1170 Oct 25 17:04 ft_print_hex_big.c
+-rw-r--r--    1 timofieiev  staff     852 Nov 10 23:44 ft_print_hex_big.o
+-rw-r--r--    1 timofieiev  staff    2187 Oct 25 17:23 ft_print_hex_main_pointer_1.c
+-rw-r--r--    1 timofieiev  staff    2852 Nov 10 23:44 ft_print_hex_main_pointer_1.o
+-rw-r--r--    1 timofieiev  staff    2680 Oct 25 17:23 ft_print_hex_main_pointer_2.c
+-rw-r--r--    1 timofieiev  staff    3596 Nov 10 23:44 ft_print_hex_main_pointer_2.o
+-rw-r--r--    1 timofieiev  staff    1054 Oct 25 17:04 ft_print_octal.c
+-rw-r--r--    1 timofieiev  staff     764 Nov 10 23:44 ft_print_octal.o
+-rw-r--r--    1 timofieiev  staff    1479 Oct 25 17:23 ft_printf.c
+-rw-r--r--    1 timofieiev  staff    1832 Nov 10 23:44 ft_printf.o
+-rwxr-xr-x    1 timofieiev  staff     958 Oct 25 17:04 ft_putchar.c
+-rw-r--r--    1 timofieiev  staff     700 Nov 10 23:44 ft_putchar.o
+-rwxr-xr-x    1 timofieiev  staff     970 Oct 25 17:04 ft_putchar_fd.c
+-rw-r--r--    1 timofieiev  staff     708 Nov 10 23:44 ft_putchar_fd.o
+-rwxr-xr-x    1 timofieiev  staff     981 Oct 25 17:04 ft_putendl.c
+-rw-r--r--    1 timofieiev  staff     732 Nov 10 23:44 ft_putendl.o
+-rwxr-xr-x    1 timofieiev  staff    1081 Oct 25 17:04 ft_putendl_fd.c
+-rw-r--r--    1 timofieiev  staff     892 Nov 10 23:44 ft_putendl_fd.o
+-rwxr-xr-x    1 timofieiev  staff    1144 Oct 25 17:04 ft_putnbr.c
+-rw-r--r--    1 timofieiev  staff     960 Nov 10 23:44 ft_putnbr.o
+-rwxr-xr-x    1 timofieiev  staff    1189 Oct 25 17:04 ft_putnbr_fd.c
+-rw-r--r--    1 timofieiev  staff     988 Nov 10 23:44 ft_putnbr_fd.o
+-rwxr-xr-x    1 timofieiev  staff    1026 Oct 25 17:04 ft_putstr.c
+-rw-r--r--    1 timofieiev  staff     752 Nov 10 23:44 ft_putstr.o
+-rwxr-xr-x    1 timofieiev  staff    1059 Oct 25 17:04 ft_putstr_fd.c
+-rw-r--r--    1 timofieiev  staff     764 Nov 10 23:44 ft_putstr_fd.o
+-rwxr-xr-x    1 timofieiev  staff     998 Oct 25 17:04 ft_size_bin.c
+-rw-r--r--    1 timofieiev  staff     656 Nov 10 23:44 ft_size_bin.o
+-rw-r--r--    1 timofieiev  staff    1036 Oct 25 17:04 ft_str_find_chr.c
+-rw-r--r--    1 timofieiev  staff     712 Nov 10 23:44 ft_str_find_chr.o
+-rwxr-xr-x    1 timofieiev  staff    1076 Oct 25 17:04 ft_strcat.c
+-rw-r--r--    1 timofieiev  staff     788 Nov 10 23:44 ft_strcat.o
+-rw-r--r--    1 timofieiev  staff     724 Nov  4 09:27 ft_strchr 2.o
+-rwxr-xr-x    1 timofieiev  staff    1086 Oct 25 17:04 ft_strchr.c
+-rw-r--r--    1 timofieiev  staff     724 Nov 10 23:44 ft_strchr.o
+-rwxr-xr-x    1 timofieiev  staff     991 Oct 25 17:04 ft_strclr.c
+-rw-r--r--    1 timofieiev  staff     692 Nov 10 23:44 ft_strclr.o
+-rwxr-xr-x    1 timofieiev  staff    1050 Oct 25 17:04 ft_strcmp.c
+-rw-r--r--    1 timofieiev  staff     748 Nov 10 23:44 ft_strcmp.o
+-rwxr-xr-x    1 timofieiev  staff    1044 Oct 25 17:04 ft_strcpy.c
+-rw-r--r--    1 timofieiev  staff     692 Nov 10 23:44 ft_strcpy.o
+-rwxr-xr-x    1 timofieiev  staff     995 Oct 25 17:04 ft_strdel.c
+-rw-r--r--    1 timofieiev  staff     700 Nov 10 23:44 ft_strdel.o
+-rw-r--r--    1 timofieiev  staff     852 Nov  4 09:27 ft_strdup 2.o
+-rwxr-xr-x    1 timofieiev  staff    1159 Oct 25 17:04 ft_strdup.c
+-rw-r--r--    1 timofieiev  staff     852 Nov 10 23:44 ft_strdup.o
+-rwxr-xr-x    1 timofieiev  staff    1114 Oct 25 17:04 ft_strequ.c
+-rw-r--r--    1 timofieiev  staff     836 Nov 10 23:44 ft_strequ.o
+-rwxr-xr-x    1 timofieiev  staff    1064 Oct 25 17:04 ft_striter.c
+-rw-r--r--    1 timofieiev  staff     732 Nov 10 23:44 ft_striter.o
+-rw-r--r--    1 timofieiev  staff     732 Nov  4 09:27 ft_striteri 2.o
+-rwxr-xr-x    1 timofieiev  staff    1074 Oct 25 17:04 ft_striteri.c
+-rw-r--r--    1 timofieiev  staff     732 Nov 10 23:44 ft_striteri.o
+-rwxr-xr-x    1 timofieiev  staff    1249 Oct 25 17:04 ft_strjoin.c
+-rw-r--r--    1 timofieiev  staff     944 Nov 10 23:44 ft_strjoin.o
+-rwxr-xr-x    1 timofieiev  staff    1301 Oct 25 17:04 ft_strlcat.c
+-rw-r--r--    1 timofieiev  staff     984 Nov 10 23:44 ft_strlcat.o
+-rwxr-xr-x    1 timofieiev  staff    1007 Oct 25 17:04 ft_strlen.c
+-rw-r--r--    1 timofieiev  staff     676 Nov 10 23:44 ft_strlen.o
+-rwxr-xr-x    1 timofieiev  staff    1237 Oct 25 17:04 ft_strmap.c
+-rw-r--r--    1 timofieiev  staff     916 Nov 10 23:44 ft_strmap.o
+-rwxr-xr-x    1 timofieiev  staff    1255 Oct 25 17:04 ft_strmapi.c
+-rw-r--r--    1 timofieiev  staff     920 Nov 10 23:44 ft_strmapi.o
+-rwxr-xr-x    1 timofieiev  staff    1100 Oct 25 17:04 ft_strncat.c
+-rw-r--r--    1 timofieiev  staff     840 Nov 10 23:44 ft_strncat.o
+-rw-r--r--    1 timofieiev  staff    1346 Oct 25 17:04 ft_strnccpy.c
+-rw-r--r--    1 timofieiev  staff    1092 Nov 10 23:44 ft_strnccpy.o
+-rwxr-xr-x    1 timofieiev  staff    1140 Oct 25 17:04 ft_strncmp.c
+-rw-r--r--    1 timofieiev  staff     852 Nov 10 23:44 ft_strncmp.o
+-rwxr-xr-x    1 timofieiev  staff    1122 Oct 25 17:04 ft_strncpy.c
+-rw-r--r--    1 timofieiev  staff     804 Nov 10 23:44 ft_strncpy.o
+-rwxr-xr-x    1 timofieiev  staff    1079 Oct 25 17:04 ft_strnequ.c
+-rw-r--r--    1 timofieiev  staff     768 Nov 10 23:44 ft_strnequ.o
+-rwxr-xr-x    1 timofieiev  staff    1080 Oct 25 17:04 ft_strnew.c
+-rw-r--r--    1 timofieiev  staff     788 Nov 10 23:44 ft_strnew.o
+-rwxr-xr-x    1 timofieiev  staff    1308 Oct 25 17:04 ft_strnstr.c
+-rw-r--r--    1 timofieiev  staff     936 Nov 10 23:44 ft_strnstr.o
+-rwxr-xr-x    1 timofieiev  staff    1090 Oct 25 17:04 ft_strrchr.c
+-rw-r--r--    1 timofieiev  staff     792 Nov 10 23:44 ft_strrchr.o
+-rwxr-xr-x    1 timofieiev  staff    1756 Oct 25 17:04 ft_strsplit.c
+-rw-r--r--    1 timofieiev  staff    1620 Nov 10 23:44 ft_strsplit.o
+-rwxr-xr-x    1 timofieiev  staff    1275 Oct 25 17:04 ft_strstr.c
+-rw-r--r--    1 timofieiev  staff     884 Nov 10 23:44 ft_strstr.o
+-rwxr-xr-x    1 timofieiev  staff    1222 Oct 25 17:04 ft_strsub.c
+-rw-r--r--    1 timofieiev  staff     892 Nov 10 23:44 ft_strsub.o
+-rwxr-xr-x    1 timofieiev  staff    1303 Oct 25 17:04 ft_strtrim.c
+-rw-r--r--    1 timofieiev  staff    1248 Nov 10 23:44 ft_strtrim.o
+-rwxr-xr-x    1 timofieiev  staff     985 Oct 25 17:04 ft_tolower.c
+-rw-r--r--    1 timofieiev  staff     656 Nov 10 23:44 ft_tolower.o
+-rwxr-xr-x    1 timofieiev  staff     985 Oct 25 17:04 ft_toupper.c
+-rw-r--r--    1 timofieiev  staff     656 Nov 10 23:44 ft_toupper.o
+-rw-r--r--    1 timofieiev  staff    2654 Oct 25 17:25 ft_wchar_print.c
+-rw-r--r--    1 timofieiev  staff    2244 Nov 10 23:44 ft_wchar_print.o
+-rw-r--r--    1 timofieiev  staff    2592 Oct 25 17:04 get_next_line.c
+-rw-r--r--    1 timofieiev  staff    2592 Nov 10 23:44 get_next_line.o
+-rw-r--r--    1 timofieiev  staff  147512 Nov 10 23:44 libft.a
+-rw-r--r--    1 timofieiev  staff   10690 Nov 10 23:44 libft.h
+-rw-r--r--    1 timofieiev  staff    1890 Oct 25 17:22 parsing.c
+-rw-r--r--    1 timofieiev  staff    1992 Nov 10 23:44 parsing.o
+-rw-r--r--    1 timofieiev  staff    2159 Oct 25 17:22 parsing_1.c
+-rw-r--r--    1 timofieiev  staff    2636 Nov 10 23:44 parsing_1.o
+-rw-r--r--    1 timofieiev  staff    2622 Oct 25 17:22 parsing_2.c
+-rw-r--r--    1 timofieiev  staff    3060 Nov 10 23:44 parsing_2.o
+-rw-r--r--    1 timofieiev  staff    1476 Oct 25 17:22 parsing_3.c
+-rw-r--r--    1 timofieiev  staff    1604 Nov 10 23:44 parsing_3.o
+-rw-r--r--    1 timofieiev  staff    2117 Oct 25 17:22 print_hex_big_1.c
+-rw-r--r--    1 timofieiev  staff    2764 Nov 10 23:44 print_hex_big_1.o
+-rw-r--r--    1 timofieiev  staff    2341 Oct 25 17:22 print_hex_big_2.c
+-rw-r--r--    1 timofieiev  staff    3012 Nov 10 23:44 print_hex_big_2.o
+-rw-r--r--    1 timofieiev  staff    2801 Oct 25 17:22 print_int_1.c
+-rw-r--r--    1 timofieiev  staff    3776 Nov 10 23:44 print_int_1.o
+-rw-r--r--    1 timofieiev  staff    2227 Oct 25 17:22 print_int_2.c
+-rw-r--r--    1 timofieiev  staff    2780 Nov 10 23:44 print_int_2.o
+-rw-r--r--    1 timofieiev  staff    2740 Oct 25 17:22 print_int_u_1.c
+-rw-r--r--    1 timofieiev  staff    3596 Nov 10 23:44 print_int_u_1.o
+-rw-r--r--    1 timofieiev  staff    1340 Oct 25 17:22 print_int_u_2.c
+-rw-r--r--    1 timofieiev  staff    1220 Nov 10 23:44 print_int_u_2.o
+-rw-r--r--    1 timofieiev  staff    2173 Oct 25 17:21 print_octal_main_2.c
+-rw-r--r--    1 timofieiev  staff    2752 Nov 10 23:44 print_octal_main_2.o
+-rw-r--r--    1 timofieiev  staff    2200 Oct 25 17:21 print_octlal_main_1.c
+-rw-r--r--    1 timofieiev  staff    2524 Nov 10 23:44 print_octlal_main_1.o
+-rw-r--r--    1 timofieiev  staff    1328 Oct 25 17:21 print_simple_1.c
+-rw-r--r--    1 timofieiev  staff    1252 Nov 10 23:44 print_simple_1.o
+-rw-r--r--    1 timofieiev  staff    2357 Oct 25 17:21 print_simple_string.c
+-rw-r--r--    1 timofieiev  staff    2976 Nov 10 23:44 print_simple_string.o
+-rw-r--r--    1 timofieiev  staff    2303 Oct 25 17:21 print_w_char_1.c
+-rw-r--r--    1 timofieiev  staff    2688 Nov 10 23:44 print_w_char_1.o
+-rw-r--r--    1 timofieiev  staff    2362 Oct 25 17:21 print_w_s_1.c
+-rw-r--r--    1 timofieiev  staff    2996 Nov 10 23:44 print_w_s_1.o
+-rw-r--r--    1 timofieiev  staff    1335 Oct 25 17:21 print_w_s_2.c
+-rw-r--r--    1 timofieiev  staff    1200 Nov 10 23:44 print_w_s_2.o
+-rw-r--r--    1 timofieiev  staff    2405 Oct 25 17:21 printing.c
+-rw-r--r--    1 timofieiev  staff    2592 Nov 10 23:44 printing.o
+-rw-r--r--    1 timofieiev  staff    1524 Oct 25 17:21 printing_1.c
+-rw-r--r--    1 timofieiev  staff    1440 Nov 10 23:44 printing_1.o
+
+./srcs:
+total 96
+drwxr-xr-x  12 timofieiev  staff   384 Nov 11 00:19 .
+drwxr-xr-x  47 timofieiev  staff  1504 Nov 11 00:31 ..
+-rw-r--r--   1 timofieiev  staff  5285 Nov 11 00:18 list_infrastructure.c
+-rw-r--r--   1 timofieiev  staff  4124 Nov 11 00:18 list_infrastructure.o
+-rw-r--r--   1 timofieiev  staff  1416 Nov  4 16:30 listdir_infrastructure.c
+-rw-r--r--   1 timofieiev  staff  1444 Nov 10 23:44 listdir_infrastructure.o
+-rw-r--r--   1 timofieiev  staff  2354 Nov 11 00:19 main.c
+-rw-r--r--   1 timofieiev  staff  2376 Nov 11 00:19 main.o
+-rw-r--r--   1 timofieiev  staff  2517 Nov  4 09:27 quick_sort.c
+-rw-r--r--   1 timofieiev  staff  1892 Nov 10 23:44 quick_sort.o
+-rw-r--r--   1 timofieiev  staff  3555 Nov 11 00:07 stats_infrastructure.c
+-rw-r--r--   1 timofieiev  staff  2496 Nov 11 00:07 stats_infrastructure.o

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   list_infrastructure.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/10 21:47:52 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/11 00:18:05 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ void				delete_list(t_temp **head_ref)
 	{
 		next = current->next;
 		free(current->d_name);
-		free(current->major_minor_string);
 		free(current);
 		current = next;
 	}
@@ -63,7 +62,6 @@ void				add(t_temp **head_ref, char *new_d_name,
 	str_copy(new->time_data, var.time_buf);
 	new->major_data = var.major_buf;
 	new->minor_data = var.minor_buf;
-	new->major_minor_string = NULL;
 	new->next = NULL;
 	if (*head_ref == NULL)
 	{
@@ -164,12 +162,12 @@ void				print_list(t_temp *list)
 		else
 		{
 			if (list->size_data)
-				ft_printf("%*d ", length.number_of_bytes + major_minor_case, list->size_data);
+				ft_printf("%*lld ", length.number_of_bytes + major_minor_case, (long long)list->size_data);
 			else
-				ft_printf("%*d ", length.number_of_bytes + major_minor_case -1, list->size_data);
+				ft_printf("%*lld ", length.number_of_bytes + major_minor_case -1, (long long)list->size_data);
 		}
 		print_date(list->time_data);
-		ft_printf("%s \n", list->d_name);
+		ft_printf("%s\n", list->d_name);
 		list = list->next;
 	}
 }
