@@ -2,6 +2,7 @@
 
 #include <stdio.h> // for snprintf;
 
+// flags management
 // func to detect cyrcular link; work out if have the link;
 // work out the etc
 //  - major / minor in the necessary format (first and second part) <-> print separately;
