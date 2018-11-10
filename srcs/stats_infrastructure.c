@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/28 13:38:08 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/10 19:56:34 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/10 21:48:17 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,15 +76,13 @@ t_data	get_stats(char *buffer_inner)
 	{
 		stats.major_buf = major(buf.st_rdev);
 		stats.minor_buf = minor(buf.st_rdev);
-
 		// ft_printf("maj->%d, len->%d, min->%d, len->%d\n", stats.major_buf, ft_decimal_length(stats.major_buf), stats.minor_buf, ft_decimal_length(stats.minor_buf));
 	}
+	else
+	{
+		stats.major_buf = 0;
+		stats.minor_buf = 0;
+	}
 
-else
-{
-	stats.major_buf = 0;
-	stats.minor_buf = 0;
-}
-
-	return (stats);
+		return (stats);
 }

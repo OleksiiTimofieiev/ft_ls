@@ -30,8 +30,10 @@
 
 // etc
 // etc/
+
 // tmp
 // tmp/
+
 // dev
 // dev/
 
@@ -44,7 +46,6 @@
 // total 0
 // drwxr-xr-x   2 otimofie  2017    68 Nov  3 15:01 .
 // drwxr-xr-x  36 otimofie  2017  1224 Nov  4 15:47 ..
-
 
 // link -> dir, hindu has the solution
 
