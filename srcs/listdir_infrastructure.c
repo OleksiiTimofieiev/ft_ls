@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   listdir_infrastructure.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/28 11:07:42 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/04 15:52:45 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/11 00:40:15 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

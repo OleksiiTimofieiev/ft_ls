@@ -37,6 +37,8 @@
 
 // drwx------+   5 otimofie  2017        170 Aug 29 14:11 
 
+// through out total ?
+
 // norminette;
 
 void	listdir(char *name/*, int indent  flags */) // ? go from the first element of the list;

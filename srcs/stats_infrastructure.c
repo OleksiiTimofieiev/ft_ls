@@ -6,7 +6,7 @@
 /*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/28 13:38:08 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/11 00:07:08 by timofieiev       ###   ########.fr       */
+/*   Updated: 2018/11/11 00:41:13 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,14 +58,13 @@ t_data	get_stats(char *buffer_inner)
 	char		*buf1;
 
 	lstat(buffer_inner, &buf);
-	stats.blocks_buf = buf.st_blocks;
-	stats.bytes_buf = buf.st_size;
+	stats.blocks_buf = (long long int)buf.st_blocks;
 	get_file_type(stats.type_and_permissions_buf, buf.st_mode);
 	get_permissions(stats.type_and_permissions_buf, buf.st_mode);
 	get_xattr(stats.type_and_permissions_buf, buffer_inner);
 	stats.type_and_permissions_buf[11] = '\0';
 	stats.hard_links_buf = buf.st_nlink;
-	stats.size_buf = buf.st_size;
+	stats.size_buf = (long long int)buf.st_size;
 	buf1 = getpwuid(buf.st_uid)->pw_name;
 	str_copy(stats.owner_name_buf, buf1);
 	buf1 = getgrgid(buf.st_gid)->gr_name;

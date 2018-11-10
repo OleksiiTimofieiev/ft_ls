@@ -6,7 +6,7 @@
 /*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/11 00:18:05 by timofieiev       ###   ########.fr       */
+/*   Updated: 2018/11/11 00:47:48 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,6 @@ void				add(t_temp **head_ref, char *new_d_name,
 	last = *head_ref;
 
 	new->blocks_data = var.blocks_buf;
-	new->bytes_data = var.bytes_buf;
 	new->d_name = ft_strdup(new_d_name);
 	ft_strcpy(new->type_and_permissions_data, var.type_and_permissions_buf);
 	new->d_type = d_type;
@@ -89,7 +88,7 @@ void				fill_the_length(t_temp *list, t_output_length *length)
 	length->number_of_links = ft_decimal_length(list->hard_links_data);
 	length->owner_name = ft_strlen(list->owner_name_data);
 	length->group_name = ft_strlen(list->group_name_data);
-	length->number_of_bytes = ft_decimal_length(list->bytes_data);
+	length->number_of_bytes = ft_decimal_length(list->size_data);
 
 	length->major = ft_decimal_length(list->major_data);
 	length->minor = ft_decimal_length(list->minor_data);
@@ -105,8 +104,8 @@ void				fill_the_length(t_temp *list, t_output_length *length)
 		if (length->group_name < (int)ft_strlen(list->group_name_data))
 			length->group_name = (int)ft_strlen(list->group_name_data);
 
-		if (length->number_of_bytes < ft_decimal_length(list->bytes_data))
-			length->number_of_bytes = ft_decimal_length(list->bytes_data);
+		if (length->number_of_bytes < ft_decimal_length(list->size_data))
+			length->number_of_bytes = ft_decimal_length(list->size_data);
 
 		if (length->major && length->major < ft_decimal_length(list->major_data))
 			length->major = ft_decimal_length(list->major_data);

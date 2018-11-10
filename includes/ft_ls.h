@@ -6,7 +6,7 @@
 /*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/20 15:18:36 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/11 00:10:53 by timofieiev       ###   ########.fr       */
+/*   Updated: 2018/11/11 00:45:26 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,7 @@ typedef	struct		s_temp
 {
 	char			*d_name;
 	unsigned char	d_type;
-	long long		bytes_data;
-	long long		blocks_data;
+	long long int		blocks_data;
 	char			type_and_permissions_data[12];
 	unsigned int	hard_links_data;
 	char			owner_name_data[20];
@@ -53,8 +52,7 @@ typedef	struct		s_output_length
 
 typedef	struct		s_data
 {
-	long long		bytes_buf;
-	long long		blocks_buf;
+	long long	int	blocks_buf;
 	char			type_and_permissions_buf[12];
 	unsigned int	hard_links_buf;
 	char			owner_name_buf[20]; 
