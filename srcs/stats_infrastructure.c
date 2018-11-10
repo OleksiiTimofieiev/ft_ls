@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/28 13:38:08 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/10 21:48:17 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/10 22:03:31 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	get_file_type(char *type_and_permissions_buf, mode_t file_mode)
 	else if ((file_mode & S_IFMT) == S_IFSOCK)
 		type_and_permissions_buf[0] = 's';
 	else if ((file_mode & S_IFMT) == S_IFIFO)
-		type_and_permissions_buf[0] = 'f';
+		type_and_permissions_buf[0] = 'p';
 }
 
 void	get_permissions(char *type_and_permissions_buf, mode_t perm_mode)
@@ -83,6 +83,5 @@ t_data	get_stats(char *buffer_inner)
 		stats.major_buf = 0;
 		stats.minor_buf = 0;
 	}
-
-		return (stats);
+	return (stats);
 }

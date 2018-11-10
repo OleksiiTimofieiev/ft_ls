@@ -2,58 +2,40 @@
 
 #include <stdio.h> // for snprintf;
 
-// flags management
-// func to detect cyrcular link; work out if have the link;
-// work out the etc
-//  - major / minor in the necessary format (first and second part) <-> print separately;
-//  - ls with link and a directory; dev vs dev/
+// if from last month -> year without time;
 
-// make it in a cycle for each command line argument;
-// norminette and leaks;
-// manage errors;
-// validator;
-
+// flags management;
 // ls -laRrt
-// ls -l -a -r -t ...
+// ls -l -a -r -t ... -> adopt to the list of directories to be worked out;
+// parse and use;
+// flags = // struct options;
+
+// manage errors: func to detect cyrcular link; work out if have the link;
+// errors in dev directory;
 // work with errors from Liubomir
-// think over about the all flags
+// chmod 000 -> no rights
+// not exists
+// dev -> last directories;
+
 // redo snprintf;
 
 // hex in dev;
-// adopt logic for the N number of the argc;	
-// if 0,5 year before -> show only the time;
 
-// flags = // struct options;
-
-// chmod 000 -> no rights
-// not exists
-
-// etc
-// etc/
-
-// tmp
-// tmp/
-
-// dev
-// dev/
-
+// link -> dir, hindu has the solution
 // ➜  ft_ls git:(master) ✗ ls -laR /etc
 // lrwxr-xr-x@ 1 root  wheel  11 Mar  4  2018 /etc -> private/etc
 
 // ➜  ft_ls git:(master) ✗ ls -la LinkDir
 // lrwxr-xr-x  1 otimofie  2017  3 Nov  3 15:01 LinkDir -> Dir
+
 // ➜  ft_ls git:(master) ✗ ls -la LinkDir/
 // total 0
 // drwxr-xr-x   2 otimofie  2017    68 Nov  3 15:01 .
 // drwxr-xr-x  36 otimofie  2017  1224 Nov  4 15:47 ..
 
-// link -> dir, hindu has the solution
-
-// 'p' instead of 'f' in /etc/
-
 // drwx------+   5 otimofie  2017        170 Aug 29 14:11 
 
-// if from last month -> year
+// norminette;
 
 void	listdir(char *name/*, int indent  flags */) // ? go from the first element of the list;
 {
@@ -116,7 +98,20 @@ void	listdir(char *name/*, int indent  flags */) // ? go from the first element 
 
 int		main(int argc, char **argv)
 {
-	(argc == 1) ? listdir(".") : listdir(argv[1]); 
+	int		arguments_quantity;
+	if (argc == 1)
+		listdir(".");
+	else
+	{
+		arguments_quantity = 1;
+
+		while (arguments_quantity < argc)
+		{
+			listdir(argv[arguments_quantity++]);
+
+		}
+		/* code */
+	}
 	system("leaks -q ft_ls");
 	return (0);
 }
