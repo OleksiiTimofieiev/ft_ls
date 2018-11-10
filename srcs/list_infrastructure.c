@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/10 21:10:32 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/10 21:38:45 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -149,13 +149,13 @@ void fill_the_length(t_temp *list, t_output_length *length)
 
 void print_major_minor(t_temp *list, t_output_length *length)
 {
-	// ft_printf("%s", " ");
+	// ft_printf("%s", "   ");
 	// ft_printf("test->|%*d|",4,0); remember this stuff
 	
 	if (list->major_data != 0)
-		ft_printf("%*d,", length->major, list->major_data); // do not forget 32
+		ft_printf("%*d, ", length->major, list->major_data); // do not forget 32
 	else
-		ft_printf("%*d,", length->major - 1, list->major_data); // do not forget 32
+		ft_printf("%*d, ", length->major - 1, list->major_data); // do not forget 32
 	
 	if (list->minor_data !=0)
 		ft_printf("%*d", length->minor, list->minor_data);
@@ -176,10 +176,11 @@ void print_list(t_temp *list)
 
 	int major_minor_case = 0;
 
-	if (len > length.number_of_bytes)
+	if (len > length.number_of_bytes || len + 2 > length.number_of_bytes)
 	{
 		length.number_of_bytes = len;
-		major_minor_case = 2;
+		major_minor_case += 2;
+
 	}
 	// fill_data_to_major_minor_string(list, &length);
 
@@ -202,8 +203,15 @@ void print_list(t_temp *list)
 		}
 		else
 		{
-			ft_printf("%*d ", length.number_of_bytes - major_minor_case, list->size_data);
+			// if (!length.number_of_bytes)
+				// ft_putstr("---here---");
+// ft_printf("-----%d------", length.number_of_bytes);
+			if (list->size_data)
+				ft_printf("%*d ", length.number_of_bytes + major_minor_case, list->size_data);
+			else
+				ft_printf("%*d ", length.number_of_bytes + major_minor_case -1, list->size_data);
 		}
+
 		print_date(list->time_data);
 		ft_printf("%s \n", list->d_name);
 		list = list->next;
