@@ -1,4 +1,4 @@
-total 15032
+total 15288
 drwxr-xr-x   55 timofieiev  staff     1760 Nov 11 01:04 .
 drwx------@  32 timofieiev  staff     1024 Nov 11 01:04 ..
 -rw-r--r--    1 timofieiev  staff     6148 Oct 28 17:47 .DS_Store
@@ -48,8 +48,8 @@ drwxr-xr-x  214 timofieiev  staff     6848 Nov 10 23:45 libft
 -rw-r--r--    1 timofieiev  staff  1271333 Oct 25 17:04 ls output.png
 -rw-r--r--    1 timofieiev  staff   138480 Nov  4 16:30 major_minor.webarchive
 drwxr-xr-x   12 timofieiev  staff      384 Nov 11 01:04 srcs
--rw-r--r--    1 timofieiev  staff        0 Nov 11 01:04 test
--rw-r--r--    1 timofieiev  staff        0 Nov 11 01:03 test1
+-rw-r--r--    1 timofieiev  staff   129921 Nov 11 01:04 test
+-rw-r--r--    1 timofieiev  staff        0 Nov 11 01:05 test1
 -rw-r--r--    1 timofieiev  staff        0 Nov 11 01:03 test2
 -rw-r--r--    1 timofieiev  staff   274327 Oct 25 17:04 type of files.png
 -rw-r--r--    1 timofieiev  staff   178375 Oct 25 17:04 type of fyle.pdf

@@ -1,12 +1,12 @@
-total 15032
-drwxr-xr-x   55 timofieiev  staff     1760 Nov 11 01:04 .
-drwx------@  32 timofieiev  staff     1024 Nov 11 01:04 ..
+total 14776
+drwxr-xr-x   52 timofieiev  staff     1664 Nov 11 01:00 .
+drwx------@  32 timofieiev  staff     1024 Nov 11 01:00 ..
 -rw-r--r--    1 timofieiev  staff     6148 Oct 28 17:47 .DS_Store
 -rw-r--r--@   1 timofieiev  staff      231 Oct 25 17:04 .How do I write a C program to emulate the Unix LS-L command? - Quora.webarchive.icloud
 -rw-r--r--@   1 timofieiev  staff      239 Oct 25 17:04 .How to read linux file permission programmatically in C:C++ - Stack Overflow.webarchive.icloud
 -rw-r--r--@   1 timofieiev  staff      230 Oct 25 17:04 .How to recursively list directories in C on Linux? - Stack Overflow.webarchive.icloud
 -rw-r--r--@   1 timofieiev  staff      192 Oct 25 17:04 .Screen Shot 2018-03-12 at 6.54.16 PM.png.icloud
-drwxr-xr-x   15 timofieiev  staff      480 Nov 11 01:04 .git
+drwxr-xr-x   15 timofieiev  staff      480 Nov 11 01:00 .git
 -rw-r--r--@   1 timofieiev  staff      236 Oct 25 17:04 .linux - How to list files in a directory in a C program? - Stack Overflow.webarchive.icloud
 -rw-r--r--@   1 timofieiev  staff      224 Oct 25 17:04 .linux - Implementing the ls -al command in C - Stack Overflow.webarchive.icloud
 -rw-r--r--@   1 timofieiev  staff      237 Oct 25 17:04 .macos - How to get extended attributes of a file(UNIX:C)? - Stack Overflow.webarchive.icloud
@@ -17,8 +17,7 @@ drwxr-xr-x    3 timofieiev  staff       96 Oct 27 19:35 .vscode
 -rw-r--r--    1 timofieiev  staff   126474 Nov 11 00:43 12
 -rw-r--r--    1 timofieiev  staff   126584 Nov 11 00:48 14
 -rw-r--r--    1 timofieiev  staff   126592 Nov 11 00:48 15
--rw-r--r--    1 timofieiev  staff   129856 Nov 11 01:00 16
--rw-r--r--    1 timofieiev  staff   129746 Nov 11 01:00 17
+-rw-r--r--    1 timofieiev  staff        0 Nov 11 01:00 16
 -rw-r--r--    1 timofieiev  staff   126356 Nov 11 00:42 2
 -rw-r--r--    1 timofieiev  staff   123719 Nov 11 00:19 3
 -rw-r--r--    1 timofieiev  staff   121279 Nov 11 00:18 4
@@ -41,24 +40,22 @@ drwxr-xr-x    3 timofieiev  staff       96 Oct 28 17:47 archive
 -rw-r--r--    1 timofieiev  staff    41736 Oct 25 17:04 check it out.png
 -rw-r--r--    1 timofieiev  staff     3246 Nov 11 00:03 comp
 drwxr-xr-x   10 timofieiev  staff      320 Nov 10 13:23 errors
--rwxr-xr-x    1 timofieiev  staff    57564 Nov 11 01:04 ft_ls
+-rwxr-xr-x    1 timofieiev  staff    57612 Nov 11 01:00 ft_ls
 -rw-r--r--    1 timofieiev  staff  1462757 Oct 25 17:04 ft_ls.en.pdf
 drwxr-xr-x    3 timofieiev  staff       96 Nov 11 00:59 includes
 drwxr-xr-x  214 timofieiev  staff     6848 Nov 10 23:45 libft
 -rw-r--r--    1 timofieiev  staff  1271333 Oct 25 17:04 ls output.png
 -rw-r--r--    1 timofieiev  staff   138480 Nov  4 16:30 major_minor.webarchive
-drwxr-xr-x   12 timofieiev  staff      384 Nov 11 01:04 srcs
--rw-r--r--    1 timofieiev  staff        0 Nov 11 01:04 test
--rw-r--r--    1 timofieiev  staff        0 Nov 11 01:03 test1
--rw-r--r--    1 timofieiev  staff        0 Nov 11 01:03 test2
+drwxr-xr-x   12 timofieiev  staff      384 Nov 11 01:00 srcs
+-rw-r--r--    1 timofieiev  staff   122805 Nov 11 00:03 test
 -rw-r--r--    1 timofieiev  staff   274327 Oct 25 17:04 type of files.png
 -rw-r--r--    1 timofieiev  staff   178375 Oct 25 17:04 type of fyle.pdf
 -rw-r--r--    1 timofieiev  staff    12625 Oct 25 17:04 woohoo.png
 
 ./.git:
 total 104
-drwxr-xr-x   15 timofieiev  staff    480 Nov 11 01:04 .
-drwxr-xr-x   55 timofieiev  staff   1760 Nov 11 01:04 ..
+drwxr-xr-x   15 timofieiev  staff    480 Nov 11 01:00 .
+drwxr-xr-x   52 timofieiev  staff   1664 Nov 11 01:00 ..
 -rw-r--r--    1 timofieiev  staff      7 Nov 11 00:54 COMMIT_EDITMSG
 -rw-r--r--    1 timofieiev  staff    226 Nov 10 23:44 FETCH_HEAD
 -rw-r--r--    1 timofieiev  staff     23 Oct 25 17:04 HEAD
@@ -76,7 +73,7 @@ drwxr-xr-x    6 timofieiev  staff    192 Nov  4 09:27 refs
 ./.git/hooks:
 total 96
 drwxr-xr-x  13 timofieiev  staff   416 Oct 25 17:03 .
-drwxr-xr-x  15 timofieiev  staff   480 Nov 11 01:04 ..
+drwxr-xr-x  15 timofieiev  staff   480 Nov 11 01:00 ..
 -rwxr-xr-x   1 timofieiev  staff   478 Oct 25 17:03 applypatch-msg.sample
 -rwxr-xr-x   1 timofieiev  staff   896 Oct 25 17:03 commit-msg.sample
 -rwxr-xr-x   1 timofieiev  staff  3327 Oct 25 17:03 fsmonitor-watchman.sample
@@ -92,13 +89,13 @@ drwxr-xr-x  15 timofieiev  staff   480 Nov 11 01:04 ..
 ./.git/info:
 total 8
 drwxr-xr-x   3 timofieiev  staff     96 Oct 25 17:03 .
-drwxr-xr-x  15 timofieiev  staff    480 Nov 11 01:04 ..
+drwxr-xr-x  15 timofieiev  staff    480 Nov 11 01:00 ..
 -rw-r--r--   1 timofieiev  staff    240 Oct 25 17:03 exclude
 
 ./.git/logs:
 total 16
 drwxr-xr-x   4 timofieiev  staff   128 Nov 11 00:54 .
-drwxr-xr-x  15 timofieiev  staff   480 Nov 11 01:04 ..
+drwxr-xr-x  15 timofieiev  staff   480 Nov 11 01:00 ..
 -rw-r--r--   1 timofieiev  staff  5563 Nov 11 00:54 HEAD
 drwxr-xr-x   5 timofieiev  staff   160 Nov 11 00:54 refs
 
@@ -132,7 +129,7 @@ drwxr-xr-x  3 timofieiev  staff    96 Nov 11 00:54 ..
 ./.git/objects:
 total 0
 drwxr-xr-x  238 timofieiev  staff  7616 Nov 11 00:54 .
-drwxr-xr-x   15 timofieiev  staff   480 Nov 11 01:04 ..
+drwxr-xr-x   15 timofieiev  staff   480 Nov 11 01:00 ..
 drwxr-xr-x    6 timofieiev  staff   192 Nov 11 00:36 00
 drwxr-xr-x    7 timofieiev  staff   224 Nov  4 09:27 01
 drwxr-xr-x    4 timofieiev  staff   128 Nov  4 16:31 02
@@ -2174,7 +2171,7 @@ drwxr-xr-x  238 timofieiev  staff      7616 Nov 11 00:54 ..
 ./.git/refs:
 total 8
 drwxr-xr-x   6 timofieiev  staff    192 Nov  4 09:27 .
-drwxr-xr-x  15 timofieiev  staff    480 Nov 11 01:04 ..
+drwxr-xr-x  15 timofieiev  staff    480 Nov 11 01:00 ..
 drwxr-xr-x   3 timofieiev  staff     96 Nov 11 00:54 heads
 drwxr-xr-x   3 timofieiev  staff     96 Oct 25 18:21 remotes
 -rw-r--r--   1 timofieiev  staff     41 Nov  4 09:27 stash
@@ -2207,19 +2204,19 @@ drwxr-xr-x  6 timofieiev  staff    192 Nov  4 09:27 ..
 ./.vscode:
 total 8
 drwxr-xr-x   3 timofieiev  staff    96 Oct 27 19:35 .
-drwxr-xr-x  55 timofieiev  staff  1760 Nov 11 01:04 ..
+drwxr-xr-x  52 timofieiev  staff  1664 Nov 11 01:00 ..
 -rw-r--r--   1 timofieiev  staff    48 Oct 27 19:35 settings.json
 
 ./archive:
 total 272
 drwxr-xr-x   3 timofieiev  staff      96 Oct 28 17:47 .
-drwxr-xr-x  55 timofieiev  staff    1760 Nov 11 01:04 ..
+drwxr-xr-x  52 timofieiev  staff    1664 Nov 11 01:00 ..
 -rw-r--r--   1 timofieiev  staff  137585 Oct 28 17:47 8.6 Пример. Печать каталогов : Язык программирования Си. Издание 3-е, исправленное : Библиотека (кни.pdf
 
 ./errors:
 total 64
 drwxr-xr-x  10 timofieiev  staff   320 Nov 10 13:23 .
-drwxr-xr-x  55 timofieiev  staff  1760 Nov 11 01:04 ..
+drwxr-xr-x  52 timofieiev  staff  1664 Nov 11 01:00 ..
 -rw-r--r--@  1 timofieiev  staff   192 Oct 25 17:04 .Screen Shot 2018-10-23 at 9.30.53 PM.png.icloud
 -rw-r--r--@  1 timofieiev  staff   192 Oct 25 17:04 .Screen Shot 2018-10-23 at 9.31.01 PM.png.icloud
 -rw-r--r--@  1 timofieiev  staff   192 Oct 25 17:04 .Screen Shot 2018-10-23 at 9.31.14 PM.png.icloud
@@ -2232,13 +2229,13 @@ drwxr-xr-x  55 timofieiev  staff  1760 Nov 11 01:04 ..
 ./includes:
 total 8
 drwxr-xr-x   3 timofieiev  staff    96 Nov 11 00:59 .
-drwxr-xr-x  55 timofieiev  staff  1760 Nov 11 01:04 ..
+drwxr-xr-x  52 timofieiev  staff  1664 Nov 11 01:00 ..
 -rw-r--r--   1 timofieiev  staff  2444 Nov 11 00:59 ft_ls.h
 
 ./libft:
 total 2008
 drwxr-xr-x  214 timofieiev  staff    6848 Nov 10 23:45 .
-drwxr-xr-x   55 timofieiev  staff    1760 Nov 11 01:04 ..
+drwxr-xr-x   52 timofieiev  staff    1664 Nov 11 01:00 ..
 -rw-r--r--@   1 timofieiev  staff    3423 Oct 25 17:18 Makefile
 -rw-r--r--    1 timofieiev  staff    2521 Oct 25 17:24 different.c
 -rw-r--r--    1 timofieiev  staff    3328 Nov 10 23:44 different.o
@@ -2454,15 +2451,19 @@ drwxr-xr-x   55 timofieiev  staff    1760 Nov 11 01:04 ..
 
 ./srcs:
 total 88
-drwxr-xr-x  12 timofieiev  staff   384 Nov 11 01:04 .
-drwxr-xr-x  55 timofieiev  staff  1760 Nov 11 01:04 ..
+drwxr-xr-x  12 timofieiev  staff   384 Nov 11 01:00 .
+drwxr-xr-x  52 timofieiev  staff  1664 Nov 11 01:00 ..
 -rw-r--r--   1 timofieiev  staff  5248 Nov 11 00:47 list_infrastructure.c
 -rw-r--r--   1 timofieiev  staff  4092 Nov 11 00:47 list_infrastructure.o
 -rw-r--r--   1 timofieiev  staff  1416 Nov 11 00:40 listdir_infrastructure.c
 -rw-r--r--   1 timofieiev  staff  1452 Nov 11 00:41 listdir_infrastructure.o
--rw-r--r--   1 timofieiev  staff  2405 Nov 11 01:04 main.c
--rw-r--r--   1 timofieiev  staff  2376 Nov 11 01:04 main.o
+-rw-r--r--   1 timofieiev  staff  2402 Nov 11 00:54 main.c
+-rw-r--r--   1 timofieiev  staff  2448 Nov 11 00:57 main.o
 -rw-r--r--   1 timofieiev  staff  2517 Nov  4 09:27 quick_sort.c
 -rw-r--r--   1 timofieiev  staff  1892 Nov 10 23:44 quick_sort.o
 -rw-r--r--   1 timofieiev  staff  3619 Nov 11 01:00 stats_infrastructure.c
 -rw-r--r--   1 timofieiev  staff  2496 Nov 11 01:00 stats_infrastructure.o
+leaks Report Version: 4.0
+Process 6281: 220 nodes malloced for 45 KB
+Process 6281: 0 leaks for 0 total leaked bytes.
+
