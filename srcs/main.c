@@ -51,17 +51,11 @@ void	listdir(char *name/*, int indent  flags */) // ? go from the first element 
 	if (!(dir = opendir(name))) // separate func;
 	{
 		free(path2);
-		// free(buffer);
-		// free(dir);
-
-		// leak with no such file in the directory;
 		ft_printf("error->>>>>>>>>>>>>>\n");
 		perror("open");
-
 		return ;
 	}
-
-	list = NULL; // to more general func // add to func above;
+	list = NULL; // to more general func above // add to func above;
 	while ((entry = readdir(dir)) != NULL)
 	{
 		buffer = ft_strjoin(path2, entry->d_name);
@@ -70,7 +64,6 @@ void	listdir(char *name/*, int indent  flags */) // ? go from the first element 
 	}
 	q_sort(&list);
 	print_list(list);
-	// t_list = NULL;
 	t_list = list;
 	while(t_list)
 	{
@@ -78,28 +71,22 @@ void	listdir(char *name/*, int indent  flags */) // ? go from the first element 
 		{
 			if (ft_strcmp(t_list->d_name, ".") == 0 || ft_strcmp(t_list->d_name, "..") == 0)
 			{
-				// ft_printf("dir1 ->>>>>>>>\n");
 				t_list = t_list->next;
 				continue ;
 			}
-			// remaster snprintf;
-			// ft_printf("dir2 ->>>>>>>>\n");
 			snprintf(path, sizeof(path), "%s/%s", name, t_list->d_name);
-
 			ft_printf("\n%s:\n", path); 
 			listdir(path);
 		}
 		t_list = t_list->next;
 	}
-	// print_list(list);
-
 	ft_dump_cleaner(&list, &path2, &dir);
 }
 
 int		main(int argc, char **argv)
 {
 	int		arguments_quantity;
-	
+
 	if (argc == 1)
 		listdir(".");
 	else
