@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/20 15:18:36 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/10 18:02:05 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/10 19:06:43 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ typedef	struct		s_temp
 	char 			time_data[20];
 	int				major_data;
 	int				minor_data;
+	char			*major_minor_string;
 	struct s_temp	*next;
 }					t_temp;
 
@@ -47,6 +48,8 @@ typedef	struct		s_output_length
 	int				owner_name;
 	int				group_name;
 	int				number_of_bytes;
+	int				major;
+	int				minor;
 }					t_output_length;
 
 typedef	struct		s_data

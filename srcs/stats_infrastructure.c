@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/28 13:38:08 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/10 17:56:28 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/10 18:51:50 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ t_data	get_stats(char *buffer_inner)
 	if ((buf.st_mode & S_IFMT) == S_IFCHR || (buf.st_mode & S_IFMT) == S_IFBLK) // major / minor // TODO: get all clear;
 	{
 		stats.major_buf = major(buf.st_rdev);
-		stats.major_buf = minor(buf.st_rdev);
+		stats.minor_buf = minor(buf.st_rdev);
 	}
 	return (stats);
 }

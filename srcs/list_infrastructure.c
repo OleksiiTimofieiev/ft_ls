@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/10 18:34:33 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/10 19:36:33 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ void				delete_list(t_temp **head_ref)
 	{
 		next = current->next;
 		free(current->d_name);
+		free(current->major_minor_string);
 		free(current);
 		current = next;
 	}
@@ -62,6 +63,7 @@ void				add(t_temp **head_ref, char *new_d_name,
 	str_copy(new->time_data, var.time_buf);
 	new->major_data = var.major_buf;
 	new->minor_data = var.minor_buf;
+	new->major_minor_string = NULL;
 	new->next = NULL;
 	if (*head_ref == NULL)
 	{
@@ -71,7 +73,7 @@ void				add(t_temp **head_ref, char *new_d_name,
 	while (last->next != NULL)
 		last = last->next;
 	last->next = new;
-	// return ;
+	return ;
 }
 
 void				print_date(char *time_str)
@@ -84,17 +86,14 @@ void				print_date(char *time_str)
 	ft_printf(" ");
 }
 
-// void				c_and_d_types_print(t_temp *list)
-// {
-
-// }
-
 void fill_the_length(t_temp *list, t_output_length *length)
 {
 	length->number_of_links = ft_decimal_length(list->hard_links_data);
 	length->owner_name = ft_strlen(list->owner_name_data);
 	length->group_name = ft_strlen(list->group_name_data);
 	length->number_of_bytes = ft_decimal_length(list->bytes_data);
+	length->major = ft_decimal_length(list->major_data);
+	length->minor = ft_decimal_length(list->minor_data);
 
 	while(list)
 	{
@@ -109,11 +108,54 @@ void fill_the_length(t_temp *list, t_output_length *length)
 
 		if (length->number_of_bytes < ft_decimal_length(list->bytes_data))
 			length->number_of_bytes = ft_decimal_length(list->bytes_data);
+
+		if (length->major < ft_decimal_length(list->major_data))
+			length->major = ft_decimal_length(list->major_data);
+
+		if (length->minor < ft_decimal_length(list->minor_data))
+			length->minor = ft_decimal_length(list->minor_data);
+
 		list = list->next;
 	}
 }
 
-void				print_list(t_temp *list)
+// get the index to start copy instruction;
+
+void	print_string(char *str, int len)
+{
+	int i;
+
+	i = 0;
+	while(i < len)
+		ft_putchar(str[i++]);
+}
+
+void fill_data_to_major_minor_string(t_temp *list, t_output_length *length)
+{
+	int len = (length->major + length->minor + 2 + 1); // 2 , + space; 1 == end of line;
+ft_printf("len->%d, maj->%d, min->%d\n", len, length->major, length->minor);
+	int i = 0;
+
+// ft_printf("len->%d\n", len);
+
+	while(list)
+	{
+		list->major_minor_string = (char *)malloc(sizeof(char) * len);
+
+		i = 0;
+		while(i < len)
+			list->major_minor_string[i++] = '0';
+
+		list->major_minor_string[len] = '\0';
+
+		list->major_minor_string[length->major] = ',';
+		list->major_minor_string[length->major + 1] = ' ';
+
+		list = list->next;
+	}
+}
+
+void print_list(t_temp *list)
 {
 	long long		total;
 	t_output_length	length;
@@ -121,6 +163,7 @@ void				print_list(t_temp *list)
 	fill_the_length(list, &length);
 	total = get_total_blocks(list);
 	ft_printf("total %lld\n", total);
+	fill_data_to_major_minor_string(list, &length);
 
 	while (list)
 	{
@@ -128,7 +171,17 @@ void				print_list(t_temp *list)
 		ft_printf("%*d ", length.number_of_links, list->hard_links_data);
 		ft_printf("%*-s  ", length.owner_name, list->owner_name_data);
 		ft_printf("%*-s  ", length.group_name, list->group_name_data);
-		ft_printf("%*d ", length.number_of_bytes, list->size_data);
+		
+
+		if (list->type_and_permissions_data[0] == 'c' || list->type_and_permissions_data[0] == 'b')
+			ft_printf("%s ", list->major_minor_string);
+			//general maximum value;
+		else
+			ft_printf("%*d ", length.number_of_bytes, list->size_data);
+
+
+
+
 		print_date(list->time_data);
 		ft_printf("%s \n", list->d_name);
 		list = list->next;
