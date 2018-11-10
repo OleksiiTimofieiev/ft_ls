@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/10 21:03:54 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/10 21:10:32 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -150,15 +150,17 @@ void fill_the_length(t_temp *list, t_output_length *length)
 void print_major_minor(t_temp *list, t_output_length *length)
 {
 	// ft_printf("%s", " ");
+	// ft_printf("test->|%*d|",4,0); remember this stuff
+	
 	if (list->major_data != 0)
 		ft_printf("%*d,", length->major, list->major_data); // do not forget 32
 	else
 		ft_printf("%*d,", length->major - 1, list->major_data); // do not forget 32
+	
 	if (list->minor_data !=0)
 		ft_printf("%*d", length->minor, list->minor_data);
 	else
 		ft_printf("%*d", length->minor -1, list->minor_data);
-
 	ft_putchar(32);
 }
 
@@ -172,8 +174,13 @@ void print_list(t_temp *list)
 
 	int len = length.major + length.minor;
 
-if (len > length.number_of_bytes)
-length.number_of_bytes = len;
+	int major_minor_case = 0;
+
+	if (len > length.number_of_bytes)
+	{
+		length.number_of_bytes = len;
+		major_minor_case = 2;
+	}
 	// fill_data_to_major_minor_string(list, &length);
 
 	ft_printf("total %lld\n", get_total_blocks(list));
@@ -188,17 +195,17 @@ length.number_of_bytes = len;
 		if (list->type_and_permissions_data[0] == 'c' || list->type_and_permissions_data[0] == 'b')
 		{
 			// ft_printf("%s ", list->major_minor_string);
-			ft_putstr("----here------ ");
+			// ft_putstr("----here------ ");
 			print_major_minor(list, &length);
+
 			//general maximum value;
 		}
 		else
 		{
-			ft_printf("%*d ", length.number_of_bytes - 2, list->size_data);
+			ft_printf("%*d ", length.number_of_bytes - major_minor_case, list->size_data);
 		}
 		print_date(list->time_data);
 		ft_printf("%s \n", list->d_name);
 		list = list->next;
 	}
-ft_printf("test->|%*d|",2,0);
 }
