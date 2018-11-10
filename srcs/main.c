@@ -99,18 +99,14 @@ void	listdir(char *name/*, int indent  flags */) // ? go from the first element 
 int		main(int argc, char **argv)
 {
 	int		arguments_quantity;
+	
 	if (argc == 1)
 		listdir(".");
 	else
 	{
 		arguments_quantity = 1;
-
 		while (arguments_quantity < argc)
-		{
 			listdir(argv[arguments_quantity++]);
-
-		}
-		/* code */
 	}
 	system("leaks -q ft_ls");
 	return (0);
