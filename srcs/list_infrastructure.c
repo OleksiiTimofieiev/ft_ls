@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/10 21:38:45 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/10 21:41:48 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -149,7 +149,7 @@ void fill_the_length(t_temp *list, t_output_length *length)
 
 void print_major_minor(t_temp *list, t_output_length *length)
 {
-	// ft_printf("%s", "   ");
+	ft_printf("%s", " ");
 	// ft_printf("test->|%*d|",4,0); remember this stuff
 	
 	if (list->major_data != 0)
@@ -179,7 +179,7 @@ void print_list(t_temp *list)
 	if (len > length.number_of_bytes || len + 2 > length.number_of_bytes)
 	{
 		length.number_of_bytes = len;
-		major_minor_case += 2;
+		major_minor_case += 3; // quantity of spaces before the size data line;
 
 	}
 	// fill_data_to_major_minor_string(list, &length);
