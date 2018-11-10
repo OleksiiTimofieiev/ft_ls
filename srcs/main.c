@@ -7,18 +7,18 @@
 // work out the etc
 //  - major / minor in the necessary format (first and second part) <-> print separately;
 //  - ls with link and a directory; dev vs dev/
-//  - output format;
+
 // make it in a cycle for each command line argument;
 // norminette and leaks;
 // manage errors;
 // validator;
-// quantity of spaces;
+
 // ls -laRrt
 // ls -l -a -r -t ...
 // work with errors from Liubomir
 // think over about the all flags
 // redo snprintf;
-// dif print modef for the different file types;
+
 // hex in dev;
 // adopt logic for the N number of the argc;	
 // if 0,5 year before -> show only the time;
@@ -45,10 +45,8 @@
 // drwxr-xr-x   2 otimofie  2017    68 Nov  3 15:01 .
 // drwxr-xr-x  36 otimofie  2017  1224 Nov  4 15:47 ..
 
-// b and c file types
-// link -> dir, hindu has the solution
 
-// modify with * according to the biggest length;
+// link -> dir, hindu has the solution
 
 // 'p' instead of 'f' in /etc/
 

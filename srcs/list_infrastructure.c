@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/10 18:15:44 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/10 18:20:09 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,15 +122,17 @@ void				print_list(t_temp *list)
 
 	fill_the_length(list, &length);
 
-		total = get_total_blocks(list);
+	total = get_total_blocks(list);
+
 	ft_printf("total %lld\n", total);
+
 	while (list)
 	{
 		ft_printf("%s ", list->type_and_permissions_data);
-		ft_printf("%*d ", length.number_of_links, list->hard_links_data);
-		ft_printf("%*s  ", length.owner_name, list->owner_name_data);
-		ft_printf("%*s  ", length.group_name, list->group_name_data);
-		ft_printf("%*d ", length.number_of_bytes, list->size_data);
+		ft_printf("%*-d ", length.number_of_links, list->hard_links_data);
+		ft_printf("%*-s  ", length.owner_name, list->owner_name_data);
+		ft_printf("%*-s  ", length.group_name, list->group_name_data);
+		ft_printf("%*-d ", length.number_of_bytes, list->size_data);
 		print_date(list->time_data);
 		ft_printf("%s \n", list->d_name);
 		list = list->next;
