@@ -99,7 +99,7 @@ int		main(int argc, char **argv)
 		while (arguments_quantity < argc)
 			listdir(argv[arguments_quantity++]);
 	}
-	// system("leaks -q ft_ls");
+	system("leaks -q ft_ls");
 	return (0);
 }
 
