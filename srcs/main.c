@@ -120,6 +120,7 @@ int		main(int argc, char **argv)
 			if (!find_char(argv[arguments_quantity]) && ((buf.st_mode & S_IFMT) == S_IFLNK))
 			{
 				// ft_printf()
+				//without total
 				add(&list, argv[arguments_quantity], get_stats(argv[arguments_quantity]));
 				print_list(list);
 
