@@ -22,7 +22,7 @@
 
 #include <stdio.h>
 
-int ft_opendir(t_variables *var, char *name)
+int		ft_opendir(t_variables *var, char *name)
 {
 	var->list = NULL;
 	if (!(var->dir = opendir(name)))
@@ -34,6 +34,17 @@ int ft_opendir(t_variables *var, char *name)
 	return (1);
 }
 
+void	fill_the_list(t_variables *var)
+{
+	while ((var->entry = readdir(var->dir)) != NULL)
+	{
+		var->buffer = ft_strjoin(var->path2, var->entry->d_name);
+		add(&var->list, var->entry->d_name, get_stats(var->buffer));
+		free(var->buffer);
+	}
+	var->t_list = var->list;
+}
+
 void	listdir(char *name)
 {
 	t_variables var;
@@ -41,15 +52,9 @@ void	listdir(char *name)
 	init_path2(&var.path2, name);
 	if (!ft_opendir(&var, name))
 		return ;
-	while ((var.entry = readdir(var.dir)) != NULL)
-	{
-		var.buffer = ft_strjoin(var.path2, var.entry->d_name);
-		add(&var.list, var.entry->d_name, get_stats(var.buffer));
-		free(var.buffer);
-	}
+	fill_the_list(&var);
 	q_sort(&var.list);
 	print_list(var.list);
-	var.t_list = var.list;
 	while (var.t_list)
 	{
 		if (var.t_list->type_and_permissions_data[0] == 'd')
