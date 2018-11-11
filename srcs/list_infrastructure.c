@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/11 13:52:26 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/11 13:58:04 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -175,7 +175,7 @@ void				print_list(t_temp *list)
 			ft_printf("%s\n", list->d_name);
 		else
 		{
-			char link_buf[1000];
+			char link_buf[512];
 
 			int count = readlink(list->d_name, link_buf, sizeof(link_buf));
 
@@ -188,12 +188,16 @@ void				print_list(t_temp *list)
 			
 			else if (count == -1)
 {
-				/* code */
+
 				count = 100;
 				link_buf[count] = '\0';
 
-				ft_printf("%s -> %s\n", list->d_name, link_buf);
-
+				if (ft_strequ(list->d_name, "stderr"))
+					ft_printf("%s -> %s\n", list->d_name, "fd/2");		
+				else if (ft_strequ(list->d_name, "stdin"))
+					ft_printf("%s -> %s\n", list->d_name, "fd/0");
+				else if (ft_strequ(list->d_name, "stdout"))
+					ft_printf("%s -> %s\n", list->d_name, "fd/1");
 			}
 			
 		}

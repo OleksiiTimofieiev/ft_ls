@@ -1,6 +1,6 @@
 #include "../includes/ft_ls.h"
 
-#include <stdio.h> // for snprintf;
+#include <stdio.h>
 
 // no total if link, mot a directory
 
