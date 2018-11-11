@@ -121,6 +121,7 @@ int		main(int argc, char **argv)
 			{
 				// ft_printf()
 				//without total
+				// flag for not printing total
 				add(&list, argv[arguments_quantity], get_stats(argv[arguments_quantity]));
 				print_list(list);
 
