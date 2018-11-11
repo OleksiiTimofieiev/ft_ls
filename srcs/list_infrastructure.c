@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/11 12:37:54 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/11 12:39:04 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,13 +135,13 @@ void				print_list(t_temp *list)
 {
 	t_output_length	length;
 	int				len;
-	int				major_minor_case;
+	// int				major_minor_case;
 
 	fill_the_length(list, &length);
 
 	len = 0;
 	len = length.major + length.minor + 2;
-	major_minor_case = 0;
+	// major_minor_case = 0;
 	// ft_printf("maj->%d, min->%d, len->%d, bytes->%d\n", length.major, length.minor, len, length.number_of_bytes);
 	if (len > length.number_of_bytes  /*|| len + 2 > length.number_of_bytes*/)
 	{
@@ -164,9 +164,9 @@ void				print_list(t_temp *list)
 		else
 		{
 			if (list->size_data)
-				ft_printf("%*lld ", length.number_of_bytes + major_minor_case, (long long)list->size_data);
+				ft_printf("%*lld ", length.number_of_bytes, (long long)list->size_data);
 			else
-				ft_printf("%*lld ", length.number_of_bytes + major_minor_case - 1, (long long)list->size_data);
+				ft_printf("%*lld ", length.number_of_bytes - 1, (long long)list->size_data);
 		}
 		print_date(list->time_data);
 
