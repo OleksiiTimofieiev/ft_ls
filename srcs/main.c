@@ -45,7 +45,21 @@ void	fill_the_list(t_variables *var)
 	var->t_list = var->list;
 }
 
-void	listdir(char *name)
+int		find_char(char *str)
+{
+	int i;
+
+	i = 2;
+	while (str[i])
+	{
+		if (str[i] == 47)
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
+void	listdir(char *name) // flags;
 {
 	t_variables var;
 
@@ -55,7 +69,7 @@ void	listdir(char *name)
 	fill_the_list(&var);
 	q_sort(&var.list);
 	print_list(var.list);
-	while (var.t_list)
+	while (var.t_list) // && R;
 	{
 		if (var.t_list->type_and_permissions_data[0] == 'd')
 		{
@@ -71,20 +85,6 @@ void	listdir(char *name)
 		var.t_list = var.t_list->next;
 	}
 	ft_dump_cleaner(&var.list, &var.path2, &var.dir);
-}
-
-int		find_char(char *str)
-{
-	int i;
-
-	i = 2;
-	while (str[i])
-	{
-		if (str[i] == 47)
-			return (1);
-		i++;
-	}
-	return (0);
 }
 
 int		main(int argc, char **argv)
