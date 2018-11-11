@@ -4,8 +4,6 @@
 
 // no total if link, mot a directory
 
-// link -> dir, hindu has the solution
-
 // flags management;
 // ls -laRrt
 // ls -l -a -r -t ... -> adopt to the list of directories to be worked out;
