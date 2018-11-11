@@ -18,6 +18,21 @@
 
 // norminette;
 
+static void reverse(t_temp** head_ref) 
+{ 
+    t_temp* prev   = NULL; 
+    t_temp* current = *head_ref; 
+    t_temp* next; 
+    while (current != NULL) 
+    { 
+        next  = current->next;   
+        current->next = prev;    
+        prev = current; 
+        current = next; 
+    } 
+    *head_ref = prev; 
+} 
+
 #include <stdio.h>
 
 int		ft_opendir(t_variables *var, char *name)
@@ -66,6 +81,8 @@ void	listdir(char *name) // flags;
 		return ;
 	fill_the_list(&var);
 	q_sort(&var.list);
+	insertionSort(&var.list);
+	reverse(&var.list);
 	print_list(var.list);
 	while (var.t_list) // && R;
 	{

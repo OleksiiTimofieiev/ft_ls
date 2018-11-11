@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+         #
+#    By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/18 11:59:13 by otimofie          #+#    #+#              #
-#    Updated: 2018/10/28 13:36:51 by otimofie         ###   ########.fr        #
+#    Updated: 2018/11/11 20:05:17 by timofieiev       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@ NAME		= ft_ls
 
 CORE		=	main.c \
 				quick_sort.c \
+				insertion_sort.c \
 				list_infrastructure.c \
 				listdir_infrastructure.c \
 				stats_infrastructure.c \

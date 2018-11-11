@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ls.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/20 15:18:36 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/11 16:20:56 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/11 20:02:01 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ typedef	struct		s_temp
 	char			time_data[20];
 	int				major_data;
 	int				minor_data;
+	time_t			mod_time_data;
 	struct s_temp	*next;
 }					t_temp;
 
@@ -60,6 +61,7 @@ typedef	struct		s_data
 	char			time_buf[20];
 	int				major_buf;
 	int				minor_buf;
+	time_t			mod_time_buf;
 }					t_data;
 
 typedef	struct		s_qsort
@@ -83,6 +85,7 @@ typedef	struct		s_variables
 }					t_variables;
 
 void				q_sort(t_temp **head_ref);
+void insertionSort(t_temp **head_ref) ;
 void				add(t_temp **head_ref, char *new_d_name, t_data var);
 void				print_list(t_temp *list);
 void				delete_list(t_temp **head_ref);

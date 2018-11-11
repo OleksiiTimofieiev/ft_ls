@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   list_infrastructure.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/11 16:58:25 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/11 20:05:15 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ void		add(t_temp **head_ref, char *new_d_name, t_data var)
 	str_copy(new->time_data, var.time_buf);
 	new->major_data = var.major_buf;
 	new->minor_data = var.minor_buf;
+	new->mod_time_data = var.mod_time_buf;
 	new->next = NULL;
 	if (*head_ref == NULL)
 	{
