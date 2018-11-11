@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stats_infrastructure.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
+/*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/28 13:38:08 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/11 10:25:08 by timofieiev       ###   ########.fr       */
+/*   Updated: 2018/11/11 13:16:36 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,13 +70,26 @@ t_data	get_stats(char *buffer_inner)
 	str_copy(stats.owner_name_buf, buf1);
 	buf1 = getgrgid(buf.st_gid)->gr_name;
 	str_copy(stats.group_name_buf, buf1);
-	buf1 = ctime(&buf.st_mtime);;
+
+	// time_t now;
+	// time_t mtime;
+	// time_t diff;
+
+	// now = time(NULL);
+	// mtime = buf.st_mtime;
+	// diff = now - mtime;
+	// if (difftime(now, mtime) >= 100)
+	// {
+	// 	buf1 = "qweqwe";
+	// }
+	// else
+		buf1 = ctime(&buf.st_mtime);
+
 	str_copy(stats.time_buf, buf1);
 	if ((buf.st_mode & S_IFMT) == S_IFCHR || (buf.st_mode & S_IFMT) == S_IFBLK) // major / minor // TODO: get all clear;
 	{
 		stats.major_buf = major(buf.st_rdev);
 		stats.minor_buf = minor(buf.st_rdev);
-		// ft_printf("maj->%d, len->%d, min->%d, len->%d\n", stats.major_buf, ft_decimal_length(stats.major_buf), stats.minor_buf, ft_decimal_length(stats.minor_buf));
 	}
 	else
 	{
