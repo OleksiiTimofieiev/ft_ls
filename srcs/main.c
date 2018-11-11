@@ -84,17 +84,48 @@ void	listdir(char *name/*, int indent  flags */) // ? go from the first element 
 	ft_dump_cleaner(&list, &path2, &dir);
 }
 
+int		find_char(char *str)
+{
+	int i;
+
+	i = 2;
+	while (str[i])
+	{
+		if (str[i] == 47)
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
 int		main(int argc, char **argv)
 {
-	int		arguments_quantity;
+	int		arguments_quantity = 0;
+	struct stat bufg;
+	// t_list *list = NULL;
 
 	if (argc == 1)
 		listdir(".");
 	else
 	{
+		ft_putstr(argv[arguments_quantity]);
+		ft_putstr("\n");
+
 		arguments_quantity = 1;
 		while (arguments_quantity < argc)
+		{
+			// etc without second '/'
+			lstat(argv[arguments_quantity], &buf);
+			
+			if (!find_char(argv[arguments_quantity]) &&  ((buf.st_mode & S_IFMT) == S_IFLNK))
+			{
+				// ft_printf()
+				
+				arguments_quantity++;
+				continue;
+			}
 			listdir(argv[arguments_quantity++]);
+		}
 	}
 	system("leaks -q ft_ls");
 	return (0);
