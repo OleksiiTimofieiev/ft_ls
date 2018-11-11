@@ -102,7 +102,7 @@ int		main(int argc, char **argv)
 {
 	int		arguments_quantity = 0;
 	struct stat buf;
-	// t_list *list = NULL;
+	t_temp *list = NULL;
 
 	if (argc == 1)
 		listdir(".");
@@ -120,8 +120,10 @@ int		main(int argc, char **argv)
 			if (!find_char(argv[arguments_quantity]) && ((buf.st_mode & S_IFMT) == S_IFLNK))
 			{
 				// ft_printf()
+				add(&list, argv[arguments_quantity], get_stats(argv[arguments_quantity]));
+				print_list(list);
 
-				ft_printf("%lld\n", buf.st_size);
+				// ft_printf("%lld\n", buf.st_size);
 				
 				arguments_quantity++;
 				continue;
