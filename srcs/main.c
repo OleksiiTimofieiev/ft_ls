@@ -85,6 +85,11 @@ void	listdir(char *name) // flags;
 	ft_dump_cleaner(&var.list, &var.path2, &var.dir);
 }
 
+// void	get_flags()
+// {
+
+// }
+
 int		main(int argc, char **argv)
 {
 	int		arguments_quantity = 0;
