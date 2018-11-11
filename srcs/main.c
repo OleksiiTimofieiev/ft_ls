@@ -1,11 +1,11 @@
 #include "../includes/ft_ls.h"
 
-// flags management;
+// flags management:
 // ls -laRrt
-// ls -l -a -r -t ... -> adopt to the list of directories to be worked out;
+// -l, -R, -a, -r and -t. -> adopt to the list of directories to be worked out;
 // parse and use;
 // flags = // struct options;
-// no total if link, not a directory
+// no total if link
 
 // manage errors: func to detect cyrcular link; work out if have the link;
 // errors in dev directory;
