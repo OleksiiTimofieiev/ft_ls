@@ -5,7 +5,7 @@
 // ls -l -a -r -t ... -> adopt to the list of directories to be worked out;
 // parse and use;
 // flags = // struct options;
-// no total if link, mot a directory
+// no total if link, not a directory
 
 // manage errors: func to detect cyrcular link; work out if have the link;
 // errors in dev directory;
@@ -28,7 +28,9 @@ void	listdir(char *name/*, int indent  flags */) // ? go from the first element 
 	struct dirent *entry;
 	t_temp *list;
 	t_temp *t_list;
+
 	char path[1024];
+	
 	char *path2; // make in ono init func
 	char *buffer;
 
@@ -61,7 +63,7 @@ void	listdir(char *name/*, int indent  flags */) // ? go from the first element 
 			// limit = 1024;
 			// ?:iterator;
 			snprintf(path, sizeof(path), "%s/%s", name, t_list->d_name);
-			
+
 			ft_printf("\n%s:\n", path); 
 			listdir(path);
 		}
