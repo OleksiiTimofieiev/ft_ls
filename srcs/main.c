@@ -7,14 +7,14 @@
 // flags = // struct options;
 // no total if link
 
+// redo snprintf;
+
 // manage errors: func to detect cyrcular link; work out if have the link;
 // errors in dev directory;
 // work with errors from Liubomir
 // chmod 000 -> no rights
 // not exists
 // dev -> last directories;
-
-// redo snprintf;
 
 // norminette;
 
