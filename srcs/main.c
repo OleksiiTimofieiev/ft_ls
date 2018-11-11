@@ -60,7 +60,7 @@ void	listdir(char *name/*, int indent  flags */) // ? go from the first element 
 	while ((entry = readdir(dir)) != NULL)
 	{
 		buffer = ft_strjoin(path2, entry->d_name);
-		add(&list, entry->d_name, entry->d_type, get_stats(buffer));
+		add(&list, entry->d_name, get_stats(buffer));
 		free(buffer);
 	}
 	q_sort(&list);
@@ -120,6 +120,8 @@ int		main(int argc, char **argv)
 			if (!find_char(argv[arguments_quantity]) && ((buf.st_mode & S_IFMT) == S_IFLNK))
 			{
 				// ft_printf()
+
+				ft_printf("%lld\n", buf.st_size);
 				
 				arguments_quantity++;
 				continue;

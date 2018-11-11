@@ -6,7 +6,7 @@
 /*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/20 15:18:36 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/11 10:25:04 by timofieiev       ###   ########.fr       */
+/*   Updated: 2018/11/11 10:42:46 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@
 typedef	struct		s_temp
 {
 	char			*d_name;
-	unsigned char	d_type;
+	// unsigned char	d_type;
 	long long int		blocks_data;
 	char			type_and_permissions_data[12];
 	long int	hard_links_data;
@@ -74,8 +74,7 @@ typedef	struct		s_qsort
 }					t_qsort;
 
 void				q_sort(t_temp **head_ref);
-void				add(t_temp **head_ref, char *new_d_name,
-					unsigned char d_type, t_data var);
+void				add(t_temp **head_ref, char *new_d_name, t_data var);
 void				print_list(t_temp *list);
 void				delete_list(t_temp **head_ref);
 void				init_path2(char **path2, char *name);

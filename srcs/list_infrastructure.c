@@ -6,7 +6,7 @@
 /*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/11 10:25:05 by timofieiev       ###   ########.fr       */
+/*   Updated: 2018/11/11 10:43:13 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,6 @@ void				add(t_temp **head_ref, char *new_d_name,
 	new->blocks_data = var.blocks_buf;
 	new->d_name = ft_strdup(new_d_name);
 	ft_strcpy(new->type_and_permissions_data, var.type_and_permissions_buf);
-	new->d_type = d_type;
 	new->hard_links_data = var.hard_links_buf;
 	ft_strcpy(new->owner_name_data, var.owner_name_buf);
 	ft_strcpy(new->group_name_data, var.group_name_buf);
