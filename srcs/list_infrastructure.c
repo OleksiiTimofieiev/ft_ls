@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/11 16:00:36 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/11 16:58:25 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,7 +114,9 @@ void		print_major_minor(t_temp *list, t_output_length *length)
 		ft_printf("%*d, ", length->major, list->major_data);
 	else
 		ft_printf("%*d, ", length->major - 1, list->major_data);
-	if (list->minor_data != 0)
+	if (list->minor_data > 255)
+		ft_printf("%#010x", list->minor_data);
+	else if (list->minor_data != 0)
 		ft_printf("%*d", length->minor, list->minor_data);
 	else
 		ft_printf("%*d", length->minor - 1, list->minor_data);
