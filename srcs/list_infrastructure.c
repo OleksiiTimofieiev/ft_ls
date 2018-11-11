@@ -6,7 +6,7 @@
 /*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/11 10:43:13 by timofieiev       ###   ########.fr       */
+/*   Updated: 2018/11/11 10:44:15 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,7 @@ void				delete_list(t_temp **head_ref)
 	}
 }
 
-void				add(t_temp **head_ref, char *new_d_name,
-					unsigned char d_type, t_data var)
+void				add(t_temp **head_ref, char *new_d_name, t_data var)
 {
 	t_temp *new;
 	t_temp *last;
