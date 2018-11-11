@@ -22,26 +22,24 @@
 
 #include <stdio.h>
 
-void	listdir(char *name/*, int indent  flags */) // ? go from the first element of the list;
+void	listdir(char *name)
 {
 	DIR *dir;
 	struct dirent *entry;
 	t_temp *list;
 	t_temp *t_list;
-
 	char path[1024];
-	
-	char *path2; // make in ono init func
+	char *path2;
 	char *buffer;
 
 	init_path2(&path2, name);
-	if (!(dir = opendir(name))) // separate func;
+	if (!(dir = opendir(name)))
 	{
 		free(path2);
 		ft_printf("error->>>>>>>>>>>>>>\n");
 		return ;
 	}
-	list = NULL; // to more general func above // add to func above;
+	list = NULL;
 	while ((entry = readdir(dir)) != NULL)
 	{
 		buffer = ft_strjoin(path2, entry->d_name);
@@ -51,7 +49,7 @@ void	listdir(char *name/*, int indent  flags */) // ? go from the first element 
 	q_sort(&list);
 	print_list(list);
 	t_list = list;
-	while(t_list)
+	while (t_list)
 	{
 		if (t_list->type_and_permissions_data[0] == 'd')
 		{
@@ -60,11 +58,8 @@ void	listdir(char *name/*, int indent  flags */) // ? go from the first element 
 				t_list = t_list->next;
 				continue ;
 			}
-			// limit = 1024;
-			// ?:iterator;
 			snprintf(path, sizeof(path), "%s/%s", name, t_list->d_name);
-
-			ft_printf("\n%s:\n", path); 
+			ft_printf("\n%s:\n", path);
 			listdir(path);
 		}
 		t_list = t_list->next;
@@ -96,25 +91,14 @@ int		main(int argc, char **argv)
 		listdir(".");
 	else
 	{
-		ft_putstr(argv[arguments_quantity]);
-		ft_putstr("\n");
-
 		arguments_quantity = 1;
 		while (arguments_quantity < argc)
 		{
-			// etc without second '/'
 			lstat(argv[arguments_quantity], &buf);
-			
 			if (!find_char(argv[arguments_quantity]) && ((buf.st_mode & S_IFMT) == S_IFLNK))
 			{
-				// ft_printf()
-				//without total
-				// flag for not printing total
 				add(&list, argv[arguments_quantity], get_stats(argv[arguments_quantity]));
 				print_list(list);
-
-				// ft_printf("%lld\n", buf.st_size);
-				
 				arguments_quantity++;
 				continue;
 			}
@@ -124,5 +108,3 @@ int		main(int argc, char **argv)
 	system("leaks -q ft_ls");
 	return (0);
 }
-
-
