@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/25 19:41:50 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/03 16:45:55 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/11 16:01:46 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ t_temp	*get_tail(t_temp *cur)
 	return (cur);
 }
 
-t_temp	*delim(t_temp *head, t_temp *end, t_temp **new_head, t_temp **new_end) // in a structure in order to hae possibility with the type of sorting, pass the function reference;
+t_temp	*delim(t_temp *head, t_temp *end, t_temp **new_head, t_temp **new_end)
 {
 	t_qsort var;
 
