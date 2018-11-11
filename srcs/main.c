@@ -24,47 +24,41 @@
 
 void	listdir(char *name)
 {
-	DIR *dir;
-	struct dirent *entry;
-	t_temp *list;
-	t_temp *t_list;
-	char path[1024];
-	char *path2;
-	char *buffer;
+	t_variables var;
 
-	init_path2(&path2, name);
-	if (!(dir = opendir(name)))
+	init_path2(&var.path2, name);
+	if (!(var.dir = opendir(name)))
 	{
-		free(path2);
+		free(var.path2);
 		ft_printf("error->>>>>>>>>>>>>>\n");
 		return ;
 	}
-	list = NULL;
-	while ((entry = readdir(dir)) != NULL)
+	var.list = NULL;
+	while ((var.entry = readdir(var.dir)) != NULL)
 	{
-		buffer = ft_strjoin(path2, entry->d_name);
-		add(&list, entry->d_name, get_stats(buffer));
-		free(buffer);
+		var.buffer = ft_strjoin(var.path2, var.entry->d_name);
+		add(&var.list, var.entry->d_name, get_stats(var.buffer));
+		free(var.buffer);
 	}
-	q_sort(&list);
-	print_list(list);
-	t_list = list;
-	while (t_list)
+	q_sort(&var.list);
+	print_list(var.list);
+	var.t_list = var.list;
+	while (var.t_list)
 	{
-		if (t_list->type_and_permissions_data[0] == 'd')
+		if (var.t_list->type_and_permissions_data[0] == 'd')
 		{
-			if (ft_strcmp(t_list->d_name, ".") == 0 || ft_strcmp(t_list->d_name, "..") == 0)
+			if (ft_strcmp(var.t_list->d_name, ".") == 0 || ft_strcmp(var.t_list->d_name, "..") == 0)
 			{
-				t_list = t_list->next;
+				var.t_list = var.t_list->next;
 				continue ;
 			}
-			snprintf(path, sizeof(path), "%s/%s", name, t_list->d_name);
-			ft_printf("\n%s:\n", path);
-			listdir(path);
+			snprintf(var.path, sizeof(var.path), "%s/%s", name, var.t_list->d_name);
+			ft_printf("\n%s:\n", var.path);
+			listdir(var.path);
 		}
-		t_list = t_list->next;
+		var.t_list = var.t_list->next;
 	}
-	ft_dump_cleaner(&list, &path2, &dir);
+	ft_dump_cleaner(&var.list, &var.path2, &var.dir);
 }
 
 int		find_char(char *str)
