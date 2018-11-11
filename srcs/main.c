@@ -2,13 +2,13 @@
 
 #include <stdio.h>
 
-// no total if link, mot a directory
 
 // flags management;
 // ls -laRrt
 // ls -l -a -r -t ... -> adopt to the list of directories to be worked out;
 // parse and use;
 // flags = // struct options;
+// no total if link, mot a directory
 
 // manage errors: func to detect cyrcular link; work out if have the link;
 // errors in dev directory;
@@ -60,6 +60,9 @@ void	listdir(char *name/*, int indent  flags */) // ? go from the first element 
 				t_list = t_list->next;
 				continue ;
 			}
+			// limit = 1024;
+			// ?:iterator;
+			
 			snprintf(path, sizeof(path), "%s/%s", name, t_list->d_name);
 			ft_printf("\n%s:\n", path); 
 			listdir(path);

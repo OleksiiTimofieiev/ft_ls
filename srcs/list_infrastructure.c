@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/11 13:58:04 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/11 13:59:22 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -185,11 +185,10 @@ void				print_list(t_temp *list)
 
 				ft_printf("%s -> %s\n", list->d_name, link_buf);
 			}
-			
 			else if (count == -1)
-{
-
+			{
 				count = 100;
+
 				link_buf[count] = '\0';
 
 				if (ft_strequ(list->d_name, "stderr"))
