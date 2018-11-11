@@ -2,8 +2,6 @@
 
 #include <stdio.h> // for snprintf;
 
-// if from last month -> year without time;
-
 // no total if link, mot a directory
 
 // link -> dir, hindu has the solution

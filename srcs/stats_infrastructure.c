@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/28 13:38:08 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/11 13:16:36 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/11 13:32:29 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,21 +71,28 @@ t_data	get_stats(char *buffer_inner)
 	buf1 = getgrgid(buf.st_gid)->gr_name;
 	str_copy(stats.group_name_buf, buf1);
 
-	// time_t now;
-	// time_t mtime;
-	// time_t diff;
+	time_t now;
+	time_t mtime;
+	time_t diff;
+	char *tstr;
 
-	// now = time(NULL);
-	// mtime = buf.st_mtime;
-	// diff = now - mtime;
-	// if (difftime(now, mtime) >= 100)
-	// {
-	// 	buf1 = "qweqwe";
-	// }
-	// else
-		buf1 = ctime(&buf.st_mtime);
+	now = time(NULL);
+	mtime = buf.st_mtime;
+	tstr = ctime(&mtime);
+	diff = now - mtime;
 
+	buf1 = ctime(&buf.st_mtime);
 	str_copy(stats.time_buf, buf1);
+
+	if (diff < (-3600 * 24 * 30.5 * 6) || diff > (3600 * 24 * 30.5 * 6))
+	{
+		stats.time_buf[11] = ' ';
+		stats.time_buf[12] = '2';
+		stats.time_buf[13] = '0';
+		stats.time_buf[14] = '1';
+		stats.time_buf[15] = '8';
+	}
+
 	if ((buf.st_mode & S_IFMT) == S_IFCHR || (buf.st_mode & S_IFMT) == S_IFBLK) // major / minor // TODO: get all clear;
 	{
 		stats.major_buf = major(buf.st_rdev);
