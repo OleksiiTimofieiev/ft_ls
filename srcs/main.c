@@ -18,20 +18,20 @@
 
 // norminette;
 
-static void reverse(t_temp** head_ref) 
-{ 
-    t_temp* prev   = NULL; 
-    t_temp* current = *head_ref; 
-    t_temp* next; 
-    while (current != NULL) 
-    { 
-        next  = current->next;   
-        current->next = prev;    
-        prev = current; 
-        current = next; 
-    } 
-    *head_ref = prev; 
-} 
+// static void reverse(t_temp** head_ref) 
+// { 
+//     t_temp* prev   = NULL; 
+//     t_temp* current = *head_ref; 
+//     t_temp* next; 
+//     while (current != NULL) 
+//     { 
+//         next  = current->next;   
+//         current->next = prev;    
+//         prev = current; 
+//         current = next; 
+//     } 
+//     *head_ref = prev; 
+// } 
 
 #include <stdio.h>
 
@@ -55,7 +55,6 @@ void	fill_the_list(t_variables *var)
 		add(&var->list, var->entry->d_name, get_stats(var->buffer));
 		free(var->buffer);
 	}
-	var->t_list = var->list;
 }
 
 int		find_char(char *str)
@@ -80,12 +79,17 @@ void	listdir(char *name) // flags;
 	if (!ft_opendir(&var, name))
 		return ;
 	fill_the_list(&var);
+
+	// func manipulations;
 	q_sort(&var.list);
-	insertionSort(&var.list);
-	reverse(&var.list);
+	// insertionSort(&var.list);
+	// reverse(&var.list);
 	print_list(var.list);
+	var.t_list = var.list;
 	while (var.t_list) // && R;
 	{
+		// if (var.t_list->next)
+		// ft_putchar('1');
 		if (var.t_list->type_and_permissions_data[0] == 'd')
 		{
 			if (ft_strcmp(var.t_list->d_name, ".") == 0 || ft_strcmp(var.t_list->d_name, "..") == 0)
