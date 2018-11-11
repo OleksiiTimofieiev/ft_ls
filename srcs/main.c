@@ -101,7 +101,7 @@ int		find_char(char *str)
 int		main(int argc, char **argv)
 {
 	int		arguments_quantity = 0;
-	struct stat bufg;
+	struct stat buf;
 	// t_list *list = NULL;
 
 	if (argc == 1)
@@ -117,7 +117,7 @@ int		main(int argc, char **argv)
 			// etc without second '/'
 			lstat(argv[arguments_quantity], &buf);
 			
-			if (!find_char(argv[arguments_quantity]) &&  ((buf.st_mode & S_IFMT) == S_IFLNK))
+			if (!find_char(argv[arguments_quantity]) && ((buf.st_mode & S_IFMT) == S_IFLNK))
 			{
 				// ft_printf()
 				
