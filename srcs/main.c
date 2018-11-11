@@ -67,21 +67,21 @@ void	listdir(char *name) // flags;
 	fill_the_list(&var);
 	q_sort(&var.list);
 	print_list(var.list);
-	// while (var.t_list) // && R;
-	// {
-	// 	if (var.t_list->type_and_permissions_data[0] == 'd')
-	// 	{
-	// 		if (ft_strcmp(var.t_list->d_name, ".") == 0 || ft_strcmp(var.t_list->d_name, "..") == 0)
-	// 		{
-	// 			var.t_list = var.t_list->next;
-	// 			continue ;
-	// 		}
-	// 		snprintf(var.path, sizeof(var.path), "%s/%s", name, var.t_list->d_name);
-	// 		ft_printf("\n%s:\n", var.path);
-	// 		listdir(var.path);
-	// 	}
-	// 	var.t_list = var.t_list->next;
-	// }
+	while (var.t_list) // && R;
+	{
+		if (var.t_list->type_and_permissions_data[0] == 'd')
+		{
+			if (ft_strcmp(var.t_list->d_name, ".") == 0 || ft_strcmp(var.t_list->d_name, "..") == 0)
+			{
+				var.t_list = var.t_list->next;
+				continue ;
+			}
+			snprintf(var.path, sizeof(var.path), "%s/%s", name, var.t_list->d_name);
+			ft_printf("\n%s:\n", var.path);
+			listdir(var.path);
+		}
+		var.t_list = var.t_list->next;
+	}
 	ft_dump_cleaner(&var.list, &var.path2, &var.dir);
 }
 
