@@ -2,6 +2,21 @@
 
 #include <stdio.h> // for snprintf;
 
+// etc - link stat link, no recursion;
+
+// link -> dir, hindu has the solution
+
+// ➜  ft_ls git:(master) ✗ ls -laR /etc
+// lrwxr-xr-x@ 1 root  wheel  11 Mar  4  2018 /etc -> private/etc
+
+// ➜  ft_ls git:(master) ✗ ls -la LinkDir
+// lrwxr-xr-x  1 otimofie  2017  3 Nov  3 15:01 LinkDir -> Dir
+
+// ➜  ft_ls git:(master) ✗ ls -la LinkDir/
+// total 0
+// drwxr-xr-x   2 otimofie  2017    68 Nov  3 15:01 .
+// drwxr-xr-x  36 otimofie  2017  1224 Nov  4 15:47 ..
+
 // if from last month -> year without time;
 
 // flags management;
@@ -20,22 +35,6 @@
 // redo snprintf;
 
 // hex in dev;
-
-// link -> dir, hindu has the solution
-// ➜  ft_ls git:(master) ✗ ls -laR /etc
-// lrwxr-xr-x@ 1 root  wheel  11 Mar  4  2018 /etc -> private/etc
-
-// ➜  ft_ls git:(master) ✗ ls -la LinkDir
-// lrwxr-xr-x  1 otimofie  2017  3 Nov  3 15:01 LinkDir -> Dir
-
-// ➜  ft_ls git:(master) ✗ ls -la LinkDir/
-// total 0
-// drwxr-xr-x   2 otimofie  2017    68 Nov  3 15:01 .
-// drwxr-xr-x  36 otimofie  2017  1224 Nov  4 15:47 ..
-
-// size of the directory;
-
-// drwx------+   5 otimofie  2017        170 Aug 29 14:11 
 
 // norminette;
 
