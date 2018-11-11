@@ -88,8 +88,6 @@ void	listdir(char *name) // flags;
 	var.t_list = var.list;
 	while (var.t_list) // && R;
 	{
-		// if (var.t_list->next)
-		// ft_putchar('1');
 		if (var.t_list->type_and_permissions_data[0] == 'd')
 		{
 			if (ft_strcmp(var.t_list->d_name, ".") == 0 || ft_strcmp(var.t_list->d_name, "..") == 0)
