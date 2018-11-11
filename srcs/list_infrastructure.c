@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/11 13:59:22 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/11 14:13:43 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -172,7 +172,9 @@ void				print_list(t_temp *list)
 		print_date(list->time_data);
 
 		if (list->type_and_permissions_data[0] != 'l')
+		{
 			ft_printf("%s\n", list->d_name);
+		}
 		else
 		{
 			char link_buf[512];
@@ -182,7 +184,6 @@ void				print_list(t_temp *list)
 			if (count >= 0)
 			{
 				link_buf[count] = '\0';
-
 				ft_printf("%s -> %s\n", list->d_name, link_buf);
 			}
 			else if (count == -1)
@@ -198,7 +199,6 @@ void				print_list(t_temp *list)
 				else if (ft_strequ(list->d_name, "stdout"))
 					ft_printf("%s -> %s\n", list->d_name, "fd/1");
 			}
-			
 		}
 		list = list->next;
 	}

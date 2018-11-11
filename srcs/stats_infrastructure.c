@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/28 13:38:08 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/11 14:05:58 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/11 14:08:46 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,7 @@ t_data	get_stats(char *buffer_inner)
 	diff = now - mtime;
 
 	buf1 = ctime(&buf.st_mtime);
+
 	str_copy(stats.time_buf, buf1);
 
 	if (diff < (-3600 * 24 * 30.5 * 6) || diff > (3600 * 24 * 30.5 * 6))

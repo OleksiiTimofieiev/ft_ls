@@ -1,8 +1,5 @@
 #include "../includes/ft_ls.h"
 
-#include <stdio.h>
-
-
 // flags management;
 // ls -laRrt
 // ls -l -a -r -t ... -> adopt to the list of directories to be worked out;
@@ -23,6 +20,8 @@
 
 // norminette;
 
+#include <stdio.h>
+
 void	listdir(char *name/*, int indent  flags */) // ? go from the first element of the list;
 {
 	DIR *dir;
@@ -38,7 +37,6 @@ void	listdir(char *name/*, int indent  flags */) // ? go from the first element 
 	{
 		free(path2);
 		ft_printf("error->>>>>>>>>>>>>>\n");
-		perror("open");
 		return ;
 	}
 	list = NULL; // to more general func above // add to func above;
@@ -62,8 +60,8 @@ void	listdir(char *name/*, int indent  flags */) // ? go from the first element 
 			}
 			// limit = 1024;
 			// ?:iterator;
-			
 			snprintf(path, sizeof(path), "%s/%s", name, t_list->d_name);
+			
 			ft_printf("\n%s:\n", path); 
 			listdir(path);
 		}
