@@ -22,18 +22,25 @@
 
 #include <stdio.h>
 
+int ft_opendir(t_variables *var, char *name)
+{
+	var->list = NULL;
+	if (!(var->dir = opendir(name)))
+	{
+		free(var->path2);
+		ft_printf("error->>>>>>>>>>>>>>\n");
+		return (0);
+	}
+	return (1);
+}
+
 void	listdir(char *name)
 {
 	t_variables var;
 
 	init_path2(&var.path2, name);
-	if (!(var.dir = opendir(name)))
-	{
-		free(var.path2);
-		ft_printf("error->>>>>>>>>>>>>>\n");
+	if (!ft_opendir(&var, name))
 		return ;
-	}
-	var.list = NULL;
 	while ((var.entry = readdir(var.dir)) != NULL)
 	{
 		var.buffer = ft_strjoin(var.path2, var.entry->d_name);
