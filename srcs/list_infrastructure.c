@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   list_infrastructure.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
+/*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/11 10:44:15 by timofieiev       ###   ########.fr       */
+/*   Updated: 2018/11/11 12:37:54 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,10 +105,10 @@ void				fill_the_length(t_temp *list, t_output_length *length)
 		if (length->number_of_bytes < ft_decimal_length(list->size_data))
 			length->number_of_bytes = ft_decimal_length(list->size_data);
 
-		if (length->major && length->major < ft_decimal_length(list->major_data))
+		if (length->major != 0 && length->major < ft_decimal_length(list->major_data))
 			length->major = ft_decimal_length(list->major_data);
 
-		if (length->minor && length->minor < ft_decimal_length(list->minor_data))
+		if (length->minor != 0&& length->minor < ft_decimal_length(list->minor_data))
 			length->minor = ft_decimal_length(list->minor_data);
 
 		list = list->next;
@@ -134,17 +134,21 @@ void				print_major_minor(t_temp *list, t_output_length *length)
 void				print_list(t_temp *list)
 {
 	t_output_length	length;
-	int len;
-	int major_minor_case;
+	int				len;
+	int				major_minor_case;
 
 	fill_the_length(list, &length);
-	// ft_printf("len_major->%d, len_minor->%d\n", length.major, length.minor);
-	len = length.major + length.minor;
+
+	len = 0;
+	len = length.major + length.minor + 2;
 	major_minor_case = 0;
-	if (len > length.number_of_bytes || len + 2 > length.number_of_bytes)
+	// ft_printf("maj->%d, min->%d, len->%d, bytes->%d\n", length.major, length.minor, len, length.number_of_bytes);
+	if (len > length.number_of_bytes  /*|| len + 2 > length.number_of_bytes*/)
 	{
-		length.number_of_bytes = len;
-		major_minor_case += 3; // quantity of spaces before the size data line;
+		// ft_putstr("----\n");
+		// ft_printf("maj->%d, min->%d, len->%d, bytes->%d\n", length.major, length.minor, len, length.number_of_bytes);
+		length.number_of_bytes = len + 1;
+		// major_minor_case += 3; // quantity of spaces before the size data line;
 	}
 	ft_printf("total %lld\n", get_total_blocks(list));
 	// different func;
@@ -152,8 +156,9 @@ void				print_list(t_temp *list)
 	{
 		ft_printf("%s ", list->type_and_permissions_data);
 		ft_printf("%*d ", length.number_of_links, list->hard_links_data);
-		ft_printf("%*-s  ", length.owner_name, list->owner_name_data);
-		ft_printf("%*-s  ", length.group_name, list->group_name_data);
+		ft_printf("%*-s", length.owner_name + 2, list->owner_name_data);
+		ft_printf("%*-s", length.group_name + 2, list->group_name_data);
+
 		if (list->type_and_permissions_data[0] == 'c' || list->type_and_permissions_data[0] == 'b')
 			print_major_minor(list, &length);
 		else
@@ -161,10 +166,12 @@ void				print_list(t_temp *list)
 			if (list->size_data)
 				ft_printf("%*lld ", length.number_of_bytes + major_minor_case, (long long)list->size_data);
 			else
-				ft_printf("%*lld ", length.number_of_bytes + major_minor_case -1, (long long)list->size_data);
+				ft_printf("%*lld ", length.number_of_bytes + major_minor_case - 1, (long long)list->size_data);
 		}
 		print_date(list->time_data);
+
 		ft_printf("%s\n", list->d_name);
+
 		list = list->next;
 	}
 }
