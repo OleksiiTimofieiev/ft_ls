@@ -21,6 +21,15 @@
 
 // redo snprintf;
 
+// bonus: 
+
+// -c	   colors
+// -S  	   Sort files by size
+// -i      For each file, print the file's file serial number (inode number).
+// -f      Output is not sorted.  This option turns on the -a option. -> no filters;
+// -o      List in long format, but omit the group and user id.
+
+
 // norminette;
 
 // static void reverse(t_temp** head_ref) 
