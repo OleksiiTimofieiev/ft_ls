@@ -7,8 +7,6 @@
 // no total if link (/etc)
 // flags = // struct options;
 
-// redo snprintf;
-
 // manage errors: func to detect cyrcular link; work out if have the link;
 // errors in dev directory;
 // work with errors from Liubomir
@@ -19,6 +17,8 @@
 // ➜  ft_ls git:(master) ✗ ls -lz -a -zrRt /dev
 // ls: illegal option -- z
 // usage: ls [-ABCFGHLOPRSTUWabcdefghiklmnopqrstuwx1] [file ...]
+
+// redo snprintf;
 
 // norminette;
 
@@ -192,10 +192,17 @@ void	init_flags(char **argv, t_flags *flags) // int **;
 	}
 }
 
+void	print_flags(t_flags *flags)
+{
+	ft_printf("long_format->%d,include_dot->%d,recursive->%d,reversed->%d,time_sorting->%d\n",
+				flags->long_format, flags->include_dot, flags->recursive, flags->reversed, flags->time_sorting)
+}
+
 int		main(int argc, char **argv)
 {
 	t_flags flags;
 	init_flags(argv, &flags);
+	print_flags(&flags);
 
 	ft_ls(argc, argv);
 	return (0);
