@@ -212,6 +212,7 @@ int		set_flag_structure(char *str, t_flags *flags)
 	return (i);
 }
 
+
 void	init_flags(char **argv, t_flags *flags) // int **;
 {
 	int i;
