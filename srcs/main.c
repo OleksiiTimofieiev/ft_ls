@@ -12,10 +12,6 @@
 // usage: ls [-ABCFGHLOPRSTUWabcdefghiklmnopqrstuwx1] [file ...]
 // if the first argument is -l; make && ./ft_ls -ala     
 
-
-
-
-
 // list for errors maybe;
 
 // manage errors: func to detect cyrcular link; work out if have the link;
