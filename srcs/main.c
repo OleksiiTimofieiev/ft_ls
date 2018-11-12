@@ -17,7 +17,7 @@
 // ➜  ft_ls git:(master) ✗ ls -lz -a -zrRt /dev
 // ls: illegal option -- z
 // usage: ls [-ABCFGHLOPRSTUWabcdefghiklmnopqrstuwx1] [file ...]
-// if the first argument is -l;
+// if the first argument is -l; make && ./ft_ls -ala     
 
 // redo snprintf;
 
@@ -108,6 +108,9 @@ void	listdir(char *name) // flags;
 				continue ;
 			}
 			snprintf(var.path, sizeof(var.path), "%s/%s", name, var.t_list->d_name);
+			// ft_snprintf(&var, name); 
+
+
 			ft_printf("\n%s:\n", var.path);
 			listdir(var.path);
 		}
@@ -217,6 +220,7 @@ void	print_flags(t_flags *flags)
 int		main(int argc, char **argv)
 {
 	t_flags flags;
+
 	init_flags(argv, &flags);
 	print_flags(&flags);
 
