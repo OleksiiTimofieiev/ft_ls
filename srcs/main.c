@@ -7,6 +7,17 @@
 // no total if link (/etc)
 // flags = // struct options;
 
+// flag errors:
+// ?: stops on the first occurrence of the incorrect file or the dir;
+// ➜  ft_ls git:(master) ✗ ls -lz -a -zrRt /dev
+// ls: illegal option -- z
+// usage: ls [-ABCFGHLOPRSTUWabcdefghiklmnopqrstuwx1] [file ...]
+// if the first argument is -l; make && ./ft_ls -ala     
+
+
+
+
+
 // list for errors maybe;
 
 // manage errors: func to detect cyrcular link; work out if have the link;
@@ -15,14 +26,6 @@
 // chmod 000 -> no rights
 // not exists
 // dev -> last directories;
-
-// flag errors
-// ?: stops on the first occurrence of the incorrect file or the dir;
-// ➜  ft_ls git:(master) ✗ ls -lz -a -zrRt /dev
-// ls: illegal option -- z
-// usage: ls [-ABCFGHLOPRSTUWabcdefghiklmnopqrstuwx1] [file ...]
-
-// if the first argument is -l; make && ./ft_ls -ala     
 
 // bonus: 
 // -c	   colors
