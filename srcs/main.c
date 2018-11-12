@@ -1,7 +1,5 @@
 #include "../includes/ft_ls.h"
 
-#include <stdio.h>
-
 // flags:
 // use;
 // no total if link (/etc)
@@ -160,6 +158,7 @@ void	ft_ls(int argc, char **argv) //remaster according to i value;
 			{
 				add(&list, argv[arguments_quantity], get_stats(argv[arguments_quantity]));
 				print_list(list);
+				delete_list(&list);
 				arguments_quantity++;
 				continue ;
 			}
