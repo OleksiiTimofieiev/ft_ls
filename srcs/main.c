@@ -29,7 +29,6 @@
 // -f      Output is not sorted.  This option turns on the -a option. -> no filters;
 // -o      List in long format, but omit the group and user id.
 
-
 // norminette;
 
 // static void reverse(t_temp** head_ref) 
@@ -137,7 +136,7 @@ void	ft_ls(int argc, char **argv) //remaster according to i value;
 				add(&list, argv[arguments_quantity], get_stats(argv[arguments_quantity]));
 				print_list(list);
 				arguments_quantity++;
-				continue;
+				continue ;
 			}
 			listdir(argv[arguments_quantity++]);
 		}
