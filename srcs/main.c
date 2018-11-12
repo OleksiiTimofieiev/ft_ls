@@ -140,7 +140,9 @@ int		check_flags_validiry(char *str)
 {
 	while (*str)
 	{
-		if (*str == 'l' || *str == 'a' || *str == 'r' || *str == 'R' || *str == 't')
+		if (*str == 'l' || *str == 'a'
+			|| *str == 'r' || *str == 'R'
+			|| *str == 't')
 		{
 			str++;
 			continue ;
