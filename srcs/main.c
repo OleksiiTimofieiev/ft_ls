@@ -7,21 +7,24 @@
 // no total if link (/etc)
 // flags = // struct options;
 
+// list for errors maybe;
+
 // manage errors: func to detect cyrcular link; work out if have the link;
 // errors in dev directory;
 // work with errors from Liubomir
 // chmod 000 -> no rights
 // not exists
 // dev -> last directories;
+
+// flag errors
 // ?: stops on the first occurrence of the incorrect file or the dir;
 // ➜  ft_ls git:(master) ✗ ls -lz -a -zrRt /dev
 // ls: illegal option -- z
 // usage: ls [-ABCFGHLOPRSTUWabcdefghiklmnopqrstuwx1] [file ...]
+
 // if the first argument is -l; make && ./ft_ls -ala     
-// list for errors maybe;
 
 // bonus: 
-
 // -c	   colors
 // -S  	   Sort files by size
 // -i      For each file, print the file's file serial number (inode number).
@@ -160,7 +163,6 @@ void	ft_ls(int argc, char **argv) //remaster according to i value;
 			listdir(argv[arguments_quantity++]);
 		}
 	}
-	system("leaks -q ft_ls");
 }
 
 int		check_flags_validiry(char *str)
@@ -227,19 +229,20 @@ void	init_flags(char **argv, t_flags *flags) // int **;
 	}
 }
 
-void	print_flags(t_flags *flags)
-{
-	ft_printf("long_format->%d,include_dot->%d,recursive->%d,reversed->%d,time_sorting->%d\n",
-				flags->long_format, flags->include_dot, flags->recursive, flags->reversed, flags->time_sorting);
-}
+// void	print_flags(t_flags *flags)
+// {
+// 	ft_printf("long_format->%d,include_dot->%d,recursive->%d,reversed->%d,time_sorting->%d\n",
+// 				flags->long_format, flags->include_dot, flags->recursive, flags->reversed, flags->time_sorting);
+// }
 
 int		main(int argc, char **argv)
 {
 	t_flags flags;
 
 	init_flags(argv, &flags);
-	print_flags(&flags);
+	// print_flags(&flags);
 
 	ft_ls(argc, argv);
+	system("leaks -q ft_ls");
 	return (0);
 }
