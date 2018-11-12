@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-// flags management:
+// flags:
 // use;
 // no total if link (/etc)
 // flags = // struct options;
