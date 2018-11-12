@@ -35,3 +35,6 @@ Err I
 Tmp dev/ /
 Time
 Sd_mode
+
+
+// snprintf(var.path, sizeof(var.path), "%s/%s", name, var.t_list->d_name);

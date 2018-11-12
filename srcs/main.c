@@ -83,6 +83,26 @@ int		find_char(char *str)
 	return (0);
 }
 
+void	ft_concatenation(t_variables *var, char *name)
+{
+	char	buf[1024];
+	char	*result;
+	int		i;
+
+	i = 0;
+	ft_memset(buf, '\0', sizeof(buf));
+	ft_memset(var->path, '\0', sizeof(var->path));
+	result = ft_strcat(buf, name);
+	result = ft_strcat(result, "/");
+	result = ft_strcat(result, var->t_list->d_name);
+	while (*result)
+	{
+		var->path[i] = *result;
+		i++;
+		result++;
+	}
+}
+
 void	listdir(char *name) // flags;
 {
 	t_variables var;
@@ -107,11 +127,7 @@ void	listdir(char *name) // flags;
 				var.t_list = var.t_list->next;
 				continue ;
 			}
-			snprintf(var.path, sizeof(var.path), "%s/%s", name, var.t_list->d_name);
-			// ft_snprintf(&var, name); 
-
-			
-
+		    ft_concatenation(&var, name);
 			ft_printf("\n%s:\n", var.path);
 			listdir(var.path);
 		}
