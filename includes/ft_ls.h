@@ -6,7 +6,7 @@
 /*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/20 15:18:36 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/11 20:02:01 by timofieiev       ###   ########.fr       */
+/*   Updated: 2018/11/12 16:21:04 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,15 @@
 # include <uuid/uuid.h>
 # include <grp.h>
 # include <time.h>
+
+typedef struct		s_flags
+{
+	char			long_format;
+	char			include_dot;
+	char			recursive;
+	char			reversed;
+	char			time_sorting;
+}					t_flags;
 
 typedef	struct		s_temp
 {
@@ -85,13 +94,13 @@ typedef	struct		s_variables
 }					t_variables;
 
 void				q_sort(t_temp **head_ref);
-void insertionSort(t_temp **head_ref) ;
+void				insertionSort(t_temp **head_ref) ;
 void				add(t_temp **head_ref, char *new_d_name, t_data var);
 void				print_list(t_temp *list);
 void				delete_list(t_temp **head_ref);
 void				init_path2(char **path2, char *name);
 void				ft_dump_cleaner(t_temp **list, char **path2, DIR **dir);
-t_data				get_stats(char *buffer);
 void				str_copy(char *dst, char *src);
+t_data				get_stats(char *buffer);
 
 #endif

@@ -35,6 +35,7 @@
 //     *head_ref = prev; 
 // } 
 
+// work with separate file;
 
 int		ft_opendir(t_variables *var, char *name)
 {
@@ -105,12 +106,7 @@ void	listdir(char *name) // flags;
 	ft_dump_cleaner(&var.list, &var.path2, &var.dir);
 }
 
-// void	get_flags()
-// {
-
-// }
-
-void	ft_ls(int argc, char **argv)
+void	ft_ls(int argc, char **argv) //remaster according to i value;
 {
 	int			arguments_quantity = 0;
 	struct stat buf;
@@ -138,8 +134,11 @@ void	ft_ls(int argc, char **argv)
 	system("leaks -q ft_ls");
 }
 
+// void	init_flags(char **argv)
+
 int		main(int argc, char **argv)
 {
+	// t_flags flags;
 	ft_ls(argc, argv);
 	return (0);
 }
