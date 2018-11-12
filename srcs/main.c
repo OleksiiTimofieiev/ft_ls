@@ -3,11 +3,9 @@
 #include <stdio.h>
 
 // flags management:
-// ls -laRrt
-// -l, -R, -a, -r and -t. -> adopt to the list of directories to be worked out;
-// parse and use;
+// use;
+// no total if link (/etc)
 // flags = // struct options;
-// no total if link
 
 // redo snprintf;
 
@@ -17,6 +15,10 @@
 // chmod 000 -> no rights
 // not exists
 // dev -> last directories;
+// ?: stops on the first occurrence of the incorrect file or the dir;
+// ➜  ft_ls git:(master) ✗ ls -lz -a -zrRt /dev
+// ls: illegal option -- z
+// usage: ls [-ABCFGHLOPRSTUWabcdefghiklmnopqrstuwx1] [file ...]
 
 // norminette;
 
@@ -35,7 +37,6 @@
 //     *head_ref = prev; 
 // } 
 
-// work with separate file;
 
 int		ft_opendir(t_variables *var, char *name)
 {
@@ -134,11 +135,68 @@ void	ft_ls(int argc, char **argv) //remaster according to i value;
 	system("leaks -q ft_ls");
 }
 
-// void	init_flags(char **argv)
+int		check_flags_validiry(char *str)
+{
+	while (*str)
+	{
+		if (*str == 'l' || *str == 'a' || *str == 'r' || *str == 'R' || *str == 't')
+		{
+			str++;
+			continue ;
+		}
+		else
+			return (0);
+		str++;
+	}
+	return (1);
+}
+
+int		set_flag_structure(char *str, t_flags *flags)
+{
+	int i;
+
+	i = 1;
+	if (!check_flags_validiry(str))
+	{
+		i = 0;
+		return (i);
+	}
+	while (*str)
+	{
+		if (*str == 'l')
+			flags->long_format = 1;
+		else if (*str == 'a')
+			flags->include_dot = 1;
+		else if (*str == 'R')
+			flags->recursive = 1;
+		else if (*str == 'r')
+			flags->reversed = 1;
+		else if (*str == 't')
+			flags->time_sorting = 1;
+		str++;
+	}
+	return (i);
+}
+
+void	init_flags(char **argv, t_flags *flags) // int **;
+{
+	int i;
+
+	i = 1;
+	while (argv[i][0] == '-')
+	{
+		ft_printf("we have the flag\n");
+		if (!set_flag_structure(&argv[i][1], flags))
+			ft_printf("we have an error\n");
+		i++;
+	}
+}
 
 int		main(int argc, char **argv)
 {
-	// t_flags flags;
+	t_flags flags;
+	init_flags(argv, &flags);
+
 	ft_ls(argc, argv);
 	return (0);
 }
