@@ -110,6 +110,7 @@ void	listdir(char *name) // flags;
 			snprintf(var.path, sizeof(var.path), "%s/%s", name, var.t_list->d_name);
 			// ft_snprintf(&var, name); 
 
+			
 
 			ft_printf("\n%s:\n", var.path);
 			listdir(var.path);
