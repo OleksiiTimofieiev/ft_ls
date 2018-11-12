@@ -80,7 +80,7 @@ void	listdir(char *name) // flags;
 		return ;
 	fill_the_list(&var);
 
-	// func manipulations;
+	// func manipulations according to the flags;
 	q_sort(&var.list);
 	// insertionSort(&var.list);
 	// reverse(&var.list);
