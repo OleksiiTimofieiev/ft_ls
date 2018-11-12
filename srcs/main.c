@@ -189,7 +189,6 @@ void	init_flags(char **argv, t_flags *flags) // int **;
 	flags->recursive = 0;
 	flags->reversed = 0;
 	flags->time_sorting = 0;
-
 	while (argv[i][0] == '-')
 	{
 		ft_printf("we have the flag\n");
