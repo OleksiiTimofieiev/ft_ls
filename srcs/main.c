@@ -1,5 +1,7 @@
 #include "../includes/ft_ls.h"
 
+#include <stdio.h>
+
 // flags management:
 // ls -laRrt
 // -l, -R, -a, -r and -t. -> adopt to the list of directories to be worked out;
@@ -33,7 +35,6 @@
 //     *head_ref = prev; 
 // } 
 
-#include <stdio.h>
 
 int		ft_opendir(t_variables *var, char *name)
 {
@@ -109,12 +110,13 @@ void	listdir(char *name) // flags;
 
 // }
 
-int		main(int argc, char **argv)
+void	ft_ls(int argc, char **argv)
 {
-	int		arguments_quantity = 0;
+	int			arguments_quantity = 0;
 	struct stat buf;
-	t_temp *list = NULL;
+	t_temp 		*list;
 
+	list = NULL;
 	if (argc == 1)
 		listdir(".");
 	else
@@ -134,5 +136,10 @@ int		main(int argc, char **argv)
 		}
 	}
 	system("leaks -q ft_ls");
+}
+
+int		main(int argc, char **argv)
+{
+	ft_ls(argc, argv);
 	return (0);
 }
