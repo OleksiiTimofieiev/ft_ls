@@ -183,6 +183,12 @@ void	init_flags(char **argv, t_flags *flags) // int **;
 	int i;
 
 	i = 1;
+	flags->long_format = 0;
+	flags->include_dot = 0;
+	flags->recursive = 0;
+	flags->reversed = 0;
+	flags->time_sorting = 0;
+
 	while (argv[i][0] == '-')
 	{
 		ft_printf("we have the flag\n");
@@ -195,7 +201,7 @@ void	init_flags(char **argv, t_flags *flags) // int **;
 void	print_flags(t_flags *flags)
 {
 	ft_printf("long_format->%d,include_dot->%d,recursive->%d,reversed->%d,time_sorting->%d\n",
-				flags->long_format, flags->include_dot, flags->recursive, flags->reversed, flags->time_sorting)
+				flags->long_format, flags->include_dot, flags->recursive, flags->reversed, flags->time_sorting);
 }
 
 int		main(int argc, char **argv)
