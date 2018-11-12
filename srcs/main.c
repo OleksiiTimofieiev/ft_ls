@@ -18,8 +18,7 @@
 // ls: illegal option -- z
 // usage: ls [-ABCFGHLOPRSTUWabcdefghiklmnopqrstuwx1] [file ...]
 // if the first argument is -l; make && ./ft_ls -ala     
-
-// redo snprintf;
+// list for errors maybe;
 
 // bonus: 
 
