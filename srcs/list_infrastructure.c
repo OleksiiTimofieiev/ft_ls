@@ -6,7 +6,7 @@
 /*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/13 16:03:02 by timofieiev       ###   ########.fr       */
+/*   Updated: 2018/11/13 16:34:06 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -184,13 +184,16 @@ void		print_list(t_temp *list, t_flags flags)
 			list = list->next;
 			continue ;
 		}
-		print_simple_params(list, length);
-		if (list->type_and_permissions_data[0] == 'c'
-			|| list->type_and_permissions_data[0] == 'b')
-			print_major_minor(list, &length);
-		else
-			print_number_of_bytes(list, length);
-		print_date(list->time_data);
+		if (flags.long_format)
+		{
+			print_simple_params(list, length);
+			if (list->type_and_permissions_data[0] == 'c'
+				|| list->type_and_permissions_data[0] == 'b')
+				print_major_minor(list, &length);
+			else
+				print_number_of_bytes(list, length);
+			print_date(list->time_data);
+		}
 		if (list->type_and_permissions_data[0] != 'l')
 			ft_printf("%s\n", list->d_name);
 		else
