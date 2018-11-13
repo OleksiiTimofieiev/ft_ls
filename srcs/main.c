@@ -6,7 +6,6 @@
 // ➜  ft_ls git:(master) ✗ ls -lz -a -zrRt /dev
 // ls: illegal option -- z
 // usage: ls [-ABCFGHLOPRSTUWabcdefghiklmnopqrstuwx1] [file ...]
-// ls /etc -> reading the file stats
 // check that flags work properly;
 
 // manage errors:
