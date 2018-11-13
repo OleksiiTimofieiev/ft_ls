@@ -5,6 +5,9 @@
 // no total if link (/etc)
 // flags = // struct options;
 // ls -lart // recursion does`nt affects the output;
+// pass flags struct to the func;
+// flag priorities
+// manage seqfault;
 
 // flag errors:
 // ?: stops on the first occurrence of the incorrect file or the dir;
@@ -17,7 +20,6 @@
 
 // manage errors: func to detect cyrcular link; work out if have the link;
 // errors in dev directory;
-// work with errors from Liubomir
 // chmod 000 -> no rights
 // not exists
 // dev -> last directories;
