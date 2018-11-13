@@ -33,20 +33,20 @@
 
 // norminette;
 
-// static void reverse(t_temp** head_ref) 
-// { 
-//     t_temp* prev   = NULL; 
-//     t_temp* current = *head_ref; 
-//     t_temp* next; 
-//     while (current != NULL) 
-//     { 
-//         next  = current->next;   
-//         current->next = prev;    
-//         prev = current; 
-//         current = next; 
-//     } 
-//     *head_ref = prev; 
-// } 
+static void reverse(t_temp** head_ref) 
+{ 
+    t_temp* prev   = NULL; 
+    t_temp* current = *head_ref; 
+    t_temp* next; 
+    while (current != NULL) 
+    { 
+        next  = current->next;   
+        current->next = prev;    
+        prev = current; 
+        current = next; 
+    } 
+    *head_ref = prev; 
+} 
 
 
 int		ft_opendir(t_variables *var, char *name)
@@ -117,7 +117,8 @@ void	listdir(char *name, t_flags flags) // flags;
 	// func manipulations according to the flags;
 	q_sort(&var.list);
 	// insertionSort(&var.list);
-	// reverse(&var.list);
+	if (flags.reversed)
+		reverse(&var.list);
 	print_list(var.list, flags);
 	var.t_list = var.list;
 	while (flags.recursive && var.t_list)
