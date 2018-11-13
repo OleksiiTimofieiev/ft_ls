@@ -1,24 +1,20 @@
 #include "../includes/ft_ls.h"
 
-// flags:
-// use;
-// no total if link (/etc)
-// flags = // struct options;
-// ls -lart // recursion does`nt affects the output;
-// pass flags struct to the func;
-// flag priorities
-// manage seqfault;
-
 // flag errors:
+// no total if link (/etc)
+// manage seqfault;
 // ?: stops on the first occurrence of the incorrect file or the dir;
 // ➜  ft_ls git:(master) ✗ ls -lz -a -zrRt /dev
 // ls: illegal option -- z
 // usage: ls [-ABCFGHLOPRSTUWabcdefghiklmnopqrstuwx1] [file ...]
 // if the first argument is -l; make && ./ft_ls -ala     
+// ls /etc
+// opening the file
 
+
+// manage errors:
+// func to detect cyrcular link; work out if have the link;
 // list for errors maybe;
-
-// manage errors: func to detect cyrcular link; work out if have the link;
 // errors in dev directory;
 // chmod 000 -> no rights
 // not exists
