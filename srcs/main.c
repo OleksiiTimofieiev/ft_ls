@@ -4,6 +4,7 @@
 // use;
 // no total if link (/etc)
 // flags = // struct options;
+// ls -lart // recursion does`nt affects the output;
 
 // flag errors:
 // ?: stops on the first occurrence of the incorrect file or the dir;
