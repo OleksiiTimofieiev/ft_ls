@@ -105,7 +105,7 @@ void	ft_concatenation(t_variables *var, char *name)
 	}
 }
 
-void	listdir(char *name) // flags;
+void	listdir(char *name, t_flags flags) // flags;
 {
 	t_variables var;
 
@@ -118,9 +118,9 @@ void	listdir(char *name) // flags;
 	q_sort(&var.list);
 	// insertionSort(&var.list);
 	// reverse(&var.list);
-	print_list(var.list);
+	print_list(var.list, flags);
 	var.t_list = var.list;
-	while (var.t_list) // && R;
+	while (flags.recursive && var.t_list)
 	{
 		if (var.t_list->type_and_permissions_data[0] == 'd')
 		{
@@ -131,14 +131,14 @@ void	listdir(char *name) // flags;
 			}
 		    ft_concatenation(&var, name);
 			ft_printf("\n%s:\n", var.path);
-			listdir(var.path);
+			listdir(var.path, flags);
 		}
 		var.t_list = var.t_list->next;
 	}
 	ft_dump_cleaner(&var.list, &var.path2, &var.dir);
 }
 
-void	ft_ls(int argc, char **argv) //remaster according to i value;
+void	ft_ls(int argc, char **argv, t_flags flags) //remaster according to i value;
 {
 	int			arguments_quantity = 0;
 	struct stat buf;
@@ -146,7 +146,7 @@ void	ft_ls(int argc, char **argv) //remaster according to i value;
 
 	list = NULL;
 	if (argc == 1)
-		listdir(".");
+		listdir(".", flags);
 	else
 	{
 		arguments_quantity = 1;
@@ -156,12 +156,12 @@ void	ft_ls(int argc, char **argv) //remaster according to i value;
 			if (!find_char(argv[arguments_quantity]) && ((buf.st_mode & S_IFMT) == S_IFLNK))
 			{
 				add(&list, argv[arguments_quantity], get_stats(argv[arguments_quantity]));
-				print_list(list);
+				print_list(list, flags);
 				delete_list(&list);
 				arguments_quantity++;
 				continue ;
 			}
-			listdir(argv[arguments_quantity++]);
+			listdir(argv[arguments_quantity++], flags);
 		}
 	}
 }
@@ -243,7 +243,7 @@ int		main(int argc, char **argv)
 	init_flags(argv, &flags);
 	// print_flags(&flags);
 
-	ft_ls(argc, argv);
+	ft_ls(argc, argv, flags);
 	system("leaks -q ft_ls");
 	return (0);
 }

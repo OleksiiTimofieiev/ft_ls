@@ -6,7 +6,7 @@
 /*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/11 20:05:15 by timofieiev       ###   ########.fr       */
+/*   Updated: 2018/11/13 16:03:02 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -166,7 +166,7 @@ void		print_number_of_bytes(t_temp *list, t_output_length length)
 			(long long)list->size_data);
 }
 
-void		print_list(t_temp *list)
+void		print_list(t_temp *list, t_flags flags)
 {
 	int				len;
 	t_output_length	length;
@@ -179,6 +179,11 @@ void		print_list(t_temp *list)
 	ft_printf("total %lld\n", get_total_blocks(list));
 	while (list)
 	{
+		if (list->d_name[0] == '.' && !flags.include_dot)
+		{
+			list = list->next;
+			continue ;
+		}
 		print_simple_params(list, length);
 		if (list->type_and_permissions_data[0] == 'c'
 			|| list->type_and_permissions_data[0] == 'b')
