@@ -1,18 +1,14 @@
 #include "../includes/ft_ls.h"
 
 // flag errors:
-// no total if link (/etc)
-// manage seqfault = if -l and no arguments;
-// if the first argument is -l; make && ./ft_ls -ala     
+// no total if link (/etc)  
 // ?: stops on the first occurrence of the incorrect file or the dir;
 // ➜  ft_ls git:(master) ✗ ls -lz -a -zrRt /dev
 // ls: illegal option -- z
 // usage: ls [-ABCFGHLOPRSTUWabcdefghiklmnopqrstuwx1] [file ...]
-// quantity of flags;
 // ls /etc -> reading the file stats
 // check that flags work properly;
 // new line when two arguments;
-
 
 // manage errors:
 // func to detect cyrcular link; work out if have the link;
