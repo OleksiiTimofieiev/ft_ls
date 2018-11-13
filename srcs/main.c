@@ -148,7 +148,7 @@ void	ft_ls(int argc, char **argv, t_flags flags, int move_to_the_arguments) //re
 	t_temp 		*list;
 
 	list = NULL;
-	if (argc == 1 && move_to_the_arguments == 1)
+	if ((argc - move_to_the_arguments) == 1)
 	{
 		listdir(".", flags);
 	}
@@ -227,14 +227,23 @@ void	init_flags(char **argv, t_flags *flags, int argc, int *move_to_the_argument
 	flags->time_sorting = 0;
 	if (argc == 1)
 		return ;
-	while (argv[i][0] == '-')
+	while (argv[i] && argv[i][0] == '-')
 	{
 		ft_printf("we have the flag\n");
+
 		if (!set_flag_structure(&argv[i][1], flags))
 			ft_printf("we have an error\n");
-		*move_to_the_arguments +=1 ;
+		// ft_putstr("here1\n");
+		*move_to_the_arguments = *move_to_the_arguments + 1;
+		// ft_putstr("here2\n")
 		i++;
+		// ft_putstr("here3\n");
+
 	}
+		// ft_putstr("here4\n");
+
+
+
 }
 
 // void	print_flags(t_flags *flags)
