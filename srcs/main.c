@@ -1,14 +1,13 @@
 #include "../includes/ft_ls.h"
 
 // flag errors:
-// no total if link (/etc)  
+// no total if link (/etc) or simple file
 // ?: stops on the first occurrence of the incorrect file or the dir;
 // ➜  ft_ls git:(master) ✗ ls -lz -a -zrRt /dev
 // ls: illegal option -- z
 // usage: ls [-ABCFGHLOPRSTUWabcdefghiklmnopqrstuwx1] [file ...]
 // ls /etc -> reading the file stats
 // check that flags work properly;
-// new line when two arguments;
 
 // manage errors:
 // func to detect cyrcular link; work out if have the link;
@@ -27,7 +26,7 @@
 
 // norminette;
 
-static void reverse(t_temp** head_ref) 
+void	reverse(t_temp** head_ref) 
 { 
     t_temp* prev   = NULL; 
     t_temp* current = *head_ref; 
@@ -162,7 +161,17 @@ void	ft_ls(int argc, char **argv, t_flags flags, int move_to_the_arguments) //re
 				arguments_quantity++;
 				continue ;
 			}
+			else if ((buf.st_mode & S_IFMT) != S_IFDIR)
+			{
+				add(&list, argv[arguments_quantity], get_stats(argv[arguments_quantity]));
+				print_list(list, flags);
+				delete_list(&list);
+				arguments_quantity++;
+				continue ;	
+			} 
 			listdir(argv[arguments_quantity++], flags);
+			if ((argc - arguments_quantity) > 0)
+				ft_printf("\n");
 		}
 	}
 }
@@ -229,17 +238,9 @@ void	init_flags(char **argv, t_flags *flags, int argc, int *move_to_the_argument
 
 		if (!set_flag_structure(&argv[i][1], flags))
 			ft_printf("we have an error\n");
-		// ft_putstr("here1\n");
 		*move_to_the_arguments = *move_to_the_arguments + 1;
-		// ft_putstr("here2\n")
 		i++;
-		// ft_putstr("here3\n");
-
 	}
-		// ft_putstr("here4\n");
-
-
-
 }
 
 // void	print_flags(t_flags *flags)
@@ -259,6 +260,6 @@ int		main(int argc, char **argv)
 
 		ft_printf("move_to_the_arguments->%d\n", move_to_the_arguments);
 	ft_ls(argc, argv, flags, move_to_the_arguments);
-	system("leaks -q ft_ls");
+	// system("leaks -q ft_ls");
 	return (0);
 }
