@@ -114,11 +114,15 @@ void	listdir(char *name, t_flags flags) // flags;
 		return ;
 	fill_the_list(&var);
 
-	// func manipulations according to the flags;
 	q_sort(&var.list);
-	// insertionSort(&var.list);
 	if (flags.reversed)
 		reverse(&var.list);
+	if (flags.time_sorting)
+	{
+		insertionSort(&var.list);
+			if (!flags.reversed)
+		reverse(&var.list);
+	}
 	print_list(var.list, flags);
 	var.t_list = var.list;
 	while (flags.recursive && var.t_list)
