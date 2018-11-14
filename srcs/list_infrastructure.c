@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/14 19:25:38 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/14 19:27:40 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -218,14 +218,8 @@ void		print_list(t_temp *list, t_flags flags)
 		{
 			if (flags.colors)
 				color_printing(list);
-
-			
 			else
-			{
-				/* code */
 				ft_printf("%s\n", list->d_name);
-			}
-			
 		}
 		else
 			print_file_name(list);
