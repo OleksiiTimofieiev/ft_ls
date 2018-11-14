@@ -1,16 +1,20 @@
 #include "../includes/ft_ls.h"
 
-// bonus: 
-// -c	+   colors: dir, binary, file;
-// -f   +   Output is not sorted.  This option turns on the -a option. -> no filters;
-// -o   +   omit the group and user id.
+/*
+bonus:
+-c	->	colors: dir, binary, file;
+-f  ->	Output is not sorted.
+		This option turns on the -a option. -> no filters;
+-o	->	omit the group and user id.
+*/
 
 // manage errors:
+
 // func to detect cyrcular link; work out if have the link;
 // list for errors maybe;
 // dev dir -> last directories;
 // tests directory;
-// mod through pointer illegal flag
+// through pointer pass illegal flag to the printing func
 
 // norminette;
 
