@@ -4,8 +4,6 @@
 // -c	+   colors: dir, binary, file;
 // -f   +   Output is not sorted.  This option turns on the -a option. -> no filters;
 // -o   +   omit the group and user id.
-// -S  	-   Sort files by size
-// -i   -   For each file, print the file's file serial number (inode number).
 
 // manage errors:
 // func to detect cyrcular link; work out if have the link;
@@ -143,6 +141,7 @@ void	ft_ls(int argc, char **argv, t_flags flags, int move_to_the_arguments)
 	list = NULL;
 	if ((argc - move_to_the_arguments) == 1)
 	{
+		// ft_putstr("here1\n");
 		listdir(".", flags);
 	}
 	else
@@ -150,7 +149,8 @@ void	ft_ls(int argc, char **argv, t_flags flags, int move_to_the_arguments)
 		arguments_quantity += (move_to_the_arguments + 1);
 		while (arguments_quantity < argc)
 		{
-			lstat(argv[arguments_quantity], &buf);
+			if (lstat(argv[arguments_quantity], &buf) == -1)
+				ft_printf("ft_ls: %s: %s\n", argv[arguments_quantity] , strerror(errno));
 			if (!find_char(argv[arguments_quantity]) && ((buf.st_mode & S_IFMT) == S_IFLNK))
 			{
 				flags.no_total = 1;
@@ -165,10 +165,24 @@ void	ft_ls(int argc, char **argv, t_flags flags, int move_to_the_arguments)
 			}
 			else if ((buf.st_mode & S_IFMT) != S_IFDIR)
 			{
+				char *remove_dot = NULL;
+				// ft_putstr("wtf\n");
 				flags.no_total = 1;
-				add(&list, argv[arguments_quantity], get_stats(argv[arguments_quantity]));
+				if (argv[arguments_quantity][0] == '.')
+				{
+					remove_dot = ft_strdup(&argv[arguments_quantity][1]);
+					add(&list, remove_dot, get_stats(remove_dot));
+					ft_putchar('.');
+				}
+				else
+					add(&list, argv[arguments_quantity], get_stats(argv[arguments_quantity]));
+
 				print_list(list, flags);
+				if (remove_dot)
+					free(remove_dot);
 				delete_list(&list);
+				// ft_putstr("wtf\n");
+
 				arguments_quantity++;
 				continue ;	
 			}
@@ -240,16 +254,16 @@ void	init_flags(char **argv, t_flags *flags, int argc, int *move_to_the_argument
 	flags->no_group_user_name = 0;
 	 if (argc == 1) 
 	 return;
-	while (argv[i] && argv[i][0] == '-')
-	{
-		if (!set_flag_structure(&argv[i][1], flags))
-		{
-			ft_printf("ft_ls: illegal option -- %c\n", &argv[i][1]);
-			ft_printf("usage: ft_ls [-RSacfilrst] [file ...]\n");
-			exit(0);
-		}
-		*move_to_the_arguments = *move_to_the_arguments + 1;
-		i++;
+	 while (argv[i] && argv[i][1] &&  argv[i][0] == '-')
+	 {
+		 if (!set_flag_structure(&argv[i][1], flags))
+		 {
+			 ft_printf("ft_ls: illegal option -- %c\n", &argv[i][1]);
+			 ft_printf("usage: ft_ls [-RSacfilrst] [file ...]\n");
+			 exit(0);
+		 }
+		 *move_to_the_arguments = *move_to_the_arguments + 1;
+		 i++;
 	}
 }
 

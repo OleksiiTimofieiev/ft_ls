@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/14 18:35:04 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/14 18:36:54 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -156,9 +156,7 @@ void		print_simple_params(t_temp *list, t_output_length length, t_flags flags)
 	{
 		ft_printf("%*-s", length.owner_name + 2, list->owner_name_data);
 		ft_printf("%*-s", length.group_name + 2, list->group_name_data);
-	}
-
-	
+	}	
 }
 
 void		print_number_of_bytes(t_temp *list, t_output_length length)

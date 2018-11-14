@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/20 15:18:36 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/14 18:28:12 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/14 18:58:48 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 # include <uuid/uuid.h>
 # include <grp.h>
 # include <time.h>
+# include <errno.h>
 
 typedef struct		s_flags
 {
