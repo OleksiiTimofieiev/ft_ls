@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/20 15:18:36 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/14 17:45:12 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/14 18:09:05 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ typedef struct		s_flags
 	char			time_sorting;
 	char			no_total;
 	char			colors;
+	char			freedom;
 }					t_flags;
 
 typedef	struct		s_temp

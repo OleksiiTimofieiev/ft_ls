@@ -2,9 +2,9 @@
 
 // bonus: 
 // -c	+   colors: dir, binary, file;
+// -f   +   Output is not sorted.  This option turns on the -a option. -> no filters;
 // -S  	-   Sort files by size
 // -i   -   For each file, print the file's file serial number (inode number).
-// -f   -   Output is not sorted.  This option turns on the -a option. -> no filters;
 // -o   -   List in long format, but omit the group and user id.
 
 // manage errors:
@@ -98,15 +98,22 @@ void	listdir(char *name, t_flags flags)
 		return ;
 	fill_the_list(&var);
 
-	q_sort(&var.list);
-	if (flags.reversed)
-		reverse(&var.list);
-	if (flags.time_sorting)
+	if (!flags.freedom)
 	{
-		insertionSort(&var.list);
-			if (!flags.reversed)
-		reverse(&var.list);
+		q_sort(&var.list);
+		if (flags.time_sorting)
+		{
+			insertionSort(&var.list);
+			reverse(&var.list);
+		}
+		if (flags.reversed)
+			reverse(&var.list);
 	}
+	else
+	{
+		flags.include_dot = 1;
+	}
+	
 	print_list(var.list, flags);
 	var.t_list = var.list;
 	while (flags.recursive && var.t_list)
@@ -177,7 +184,7 @@ int		check_flags_validiry(char *str)
 {
 	while (*str)
 	{
-		if (*str == 'l' || *str == 'a' || *str == 'r' || *str == 'R' || *str == 't' || *str == 'c')
+		if (*str == 'l' || *str == 'a' || *str == 'r' || *str == 'R' || *str == 't' || *str == 'c' || *str == 'f')
 			str++;
 		else
 			return (0);
@@ -209,6 +216,8 @@ int		set_flag_structure(char *str, t_flags *flags)
 			flags->time_sorting = 1;
 		else if (*str == 'c')
 			flags->colors = 1;
+		else if (*str == 'f')
+			flags->freedom = 1;
 		str++;
 	}
 	return (i);
@@ -225,6 +234,7 @@ void	init_flags(char **argv, t_flags *flags, int argc, int *move_to_the_argument
 	flags->reversed = 0;
 	flags->time_sorting = 0;
 	flags->no_total = 0;
+	flags->freedom = 0;
 	if (argc == 1)
 		return ;
 	while (argv[i] && argv[i][0] == '-')
