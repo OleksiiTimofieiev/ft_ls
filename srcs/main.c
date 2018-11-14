@@ -3,9 +3,9 @@
 // bonus: 
 // -c	+   colors: dir, binary, file;
 // -f   +   Output is not sorted.  This option turns on the -a option. -> no filters;
+// -o   +   omit the group and user id.
 // -S  	-   Sort files by size
 // -i   -   For each file, print the file's file serial number (inode number).
-// -o   -   List in long format, but omit the group and user id.
 
 // manage errors:
 // func to detect cyrcular link; work out if have the link;
