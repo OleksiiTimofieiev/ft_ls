@@ -6,7 +6,6 @@
 // ➜  ft_ls git:(master) ✗ ls -lz -a -zrRt /dev
 // ls: illegal option -- z
 // usage: ls [-ABCFGHLOPRSTUWabcdefghiklmnopqrstuwx1] [file ...]
-// check that flags work properly;
 
 // manage errors:
 // func to detect cyrcular link; work out if have the link;
@@ -233,7 +232,7 @@ void	init_flags(char **argv, t_flags *flags, int argc, int *move_to_the_argument
 		return ;
 	while (argv[i] && argv[i][0] == '-')
 	{
-		ft_printf("we have the flag\n");
+		// ft_printf("we have the flag\n");
 
 		if (!set_flag_structure(&argv[i][1], flags))
 			ft_printf("we have an error\n");
@@ -255,9 +254,9 @@ int		main(int argc, char **argv)
 
 	init_flags(argv, &flags, argc, &move_to_the_arguments);
 	// print_flags(&flags);
-		ft_putstr("here\n");
+		// ft_putstr("here\n");
 
-		ft_printf("move_to_the_arguments->%d\n", move_to_the_arguments);
+		// ft_printf("move_to_the_arguments->%d\n", move_to_the_arguments);
 	ft_ls(argc, argv, flags, move_to_the_arguments);
 	// system("leaks -q ft_ls");
 	return (0);
