@@ -9,9 +9,8 @@
 // func to detect cyrcular link; work out if have the link;
 // list for errors maybe;
 // errors in dev directory;
-// chmod 000 -> no rights
 // dev -> last directories;
-// lyubomor
+// tests directory;
 
 // norminette;
 
@@ -141,7 +140,6 @@ void	ft_ls(int argc, char **argv, t_flags flags, int move_to_the_arguments)
 	list = NULL;
 	if ((argc - move_to_the_arguments) == 1)
 	{
-		// ft_putstr("here1\n");
 		listdir(".", flags);
 	}
 	else
@@ -150,7 +148,10 @@ void	ft_ls(int argc, char **argv, t_flags flags, int move_to_the_arguments)
 		while (arguments_quantity < argc)
 		{
 			if (lstat(argv[arguments_quantity], &buf) == -1)
-				ft_printf("ft_ls: %s: %s\n", argv[arguments_quantity] , strerror(errno));
+			{
+				ft_printf("ft_ls: %s: %s\n", argv[arguments_quantity++] , strerror(errno));
+				continue ;
+			}
 			if (!find_char(argv[arguments_quantity]) && ((buf.st_mode & S_IFMT) == S_IFLNK))
 			{
 				flags.no_total = 1;
