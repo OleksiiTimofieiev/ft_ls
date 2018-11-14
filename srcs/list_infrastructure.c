@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/14 18:36:54 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/14 19:25:38 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -195,7 +195,7 @@ void		print_list(t_temp *list, t_flags flags)
 	len = length.major + length.minor + 2;
 	if (len > length.number_of_bytes)
 		length.number_of_bytes = len + 1;
-	if (!flags.no_total)
+	if (!flags.no_total && get_total_blocks(list) != 0 && flags.long_format)
 		ft_printf("total %lld\n", get_total_blocks(list));
 	while (list)
 	{

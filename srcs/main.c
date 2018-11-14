@@ -110,7 +110,6 @@ void	listdir(char *name, t_flags flags)
 	{
 		flags.include_dot = 1;
 	}
-	
 	print_list(var.list, flags);
 	var.t_list = var.list;
 	while (flags.recursive && var.t_list)
