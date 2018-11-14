@@ -1,7 +1,5 @@
 #include "../includes/ft_ls.h"
 
-// flag errors:
-// no total if link (/etc) or simple file
 // ?: stops on the first occurrence of the incorrect file or the dir;
 // ➜  ft_ls git:(master) ✗ ls -lz -a -zrRt /dev
 // ls: illegal option -- z
@@ -147,7 +145,7 @@ void	ft_ls(int argc, char **argv, t_flags flags, int move_to_the_arguments) //re
 	}
 	else
 	{
-		arguments_quantity = move_to_the_arguments + 1;
+		arguments_quantity += (move_to_the_arguments + 1);
 		while (arguments_quantity < argc)
 		{
 			lstat(argv[arguments_quantity], &buf);
@@ -156,7 +154,10 @@ void	ft_ls(int argc, char **argv, t_flags flags, int move_to_the_arguments) //re
 				flags.no_total = 1;
 				add(&list, argv[arguments_quantity], get_stats(argv[arguments_quantity]));
 				print_list(list, flags);
-				delete_list(&list);
+				free(list->d_name);
+				free(list);
+				list = NULL;
+				// ft_putstr("here1\n");
 				arguments_quantity++;
 				continue ;
 			}
@@ -166,10 +167,17 @@ void	ft_ls(int argc, char **argv, t_flags flags, int move_to_the_arguments) //re
 				add(&list, argv[arguments_quantity], get_stats(argv[arguments_quantity]));
 				print_list(list, flags);
 				delete_list(&list);
+				// ft_putstr("here2\n");
+
 				arguments_quantity++;
 				continue ;	
 			} 
-			listdir(argv[arguments_quantity++], flags);
+			// ft_putstr("here3\n");
+
+			listdir(argv[arguments_quantity], flags);
+			
+			arguments_quantity++;
+			
 			if ((argc - arguments_quantity) > 0)
 				ft_printf("\n");
 		}
