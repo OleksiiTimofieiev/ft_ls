@@ -14,6 +14,7 @@
 // -i      For each file, print the file's file serial number (inode number).
 // -f      Output is not sorted.  This option turns on the -a option. -> no filters;
 // -o      List in long format, but omit the group and user id.
+// -m      music
 
 // norminette;
 
