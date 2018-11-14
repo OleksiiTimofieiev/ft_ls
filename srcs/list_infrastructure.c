@@ -6,7 +6,7 @@
 /*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/13 20:25:59 by timofieiev       ###   ########.fr       */
+/*   Updated: 2018/11/14 11:17:35 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -176,7 +176,8 @@ void		print_list(t_temp *list, t_flags flags)
 	len = length.major + length.minor + 2;
 	if (len > length.number_of_bytes)
 		length.number_of_bytes = len + 1;
-	ft_printf("total %lld\n", get_total_blocks(list));
+	if (!flags.no_total)
+		ft_printf("total %lld\n", get_total_blocks(list));
 	while (list)
 	{
 		if (list->d_name[0] == '.' && !flags.include_dot)

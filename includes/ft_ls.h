@@ -6,7 +6,7 @@
 /*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/20 15:18:36 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/13 16:33:34 by timofieiev       ###   ########.fr       */
+/*   Updated: 2018/11/14 11:17:01 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ typedef struct		s_flags
 	char			recursive;
 	char			reversed;
 	char			time_sorting;
+	char			no_total;
 }					t_flags;
 
 typedef	struct		s_temp

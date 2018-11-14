@@ -153,6 +153,7 @@ void	ft_ls(int argc, char **argv, t_flags flags, int move_to_the_arguments) //re
 			lstat(argv[arguments_quantity], &buf);
 			if (!find_char(argv[arguments_quantity]) && ((buf.st_mode & S_IFMT) == S_IFLNK))
 			{
+				flags.no_total = 1;
 				add(&list, argv[arguments_quantity], get_stats(argv[arguments_quantity]));
 				print_list(list, flags);
 				delete_list(&list);
@@ -161,6 +162,7 @@ void	ft_ls(int argc, char **argv, t_flags flags, int move_to_the_arguments) //re
 			}
 			else if ((buf.st_mode & S_IFMT) != S_IFDIR)
 			{
+				flags.no_total = 1;
 				add(&list, argv[arguments_quantity], get_stats(argv[arguments_quantity]));
 				print_list(list, flags);
 				delete_list(&list);
@@ -228,6 +230,7 @@ void	init_flags(char **argv, t_flags *flags, int argc, int *move_to_the_argument
 	flags->recursive = 0;
 	flags->reversed = 0;
 	flags->time_sorting = 0;
+	flags->no_total = 0;
 	if (argc == 1)
 		return ;
 	while (argv[i] && argv[i][0] == '-')
