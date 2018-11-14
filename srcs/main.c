@@ -94,7 +94,7 @@ void	ft_concatenation(t_variables *var, char *name)
 	}
 }
 
-void	listdir(char *name, t_flags flags) // flags;
+void	listdir(char *name, t_flags flags)
 {
 	t_variables var;
 
@@ -132,7 +132,7 @@ void	listdir(char *name, t_flags flags) // flags;
 	ft_dump_cleaner(&var.list, &var.path2, &var.dir);
 }
 
-void	ft_ls(int argc, char **argv, t_flags flags, int move_to_the_arguments) //remaster according to i value;
+void	ft_ls(int argc, char **argv, t_flags flags, int move_to_the_arguments)
 {
 	int			arguments_quantity = 0;
 	struct stat buf;
@@ -167,17 +167,11 @@ void	ft_ls(int argc, char **argv, t_flags flags, int move_to_the_arguments) //re
 				add(&list, argv[arguments_quantity], get_stats(argv[arguments_quantity]));
 				print_list(list, flags);
 				delete_list(&list);
-				// ft_putstr("here2\n");
-
 				arguments_quantity++;
 				continue ;	
-			} 
-			// ft_putstr("here3\n");
-
+			}
 			listdir(argv[arguments_quantity], flags);
-			
 			arguments_quantity++;
-			
 			if ((argc - arguments_quantity) > 0)
 				ft_printf("\n");
 		}
@@ -228,7 +222,7 @@ int		set_flag_structure(char *str, t_flags *flags)
 	return (i);
 }
 
-void	init_flags(char **argv, t_flags *flags, int argc, int *move_to_the_arguments) // int **;
+void	init_flags(char **argv, t_flags *flags, int argc, int *move_to_the_arguments)
 {
 	int i;
 
@@ -243,8 +237,6 @@ void	init_flags(char **argv, t_flags *flags, int argc, int *move_to_the_argument
 		return ;
 	while (argv[i] && argv[i][0] == '-')
 	{
-		// ft_printf("we have the flag\n");
-
 		if (!set_flag_structure(&argv[i][1], flags))
 			ft_printf("we have an error\n");
 		*move_to_the_arguments = *move_to_the_arguments + 1;
@@ -264,11 +256,7 @@ int		main(int argc, char **argv)
 	int		move_to_the_arguments = 0;
 
 	init_flags(argv, &flags, argc, &move_to_the_arguments);
-	// print_flags(&flags);
-		// ft_putstr("here\n");
-
-		// ft_printf("move_to_the_arguments->%d\n", move_to_the_arguments);
 	ft_ls(argc, argv, flags, move_to_the_arguments);
-	// system("leaks -q ft_ls");
+	system("leaks -q ft_ls");
 	return (0);
 }
