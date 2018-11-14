@@ -8,9 +8,9 @@
 // manage errors:
 // func to detect cyrcular link; work out if have the link;
 // list for errors maybe;
-// errors in dev directory;
-// dev -> last directories;
+// dev dir -> last directories;
 // tests directory;
+// mod through pointer illegal flag
 
 // norminette;
 
@@ -182,8 +182,6 @@ void	ft_ls(int argc, char **argv, t_flags flags, int move_to_the_arguments)
 				if (remove_dot)
 					free(remove_dot);
 				delete_list(&list);
-				// ft_putstr("wtf\n");
-
 				arguments_quantity++;
 				continue ;	
 			}
@@ -257,10 +255,10 @@ void	init_flags(char **argv, t_flags *flags, int argc, int *move_to_the_argument
 	 return;
 	 while (argv[i] && argv[i][1] &&  argv[i][0] == '-')
 	 {
-		 if (!set_flag_structure(&argv[i][1], flags))
+		 if (!set_flag_structure(&argv[i][1], flags)) 
 		 {
-			 ft_printf("ft_ls: illegal option -- %c\n", &argv[i][1]);
-			 ft_printf("usage: ft_ls [-RSacfilrst] [file ...]\n");
+			 ft_printf("ft_ls: illegal option -- %c\n", &argv[i][1]); ////// here;
+			 ft_printf("usage: ft_ls [-Racfolrt] [file ...]\n");
 			 exit(0);
 		 }
 		 *move_to_the_arguments = *move_to_the_arguments + 1;
