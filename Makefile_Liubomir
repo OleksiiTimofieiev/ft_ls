@@ -1,0 +1,96 @@
+#******************************************************************************#
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: lmatvien <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/07/06 20:11:35 by lmatvien          #+#    #+#              #
+#    Updated: 2018/09/29 16:05:42 by lmatvien         ###   ########.fr        #
+#                                                                              #
+#******************************************************************************#
+HEADER =	\n █░░ █▀▄▀█ █▀▀█ ▀▀█▀▀ ▀█░█▀ ░▀░ █▀▀ █▀▀▄ \n \
+			█░░ █░▀░█ █▄▄█ ░░█░░ ░█▄█░ ▀█▀ █▀▀ █░░█ \n \
+			▀▀▀ ▀░░░▀ ▀░░▀ ░░▀░░ ░░▀░░ ▀▀▀ ▀▀▀ ▀░░▀ \
+
+NAME			= ft_ssl
+LIB_MINI_NAME 	= lib_mini.a
+PARSER_LIB	= 	parserlib.a
+ODIR 			= obj
+SDIR 			= src
+LDIR 			= ./src/libft_mini
+
+FLAGS  			= -Wall -Wextra -Werror
+
+PARSER_FILES	= ssl_hash_mod.c \
+				ssl_main.c \
+				ssl_reader_stdin.c \
+				ssl_handle.c \
+				ssl_flags_mod.c \
+				ssl_open_file_mode.c \
+
+LIBFILE =   ft_atoi_base.c \
+			ft_itoa.c \
+			ft_strnew.c \
+			ft_pow.c \
+			ft_strchr.c \
+			ft_dgt_quntt_i.c \
+			ft_isdigit.c  \
+			ft_strrchr.c \
+			ft_putnbr_fd.c \
+			ft_putstr_error.c \
+			ft_str_del_newline.c \
+			ft_putchar.c \
+			ft_putstr.c \
+			ft_strcpy.c \
+			ft_strncpy.c \
+			ft_strcmp.c \
+			ft_strequ.c \
+			ft_strlen.c \
+			ft_strnlen.c \
+	 		ft_strdup.c \
+			ft_strjoin.c \
+			ft_strstr.c \
+			ft_memset.c \
+			ft_strncat.c \
+			ft_strcat.c \
+			get_next_line.c \
+			ft_strsplit.c \
+			ft_atoi.c \
+			ft_swap.c \
+
+LIB_OBJ =	$(addprefix $(ODIR)/, $(patsubst %.c,%.o,$(LIBFILE)))
+PARSER_OBJ = $(addprefix $(ODIR)/, $(patsubst %.c,%.o,$(PARSER_FILES)))
+
+INC_PARSER = -I ./include -I $(LDIR) -I src/ft_printf/includes/
+
+all: $(NAME)
+
+
+$(ODIR)/%.o: $(LDIR)/%.c | $(ODIR)
+	@gcc -c $< -o $@
+
+$(ODIR)/%.o: $(SDIR)/%.c | $(ODIR)
+	@gcc -c $(INC_PARSER) $< -o $@
+
+$(ODIR):
+	@echo "\033[35;1m>>>Creating objects folder...\033[0m"
+	@mkdir $(ODIR)
+
+$(NAME): $(LIB_OBJ) $(PARSER_OBJ)
+	@ar rcs ./obj/$(PARSER_LIB) $(PARSER_OBJ)
+	@ar rcs ./obj/$(LIB_MINI_NAME) $(LIB_OBJ)
+	@make -C ./src/ft_printf/
+	@gcc -o $(NAME) ./obj/$(PARSER_LIB) ./obj/$(LIB_MINI_NAME) ./src/ft_printf/libftprintf.a
+	@echo "\033[0;31m\nDone$(HEADER)\033[0m";
+clean:
+	@/bin/rm -rf $(LIB_OBJ) $(PARSER_OBJ)
+	@make clean -C ./src/ft_printf/
+	@echo "\033[35;1m>>>Removed OBJ Files\033[0m"
+	
+fclean: clean
+	@/bin/rm -rf $(ODIR) $(NAME)
+	@make fclean -C ./src/ft_printf/
+	@echo "\033[35;1m>>>Removed executed files\033[0m"
+
+re: fclean all
