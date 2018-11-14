@@ -11,10 +11,10 @@ bonus:
 // manage errors:
 
 // func to detect cyrcular link; work out if have the link;
-// list for errors maybe;
-// dev dir -> last directories;
-// tests directory;
 // through pointer pass illegal flag to the printing func
+// tests directory;
+
+// test output
 
 // norminette;
 
@@ -40,7 +40,7 @@ int		ft_opendir(t_variables *var, char *name)
 	if (!(var->dir = opendir(name)))
 	{
 		free(var->path2);
-		ft_printf("error->>>>>>>>>>>>>>\n");
+		ft_printf("ft_ls: %s: %s\n", name, strerror(errno));
 		return (0);
 	}
 	return (1);
@@ -174,7 +174,7 @@ void	ft_ls(int argc, char **argv, t_flags flags, int move_to_the_arguments)
 				flags.no_total = 1;
 				if (argv[arguments_quantity][0] == '.')
 				{
-					remove_dot = ft_strdup(&argv[arguments_quantity][1]);
+					remove_dot = ft_strdup(&argv[arguments_quantity][2]);
 					add(&list, remove_dot, get_stats(remove_dot));
 					ft_putchar('.');
 				}
