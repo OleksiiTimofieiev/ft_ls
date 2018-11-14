@@ -1,10 +1,5 @@
 #include "../includes/ft_ls.h"
 
-// ?: stops on the first occurrence of the incorrect file or the dir;
-// ➜  ft_ls git:(master) ✗ ls -lz -a -zrRt /dev
-// ls: illegal option -- z
-// usage: ls [-ABCFGHLOPRSTUWabcdefghiklmnopqrstuwx1] [file ...]
-
 // manage errors:
 // func to detect cyrcular link; work out if have the link;
 // list for errors maybe;
@@ -238,7 +233,11 @@ void	init_flags(char **argv, t_flags *flags, int argc, int *move_to_the_argument
 	while (argv[i] && argv[i][0] == '-')
 	{
 		if (!set_flag_structure(&argv[i][1], flags))
-			ft_printf("we have an error\n");
+		{
+			ft_printf("ft_ls: illegal option -- %c\n", &argv[i][1]);
+			ft_printf("usage: ft_ls [-RSacfilrst] [file ...]\n");
+			exit(0);
+		}
 		*move_to_the_arguments = *move_to_the_arguments + 1;
 		i++;
 	}
