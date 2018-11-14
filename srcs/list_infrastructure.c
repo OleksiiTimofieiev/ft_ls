@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   list_infrastructure.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
+/*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/14 11:32:23 by timofieiev       ###   ########.fr       */
+/*   Updated: 2018/11/14 18:06:25 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -166,6 +166,22 @@ void		print_number_of_bytes(t_temp *list, t_output_length length)
 			(long long)list->size_data);
 }
 
+void color_printing(t_temp *list)
+{
+	if (list->type_and_permissions_data[0] == 'd')
+		ft_printf("%s%s%s\n", GREEN, list->d_name, RESET);
+	else if (list->type_and_permissions_data[0] == '-')
+		ft_printf("%s%s%s\n", CYAN, list->d_name, RESET);
+	else if (list->type_and_permissions_data[0] == 'b')
+		ft_printf("%s%s%s\n", RED, list->d_name, RESET);
+	else if (list->type_and_permissions_data[0] == 'c')
+		ft_printf("%s%s%s\n", RED, list->d_name, RESET);
+	else if (list->type_and_permissions_data[0] == 'p')
+		ft_printf("%s%s%s\n", MAGENTA, list->d_name, RESET);
+	else
+		ft_printf("%s\n", list->d_name);
+}
+
 void		print_list(t_temp *list, t_flags flags)
 {
 	int				len;
@@ -196,7 +212,10 @@ void		print_list(t_temp *list, t_flags flags)
 			print_date(list->time_data);
 		}
 		if (list->type_and_permissions_data[0] != 'l')
-			ft_printf("%s\n", list->d_name);
+		{
+			if (flags.colors)
+				color_printing(list);
+		}
 		else
 			print_file_name(list);
 		list = list->next;

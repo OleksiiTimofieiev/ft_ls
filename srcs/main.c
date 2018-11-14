@@ -1,21 +1,19 @@
 #include "../includes/ft_ls.h"
 
 // bonus: 
-// -c	   colors
-// -S  	   Sort files by size
-// -i      For each file, print the file's file serial number (inode number).
-// -f      Output is not sorted.  This option turns on the -a option. -> no filters;
-// -o      List in long format, but omit the group and user id.
-// -m      music
+// -c	+   colors: dir, binary, file;
+// -S  	-   Sort files by size
+// -i   -   For each file, print the file's file serial number (inode number).
+// -f   -   Output is not sorted.  This option turns on the -a option. -> no filters;
+// -o   -   List in long format, but omit the group and user id.
 
 // manage errors:
 // func to detect cyrcular link; work out if have the link;
 // list for errors maybe;
 // errors in dev directory;
 // chmod 000 -> no rights
-// not exists
 // dev -> last directories;
-
+// lyubomor
 
 // norminette;
 
@@ -179,13 +177,8 @@ int		check_flags_validiry(char *str)
 {
 	while (*str)
 	{
-		if (*str == 'l' || *str == 'a'
-			|| *str == 'r' || *str == 'R'
-			|| *str == 't')
-		{
+		if (*str == 'l' || *str == 'a' || *str == 'r' || *str == 'R' || *str == 't' || *str == 'c')
 			str++;
-			continue ;
-		}
 		else
 			return (0);
 	}
@@ -214,6 +207,8 @@ int		set_flag_structure(char *str, t_flags *flags)
 			flags->reversed = 1;
 		else if (*str == 't')
 			flags->time_sorting = 1;
+		else if (*str == 'c')
+			flags->colors = 1;
 		str++;
 	}
 	return (i);
