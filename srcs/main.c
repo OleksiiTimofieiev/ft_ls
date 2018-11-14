@@ -184,7 +184,7 @@ int		check_flags_validiry(char *str)
 {
 	while (*str)
 	{
-		if (*str == 'l' || *str == 'a' || *str == 'r' || *str == 'R' || *str == 't' || *str == 'c' || *str == 'f')
+		if (*str == 'l' || *str == 'a' || *str == 'r' || *str == 'R' || *str == 't' || *str == 'c' || *str == 'f' || *str == 'o')
 			str++;
 		else
 			return (0);
@@ -218,6 +218,8 @@ int		set_flag_structure(char *str, t_flags *flags)
 			flags->colors = 1;
 		else if (*str == 'f')
 			flags->freedom = 1;
+		else if (*str == 'o')
+			flags->no_group_user_name = 1;
 		str++;
 	}
 	return (i);
@@ -235,8 +237,9 @@ void	init_flags(char **argv, t_flags *flags, int argc, int *move_to_the_argument
 	flags->time_sorting = 0;
 	flags->no_total = 0;
 	flags->freedom = 0;
-	if (argc == 1)
-		return ;
+	flags->no_group_user_name = 0;
+	 if (argc == 1) 
+	 return;
 	while (argv[i] && argv[i][0] == '-')
 	{
 		if (!set_flag_structure(&argv[i][1], flags))

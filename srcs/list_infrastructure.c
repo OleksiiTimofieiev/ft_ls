@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/14 18:14:39 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/14 18:35:04 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -148,12 +148,17 @@ void		print_file_name(t_temp *list)
 	}
 }
 
-void		print_simple_params(t_temp *list, t_output_length length)
+void		print_simple_params(t_temp *list, t_output_length length, t_flags flags)
 {
 	ft_printf("%s ", list->type_and_permissions_data);
 	ft_printf("%*d ", length.number_of_links, list->hard_links_data);
-	ft_printf("%*-s", length.owner_name + 2, list->owner_name_data);
-	ft_printf("%*-s", length.group_name + 2, list->group_name_data);
+	if (flags.no_group_user_name != 1)
+	{
+		ft_printf("%*-s", length.owner_name + 2, list->owner_name_data);
+		ft_printf("%*-s", length.group_name + 2, list->group_name_data);
+	}
+
+	
 }
 
 void		print_number_of_bytes(t_temp *list, t_output_length length)
@@ -203,7 +208,7 @@ void		print_list(t_temp *list, t_flags flags)
 		}
 		if (flags.long_format)
 		{
-			print_simple_params(list, length);
+			print_simple_params(list, length, flags);
 			if (list->type_and_permissions_data[0] == 'c'
 				|| list->type_and_permissions_data[0] == 'b')
 				print_major_minor(list, &length);
