@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/14 19:27:40 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/14 19:44:07 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,6 @@ void		add(t_temp **head_ref, char *new_d_name, t_data var)
 	while (last->next != NULL)
 		last = last->next;
 	last->next = new;
-	return ;
 }
 
 void		print_date(char *time_str)
