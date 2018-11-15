@@ -6,7 +6,7 @@
 /*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/20 15:18:36 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/15 12:26:46 by timofieiev       ###   ########.fr       */
+/*   Updated: 2018/11/15 17:38:14 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,7 +102,11 @@ typedef	struct		s_variables
 }					t_variables;
 
 void				q_sort(t_temp **head_ref);
-void				insertionSort(t_temp **head_ref) ;
+void				r_q_sort(t_temp **head_ref);
+
+void				insertionSort(t_temp **head_ref);
+void				r_insertionSort(t_temp **head_ref) ;
+
 void				add(t_temp **head_ref, char *new_d_name, t_data var);
 void				print_list(t_temp *list, t_flags t_flags);
 void				delete_list(t_temp **head_ref);

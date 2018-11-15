@@ -86,13 +86,20 @@ void	ft_concatenation(t_variables *var, char *name)
 void	handle_flags(t_flags *flags, t_variables *var)
 {
 	if (!(flags->time_sorting))
+			// r_insertionSort(&var->list);
 		q_sort(&var->list); // without any flags;
+	// if (flags->time_sorting)
+	// 	r_insertionSort(&var->list);
 	if (!flags->freedom) // if no 'f' flag;
 	{
 		if (flags->time_sorting)
 		{
-			insertionSort(&var->list);
-			reverse(&var->list);
+			// insertionSort(&var->list);
+			q_sort(&var->list); // without any flags;
+			r_q_sort(&var->list); // without any flags;
+			// reverse(&var->list);
+
+
 		}
 		if (flags->reversed)
 			reverse(&var->list);
