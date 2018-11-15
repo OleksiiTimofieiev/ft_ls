@@ -284,8 +284,9 @@ void	init_flags(char **argv, t_flags *flags, int argc, int *move_to_the_argument
 int		main(int argc, char **argv)
 {
 	t_flags flags;
-	int		move_to_the_arguments = 0;
+	int		move_to_the_arguments;
 
+	move_to_the_arguments = 0;
 	init_flags(argv, &flags, argc, &move_to_the_arguments);
 	ft_ls(argc, argv, flags, move_to_the_arguments);
 	system("leaks -q ft_ls");
