@@ -1,31 +1,34 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/15 18:34:49 by otimofie          #+#    #+#             */
+/*   Updated: 2018/11/15 18:36:22 by otimofie         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/ft_ls.h"
 
-/*
-bonus:
--c	->	colors: dir, binary, file;
--f  ->	Output is not sorted.
-		This option turns on the -a option. -> no filters;
--o	->	omit the group and user id.
-*/
+void	reverse(t_temp **head_ref)
+{
+	t_temp	*prev;
+	t_temp	*current;
+	t_temp	*next;
 
-// func to detect cyrcular link; work out if have the link; check with liubomir;
-
-// norminette;
-
-void	reverse(t_temp** head_ref) 
-{ 
-    t_temp* prev   = NULL; 
-    t_temp* current = *head_ref; 
-    t_temp* next; 
-    while (current != NULL) 
-    { 
-        next = current->next;   
-        current->next = prev;    
-        prev = current; 
-        current = next; 
-    } 
-    *head_ref = prev; 
-} 
+	prev = NULL;
+	current = *head_ref;
+	while (current != NULL)
+	{
+		next = current->next;
+		current->next = prev;
+		prev = current;
+		current = next;
+	}
+	*head_ref = prev;
+}
 
 int		ft_opendir(t_variables *var, char *name)
 {
@@ -86,20 +89,13 @@ void	ft_concatenation(t_variables *var, char *name)
 void	handle_flags(t_flags *flags, t_variables *var)
 {
 	if (!(flags->time_sorting))
-			// r_insertionSort(&var->list);
-		q_sort(&var->list); // without any flags;
-	// if (flags->time_sorting)
-	// 	r_insertionSort(&var->list);
-	if (!flags->freedom) // if no 'f' flag;
+		q_sort(&var->list);
+	if (!flags->freedom)
 	{
 		if (flags->time_sorting)
 		{
-			q_sort(&var->list); // without any flags;
-			r_q_sort(&var->list); // without any flags;
-			// insertionSort(&var->list);
-			// reverse(&var->list);
-
-
+			q_sort(&var->list);
+			r_q_sort(&var->list);
 		}
 		if (flags->reversed)
 			reverse(&var->list);
@@ -108,14 +104,16 @@ void	handle_flags(t_flags *flags, t_variables *var)
 	{
 		flags->include_dot = 1;
 	}
+	print_list(var->list, *flags);
 }
 
 void	current_dir_print(t_variables *var, t_flags *flags)
 {
-	if (var->path[0] && var->path[0] == '/' && var->path[1] && var->path[1] == '/')
+	if (var->path[0] && var->path[0] == '/'
+		&& var->path[1] && var->path[1] == '/')
 	{
 		if (!flags->colors)
-			ft_printf("\n%s:\n", &var->path[1]); 
+			ft_printf("\n%s:\n", &var->path[1]);
 		else
 			ft_printf("\n%s%s%s:\n", MAGENTA, &var->path[1], RESET);
 	}
@@ -137,19 +135,19 @@ void	listdir(char *name, t_flags flags)
 		return ;
 	fill_the_list(&var);
 	handle_flags(&flags, &var);
-	print_list(var.list, flags);
 	var.t_list = var.list;
 	while (flags.recursive && var.t_list)
 	{
 		if (var.t_list->type_and_permissions_data[0] == 'd')
 		{
-			if (ft_strcmp(var.t_list->d_name, ".") == 0 || ft_strcmp(var.t_list->d_name, "..") == 0)
+			if (ft_strcmp(var.t_list->d_name, ".") == 0
+				|| ft_strcmp(var.t_list->d_name, "..") == 0)
 			{
 				var.t_list = var.t_list->next;
 				continue ;
 			}
-		    ft_concatenation(&var, name);
-		   	current_dir_print(&var, &flags);
+			ft_concatenation(&var, name);
+			current_dir_print(&var, &flags);
 			listdir(var.path, flags);
 		}
 		var.t_list = var.t_list->next;
@@ -157,12 +155,12 @@ void	listdir(char *name, t_flags flags)
 	ft_dump_cleaner(&var.list, &var.path2, &var.dir);
 }
 
-void	handler_not_dir(t_flags *flags, char **argv, t_temp *list, int *arguments_quantity)
+void	handler_not_dir(t_flags *flags, char **argv,
+		t_temp *list, int *arguments_quantity)
 {
 	char *remove_dot;
 
 	remove_dot = NULL;
-	
 	flags->no_total = 1;
 	if (argv[(*arguments_quantity)][0] == '.')
 	{
@@ -171,7 +169,8 @@ void	handler_not_dir(t_flags *flags, char **argv, t_temp *list, int *arguments_q
 		ft_putchar('.');
 	}
 	else
-		add(&list, argv[(*arguments_quantity)], get_stats(argv[(*arguments_quantity)]));
+		add(&list, argv[(*arguments_quantity)],
+			get_stats(argv[(*arguments_quantity)]));
 	print_list(list, *flags);
 	if (remove_dot)
 		free(remove_dot);
@@ -180,10 +179,12 @@ void	handler_not_dir(t_flags *flags, char **argv, t_temp *list, int *arguments_q
 	(*arguments_quantity)++;
 }
 
-void	handler_link(t_flags *flags, char **argv, t_temp *list, int *arguments_quantity)
+void	handler_link(t_flags *flags, char **argv,
+		t_temp *list, int *arguments_quantity)
 {
 	flags->no_total = 1;
-	add(&list, argv[(*arguments_quantity)], get_stats(argv[(*arguments_quantity)]));
+	add(&list, argv[(*arguments_quantity)],
+		get_stats(argv[(*arguments_quantity)]));
 	print_list(list, *flags);
 	free(list->d_name);
 	free(list);
@@ -195,16 +196,18 @@ int		not_valid_input(char **argv, int *arguments_quantity, struct stat *buf)
 {
 	if (lstat(argv[(*arguments_quantity)], buf) == -1)
 	{
-		ft_printf("ft_ls: %s: %s\n", argv[(*arguments_quantity)++] , strerror(errno));
+		ft_printf("ft_ls: %s: %s\n",
+			argv[(*arguments_quantity)++], strerror(errno));
 		return (1);
 	}
 	return (0);
 }
 
-void	while_loop(int *arguments_quantity, int argc, char **argv, t_flags *flags)
+void	while_loop(int *arguments_quantity, int argc,
+		char **argv, t_flags *flags)
 {
 	struct stat buf;
-	t_temp 		*list;
+	t_temp		*list;
 
 	list = NULL;
 	while ((*arguments_quantity) < argc)
@@ -213,7 +216,8 @@ void	while_loop(int *arguments_quantity, int argc, char **argv, t_flags *flags)
 		{
 			continue ;
 		}
-		else if (!find_char(argv[(*arguments_quantity)]) && ((buf.st_mode & S_IFMT) == S_IFLNK))
+		else if (!find_char(argv[(*arguments_quantity)])
+			&& ((buf.st_mode & S_IFMT) == S_IFLNK))
 		{
 			handler_link(flags, argv, list, &(*arguments_quantity));
 			continue ;
@@ -221,7 +225,7 @@ void	while_loop(int *arguments_quantity, int argc, char **argv, t_flags *flags)
 		else if ((buf.st_mode & S_IFMT) != S_IFDIR)
 		{
 			handler_not_dir(flags, argv, list, &(*arguments_quantity));
-			continue ;	
+			continue ;
 		}
 		listdir(argv[(*arguments_quantity)++], *flags);
 		if ((argc - (*arguments_quantity)) > 0)
@@ -234,7 +238,6 @@ void	ft_ls(int argc, char **argv, t_flags flags, int move_to_the_arguments)
 	int			arguments_quantity;
 
 	arguments_quantity = 0;
-
 	if ((argc - move_to_the_arguments) == 1)
 		listdir(".", flags);
 	else
@@ -300,10 +303,11 @@ int		set_flag_structure(char *str, t_flags *flags, char *invalid)
 	return (i);
 }
 
-void	init_flags(char **argv, t_flags *flags, int argc, int *move_to_the_arguments)
+void	init_flags(char **argv, t_flags *flags,
+		int argc, int *move_to_the_arguments)
 {
-	int i;
-	char invalid;
+	int		i;
+	char	invalid;
 
 	i = 1;
 	flags->long_format = 0;
@@ -314,11 +318,11 @@ void	init_flags(char **argv, t_flags *flags, int argc, int *move_to_the_argument
 	flags->no_total = 0;
 	flags->freedom = 0;
 	flags->no_group_user_name = 0;
-	if (argc == 1) 
-		return;
+	if (argc == 1)
+		return ;
 	while (argv[i] && argv[i][1] && argv[i][0] == '-')
 	{
-		if (!set_flag_structure(&argv[i][1], flags, &invalid)) 
+		if (!set_flag_structure(&argv[i][1], flags, &invalid))
 		{
 			ft_printf("ft_ls: illegal option -- %c\n", invalid);
 			ft_printf("usage: ft_ls [-Racfolrt] [file ...]\n");
