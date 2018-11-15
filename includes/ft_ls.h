@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/20 15:18:36 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/15 18:53:24 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/15 18:58:31 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,5 +118,12 @@ void				print_simple_params(t_temp *list, t_output_length length,
 										t_flags flags);
 void				print_major_minor(t_temp *list, t_output_length *length);
 void				fill_the_length(t_temp *list, t_output_length *length);
+void				add(t_temp **head_ref, char *new_d_name, t_data var);
+void				print_date(char *time_str);
+void				print_dname(t_temp *list, t_flags *flags);
+void				print_maj_min(t_temp *list, t_output_length *length);
+void				print_total(t_flags *flags, t_temp *list);
+void				element_constructor(t_temp *new, char *new_d_name, t_data var);
+long long			get_total_blocks(t_temp *list);
 
 #endif

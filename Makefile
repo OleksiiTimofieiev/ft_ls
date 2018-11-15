@@ -6,7 +6,7 @@
 #    By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/18 11:59:13 by otimofie          #+#    #+#              #
-#    Updated: 2018/11/15 18:52:12 by otimofie         ###   ########.fr        #
+#    Updated: 2018/11/15 18:56:09 by otimofie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,9 +17,11 @@ CORE		=	main.c \
 				time_quick_sort.c \
 				list_infrastructure.c \
 				list_infrastructure_2.c \
+				list_infrastructure_3.c \
 				listdir_infrastructure.c \
 				stats_infrastructure.c \
 				stats_infrastructure_2.c \
+
 
 
 SRCS        = $(addprefix srcs/, $(CORE))
