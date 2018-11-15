@@ -6,7 +6,7 @@
 /*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/15 13:07:13 by timofieiev       ###   ########.fr       */
+/*   Updated: 2018/11/15 17:07:14 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -161,6 +161,28 @@ void color_printing(t_temp *list)
 		ft_printf("%s\n", list->d_name);
 }
 
+void		print_dname(t_temp *list, t_flags *flags)
+{
+	if (list->type_and_permissions_data[0] != 'l')
+	{
+		if (flags->colors)
+			color_printing(list);
+		else
+			ft_printf("%s\n", list->d_name);
+	}
+	else
+		ft_printf("%s -> %s\n", list->d_name, list->link_name_data);
+}
+
+void		print_maj_min(t_temp *list, t_output_length	*length)
+{
+	if (list->type_and_permissions_data[0] == 'c'
+				|| list->type_and_permissions_data[0] == 'b')
+				print_major_minor(list, length);
+			else
+				print_number_of_bytes(list, *length);
+}
+
 void		print_list(t_temp *list, t_flags flags)
 {
 	int				len;
@@ -183,22 +205,10 @@ void		print_list(t_temp *list, t_flags flags)
 		if (flags.long_format)
 		{
 			print_simple_params(list, length, flags);
-			if (list->type_and_permissions_data[0] == 'c'
-				|| list->type_and_permissions_data[0] == 'b')
-				print_major_minor(list, &length);
-			else
-				print_number_of_bytes(list, length);
+			print_maj_min(list, &length);
 			print_date(list->time_data);
 		}
-		if (list->type_and_permissions_data[0] != 'l')
-		{
-			if (flags.colors)
-				color_printing(list);
-			else
-				ft_printf("%s\n", list->d_name);
-		}
-		else
-			ft_printf("%s -> %s\n", list->d_name, list->link_name_data);
+		print_dname(list, &flags);
 		list = list->next;
 	}
 }

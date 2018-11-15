@@ -6,7 +6,7 @@
 /*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/28 13:38:08 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/15 14:54:29 by timofieiev       ###   ########.fr       */
+/*   Updated: 2018/11/15 16:57:30 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,13 +65,14 @@ void	get_time_data(t_data *stats, struct stat buf)
 	diff = now - mtime;
 	buf1 = ctime(&buf.st_mtime);
 	str_copy(stats->time_buf, buf1);
-	if (diff < (-3600 * 24 * 30.5 * 6) || diff > (3600 * 24 * 30.5 * 6))
+	if ((now - 15778463) > mtime || now < mtime)
 	{
 		stats->time_buf[11] = ' ';
-		stats->time_buf[12] = '2';
-		stats->time_buf[13] = '0';
-		stats->time_buf[14] = '1';
-		stats->time_buf[15] = '8';
+		stats->time_buf[12] = buf1[20];
+		stats->time_buf[13] = buf1[21];
+		stats->time_buf[14] = buf1[22];
+		stats->time_buf[15] = buf1[23];
+
 	}
 }
 

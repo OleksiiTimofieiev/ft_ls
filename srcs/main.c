@@ -85,9 +85,10 @@ void	ft_concatenation(t_variables *var, char *name)
 
 void	handle_flags(t_flags *flags, t_variables *var)
 {
-	if (!flags->freedom)
+	if (!(flags->time_sorting))
+		q_sort(&var->list); // without any flags;
+	if (!flags->freedom) // if no 'f' flag;
 	{
-		q_sort(&var->list);
 		if (flags->time_sorting)
 		{
 			insertionSort(&var->list);
@@ -184,39 +185,56 @@ void	handler_link(t_flags *flags, char **argv, t_temp *list, int *arguments_quan
 	(*arguments_quantity)++;
 }
 
-void	ft_ls(int argc, char **argv, t_flags flags, int move_to_the_arguments)
+int		not_valid_input(char **argv, int *arguments_quantity, struct stat *buf)
 {
-	int			arguments_quantity = 0;
+	if (lstat(argv[(*arguments_quantity)], buf) == -1)
+	{
+		ft_printf("ft_ls: %s: %s\n", argv[(*arguments_quantity)++] , strerror(errno));
+		return (1);
+	}
+	return (0);
+}
+
+void	while_loop(int *arguments_quantity, int argc, char **argv, t_flags *flags)
+{
 	struct stat buf;
 	t_temp 		*list;
 
 	list = NULL;
+	while ((*arguments_quantity) < argc)
+	{
+		if (not_valid_input(argv, arguments_quantity, &buf))
+		{
+			continue ;
+		}
+		else if (!find_char(argv[(*arguments_quantity)]) && ((buf.st_mode & S_IFMT) == S_IFLNK))
+		{
+			handler_link(flags, argv, list, &(*arguments_quantity));
+			continue ;
+		}
+		else if ((buf.st_mode & S_IFMT) != S_IFDIR)
+		{
+			handler_not_dir(flags, argv, list, &(*arguments_quantity));
+			continue ;	
+		}
+		listdir(argv[(*arguments_quantity)++], *flags);
+		if ((argc - (*arguments_quantity)) > 0)
+			ft_printf("\n");
+	}
+}
+
+void	ft_ls(int argc, char **argv, t_flags flags, int move_to_the_arguments)
+{
+	int			arguments_quantity;
+
+	arguments_quantity = 0;
+
 	if ((argc - move_to_the_arguments) == 1)
 		listdir(".", flags);
 	else
 	{
 		arguments_quantity += (move_to_the_arguments + 1);
-		while (arguments_quantity < argc)
-		{
-			if (lstat(argv[arguments_quantity], &buf) == -1)
-			{
-				ft_printf("ft_ls: %s: %s\n", argv[arguments_quantity++] , strerror(errno));
-				continue ;
-			}
-			else if (!find_char(argv[arguments_quantity]) && ((buf.st_mode & S_IFMT) == S_IFLNK))
-			{
-				handler_link(&flags, argv, list, &arguments_quantity);
-				continue ;
-			}
-			else if ((buf.st_mode & S_IFMT) != S_IFDIR)
-			{
-				handler_not_dir(&flags, argv, list, &arguments_quantity);
-				continue ;	
-			}
-			listdir(argv[arguments_quantity++], flags);
-			if ((argc - arguments_quantity) > 0)
-				ft_printf("\n");
-		}
+		while_loop(&arguments_quantity, argc, argv, &flags);
 	}
 }
 
