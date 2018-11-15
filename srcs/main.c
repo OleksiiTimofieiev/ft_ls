@@ -94,9 +94,9 @@ void	handle_flags(t_flags *flags, t_variables *var)
 	{
 		if (flags->time_sorting)
 		{
-			// insertionSort(&var->list);
 			q_sort(&var->list); // without any flags;
 			r_q_sort(&var->list); // without any flags;
+			// insertionSort(&var->list);
 			// reverse(&var->list);
 
 
