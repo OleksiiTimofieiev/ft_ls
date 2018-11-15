@@ -20,7 +20,7 @@ void	reverse(t_temp** head_ref)
     t_temp* next; 
     while (current != NULL) 
     { 
-        next  = current->next;   
+        next = current->next;   
         current->next = prev;    
         prev = current; 
         current = next; 
@@ -200,24 +200,27 @@ void	ft_ls(int argc, char **argv, t_flags flags, int move_to_the_arguments)
 	}
 }
 
-int		check_flags_validiry(char *str)
+int		check_flags_validiry(char *str, char *invalid)
 {
 	while (*str)
 	{
 		if (*str == 'l' || *str == 'a' || *str == 'r' || *str == 'R' || *str == 't' || *str == 'c' || *str == 'f' || *str == 'o')
 			str++;
 		else
+		{
+			*invalid = *str;
 			return (0);
+		}
 	}
 	return (1);
 }
 
-int		set_flag_structure(char *str, t_flags *flags)
+int		set_flag_structure(char *str, t_flags *flags, char *invalid)
 {
 	int i;
 
 	i = 1;
-	if (!check_flags_validiry(str))
+	if (!check_flags_validiry(str, invalid))
 	{
 		i = 0;
 		return (i);
@@ -248,6 +251,7 @@ int		set_flag_structure(char *str, t_flags *flags)
 void	init_flags(char **argv, t_flags *flags, int argc, int *move_to_the_arguments)
 {
 	int i;
+	char invalid;
 
 	i = 1;
 	flags->long_format = 0;
@@ -262,9 +266,9 @@ void	init_flags(char **argv, t_flags *flags, int argc, int *move_to_the_argument
 	 return;
 	 while (argv[i] && argv[i][1] && argv[i][0] == '-')
 	 {
-		 if (!set_flag_structure(&argv[i][1], flags)) 
+		 if (!set_flag_structure(&argv[i][1], flags, &invalid)) 
 		 {
-			 ft_printf("ft_ls: illegal option -- %c\n", &argv[i][1]); ////// here;
+			 ft_printf("ft_ls: illegal option -- %c\n", invalid); ////// here;
 			 ft_printf("usage: ft_ls [-Racfolrt] [file ...]\n");
 			 exit(0);
 		 }
