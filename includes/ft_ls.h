@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/20 15:18:36 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/15 19:10:52 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/15 19:18:43 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,5 +127,19 @@ void				element_constructor(t_temp *new, char *new_d_name, t_data var);
 long long			get_total_blocks(t_temp *list);
 void				init_flags(char **argv, t_flags *flags,
 								int argc, int *move_to_the_arguments);
+void				reverse(t_temp **head_ref);
+int					ft_opendir(t_variables *var, char *name);
+void							fill_the_list(t_variables *var);
+int					find_char(char *str);
+void				ft_concatenation(t_variables *var, char *name);
+void				handler_not_dir(t_flags *flags, char **argv,
+									t_temp *list, int *arguments_quantity);
+void				handler_link(t_flags *flags, char **argv,
+				  			t_temp *list, int *arguments_quantity);
+int					not_valid_input(char **argv, int *arguments_quantity, struct stat *buf);
+void				while_loop(int *arguments_quantity, int argc,
+							char **argv, t_flags *flags);
+void				ft_ls(int argc, char **argv, t_flags flags, int move_to_the_arguments);
+void				listdir(char *name, t_flags flags);
 
 #endif

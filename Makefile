@@ -6,13 +6,15 @@
 #    By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/18 11:59:13 by otimofie          #+#    #+#              #
-#    Updated: 2018/11/15 19:11:34 by otimofie         ###   ########.fr        #
+#    Updated: 2018/11/15 19:17:55 by otimofie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= ft_ls
 
 CORE		=	main.c \
+				main_infrastructure.c \
+				main_infrastructure_2.c \
 				quick_sort.c \
 				time_quick_sort.c \
 				list_infrastructure.c \

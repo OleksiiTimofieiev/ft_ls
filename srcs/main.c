@@ -6,85 +6,11 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 18:34:49 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/15 19:09:30 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/15 19:16:20 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_ls.h"
-
-void	reverse(t_temp **head_ref)
-{
-	t_temp	*prev;
-	t_temp	*current;
-	t_temp	*next;
-
-	prev = NULL;
-	current = *head_ref;
-	while (current != NULL)
-	{
-		next = current->next;
-		current->next = prev;
-		prev = current;
-		current = next;
-	}
-	*head_ref = prev;
-}
-
-int		ft_opendir(t_variables *var, char *name)
-{
-	var->list = NULL;
-	if (!(var->dir = opendir(name)))
-	{
-		free(var->path2);
-		ft_printf("ft_ls: %s: %s\n", name, strerror(errno));
-		return (0);
-	}
-	return (1);
-}
-
-void	fill_the_list(t_variables *var)
-{
-	while ((var->entry = readdir(var->dir)) != NULL)
-	{
-		var->buffer = ft_strjoin(var->path2, var->entry->d_name);
-		add(&var->list, var->entry->d_name, get_stats(var->buffer));
-		free(var->buffer);
-	}
-}
-
-int		find_char(char *str)
-{
-	int i;
-
-	i = 2;
-	while (str[i])
-	{
-		if (str[i] == 47)
-			return (1);
-		i++;
-	}
-	return (0);
-}
-
-void	ft_concatenation(t_variables *var, char *name)
-{
-	char	buf[1024];
-	char	*result;
-	int		i;
-
-	i = 0;
-	ft_memset(buf, '\0', sizeof(buf));
-	ft_memset(var->path, '\0', sizeof(var->path));
-	result = ft_strcat(buf, name);
-	result = ft_strcat(result, "/");
-	result = ft_strcat(result, var->t_list->d_name);
-	while (*result)
-	{
-		var->path[i] = *result;
-		i++;
-		result++;
-	}
-}
 
 void	handle_flags(t_flags *flags, t_variables *var)
 {
@@ -154,100 +80,6 @@ void	listdir(char *name, t_flags flags)
 	}
 	ft_dump_cleaner(&var.list, &var.path2, &var.dir);
 }
-
-void	handler_not_dir(t_flags *flags, char **argv,
-		t_temp *list, int *arguments_quantity)
-{
-	char *remove_dot;
-
-	remove_dot = NULL;
-	flags->no_total = 1;
-	if (argv[(*arguments_quantity)][0] == '.')
-	{
-		remove_dot = ft_strdup(&argv[(*arguments_quantity)][2]);
-		add(&list, remove_dot, get_stats(remove_dot));
-		ft_putchar('.');
-	}
-	else
-		add(&list, argv[(*arguments_quantity)],
-			get_stats(argv[(*arguments_quantity)]));
-	print_list(list, *flags);
-	if (remove_dot)
-		free(remove_dot);
-	delete_list(&list);
-	list = NULL;
-	(*arguments_quantity)++;
-}
-
-void	handler_link(t_flags *flags, char **argv,
-		t_temp *list, int *arguments_quantity)
-{
-	flags->no_total = 1;
-	add(&list, argv[(*arguments_quantity)],
-		get_stats(argv[(*arguments_quantity)]));
-	print_list(list, *flags);
-	free(list->d_name);
-	free(list);
-	list = NULL;
-	(*arguments_quantity)++;
-}
-
-int		not_valid_input(char **argv, int *arguments_quantity, struct stat *buf)
-{
-	if (lstat(argv[(*arguments_quantity)], buf) == -1)
-	{
-		ft_printf("ft_ls: %s: %s\n",
-			argv[(*arguments_quantity)++], strerror(errno));
-		return (1);
-	}
-	return (0);
-}
-
-void	while_loop(int *arguments_quantity, int argc,
-		char **argv, t_flags *flags)
-{
-	struct stat buf;
-	t_temp		*list;
-
-	list = NULL;
-	while ((*arguments_quantity) < argc)
-	{
-		if (not_valid_input(argv, arguments_quantity, &buf))
-		{
-			continue ;
-		}
-		else if (!find_char(argv[(*arguments_quantity)])
-			&& ((buf.st_mode & S_IFMT) == S_IFLNK))
-		{
-			handler_link(flags, argv, list, &(*arguments_quantity));
-			continue ;
-		}
-		else if ((buf.st_mode & S_IFMT) != S_IFDIR)
-		{
-			handler_not_dir(flags, argv, list, &(*arguments_quantity));
-			continue ;
-		}
-		listdir(argv[(*arguments_quantity)++], *flags);
-		if ((argc - (*arguments_quantity)) > 0)
-			ft_printf("\n");
-	}
-}
-
-void	ft_ls(int argc, char **argv, t_flags flags, int move_to_the_arguments)
-{
-	int			arguments_quantity;
-
-	arguments_quantity = 0;
-	if ((argc - move_to_the_arguments) == 1)
-		listdir(".", flags);
-	else
-	{
-		arguments_quantity += (move_to_the_arguments + 1);
-		while_loop(&arguments_quantity, argc, argv, &flags);
-	}
-}
-
-
 
 int		main(int argc, char **argv)
 {
