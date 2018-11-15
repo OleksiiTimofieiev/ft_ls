@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+         #
+#    By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/18 11:59:13 by otimofie          #+#    #+#              #
-#    Updated: 2018/11/15 18:03:34 by timofieiev       ###   ########.fr        #
+#    Updated: 2018/11/15 18:46:49 by otimofie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,8 @@ CORE		=	main.c \
 				list_infrastructure.c \
 				listdir_infrastructure.c \
 				stats_infrastructure.c \
+				stats_infrastructure_2.c \
+
 
 SRCS        = $(addprefix srcs/, $(CORE))
 

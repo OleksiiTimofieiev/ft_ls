@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ls.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
+/*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/20 15:18:36 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/15 18:01:55 by timofieiev       ###   ########.fr       */
+/*   Updated: 2018/11/15 18:46:25 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,5 +110,6 @@ void				init_path2(char **path2, char *name);
 void				ft_dump_cleaner(t_temp **list, char **path2, DIR **dir);
 void				str_copy(char *dst, char *src);
 t_data				get_stats(char *buffer);
+void				get_link_data(t_data *stats, char *buffer_inner);
 
 #endif
