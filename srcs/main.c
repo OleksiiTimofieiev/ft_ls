@@ -8,10 +8,8 @@ bonus:
 -o	->	omit the group and user id.
 */
 
-// manage errors:
-
 // func to detect cyrcular link; work out if have the link;
-// through pointer pass illegal flag to the printing func
+// through pointer pass illegal flag to the printing func;
 
 // norminette;
 
@@ -274,12 +272,6 @@ void	init_flags(char **argv, t_flags *flags, int argc, int *move_to_the_argument
 		 i++;
 	}
 }
-
-// void	print_flags(t_flags *flags)
-// {
-// 	ft_printf("long_format->%d,include_dot->%d,recursive->%d,reversed->%d,time_sorting->%d\n",
-// 				flags->long_format, flags->include_dot, flags->recursive, flags->reversed, flags->time_sorting);
-// }
 
 int		main(int argc, char **argv)
 {
