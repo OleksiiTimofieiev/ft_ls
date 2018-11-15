@@ -6,7 +6,7 @@
 /*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/15 12:30:25 by timofieiev       ###   ########.fr       */
+/*   Updated: 2018/11/15 13:07:13 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,11 +124,6 @@ void		print_major_minor(t_temp *list, t_output_length *length)
 	ft_putchar(32);
 }
 
-void		print_file_name(t_temp *list)
-{
-	ft_printf("%s -> %s\n", list->d_name, list->link_name_data);
-}
-
 void		print_simple_params(t_temp *list, t_output_length length, t_flags flags)
 {
 	ft_printf("%s ", list->type_and_permissions_data);
@@ -203,7 +198,7 @@ void		print_list(t_temp *list, t_flags flags)
 				ft_printf("%s\n", list->d_name);
 		}
 		else
-			print_file_name(list);
+			ft_printf("%s -> %s\n", list->d_name, list->link_name_data);
 		list = list->next;
 	}
 }
