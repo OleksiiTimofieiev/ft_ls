@@ -27,7 +27,6 @@ void	reverse(t_temp** head_ref)
     *head_ref = prev; 
 } 
 
-
 int		ft_opendir(t_variables *var, char *name)
 {
 	var->list = NULL;
@@ -201,8 +200,7 @@ void	ft_ls(int argc, char **argv, t_flags flags, int move_to_the_arguments)
 		{
 			if (lstat(argv[arguments_quantity], &buf) == -1)
 			{
-				ft_printf("ft_ls: %s: %s\n", argv[arguments_quantity] , strerror(errno));
-				arguments_quantity++;
+				ft_printf("ft_ls: %s: %s\n", argv[arguments_quantity++] , strerror(errno));
 				continue ;
 			}
 			if (!find_char(argv[arguments_quantity]) && ((buf.st_mode & S_IFMT) == S_IFLNK))
@@ -215,8 +213,7 @@ void	ft_ls(int argc, char **argv, t_flags flags, int move_to_the_arguments)
 				handler_not_dir(&flags, argv, list, &arguments_quantity);
 				continue ;	
 			}
-			listdir(argv[arguments_quantity], flags);
-			arguments_quantity++;
+			listdir(argv[arguments_quantity++], flags);
 			if ((argc - arguments_quantity) > 0)
 				ft_printf("\n");
 		}
