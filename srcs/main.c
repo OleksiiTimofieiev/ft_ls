@@ -12,6 +12,7 @@ bonus:
 
 // func to detect cyrcular link; work out if have the link;
 // through pointer pass illegal flag to the printing func
+// two // costello from vlobuner in dev
 
 // norminette;
 
@@ -123,7 +124,11 @@ void	listdir(char *name, t_flags flags)
 				continue ;
 			}
 		    ft_concatenation(&var, name);
-			ft_printf("\n%s:\n", var.path);
+		    if (var.path[0] && var.path[0] == '/' && var.path[1] && var.path[1] == '/')
+				ft_printf("\n%s:\n", &var.path[1]);
+			else
+				ft_printf("\n%s:\n", var.path);
+
 			listdir(var.path, flags);
 		}
 		var.t_list = var.t_list->next;
