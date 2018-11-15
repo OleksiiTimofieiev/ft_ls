@@ -122,9 +122,9 @@ void	listdir(char *name, t_flags flags)
 			}
 		    ft_concatenation(&var, name);
 		    if (var.path[0] && var.path[0] == '/' && var.path[1] && var.path[1] == '/')
-				ft_printf("\n%s:\n", &var.path[1]);
+				(!flags.colors) ? ft_printf("\n%s:\n", &var.path[1]) : ft_printf("\n%s%s%s:\n", MAGENTA, &var.path[1], RESET);
 			else
-				ft_printf("\n%s:\n", var.path);
+				(!flags.colors) ? ft_printf("\n%s:\n", &var.path[1]) : ft_printf("\n%s%s%s:\n", MAGENTA, &var.path, RESET);
 
 			listdir(var.path, flags);
 		}
