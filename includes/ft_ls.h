@@ -6,24 +6,23 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/20 15:18:36 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/15 19:18:43 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/15 19:25:02 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_LS_H
 # define FT_LS_H
 
-# include "../libft/libft.h"
-
-# include <dirent.h>
-# include <sys/types.h>
-# include <sys/stat.h>
-# include <sys/xattr.h>
-# include <pwd.h>
-# include <uuid/uuid.h>
-# include <grp.h>
-# include <time.h>
-# include <errno.h>
+#include "../libft/libft.h"
+#include <dirent.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <sys/xattr.h>
+#include <pwd.h>
+#include <uuid/uuid.h>
+#include <grp.h>
+#include <time.h>
+#include <errno.h>
 
 typedef struct		s_flags
 {
@@ -67,9 +66,9 @@ typedef	struct		s_output_length
 
 typedef	struct		s_data
 {
-	long long	int	blocks_buf;
+	long long int	blocks_buf;
 	char			type_and_permissions_buf[12];
-	long	int		hard_links_buf;
+	long int		hard_links_buf;
 	char			owner_name_buf[20];
 	char			group_name_buf[20];
 	long long int	size_buf;
@@ -78,7 +77,6 @@ typedef	struct		s_data
 	int				minor_buf;
 	time_t			mod_time_buf;
 	char			link_name_buf[50];
-
 }					t_data;
 
 typedef	struct		s_qsort
@@ -114,8 +112,7 @@ void				get_link_data(t_data *stats, char *buffer_inner);
 void				major_minor(t_data *stats, struct stat buf);
 void				color_printing(t_temp *list);
 void				print_number_of_bytes(t_temp *list, t_output_length length);
-void				print_simple_params(t_temp *list, t_output_length length,
-										t_flags flags);
+void				print_simple_params(t_temp *list, t_output_length length, t_flags flags);
 void				print_major_minor(t_temp *list, t_output_length *length);
 void				fill_the_length(t_temp *list, t_output_length *length);
 void				add(t_temp **head_ref, char *new_d_name, t_data var);
@@ -125,20 +122,16 @@ void				print_maj_min(t_temp *list, t_output_length *length);
 void				print_total(t_flags *flags, t_temp *list);
 void				element_constructor(t_temp *new, char *new_d_name, t_data var);
 long long			get_total_blocks(t_temp *list);
-void				init_flags(char **argv, t_flags *flags,
-								int argc, int *move_to_the_arguments);
+void				init_flags(char **argv, t_flags *flags, int argc, int *move_to_the_arguments);
 void				reverse(t_temp **head_ref);
 int					ft_opendir(t_variables *var, char *name);
-void							fill_the_list(t_variables *var);
+void				fill_the_list(t_variables *var);
 int					find_char(char *str);
 void				ft_concatenation(t_variables *var, char *name);
-void				handler_not_dir(t_flags *flags, char **argv,
-									t_temp *list, int *arguments_quantity);
-void				handler_link(t_flags *flags, char **argv,
-				  			t_temp *list, int *arguments_quantity);
+void				handler_not_dir(t_flags *flags, char **argv, t_temp *list, int *arguments_quantity);
+void				handler_link(t_flags *flags, char **argv, t_temp *list, int *arguments_quantity);
 int					not_valid_input(char **argv, int *arguments_quantity, struct stat *buf);
-void				while_loop(int *arguments_quantity, int argc,
-							char **argv, t_flags *flags);
+void				while_loop(int *arguments_quantity, int argc, char **argv, t_flags *flags);
 void				ft_ls(int argc, char **argv, t_flags flags, int move_to_the_arguments);
 void				listdir(char *name, t_flags flags);
 

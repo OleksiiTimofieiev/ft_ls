@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/15 18:54:09 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/15 19:20:55 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,6 @@ void		element_constructor(t_temp *new, char *new_d_name, t_data var)
 	ft_strcpy(new->link_name_data, var.link_name_buf);
 	new->next = NULL;
 }
-
-
 
 void		print_list(t_temp *list, t_flags flags)
 {
