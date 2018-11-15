@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/20 15:18:36 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/15 18:58:31 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/15 19:10:52 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,5 +125,7 @@ void				print_maj_min(t_temp *list, t_output_length *length);
 void				print_total(t_flags *flags, t_temp *list);
 void				element_constructor(t_temp *new, char *new_d_name, t_data var);
 long long			get_total_blocks(t_temp *list);
+void				init_flags(char **argv, t_flags *flags,
+								int argc, int *move_to_the_arguments);
 
 #endif
