@@ -6,7 +6,7 @@
 /*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/28 13:38:08 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/15 12:26:52 by timofieiev       ###   ########.fr       */
+/*   Updated: 2018/11/15 14:54:29 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,6 +105,11 @@ void	get_link_data(t_data *stats, char *buffer_inner)
 	{
 		stats->link_name_buf[i] = link_buf[i];
 		i++;
+	}
+	if (ft_strequ(link_buf, buffer_inner))
+	{
+		ft_printf("ft_ls: %s %s\n", buffer_inner, "cyrcular link");
+		exit(0);
 	}
 }
 
