@@ -203,7 +203,7 @@ void	ft_ls(int argc, char **argv, t_flags flags, int move_to_the_arguments)
 				ft_printf("ft_ls: %s: %s\n", argv[arguments_quantity++] , strerror(errno));
 				continue ;
 			}
-			if (!find_char(argv[arguments_quantity]) && ((buf.st_mode & S_IFMT) == S_IFLNK))
+			else if (!find_char(argv[arguments_quantity]) && ((buf.st_mode & S_IFMT) == S_IFLNK))
 			{
 				handler_link(&flags, argv, list, &arguments_quantity);
 				continue ;
