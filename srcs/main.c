@@ -8,7 +8,7 @@ bonus:
 -o	->	omit the group and user id.
 */
 
-// func to detect cyrcular link; work out if have the link;
+// func to detect cyrcular link; work out if have the link; check with liubomir;
 
 // norminette;
 
@@ -84,6 +84,44 @@ void	ft_concatenation(t_variables *var, char *name)
 	}
 }
 
+void	handle_flags(t_flags *flags, t_variables *var)
+{
+	if (!flags->freedom)
+	{
+		q_sort(&var->list);
+		if (flags->time_sorting)
+		{
+			insertionSort(&var->list);
+			reverse(&var->list);
+		}
+		if (flags->reversed)
+			reverse(&var->list);
+	}
+	else
+	{
+		flags->include_dot = 1;
+	}
+}
+
+void	current_dir_print(t_variables *var, t_flags *flags)
+{
+	if (var->path[0] && var->path[0] == '/' && var->path[1] && var->path[1] == '/')
+	{
+		if (!flags->colors)
+			ft_printf("\n%s:\n", &var->path[1]); 
+		else
+			ft_printf("\n%s%s%s:\n", MAGENTA, &var->path[1], RESET);
+	}
+	else
+	{
+		if (!flags->colors)
+			ft_printf("\n%s:\n", &var->path[1]);
+		else
+			ft_printf("\n%s%s%s:\n", MAGENTA, &var->path, RESET);
+	}
+		
+}
+
 void	listdir(char *name, t_flags flags)
 {
 	t_variables var;
@@ -92,22 +130,7 @@ void	listdir(char *name, t_flags flags)
 	if (!ft_opendir(&var, name))
 		return ;
 	fill_the_list(&var);
-
-	if (!flags.freedom)
-	{
-		q_sort(&var.list);
-		if (flags.time_sorting)
-		{
-			insertionSort(&var.list);
-			reverse(&var.list);
-		}
-		if (flags.reversed)
-			reverse(&var.list);
-	}
-	else
-	{
-		flags.include_dot = 1;
-	}
+	handle_flags(&flags, &var);
 	print_list(var.list, flags);
 	var.t_list = var.list;
 	while (flags.recursive && var.t_list)
@@ -120,16 +143,46 @@ void	listdir(char *name, t_flags flags)
 				continue ;
 			}
 		    ft_concatenation(&var, name);
-		    if (var.path[0] && var.path[0] == '/' && var.path[1] && var.path[1] == '/')
-				(!flags.colors) ? ft_printf("\n%s:\n", &var.path[1]) : ft_printf("\n%s%s%s:\n", MAGENTA, &var.path[1], RESET);
-			else
-				(!flags.colors) ? ft_printf("\n%s:\n", &var.path[1]) : ft_printf("\n%s%s%s:\n", MAGENTA, &var.path, RESET);
-
+		   	current_dir_print(&var, &flags);
 			listdir(var.path, flags);
 		}
 		var.t_list = var.t_list->next;
 	}
 	ft_dump_cleaner(&var.list, &var.path2, &var.dir);
+}
+
+void	handler_not_dir(t_flags *flags, char **argv, t_temp *list, int *arguments_quantity)
+{
+	char *remove_dot;
+
+	remove_dot = NULL;
+	
+	flags->no_total = 1;
+	if (argv[(*arguments_quantity)][0] == '.')
+	{
+		remove_dot = ft_strdup(&argv[(*arguments_quantity)][2]);
+		add(&list, remove_dot, get_stats(remove_dot));
+		ft_putchar('.');
+	}
+	else
+		add(&list, argv[(*arguments_quantity)], get_stats(argv[(*arguments_quantity)]));
+	print_list(list, *flags);
+	if (remove_dot)
+		free(remove_dot);
+	delete_list(&list);
+	list = NULL;
+	(*arguments_quantity)++;
+}
+
+void	handler_link(t_flags *flags, char **argv, t_temp *list, int *arguments_quantity)
+{
+	flags->no_total = 1;
+	add(&list, argv[(*arguments_quantity)], get_stats(argv[(*arguments_quantity)]));
+	print_list(list, *flags);
+	free(list->d_name);
+	free(list);
+	list = NULL;
+	(*arguments_quantity)++;
 }
 
 void	ft_ls(int argc, char **argv, t_flags flags, int move_to_the_arguments)
@@ -140,9 +193,7 @@ void	ft_ls(int argc, char **argv, t_flags flags, int move_to_the_arguments)
 
 	list = NULL;
 	if ((argc - move_to_the_arguments) == 1)
-	{
 		listdir(".", flags);
-	}
 	else
 	{
 		arguments_quantity += (move_to_the_arguments + 1);
@@ -156,39 +207,12 @@ void	ft_ls(int argc, char **argv, t_flags flags, int move_to_the_arguments)
 			}
 			if (!find_char(argv[arguments_quantity]) && ((buf.st_mode & S_IFMT) == S_IFLNK))
 			{
-				flags.no_total = 1;
-				add(&list, argv[arguments_quantity], get_stats(argv[arguments_quantity]));
-				print_list(list, flags);
-				free(list->d_name);
-				free(list);
-				list = NULL;
-				// ft_putstr("here1\n");
-				arguments_quantity++;
+				handler_link(&flags, argv, list, &arguments_quantity);
 				continue ;
 			}
 			else if ((buf.st_mode & S_IFMT) != S_IFDIR)
 			{
-				// ft_putstr("here1\n");
-				char *remove_dot = NULL;
-				// ft_putstr("wtf\n");
-				flags.no_total = 1;
-				if (argv[arguments_quantity][0] == '.')
-				{
-					remove_dot = ft_strdup(&argv[arguments_quantity][2]);
-					add(&list, remove_dot, get_stats(remove_dot));
-					ft_putchar('.');
-				}
-				else
-					add(&list, argv[arguments_quantity], get_stats(argv[arguments_quantity]));
-
-				print_list(list, flags);
-				// ft_putstr("here2\n");
-
-				if (remove_dot)
-					free(remove_dot);
-				delete_list(&list);
-				list = NULL;
-				arguments_quantity++;
+				handler_not_dir(&flags, argv, list, &arguments_quantity);
 				continue ;	
 			}
 			listdir(argv[arguments_quantity], flags);
@@ -203,7 +227,10 @@ int		check_flags_validiry(char *str, char *invalid)
 {
 	while (*str)
 	{
-		if (*str == 'l' || *str == 'a' || *str == 'r' || *str == 'R' || *str == 't' || *str == 'c' || *str == 'f' || *str == 'o')
+		if (*str == 'l' || *str == 'a'
+			|| *str == 'r' || *str == 'R'
+			|| *str == 't' || *str == 'c'
+			|| *str == 'f' || *str == 'o')
 			str++;
 		else
 		{
@@ -214,16 +241,8 @@ int		check_flags_validiry(char *str, char *invalid)
 	return (1);
 }
 
-int		set_flag_structure(char *str, t_flags *flags, char *invalid)
+void	activate_the_flags(char *str, t_flags *flags)
 {
-	int i;
-
-	i = 1;
-	if (!check_flags_validiry(str, invalid))
-	{
-		i = 0;
-		return (i);
-	}
 	while (*str)
 	{
 		if (*str == 'l')
@@ -244,6 +263,19 @@ int		set_flag_structure(char *str, t_flags *flags, char *invalid)
 			flags->no_group_user_name = 1;
 		str++;
 	}
+}
+
+int		set_flag_structure(char *str, t_flags *flags, char *invalid)
+{
+	int i;
+
+	i = 1;
+	if (!check_flags_validiry(str, invalid))
+	{
+		i = 0;
+		return (i);
+	}
+	activate_the_flags(str, flags);
 	return (i);
 }
 
@@ -261,18 +293,18 @@ void	init_flags(char **argv, t_flags *flags, int argc, int *move_to_the_argument
 	flags->no_total = 0;
 	flags->freedom = 0;
 	flags->no_group_user_name = 0;
-	 if (argc == 1) 
-	 return;
-	 while (argv[i] && argv[i][1] && argv[i][0] == '-')
-	 {
-		 if (!set_flag_structure(&argv[i][1], flags, &invalid)) 
-		 {
-			 ft_printf("ft_ls: illegal option -- %c\n", invalid); ////// here;
-			 ft_printf("usage: ft_ls [-Racfolrt] [file ...]\n");
-			 exit(0);
-		 }
-		 *move_to_the_arguments = *move_to_the_arguments + 1;
-		 i++;
+	if (argc == 1) 
+		return;
+	while (argv[i] && argv[i][1] && argv[i][0] == '-')
+	{
+		if (!set_flag_structure(&argv[i][1], flags, &invalid)) 
+		{
+			ft_printf("ft_ls: illegal option -- %c\n", invalid);
+			ft_printf("usage: ft_ls [-Racfolrt] [file ...]\n");
+			exit(0);
+		}
+		*move_to_the_arguments = *move_to_the_arguments + 1;
+		i++;
 	}
 }
 

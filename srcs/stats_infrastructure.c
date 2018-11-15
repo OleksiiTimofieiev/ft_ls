@@ -120,7 +120,6 @@ t_data	get_stats(char *buffer_inner)
 	char		*buf1;
 
 	lstat(buffer_inner, &buf);
-
 	if ((buf.st_mode & S_IFMT) == S_IFLNK)
 		get_link_data(&stats, buffer_inner);
 	stats.blocks_buf = (long long int)buf.st_blocks;
