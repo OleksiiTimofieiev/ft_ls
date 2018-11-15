@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stats_infrastructure.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
+/*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/28 13:38:08 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/15 16:57:30 by timofieiev       ###   ########.fr       */
+/*   Updated: 2018/11/15 18:38:14 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,6 @@ void	get_time_data(t_data *stats, struct stat buf)
 		stats->time_buf[13] = buf1[21];
 		stats->time_buf[14] = buf1[22];
 		stats->time_buf[15] = buf1[23];
-
 	}
 }
 
@@ -99,9 +98,7 @@ void	get_link_data(t_data *stats, char *buffer_inner)
 	i = 0;
 	count = readlink(buffer_inner, link_buf, sizeof(link_buf));
 	link_buf[count] = '\0';
-
 	ft_memset(stats->link_name_buf, '\0', sizeof(stats->link_name_buf));
-	
 	while (link_buf[i])
 	{
 		stats->link_name_buf[i] = link_buf[i];

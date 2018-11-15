@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   time_quick_sort.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/15 18:38:38 by otimofie          #+#    #+#             */
+/*   Updated: 2018/11/15 18:39:29 by otimofie         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/ft_ls.h"
 
-static void	init(t_temp **head, t_temp **end, t_qsort *var)
+static void		init(t_temp **head, t_temp **end, t_qsort *var)
 {
 	var->pivot = *end;
 	var->prev = NULL;
@@ -15,7 +27,8 @@ static t_temp	*get_tail(t_temp *cur)
 	return (cur);
 }
 
-static t_temp	*delim(t_temp *head, t_temp *end, t_temp **new_head, t_temp **new_end)
+static t_temp	*delim(t_temp *head, t_temp *end,
+				t_temp **new_head, t_temp **new_end)
 {
 	t_qsort var;
 
@@ -69,10 +82,8 @@ static t_temp	*quick_sort(t_temp *head, t_temp *end)
 	return (new_head);
 }
 
-void	r_q_sort(t_temp **head_ref)
+void			r_q_sort(t_temp **head_ref)
 {
 	(*head_ref) = quick_sort(*head_ref, get_tail(*head_ref));
 	return ;
 }
-
-
