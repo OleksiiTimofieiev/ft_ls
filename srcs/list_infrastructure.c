@@ -6,7 +6,7 @@
 /*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/15 17:07:14 by timofieiev       ###   ########.fr       */
+/*   Updated: 2018/11/15 17:11:20 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -145,7 +145,7 @@ void		print_number_of_bytes(t_temp *list, t_output_length length)
 			(long long)list->size_data);
 }
 
-void color_printing(t_temp *list)
+void		color_printing(t_temp *list)
 {
 	if (list->type_and_permissions_data[0] == 'd')
 		ft_printf("%s%s%s\n", GREEN, list->d_name, RESET);
@@ -177,10 +177,16 @@ void		print_dname(t_temp *list, t_flags *flags)
 void		print_maj_min(t_temp *list, t_output_length	*length)
 {
 	if (list->type_and_permissions_data[0] == 'c'
-				|| list->type_and_permissions_data[0] == 'b')
-				print_major_minor(list, length);
-			else
-				print_number_of_bytes(list, *length);
+		|| list->type_and_permissions_data[0] == 'b')
+		print_major_minor(list, length);
+	else
+		print_number_of_bytes(list, *length);
+}
+
+void		print_total(t_flags *flags, t_temp *list)
+{
+	if (!flags->no_total && get_total_blocks(list) != 0 && flags->long_format)
+		ft_printf("total %lld\n", get_total_blocks(list));
 }
 
 void		print_list(t_temp *list, t_flags flags)
@@ -193,8 +199,7 @@ void		print_list(t_temp *list, t_flags flags)
 	len = length.major + length.minor + 2;
 	if (len > length.number_of_bytes)
 		length.number_of_bytes = len + 1;
-	if (!flags.no_total && get_total_blocks(list) != 0 && flags.long_format)
-		ft_printf("total %lld\n", get_total_blocks(list));
+	print_total(&flags, list);
 	while (list)
 	{
 		if (list->d_name[0] == '.' && !flags.include_dot)
