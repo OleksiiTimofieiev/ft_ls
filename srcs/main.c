@@ -119,7 +119,6 @@ void	current_dir_print(t_variables *var, t_flags *flags)
 		else
 			ft_printf("\n%s%s%s:\n", MAGENTA, &var->path, RESET);
 	}
-		
 }
 
 void	listdir(char *name, t_flags flags)

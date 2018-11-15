@@ -6,7 +6,7 @@
 /*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/15 17:11:20 by timofieiev       ###   ########.fr       */
+/*   Updated: 2018/11/15 17:18:46 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,8 @@ void		delete_list(t_temp **head_ref)
 	}
 }
 
-void		add(t_temp **head_ref, char *new_d_name, t_data var)
+void		element_constructor(t_temp *new, char *new_d_name, t_data var)
 {
-	t_temp *new;
-	t_temp *last;
-
-	new = (t_temp*)malloc(sizeof(t_temp));
-	last = *head_ref;
 	new->blocks_data = var.blocks_buf;
 	new->d_name = ft_strdup(new_d_name);
 	ft_strcpy(new->type_and_permissions_data, var.type_and_permissions_buf);
@@ -60,6 +55,16 @@ void		add(t_temp **head_ref, char *new_d_name, t_data var)
 	new->mod_time_data = var.mod_time_buf;
 	ft_strcpy(new->link_name_data, var.link_name_buf);
 	new->next = NULL;
+}
+
+void		add(t_temp **head_ref, char *new_d_name, t_data var)
+{
+	t_temp *new;
+	t_temp *last;
+
+	new = (t_temp*)malloc(sizeof(t_temp));
+	last = *head_ref;
+	element_constructor(new, new_d_name, var);
 	if (*head_ref == NULL)
 	{
 		*head_ref = new;
