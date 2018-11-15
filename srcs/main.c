@@ -12,7 +12,6 @@ bonus:
 
 // func to detect cyrcular link; work out if have the link;
 // through pointer pass illegal flag to the printing func
-// two // costello from vlobuner in dev
 
 // norminette;
 
