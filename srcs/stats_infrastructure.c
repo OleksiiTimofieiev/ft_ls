@@ -6,7 +6,7 @@
 /*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/28 13:38:08 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/13 20:25:53 by timofieiev       ###   ########.fr       */
+/*   Updated: 2018/11/15 12:26:52 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,25 @@ void	major_minor(t_data *stats, struct stat buf)
 	}
 }
 
+void	get_link_data(t_data *stats, char *buffer_inner)
+{
+	char	link_buf[512];
+	int		count;
+	int		i;
+
+	i = 0;
+	count = readlink(buffer_inner, link_buf, sizeof(link_buf));
+	link_buf[count] = '\0';
+
+	ft_memset(stats->link_name_buf, '\0', sizeof(stats->link_name_buf));
+	
+	while (link_buf[i])
+	{
+		stats->link_name_buf[i] = link_buf[i];
+		i++;
+	}
+}
+
 t_data	get_stats(char *buffer_inner)
 {
 	t_data		stats;
@@ -96,6 +115,9 @@ t_data	get_stats(char *buffer_inner)
 	char		*buf1;
 
 	lstat(buffer_inner, &buf);
+
+	if ((buf.st_mode & S_IFMT) == S_IFLNK)
+		get_link_data(&stats, buffer_inner);
 	stats.blocks_buf = (long long int)buf.st_blocks;
 	get_file_type(stats.type_and_permissions_buf, buf.st_mode);
 	get_permissions(stats.type_and_permissions_buf, buf.st_mode);

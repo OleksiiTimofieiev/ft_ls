@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ls.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/20 15:18:36 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/14 19:46:27 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/15 12:26:46 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ typedef struct		s_flags
 typedef	struct		s_temp
 {
 	char			*d_name;
+	char			link_name_data[50];
 	long long int	blocks_data;
 	char			type_and_permissions_data[12];
 	long int		hard_links_data;
@@ -76,6 +77,8 @@ typedef	struct		s_data
 	int				major_buf;
 	int				minor_buf;
 	time_t			mod_time_buf;
+	char			link_name_buf[50];
+
 }					t_data;
 
 typedef	struct		s_qsort

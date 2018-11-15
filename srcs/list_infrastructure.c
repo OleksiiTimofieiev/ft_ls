@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   list_infrastructure.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/14 19:45:01 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/15 12:30:25 by timofieiev       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ void		add(t_temp **head_ref, char *new_d_name, t_data var)
 	new->major_data = var.major_buf;
 	new->minor_data = var.minor_buf;
 	new->mod_time_data = var.mod_time_buf;
+	ft_strcpy(new->link_name_data, var.link_name_buf);
 	new->next = NULL;
 	if (*head_ref == NULL)
 	{
@@ -125,26 +126,7 @@ void		print_major_minor(t_temp *list, t_output_length *length)
 
 void		print_file_name(t_temp *list)
 {
-	char	link_buf[512];
-	int		count;
-
-	count = readlink(list->d_name, link_buf, sizeof(link_buf));
-	if (count >= 0)
-	{
-		link_buf[count] = '\0';
-		ft_printf("%s -> %s\n", list->d_name, link_buf);
-	}
-	else if (count == -1)
-	{
-		count = 100;
-		link_buf[count] = '\0';
-		if (ft_strequ(list->d_name, "stderr"))
-			ft_printf("%s -> %s\n", list->d_name, "fd/2");
-		else if (ft_strequ(list->d_name, "stdin"))
-			ft_printf("%s -> %s\n", list->d_name, "fd/0");
-		else if (ft_strequ(list->d_name, "stdout"))
-			ft_printf("%s -> %s\n", list->d_name, "fd/1");
-	}
+	ft_printf("%s -> %s\n", list->d_name, list->link_name_data);
 }
 
 void		print_simple_params(t_temp *list, t_output_length length, t_flags flags)
