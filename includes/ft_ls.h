@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/20 15:18:36 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/15 19:31:17 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/15 20:34:12 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -141,6 +141,6 @@ void				while_loop(int *arguments_quantity, int argc,
 void				ft_ls(int argc, char **argv, t_flags flags,
 						int move_to_the_arguments);
 void				listdir(char *name, t_flags flags);
-// void				print_list(t_temp *list, t_flags t_flags);
+void				print_list(t_temp *list, t_flags flags);
 
 #endif
