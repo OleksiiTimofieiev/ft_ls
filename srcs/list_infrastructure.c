@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   list_infrastructure.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: timofieiev <timofieiev@student.42.fr>      +#+  +:+       +#+        */
+/*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:16:12 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/15 17:36:23 by timofieiev       ###   ########.fr       */
+/*   Updated: 2018/11/15 18:24:27 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,7 +129,8 @@ void		print_major_minor(t_temp *list, t_output_length *length)
 	ft_putchar(32);
 }
 
-void		print_simple_params(t_temp *list, t_output_length length, t_flags flags)
+void		print_simple_params(t_temp *list, t_output_length length,
+			t_flags flags)
 {
 	ft_printf("%s ", list->type_and_permissions_data);
 	ft_printf("%*d ", length.number_of_links, list->hard_links_data);
@@ -137,7 +138,7 @@ void		print_simple_params(t_temp *list, t_output_length length, t_flags flags)
 	{
 		ft_printf("%*-s", length.owner_name + 2, list->owner_name_data);
 		ft_printf("%*-s", length.group_name + 2, list->group_name_data);
-	}	
+	}
 }
 
 void		print_number_of_bytes(t_temp *list, t_output_length length)
@@ -179,7 +180,7 @@ void		print_dname(t_temp *list, t_flags *flags)
 		ft_printf("%s -> %s\n", list->d_name, list->link_name_data);
 }
 
-void		print_maj_min(t_temp *list, t_output_length	*length)
+void		print_maj_min(t_temp *list, t_output_length *length)
 {
 	if (list->type_and_permissions_data[0] == 'c'
 		|| list->type_and_permissions_data[0] == 'b')
