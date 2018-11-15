@@ -12,9 +12,6 @@ bonus:
 
 // func to detect cyrcular link; work out if have the link;
 // through pointer pass illegal flag to the printing func
-// tests directory;
-
-// test output
 
 // norminette;
 
@@ -152,7 +149,8 @@ void	ft_ls(int argc, char **argv, t_flags flags, int move_to_the_arguments)
 		{
 			if (lstat(argv[arguments_quantity], &buf) == -1)
 			{
-				ft_printf("ft_ls: %s: %s\n", argv[arguments_quantity++] , strerror(errno));
+				ft_printf("ft_ls: %s: %s\n", argv[arguments_quantity] , strerror(errno));
+				arguments_quantity++;
 				continue ;
 			}
 			if (!find_char(argv[arguments_quantity]) && ((buf.st_mode & S_IFMT) == S_IFLNK))
@@ -169,6 +167,7 @@ void	ft_ls(int argc, char **argv, t_flags flags, int move_to_the_arguments)
 			}
 			else if ((buf.st_mode & S_IFMT) != S_IFDIR)
 			{
+				// ft_putstr("here1\n");
 				char *remove_dot = NULL;
 				// ft_putstr("wtf\n");
 				flags.no_total = 1;
@@ -182,9 +181,12 @@ void	ft_ls(int argc, char **argv, t_flags flags, int move_to_the_arguments)
 					add(&list, argv[arguments_quantity], get_stats(argv[arguments_quantity]));
 
 				print_list(list, flags);
+				// ft_putstr("here2\n");
+
 				if (remove_dot)
 					free(remove_dot);
 				delete_list(&list);
+				list = NULL;
 				arguments_quantity++;
 				continue ;	
 			}
@@ -256,7 +258,7 @@ void	init_flags(char **argv, t_flags *flags, int argc, int *move_to_the_argument
 	flags->no_group_user_name = 0;
 	 if (argc == 1) 
 	 return;
-	 while (argv[i] && argv[i][1] &&  argv[i][0] == '-')
+	 while (argv[i] && argv[i][1] && argv[i][0] == '-')
 	 {
 		 if (!set_flag_structure(&argv[i][1], flags)) 
 		 {
