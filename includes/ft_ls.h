@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/20 15:18:36 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/15 18:48:52 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/15 18:53:24 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,5 +112,11 @@ void				str_copy(char *dst, char *src);
 t_data				get_stats(char *buffer);
 void				get_link_data(t_data *stats, char *buffer_inner);
 void				major_minor(t_data *stats, struct stat buf);
+void				color_printing(t_temp *list);
+void				print_number_of_bytes(t_temp *list, t_output_length length);
+void				print_simple_params(t_temp *list, t_output_length length,
+										t_flags flags);
+void				print_major_minor(t_temp *list, t_output_length *length);
+void				fill_the_length(t_temp *list, t_output_length *length);
 
 #endif
