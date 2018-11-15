@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/28 13:38:08 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/15 18:45:57 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/15 18:48:27 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,20 +72,6 @@ void	get_time_data(t_data *stats, struct stat buf)
 		stats->time_buf[13] = buf1[21];
 		stats->time_buf[14] = buf1[22];
 		stats->time_buf[15] = buf1[23];
-	}
-}
-
-void	major_minor(t_data *stats, struct stat buf)
-{
-	if ((buf.st_mode & S_IFMT) == S_IFCHR || (buf.st_mode & S_IFMT) == S_IFBLK)
-	{
-		stats->major_buf = major(buf.st_rdev);
-		stats->minor_buf = minor(buf.st_rdev);
-	}
-	else
-	{
-		stats->major_buf = 0;
-		stats->minor_buf = 0;
 	}
 }
 

@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/20 15:18:36 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/15 18:46:25 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/15 18:48:52 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,5 +111,6 @@ void				ft_dump_cleaner(t_temp **list, char **path2, DIR **dir);
 void				str_copy(char *dst, char *src);
 t_data				get_stats(char *buffer);
 void				get_link_data(t_data *stats, char *buffer_inner);
+void				major_minor(t_data *stats, struct stat buf);
 
 #endif

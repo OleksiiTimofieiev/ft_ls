@@ -6,7 +6,7 @@
 /*   By: otimofie <otimofie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 18:47:32 by otimofie          #+#    #+#             */
-/*   Updated: 2018/11/15 18:47:59 by otimofie         ###   ########.fr       */
+/*   Updated: 2018/11/15 18:48:41 by otimofie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,19 @@ void	get_link_data(t_data *stats, char *buffer_inner)
 	{
 		ft_printf("ft_ls: %s %s\n", buffer_inner, "cyrcular link");
 		exit(0);
+	}
+}
+
+void	major_minor(t_data *stats, struct stat buf)
+{
+	if ((buf.st_mode & S_IFMT) == S_IFCHR || (buf.st_mode & S_IFMT) == S_IFBLK)
+	{
+		stats->major_buf = major(buf.st_rdev);
+		stats->minor_buf = minor(buf.st_rdev);
+	}
+	else
+	{
+		stats->major_buf = 0;
+		stats->minor_buf = 0;
 	}
 }
